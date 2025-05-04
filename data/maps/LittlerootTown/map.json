@@ -229,6 +229,48 @@
       "var": "VAR_LITTLEROOT_TOWN_STATE",
       "var_value": "3",
       "script": "LittlerootTown_EventScript_GiveRunningShoesTrigger1"
+    },
+    {
+      "type": "weather",
+      "x": 21,
+      "y": 9,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_SUNNY"
+    },
+    {
+      "type": "weather",
+      "x": 23,
+      "y": 11,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_SNOW"
+    },
+    {
+      "type": "weather",
+      "x": 25,
+      "y": 9,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_RAIN_THUNDERSTORM"
+    },
+    {
+      "type": "weather",
+      "x": 21,
+      "y": 13,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_SANDSTORM"
+    },
+    {
+      "type": "weather",
+      "x": 25,
+      "y": 13,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_DROUGHT"
+    },
+    {
+      "type": "weather",
+      "x": 23,
+      "y": 7,
+      "elevation": 0,
+      "weather": "COORD_EVENT_WEATHER_VOLCANIC_ASH"
     }
   ],
   "bg_events": [
@@ -263,6 +305,14 @@
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LittlerootTown_EventScript_MaysHouseSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 19,
+      "y": 12,
+      "elevation": 0,
+      "item": "ITEM_POKE_BALL,99",
+      "flag": "FLAG_ITEM_LITTLEROOT_TOWN_POKE_BALL"
     }
   ]
 }
