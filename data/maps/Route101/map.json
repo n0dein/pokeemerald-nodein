@@ -108,7 +108,7 @@
       "x": 25,
       "y": 15,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 2,
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -122,7 +122,7 @@
       "x": 28,
       "y": 3,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE101",
+      "dest_map": "MAP_ROUTE101_HOUSE",
       "dest_warp_id": "0"
     }
   ],
