@@ -123,6 +123,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCH"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE",
+      "x": 32,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_CutTree",
+      "flag": "FLAG_TEMP_11"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",
+      "x": 35,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_RockSmash",
+      "flag": "FLAG_TEMP_11"
     }
   ],
   "warp_events": [
@@ -232,13 +258,6 @@
     },
     {
       "type": "weather",
-      "x": 21,
-      "y": 9,
-      "elevation": 0,
-      "weather": "COORD_EVENT_WEATHER_SUNNY"
-    },
-    {
-      "type": "weather",
       "x": 23,
       "y": 11,
       "elevation": 0,
@@ -246,31 +265,17 @@
     },
     {
       "type": "weather",
-      "x": 25,
-      "y": 9,
+      "x": 21,
+      "y": 11,
       "elevation": 0,
       "weather": "COORD_EVENT_WEATHER_RAIN_THUNDERSTORM"
     },
     {
       "type": "weather",
-      "x": 21,
-      "y": 13,
-      "elevation": 0,
-      "weather": "COORD_EVENT_WEATHER_SANDSTORM"
-    },
-    {
-      "type": "weather",
       "x": 25,
-      "y": 13,
+      "y": 11,
       "elevation": 0,
       "weather": "COORD_EVENT_WEATHER_DROUGHT"
-    },
-    {
-      "type": "weather",
-      "x": 23,
-      "y": 7,
-      "elevation": 0,
-      "weather": "COORD_EVENT_WEATHER_VOLCANIC_ASH"
     }
   ],
   "bg_events": [
