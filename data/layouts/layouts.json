@@ -4420,6 +4420,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Route101_House/border.bin",
       "blockdata_filepath": "data/layouts/Route101_House/map.bin"
+    },
+    {
+      "id": "LAYOUT_TEST_MAP",
+      "name": "TestMap_Layout",
+      "width": 10,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/TestMap/border.bin",
+      "blockdata_filepath": "data/layouts/TestMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOG_TOWN",
+      "name": "HogTown_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/HogTown/border.bin",
+      "blockdata_filepath": "data/layouts/HogTown/map.bin"
     }
   ]
 }
