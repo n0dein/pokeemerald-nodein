@@ -1,0 +1,42 @@
+Floresol Region
+
+Cities and Towns
+1.Gainesville
+	a-Hog Town
+	b-starter town
+		-professor works at University of Floresol
+		-University of Floresol Feraligatrs
+2.Tampa
+	a-Buccaneer Bay
+	b-Gym 1 - Water
+3.Orlando
+	a-Celebration City
+	b- No gym... game corner and safari zone here
+4.Miami
+	a-Worldwide City
+	b-Gym 2 - Fire
+5.Havana
+	a-Daydream City
+	b-Gym 3 - Psychic
+6.San Juan
+	a-Rich Port
+	b-Gym 8 - Poison
+7.Port-au-Prince
+	a-Regal Port
+	b-Entrance to Victory Road
+8.Santo Domingo
+	a-Pokemon League
+9.Atlanta
+	a-Olympic City
+	b-Gym 5 - Fighting
+10.Charleston
+	a-Ironclad City
+	b-Gym 4 - Steel
+11.Huntsville
+	a-Booster Town
+	b-Gym 6 - Flying
+12.New Orleans
+	a-Bayou Bay
+	b-Gym 7 - Ghost
+
+	
