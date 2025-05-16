@@ -35,8 +35,21 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "TestMap_MapScripts",
+      "script": "TestMap_EventScript_Treecko",
       "flag": "FLAG_UNUSED_0x04E"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_TORCHIC_DOLL",
+      "x": 5,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 3,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "TestMap_EventScript_Torchic",
+      "flag": "FLAG_UNUSED_0x04F"
     }
   ],
   "warp_events": [
