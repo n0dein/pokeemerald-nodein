@@ -1357,5 +1357,5 @@ static const struct SpriteFrameImage sPicTable_RubySapphireMay[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_Treecko[] = {
-    obj_frame_tiles(gObjectEventPic_Treecko),
+    overworld_ascending_frames(gObjectEventPic_Treecko, 4, 4),
 };
