@@ -294,6 +294,7 @@ const u32 gFieldEffectObjectPic_ShadowMedium[] = INCBIN_U32("graphics/field_effe
 const u32 gFieldEffectObjectPic_ShadowLarge[] = INCBIN_U32("graphics/field_effects/pics/shadow_large.4bpp");
 const u32 gFieldEffectObjectPic_ShadowExtraLarge[] = INCBIN_U32("graphics/field_effects/pics/shadow_extra_large.4bpp");
 const u32 gObjectEventPic_Treecko[] = INCBIN_COMP("graphics/pokemon/treecko/overworld.4bpp");
+const u32 gObjectEventPic_Treecko[] = INCBIN_COMP("graphics/pokemon/treecko/overworld.");
 static const u32 sFiller[0x48] = {};
 const u8 gFieldEffectPic_CutGrass[] = INCBIN_U8("graphics/field_effects/pics/cut_grass.4bpp");
 const u32 gFieldEffectPic_CutGrass_Copy[] = INCBIN_U32("graphics/field_effects/pics/cut_grass.4bpp");
