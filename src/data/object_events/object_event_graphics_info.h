@@ -4686,7 +4686,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Treecko = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_16x16,
     .subspriteTables = sOamTables_16x16,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_Inanimate,
     .images = sPicTable_Treecko,
     .affineAnims = gDummySpriteAffineAnimTable,
-};
