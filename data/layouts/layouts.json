@@ -4435,7 +4435,7 @@
       "id": "LAYOUT_HOG_TOWN",
       "name": "HogTown_Layout",
       "width": 40,
-      "height": 30,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/HogTown/border.bin",
