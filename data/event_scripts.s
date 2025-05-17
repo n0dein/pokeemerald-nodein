@@ -1160,5 +1160,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TestMap/scripts.inc"
 
 	.include "data/maps/HogTown/scripts.inc"
-
-	.include "data/maps/HogTown_Apartment101/scripts.inc"
