@@ -729,15 +729,7 @@ static const struct SpriteFrameImage sPicTable_SmoochumDoll[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_TreeckoDoll[] = {
-    obj_frame_tiles(gObjectEventPic_treeckodoll, 2, 2, 0),
-    obj_frame_tiles(gObjectEventPic_treeckodoll, 2, 2, 2),
-    obj_frame_tiles(gObjectEventPic_treeckodoll, 2, 2, 4),
-    obj_frame_tiles(gObjectEventPic_treeckodoll, 2, 2, 1),
-    obj_frame_tiles(gObjectEventPic_treeckodoll, 2, 2, 1),
-    obj_frame_tiles(gObjectEventPic_treeckodoll, 2, 2, 3),
-    obj_frame_tiles(gObjectEventPic_treeckodoll, 2, 2, 3),
-    obj_frame_tiles(gObjectEventPic_treeckodoll, 2, 2, 5),
-    obj_frame_tiles(gObjectEventPic_treeckodoll, 2, 2, 5),
+    obj_frame_tiles(gObjectEventPic_TreeckoDoll),
 };
 
 static const struct SpriteFrameImage sPicTable_TorchicDoll[] = {
