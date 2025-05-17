@@ -4674,7 +4674,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Treecko = { 
     .tileTag = 0xFFFF,
-    .paletteTag = OBJ_EVENT_PAL_TAG_DYNAMIC,
+    .paletteTag = OBJ_EVENT_PAL_EXAMPLE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -4682,10 +4682,11 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Treecko = {
     .paletteSlot = 0,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_16x16,
-    .subspriteTables = sOamTables_32x32,
+    .subspriteTables = sOamTable_16x16_1,
     .anims = sAnimTable_Standard,
-    .images = gObjectEventPic_Treecko,
+    .images = gObjectEventPicTable_Treecko,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
