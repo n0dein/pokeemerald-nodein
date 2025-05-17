@@ -4440,6 +4440,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/HogTown/border.bin",
       "blockdata_filepath": "data/layouts/HogTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_HOG_TOWN_APARTMENT101",
+      "name": "HogTown_Apartment101_Layout",
+      "width": 10,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/HogTown_Apartment101/border.bin",
+      "blockdata_filepath": "data/layouts/HogTown_Apartment101/map.bin"
     }
   ]
 }

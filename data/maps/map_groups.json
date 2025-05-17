@@ -1,6 +1,7 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes",
+    "gMapGroup_IndoorHogTown",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
@@ -96,6 +97,9 @@
     "Route101_House",
     "TestMap",
     "HogTown"
+  ],
+  "gMapGroup_IndoorHogTown": [
+    "HogTown_Apartment101"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
