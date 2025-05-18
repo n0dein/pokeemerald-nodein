@@ -152,7 +152,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 22,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_HOG_TOWN_INDOOR_APARTMENT101",
+      "dest_warp_id": "0"
+    }
   ],
   "coord_events": [
 
