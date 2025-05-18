@@ -246,6 +246,7 @@
 #define OBJ_EVENT_GFX_chick2                   242
 #define OBJ_EVENT_GFX_gator3                   243
 #define OBJ_EVENT_GFX_gator1                   244
+#define OBJ_EVENT_GFX_swimmer_toto               245
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
@@ -391,6 +392,7 @@
 #define OBJ_EVENT_PAL_TAG_chick2                0x1126
 #define OBJ_EVENT_PAL_TAG_gator3                0x1127
 #define OBJ_EVENT_PAL_TAG_gator1                0x1128
+#define OBJ_EVENT_PAL_TAG_swimmer_toto           0x1129
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

@@ -2,6 +2,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_chick2;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_gator3;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_gator1;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_swimmer_toto;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
@@ -498,6 +499,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_chick2] =                  &gObjectEventGraphicsInfo_chick2,
     [OBJ_EVENT_GFX_gator3] =                  &gObjectEventGraphicsInfo_gator3,
     [OBJ_EVENT_GFX_gator1] =                  &gObjectEventGraphicsInfo_gator1,
+    [OBJ_EVENT_GFX_swimmer_toto] =                  &gObjectEventGraphicsInfo_swimmer_toto,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
