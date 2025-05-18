@@ -96,7 +96,9 @@
     "Route101_House",
     "TestMap",
     "HogTown",
-    "HogTownIndoorApartment101"
+    "HogTownIndoorApartment101",
+    "HogTownIndoorPokemonCenter1F",
+    "HogTownIndoorPokemonCenter2F"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

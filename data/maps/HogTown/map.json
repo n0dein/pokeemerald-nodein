@@ -158,6 +158,13 @@
       "elevation": 0,
       "dest_map": "MAP_HOG_TOWN_INDOOR_APARTMENT101",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 15,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_HOG_TOWN_INDOOR_POKEMON_CENTER1F",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
