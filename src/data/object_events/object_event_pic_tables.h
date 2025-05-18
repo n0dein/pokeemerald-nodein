@@ -1404,6 +1404,6 @@ const struct SpriteFrameImage gObjectEventPicTable_gator1[] = {
     overworld_frame(gObjectEventPic_gator1, 4, 4, 8),
 };
 
-static const struct SpriteFrameImage gObjectEventPic_Swimmer_toto[] = {
+const struct SpriteFrameImage gObjectEventPic_Swimmer_toto[] = {
     overworld_ascending_frames(gObjectEventPic_Swimmer_toto, 2, 4),
 };
