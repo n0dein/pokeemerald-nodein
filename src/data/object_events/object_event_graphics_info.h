@@ -4674,7 +4674,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example = { 
     .tileTag = 0xFFFF,
-    .paletteTag = OBJ_EVENT_PAL_EXAMPLE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_EXAMPLE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,

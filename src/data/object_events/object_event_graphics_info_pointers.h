@@ -1,5 +1,4 @@
-gObjectEventGraphicsInfoPointers;
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
@@ -492,7 +491,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
     [OBJ_EVENT_GFX_POKE_BALL] =                &gObjectEventGraphicsInfo_PokeBall,
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
-    [OBJ_EVENT_GFX_EXAMPLE] =                   &gObjectEventGraphicsInfo_Example,
+    [OBJ_EVENT_GFX_EXAMPLE] =                  &gObjectEventGraphicsInfo_Example,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {
