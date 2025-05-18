@@ -392,7 +392,7 @@ const u16 gObjectEventPalette_gator3[] = INCBIN_U16("graphics/object_events/pics
 const u32 gObjectEventPic_gator1[] = INCBIN_U32("graphics/object_events/pics/people/gator1.4bpp");
 const u16 gObjectEventPalette_gator1[] = INCBIN_U16("graphics/object_events/pics/people/gator1.gbapal");
 
-const u32 gObjectEventGraphicsInfo_swimmer_toto[] = INCBIN_U32("graphics/object_events/pics/people/swimmer_toto.4bpp");
+const u32 gObjectEventPic_Swimmer_toto[] = INCBIN_U32("graphics/object_events/pics/people/swimmer_toto.4bpp");
 const u16 gObjectEventPalette_swimmer_toto[] = INCBIN_U16("graphics/object_events/pics/people/swimmer_toto.gbapal");
 
 const u16 gObjectEventPal_Substitute[] = INCBIN_U16("graphics/pokemon/question_mark/overworld.gbapal");
