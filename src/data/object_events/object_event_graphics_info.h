@@ -4690,9 +4690,9 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example2 = { 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_chick2 = { 
     .tileTag = 0xFFFF,
-    .paletteTag = OBJ_EVENT_PAL_TAG_EXAMPLE2,
+    .paletteTag = OBJ_EVENT_PAL_TAG_chick2,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,
@@ -4704,13 +4704,13 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example2 = {
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_Standard,
-    .images = gObjectEventPicTable_Example2,
+    .images = gObjectEventPicTable_chick2,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example3 = { 
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_gator3 = { 
     .tileTag = 0xFFFF,
-    .paletteTag = OBJ_EVENT_PAL_TAG_EXAMPLE3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_gator3,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,
@@ -4722,6 +4722,6 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example3 = {
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_Standard,
-    .images = gObjectEventPicTable_Example3,
+    .images = gObjectEventPicTable_gator3,
     .affineAnims = gDummySpriteAffineAnimTable,
 };

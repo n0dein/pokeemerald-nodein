@@ -21,7 +21,7 @@
   ],
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXAMPLE3",
+      "graphics_id": "OBJ_EVENT_GFX_gator3",
       "x": 25,
       "y": 21,
       "elevation": 0,
@@ -34,7 +34,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_EXAMPLE3",
+      "graphics_id": "OBJ_EVENT_GFX_gator3",
       "x": 28,
       "y": 21,
       "elevation": 0,
