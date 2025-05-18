@@ -383,6 +383,9 @@ const u16 gObjectEventPal_Lugia[] = INCBIN_U16("graphics/object_events/palettes/
 const u32 gObjectEventPic_Example[] = INCBIN_U32("graphics/object_events/pics/people/example.4bpp");
 const u16 gObjectEventPalette_Example[] = INCBIN_U16("graphics/object_events/pics/people/example.gbapal");
 
+const u32 gObjectEventPic_Example2[] = INCBIN_U32("graphics/object_events/pics/people/example2.4bpp");
+const u16 gObjectEventPalette_Example2[] = INCBIN_U16("graphics/object_events/pics/people/example2.gbapal");
+
 const u16 gObjectEventPal_Substitute[] = INCBIN_U16("graphics/pokemon/question_mark/overworld.gbapal");
 
 const u16 gObjectEventPaletteEmotes[] = INCBIN_U16("graphics/misc/emotes.gbapal");
