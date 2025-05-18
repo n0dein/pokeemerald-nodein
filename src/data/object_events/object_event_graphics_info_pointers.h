@@ -1,4 +1,6 @@
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_chick2;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_gator3;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanSurfing;
