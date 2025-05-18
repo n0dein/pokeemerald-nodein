@@ -74,3 +74,27 @@ HogTown_EventScript_FeraligatrLeft::
 HogTown_Text_FeraligatrLeft::
 	.string "Ferali... Gatr!\p"
 	.string "FERALIGATR!$"
+
+HogTown_EventScript_Totodile::
+	msgbox HogTown_Text_Totodile, MSGBOX_NPC
+	end
+HogTown_Text_Totodile::
+	.string "Totodile!\n"
+	.string "Totodile! Totodile\p"
+	.string "Totodile!$"
+
+HogTown_EventScript_Totodile2::
+	msgbox HogTown_Text_Totodile2, MSGBOX_NPC
+	end
+HogTown_Text_Totodile2::
+	.string "Toto\n"
+	.string "Totodile!\p"
+	.string "Toto...dile! dile!$"
+
+HogTown_EventScript_Totodile3::
+	msgbox HogTown_Text_Totodile3, MSGBOX_NPC
+	end
+HogTown_Text_Totodile3::
+	.string "...toto$"
+
+	
