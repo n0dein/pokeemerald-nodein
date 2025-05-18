@@ -1,4 +1,4 @@
-gObjectEventGraphicsInfoPointers
+gObjectEventGraphicsInfoPointers;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Example;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanNormal;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BrendanMachBike;
