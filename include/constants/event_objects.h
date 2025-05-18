@@ -243,9 +243,9 @@
 #define OBJ_EVENT_GFX_POKE_BALL                  239
 #define OBJ_EVENT_GFX_OW_MON                     240
 #define OBJ_EVENT_GFX_EXAMPLE                    241
-#define OBJ_EVENT_GFX_chick2                   242
-#define OBJ_EVENT_GFX_gator3                   243
-#define OBJ_EVENT_GFX_gator1                   244
+#define OBJ_EVENT_GFX_chick2                     242
+#define OBJ_EVENT_GFX_gator3                     243
+#define OBJ_EVENT_GFX_gator1                     244
 #define OBJ_EVENT_GFX_swimmer_toto               245
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.

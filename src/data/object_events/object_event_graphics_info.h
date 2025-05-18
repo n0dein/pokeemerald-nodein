@@ -4745,7 +4745,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_gator1 = {
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Swimmer_toto = {
-    .tileTag = TAG_NONE,
+    .tileTag = 0xFFFF,
     .paletteTag = OBJ_EVENT_PAL_TAG_swimmer_toto,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
