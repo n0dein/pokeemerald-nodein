@@ -493,6 +493,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_OW_MON] =                   &gObjectEventGraphicsInfo_Follower,
     [OBJ_EVENT_GFX_EXAMPLE] =                  &gObjectEventGraphicsInfo_Example,
     [OBJ_EVENT_GFX_EXAMPLE2] =                 &gObjectEventGraphicsInfo_Example2,
+    [OBJ_EVENT_GFX_EXAMPLE3] =                 &gObjectEventGraphicsInfo_Example3,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

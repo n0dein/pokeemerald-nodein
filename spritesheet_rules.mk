@@ -297,6 +297,9 @@ $(OBJEVENTGFXDIR)/people/example.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/example2.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
 
+$(OBJEVENTGFXDIR)/people/example3.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 4 -mheight 4
+
 $(OBJEVENTGFXDIR)/people/old_man.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
