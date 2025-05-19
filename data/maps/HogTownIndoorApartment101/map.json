@@ -3,7 +3,7 @@
   "name": "HogTownIndoorApartment101",
   "layout": "LAYOUT_HOG_TOWN_INDOOR_APARTMENT101",
   "music": "MUS_VS_RAYQUAZA",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "region_map_section": "MAPSEC_HOG_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",

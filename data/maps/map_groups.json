@@ -1,6 +1,7 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes",
+    "gMapGroup_IndoorHogTown",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
@@ -17,6 +18,7 @@
     "gMapGroup_IndoorMossdeep",
     "gMapGroup_IndoorSootopolis",
     "gMapGroup_IndoorEverGrande",
+    "gMapGroup_IndoorRoute101",
     "gMapGroup_IndoorRoute104",
     "gMapGroup_IndoorRoute111",
     "gMapGroup_IndoorRoute112",
@@ -93,7 +95,6 @@
     "Underwater_Route129",
     "Underwater_Route105",
     "Underwater_Route125",
-    "Route101_House",
     "TestMap",
     "HogTown"
   ],
@@ -102,7 +103,6 @@
     "HogTownIndoorPokemonCenter1F",
     "HogTownIndoorPokemonCenter2F"
   ],
-
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
     "LittlerootTown_BrendansHouse_2F",
@@ -303,6 +303,9 @@
     "EverGrandeCity_PokemonCenter_1F",
     "EverGrandeCity_PokemonCenter_2F",
     "EverGrandeCity_PokemonLeague_2F"
+  ],
+  "gMapGroup_IndoorRoute101": [
+    "Route101_House"
   ],
   "gMapGroup_IndoorRoute104": [
     "Route104_MrBrineysHouse",

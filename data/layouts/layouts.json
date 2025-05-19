@@ -4414,8 +4414,8 @@
     {
       "id": "LAYOUT_ROUTE101_HOUSE",
       "name": "Route101_House_Layout",
-      "width": 15,
-      "height": 10,
+      "width": 11,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/Route101_House/border.bin",
