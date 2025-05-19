@@ -96,9 +96,7 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "TestMap",
-    "HogTown"
-  ],
-  "gMapGroup_IndoorHogTown": [
+    "HogTown",
     "HogTownIndoorApartment101",
     "HogTownIndoorPokemonCenter1F",
     "HogTownIndoorPokemonCenter2F"
