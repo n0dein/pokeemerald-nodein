@@ -97,3 +97,4 @@ HogTown_EventScript_Totodile3::
 HogTown_Text_Totodile3::
 	.string "...toto$"
 
+	
