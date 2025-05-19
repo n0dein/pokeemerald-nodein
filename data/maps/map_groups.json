@@ -98,17 +98,17 @@
     "TestMap",
     "HogTown"
   ],
-  "gMapGroup_IndoorHogTown": [
-    "HogTownIndoorApartment101",
-    "HogTownIndoorPokemonCenter1F",
-    "HogTownIndoorPokemonCenter2F"
-  ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
     "LittlerootTown_BrendansHouse_2F",
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
     "LittlerootTown_ProfessorBirchsLab"
+  ],
+  "gMapGroup_IndoorHogTown": [
+    "HogTownIndoorApartment101",
+    "HogTownIndoorPokemonCenter1F",
+    "HogTownIndoorPokemonCenter2F"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",
