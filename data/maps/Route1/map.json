@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_HOG_TOWN",
-      "offset": -12,
+      "offset": -2,
       "direction": "up"
     }
   ],

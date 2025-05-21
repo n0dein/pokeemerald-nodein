@@ -4434,7 +4434,7 @@
     {
       "id": "LAYOUT_HOG_TOWN",
       "name": "HogTown_Layout",
-      "width": 42,
+      "width": 50,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4474,8 +4474,8 @@
     {
       "id": "LAYOUT_ROUTE1",
       "name": "Route1_Layout",
-      "width": 30,
-      "height": 60,
+      "width": 50,
+      "height": 70,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/Route1/border.bin",
