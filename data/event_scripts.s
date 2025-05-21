@@ -1166,3 +1166,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/HogTownIndoorPokemonCenter1F/scripts.inc"
 
 	.include "data/maps/HogTownIndoorPokemonCenter2F/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
