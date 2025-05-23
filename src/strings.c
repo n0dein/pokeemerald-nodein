@@ -509,6 +509,7 @@ const u8 gText_Double2[] = _("DOUBLE");
 const u8 gText_Multi[] = _("MULTI");
 const u8 gText_MultiLink[] = _("MULTI-LINK");
 const u8 gText_MenuOptionPokedex[] = _("POKéDEX");
+const u8 gText_MenuOptionBox[] = _("PC BOX");
 const u8 gText_MenuOptionPokemon[] = _("POKéMON");
 const u8 gText_MenuOptionBag[] = _("BAG");
 const u8 gText_MenuOptionPokenav[] = _("POKéNAV");
