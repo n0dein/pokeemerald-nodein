@@ -817,7 +817,7 @@ static bool8 StartMenuBoxCallback(void)
 {
     RemoveExtraStartMenuWindows();
     HideStartMenu();
-    ScriptContext1_SetupScript(EventScript_PC);
+    ScriptContext_SetupScript(EventScript_PC);
 
     return TRUE;
 }
