@@ -1,7 +1,6 @@
 PartnerPlayground_MapScripts::
 	.byte 0
 
-
 PartnerPlayground_EventScript_Mudkip::
 # 5 "data/maps/PartnerPlayground/scripts.pory"
 	showmonpic SPECIES_MUDKIP, 10, 3
