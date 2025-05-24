@@ -12,11 +12,12 @@ PartnerPlayground_EventScript_Machamp::
 PartnerPlayground_Text_Sign:
 	.string "{LEFT_ARROW} PARTNER PLAYGROUND\p"
 	.string "“Where new trainers make\n"
-	.string "lifetime bonds with POKéMON.$"
+	.string "lifetime bonds with POKéMON.”$"
 
 PartnerPlayground_Text_Machamp:
 	.string "The Machamp motions toward your\n"
 	.string "trainer card.\p"
 	.string "It puts eight fingers up and\n"
 	.string "gestures for you to go away.\p"
+
 
