@@ -1158,6 +1158,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NewBirchLab/scripts.inc"
 
 	.include "data/maps/PartnerPlayground/scripts.inc"
-
-	.include "data/scripts/scripts.pory"
 	
+		
