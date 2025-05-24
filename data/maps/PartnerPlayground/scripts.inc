@@ -18,6 +18,6 @@ PartnerPlayground_Text_Machamp:
 	.string "The Machamp motions toward your\n"
 	.string "trainer card.\p"
 	.string "It puts eight fingers up and\n"
-	.string "gestures for you to go away.\p"
+	.string "gestures for you to go away.$"
 
 
