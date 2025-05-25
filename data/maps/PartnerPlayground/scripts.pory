@@ -289,7 +289,7 @@ script NicknamePartyMon{
         call(Common_EventScript_NameReceivedPartyMon)
     }
     if(var(VAR_RESULT) == NO){
-       return 
+       end 
     }
 }
  
@@ -301,7 +301,7 @@ script NicknameBoxMon{
     }
     
     if(var(VAR_RESULT) == NO){
-       return 
+       end
     }
     
     msgbox("Transferred to PC")
@@ -309,5 +309,6 @@ script NicknameBoxMon{
  
 text PartnerPlayground_NotChosen{
     "You did not choose the Pokemon"
+    end
 }
 
