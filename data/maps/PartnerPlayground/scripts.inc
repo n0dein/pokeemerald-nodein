@@ -224,5 +224,182 @@ PP_TorchicToPC::
 	goto PP_ReceivedTorchic
 	end
 
+PP_Turtwig::
+	lockall
+	playmoncry SPECIES_TURTWIG, CRY_MODE_NORMAL
+	waitmoncry
+	showmonpic SPECIES_TURTWIG, 10, 3
+	msgbox PP_TurtwigChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO PP_NotChosen
+	goto PP_GiveTurtwig
+	end
 
+PP_GiveTurtwig::
+	givemon SPECIES_TURTWIG, 5, 
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyTurtwig
+	goto_if_eq  VAR_RESULT, MON_GIVEN_TO_PC, PP_PCTurtwig
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+PP_PartyTurtwig::
+	call PP_CelebrateTurtwig
+	msgbox PP_NicknameChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO PP_NotNamed
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedTurtwig
+	end 
+
+PP_CelebrateTurtwig::
+	playfanfare MUS_OBTAIN_ITEM
+	message PP_TurtwigText1
+	waitmessage
+	waitfanfare
+	setflag FLAG_SYS_POKEMON_GET
+	return
+
+PP_PCTurtwig::
+	call PP_CelebrateTurtwig
+	msgbox PP_NicknameChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO PP_TurtwigToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto PP_TurtwigToPC
+	end 
+
+PP_TurtwigChoice::
+	.string "Do you want to take Turtwig with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_TurtwigText1::
+	.string "You received Turtwig!\n"
+	.string "The Tiny Leaf POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+PP_ReceivedTurtwig::
+	hidemonpic
+	releaseall
+	end
+
+PP_TurtwigToPC::
+	call Common_EventScript_TransferredToPC
+	goto PP_ReceivedTurtwig
+	end
+
+PP_Chimchar::
+	lockall
+	playmoncry SPECIES_CHIMCHAR, CRY_MODE_NORMAL
+	waitmoncry
+	showmonpic SPECIES_CHIMCHAR, 10, 3
+	msgbox PP_ChimcharChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO PP_NotChosen
+	goto PP_GiveChimchar
+	end
+
+PP_GiveChimchar::
+	givemon SPECIES_CHIMCHAR, 5, 
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyChimchar
+	goto_if_eq  VAR_RESULT, MON_GIVEN_TO_PC, PP_PCChimchar
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+PP_PartyChimchar::
+	call PP_CelebrateChimchar
+	msgbox PP_NicknameChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO PP_NotNamed
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedChimchar
+	end 
+
+PP_CelebrateChimchar::
+	playfanfare MUS_OBTAIN_ITEM
+	message PP_ChimcharText1
+	waitmessage
+	waitfanfare
+	setflag FLAG_SYS_POKEMON_GET
+	return
+
+PP_PCChimchar::
+	call PP_CelebrateChimchar
+	msgbox PP_NicknameChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO PP_ChimcharToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto PP_ChimcharToPC
+	end 
+
+PP_ChimcharChoice::
+	.string "Do you want to take Chimchar with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_ChimcharText1::
+	.string "You received Chimchar!\n"
+	.string "The Chimp POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+PP_ReceivedChimchar::
+	hidemonpic
+	releaseall
+	end
+
+PP_ChimcharToPC::
+	call Common_EventScript_TransferredToPC
+	goto PP_ReceivedChimchar
+	end
 	
+	PP_Piplup::
+	lockall
+	playmoncry SPECIES_PIPLUP, CRY_MODE_NORMAL
+	waitmoncry
+	showmonpic SPECIES_PIPLUP, 10, 3
+	msgbox PP_PiplupChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO PP_NotChosen
+	goto PP_GivePiplup
+	end
+
+PP_GivePiplup::
+	givemon SPECIES_PIPLUP, 5, 
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyPiplup
+	goto_if_eq  VAR_RESULT, MON_GIVEN_TO_PC, PP_PCPiplup
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+PP_PartyPiplup::
+	call PP_CelebratePiplup
+	msgbox PP_NicknameChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO PP_NotNamed
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedPiplup
+	end 
+
+PP_CelebratePiplup::
+	playfanfare MUS_OBTAIN_ITEM
+	message PP_PiplupText1
+	waitmessage
+	waitfanfare
+	setflag FLAG_SYS_POKEMON_GET
+	return
+
+PP_PCPiplup::
+	call PP_CelebratePiplup
+	msgbox PP_NicknameChoice, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO PP_PiplupToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto PP_PiplupToPC
+	end 
+
+PP_PiplupChoice::
+	.string "Do you want to take Piplup with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_PiplupText1::
+	.string "You received Piplup!\n"
+	.string "The Penguin POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+PP_ReceivedPiplup::
+	hidemonpic
+	releaseall
+	end
+
+PP_PiplupToPC::
+	call Common_EventScript_TransferredToPC
+	goto PP_ReceivedPiplup
+	end
