@@ -214,7 +214,6 @@ script PartnerPlayground_EventScript_Torchic{
     else{
         hidemonpic
         msgbox(PartnerPlayground_NotChosen)
-        end
     }
  
 }
