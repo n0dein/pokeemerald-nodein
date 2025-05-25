@@ -1,6 +1,6 @@
 PartnerPlayground_MapScripts::
 	.byte 0
-
+	
 PartnerPlayground_EventScript_Sign::
 	msgbox PartnerPlayground_Text_Sign, MSGBOX_SIGN
 	end
