@@ -9,7 +9,7 @@ PartnerPlayground_EventScript_Machamp::
 	msgbox PartnerPlayground_Text_Machamp, MSGBOX_NPC
 	end
 
-PartnerPlayground_NotChosen::
+PartnerPlayground_EventScript_NotChosen::
 	msgbox PartnerPlayground_NotChosen, MSGBOX_NPC
 	end
 
