@@ -223,3 +223,5 @@ PP_TorchicToPC::
 	call Common_EventScript_TransferredToPC
 	goto PP_ReceivedTorchic
 	end
+
+	
