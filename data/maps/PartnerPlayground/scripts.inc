@@ -32,7 +32,7 @@ PartnerPlayground_EventScript_Mudkip::
 	hidemonpic
 # 30 "data/maps/PartnerPlayground/scripts.pory"
 	msgbox PartnerPlayground_NotChosen
-	return
+	end
 
 PartnerPlayground_EventScript_Mudkip_1:
 # 8 "data/maps/PartnerPlayground/scripts.pory"
@@ -88,7 +88,7 @@ PartnerPlayground_EventScript_Totodile::
 	hidemonpic
 # 61 "data/maps/PartnerPlayground/scripts.pory"
 	msgbox PartnerPlayground_NotChosen
-	return
+	end
 
 PartnerPlayground_EventScript_Totodile_1:
 # 39 "data/maps/PartnerPlayground/scripts.pory"
@@ -144,7 +144,7 @@ PartnerPlayground_EventScript_Squirtle::
 	hidemonpic
 # 92 "data/maps/PartnerPlayground/scripts.pory"
 	msgbox PartnerPlayground_NotChosen
-	return
+	end
 
 PartnerPlayground_EventScript_Squirtle_1:
 # 70 "data/maps/PartnerPlayground/scripts.pory"
@@ -200,7 +200,7 @@ PartnerPlayground_EventScript_Treecko::
 	hidemonpic
 # 123 "data/maps/PartnerPlayground/scripts.pory"
 	msgbox PartnerPlayground_NotChosen
-	return
+	end
 
 PartnerPlayground_EventScript_Treecko_1:
 # 101 "data/maps/PartnerPlayground/scripts.pory"
@@ -256,7 +256,7 @@ PartnerPlayground_EventScript_Chikorita::
 	hidemonpic
 # 154 "data/maps/PartnerPlayground/scripts.pory"
 	msgbox PartnerPlayground_NotChosen
-	return
+	end
 
 PartnerPlayground_EventScript_Chikorita_1:
 # 132 "data/maps/PartnerPlayground/scripts.pory"
@@ -312,7 +312,7 @@ PartnerPlayground_EventScript_Bulbasaur::
 	hidemonpic
 # 185 "data/maps/PartnerPlayground/scripts.pory"
 	msgbox PartnerPlayground_NotChosen
-	return
+	end
 
 PartnerPlayground_EventScript_Bulbasaur_1:
 # 163 "data/maps/PartnerPlayground/scripts.pory"
@@ -368,7 +368,7 @@ PartnerPlayground_EventScript_Torchic::
 	hidemonpic
 # 216 "data/maps/PartnerPlayground/scripts.pory"
 	msgbox PartnerPlayground_NotChosen
-	return
+	end
 
 PartnerPlayground_EventScript_Torchic_1:
 # 194 "data/maps/PartnerPlayground/scripts.pory"
@@ -424,7 +424,7 @@ PartnerPlayground_EventScript_Cyndaquil::
 	hidemonpic
 # 247 "data/maps/PartnerPlayground/scripts.pory"
 	msgbox PartnerPlayground_NotChosen
-	return
+	end
 
 PartnerPlayground_EventScript_Cyndaquil_1:
 # 225 "data/maps/PartnerPlayground/scripts.pory"
@@ -480,7 +480,7 @@ PartnerPlayground_EventScript_Charmander::
 	hidemonpic
 # 278 "data/maps/PartnerPlayground/scripts.pory"
 	msgbox PartnerPlayground_NotChosen
-	return
+	end
 
 PartnerPlayground_EventScript_Charmander_1:
 # 256 "data/maps/PartnerPlayground/scripts.pory"
@@ -546,7 +546,7 @@ NicknamePartyMon_2:
 	goto NicknamePartyMon_1
 
 NicknamePartyMon_4:
-	return
+	end
 
 
 NicknameBoxMon::
@@ -571,7 +571,7 @@ NicknameBoxMon_2:
 	goto NicknameBoxMon_1
 
 NicknameBoxMon_5:
-	return
+	end
 
 
 PartnerPlayground_EventScript_Mudkip_Text_0:

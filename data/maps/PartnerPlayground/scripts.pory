@@ -309,6 +309,5 @@ script NicknameBoxMon{
  
 text PartnerPlayground_NotChosen{
     "You did not choose the Pokemon"
-    end
 }
 
