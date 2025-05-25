@@ -1,6 +1,17 @@
 PartnerPlayground_MapScripts::
 	.byte 0
 
+PartnerPlayground_Text_Sign:
+	.string "{LEFT_ARROW} PARTNER PLAYGROUND\p"
+	.string "“Where new trainers make\n"
+	.string "lifetime bonds with POKéMON.”$"
+
+PartnerPlayground_Text_Machamp:
+	.string "The Machamp motions toward your\n"
+	.string "trainer card.\p"
+	.string "It puts eight fingers up and\n"
+	.string "gestures for you to go away.$"
+
 PartnerPlayground_EventScript_Mudkip::
 # 5 "data/maps/PartnerPlayground/scripts.pory"
 	showmonpic SPECIES_MUDKIP, 10, 3
