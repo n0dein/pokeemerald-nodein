@@ -50,6 +50,7 @@ PP_CelebrateMudkip::
 	compare VAR_RESULT, YES
 	goto_if_eq PP_NicknameMon
 	hidemonpic
+	releaseall
 	return
 
 PP_PCMudkip::
@@ -62,6 +63,7 @@ PP_PCMudkip::
 	compare VAR_RESULT, YES
 	goto_if_eq PP_NicknameMonPC
 	call Common_EventScript_TransferredToPC
+	releaseall
 	return
 
 PP_MudkipChoice::
@@ -81,8 +83,10 @@ PP_NicknameChoice::
 
 PP_NicknameMon::
 	call Common_EventScript_NameReceivedPartyMon
+	releaseall
 	end
 
 PP_NicknameMonPC::
 	call Common_EventScript_NameReceivedBoxMon
+	releaseall
 	end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
