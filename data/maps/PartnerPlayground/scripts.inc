@@ -22,7 +22,8 @@ PartnerPlayground_Text_Machamp:
 
 PP_Mudkip::
 	lockall
-	playmoncry SPECIES_MUDKIP
+	playmoncry SPECIES_MUDKIP, CRY_MODE_NORMAL
+	waitmoncry
 	showmonpic SPECIES_MUDKIP, 10, 3
 	msgbox PP_MudkipChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_NotChosen
@@ -63,7 +64,8 @@ PP_PCMudkip::
 
 PP_Treecko::
 	lockall
-	playmoncry SPECIES_TREECKO
+	playmoncry SPECIES_TREECKO, CRY_MODE_NORMAL
+	waitmoncry
 	showmonpic SPECIES_TREECKO, 10, 3
 	msgbox PP_TreeckoChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_NotChosen
@@ -101,10 +103,11 @@ PP_PCTreecko::
 	call Common_EventScript_NameReceivedBoxMon
 	goto PP_TreeckoToPC
 	end
-	
+
 PP_Torchic::
 	lockall
-	playmoncry SPECIES_Torchic
+	playmoncry SPECIES_Torchic, CRY_MODE_NORMAL
+	waitmoncry
 	showmonpic SPECIES_Torchic, 10, 3
 	msgbox PP_TorchicChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_NotChosen
