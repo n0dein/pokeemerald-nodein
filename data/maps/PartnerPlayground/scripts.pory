@@ -27,7 +27,7 @@ script PartnerPlayground_EventScript_Mudkip{
     }
     else{
         hidemonpic
-        msgbox(PartnerPlayground_NotChosen)
+        msgbox(PartnerPlayground_EventScript_NotChosen)
     }
  
 }
@@ -58,7 +58,7 @@ script PartnerPlayground_EventScript_Totodile{
     }
     else{
         hidemonpic
-        msgbox(PartnerPlayground_NotChosen)
+        msgbox(PartnerPlayground_EventScript_NotChosen)
     }
  
 }
@@ -89,7 +89,7 @@ script PartnerPlayground_EventScript_Squirtle{
     }
     else{
         hidemonpic
-        msgbox(PartnerPlayground_NotChosen)
+        msgbox(PartnerPlayground_EventScript_NotChosen)
     }
  
 }
@@ -120,7 +120,7 @@ script PartnerPlayground_EventScript_Treecko{
     }
     else{
         hidemonpic
-        msgbox(PartnerPlayground_NotChosen)
+        msgbox(PartnerPlayground_EventScript_NotChosen)
     }
  
 }
@@ -151,7 +151,7 @@ script PartnerPlayground_EventScript_Chikorita{
     }
     else{
         hidemonpic
-        msgbox(PartnerPlayground_NotChosen)
+        msgbox(PartnerPlayground_EventScript_NotChosen)
     }
  
 }
@@ -182,7 +182,7 @@ script PartnerPlayground_EventScript_Bulbasaur{
     }
     else{
         hidemonpic
-        msgbox(PartnerPlayground_NotChosen)
+        msgbox(PartnerPlayground_EventScript_NotChosen)
     }
  
 }
@@ -213,7 +213,7 @@ script PartnerPlayground_EventScript_Torchic{
     }
     else{
         hidemonpic
-        msgbox(PartnerPlayground_NotChosen)
+        msgbox(PartnerPlayground_EventScript_NotChosen)
         end
     }
  
@@ -245,7 +245,7 @@ script PartnerPlayground_EventScript_Cyndaquil{
     }
     else{
         hidemonpic
-        msgbox(PartnerPlayground_NotChosen)
+        msgbox(PartnerPlayground_EventScript_NotChosen)
     }
  
 }
@@ -276,7 +276,7 @@ script PartnerPlayground_EventScript_Charmander{
     }
     else{
         hidemonpic
-        msgbox(PartnerPlayground_NotChosen)
+        msgbox(PartnerPlayground_EventScript_NotChosen)
     }
  
 }
