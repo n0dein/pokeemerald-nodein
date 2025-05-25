@@ -307,7 +307,5 @@ script NicknameBoxMon{
     msgbox("Transferred to PC")
 }
  
-text PartnerPlayground_NotChosen{
-    "You did not choose the Pokemon"
-}
+
 
