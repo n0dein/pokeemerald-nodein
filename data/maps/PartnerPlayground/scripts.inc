@@ -65,12 +65,11 @@ PP_PCMudkip::
 PP_MudkipChoice::
 	.string "Do you want to take this\p"
 	.string "Mudkip with you to be your\n"
-	.string "partner?\$"
+	.string "partner?$"
 
 PP_MudkipText1::
 	.string "You received a Mudkip!$"
 
 PP_MudkipText2::
-	.string "You decided not to take the Mudkip.\$"
+	.string "You decided not to take the Mudkip.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 
-	
