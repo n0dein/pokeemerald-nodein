@@ -39,7 +39,6 @@ PP_GiveMudkip::
 	compare VAR_RESULT, MON_GIVEN_TO_PC
 	goto_if_eq PP_PCMudkip
 	hidemonpic
-	msgbox PP_MudkipText2
 	return
 
 PP_CelebrateMudkip::
@@ -56,19 +55,20 @@ PP_PCMudkip::
 	removeobject 1
 	setflag FLAG_SYS_POKEMON_GET
 	call Common_EventScript_NameReceivedBoxMon
+	goto PP_MudkipPC_MSG
 	return
 
 PP_MudkipChoice::
-	.string "Do you want to take this\p"
-	.string "Mudkip with you to be your\n"
-	.string "partner?$"
+	.string "Do you want to take this Mudkip\n"
+	.string "with you to be your first partner POKéMON?$"
 
 PP_MudkipText1::
-	.string "You received a Mudkip!$"
-
-PP_MudkipText2::
-	.string "You decided not to take the Mudkip.$" 
+	.string "You received Mudkip!\n"
+	.string "The Mud Fish POKéMON.$"
 
 PP_NotChosen::
 	.string "You decided not to take this POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
+PP_MudkipPC_MSG::
+	call Common_EventScript_TransferredToPC
+	end
