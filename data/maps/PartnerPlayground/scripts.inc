@@ -8,11 +8,7 @@ PartnerPlayground_EventScript_Sign::
 PartnerPlayground_EventScript_Machamp::
 	msgbox PartnerPlayground_Text_Machamp, MSGBOX_NPC
 	end
-
-PartnerPlayground_EventScript_NotChosen::
-	msgbox PartnerPlayground_NotChosen, MSGBOX_NPC
-	end
-
+	
 PartnerPlayground_Text_Sign:
 	.string "{LEFT_ARROW} PARTNER PLAYGROUND\p"
 	.string "“Where new trainers make\n"
@@ -51,7 +47,7 @@ PP_CelebrateMudkip::
 	msgbox PP_MudkipText1
 	removeobject 1
 	setflag FLAG_SYS_POKEMON_GET
-	call NicknamePartyMon
+	call Common_EventScript_NameReceivedPartyMon
 	return
 
 PP_PCMudkip::
@@ -59,7 +55,7 @@ PP_PCMudkip::
 	msgbox PP_MudkipText1
 	removeobject 1
 	setflag FLAG_SYS_POKEMON_GET
-	call NicknameBoxMon
+	call Common_EventScript_NameReceivedBoxMon
 	return
 
 PP_MudkipChoice::
@@ -71,5 +67,8 @@ PP_MudkipText1::
 	.string "You received a Mudkip!$"
 
 PP_MudkipText2::
-	.string "You decided not to take the Mudkip.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+	.string "You decided not to take the Mudkip.$" 
+
+PP_NotChosen::
+	.string "You decided not to take this POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
