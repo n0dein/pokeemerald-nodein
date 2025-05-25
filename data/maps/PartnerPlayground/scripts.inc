@@ -29,7 +29,7 @@ PP_Mudkip::
 	goto_if_eq PP_GiveMudkip
 	hidemonpic
 	msgbox PP_NotChosen
-	releaseall
+	removeobject 1
 	end
 
 PP_GiveMudkip::
@@ -50,19 +50,19 @@ PP_CelebrateMudkip::
 	compare VAR_RESULT, YES
 	goto_if_eq PP_NicknameMon
 	hidemonpic
-	return
+	end
 
 PP_PCMudkip::
 	playfanfare MUS_OBTAIN_ITEM
 	msgbox PP_MudkipText1
 	removeobject 1
 	setflag FLAG_SYS_POKEMON_GET
-	setflag FLAG_SYS_POKEMON_GET
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq PP_NicknameMonPC
 	call Common_EventScript_TransferredToPC
-	return
+	hidemonpic
+	end
 
 PP_MudkipChoice::
 	.string "Do you want to take Mudkip with\n"
