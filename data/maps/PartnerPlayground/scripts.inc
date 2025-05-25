@@ -81,10 +81,8 @@ PP_NicknameChoice::
 
 PP_NicknameMon::
 	call Common_EventScript_NameReceivedPartyMon
-	releaseall
-	end
+	return
 
 PP_NicknameMonPC::
 	call Common_EventScript_NameReceivedBoxMon
-	releaseall
-	end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+	return                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
