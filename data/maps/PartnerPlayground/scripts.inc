@@ -10,7 +10,7 @@ PartnerPlayground_EventScript_Machamp::
 	end
 
 PartnerPlayground_EventScript_NotChosen::
-	msgbox PartnerPlayground_EventScript_NotChosen, MSGBOX_NPC
+	msgbox PartnerPlayground_NotChosen, MSGBOX_NPC
 	end
 
 PartnerPlayground_Text_Sign:
@@ -35,12 +35,12 @@ PartnerPlayground_EventScript_Mudkip::
 # 29 "data/maps/PartnerPlayground/scripts.pory"
 	hidemonpic
 # 30 "data/maps/PartnerPlayground/scripts.pory"
-	msgbox PartnerPlayground_EventScript_NotChosen
+	msgbox PartnerPlayground_NotChosen
 	end
 
 PartnerPlayground_EventScript_Mudkip_1:
 # 8 "data/maps/PartnerPlayground/scripts.pory"
-	givemon SPECIES_MUDKIP, 5, ITEM_MASTER_BALL
+	givemon SPECIES_MUDKIP, 50, ITEM_MASTER_BALL
 # 9 "data/maps/PartnerPlayground/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq PartnerPlayground_EventScript_Mudkip_4
@@ -91,12 +91,12 @@ PartnerPlayground_EventScript_Totodile::
 # 60 "data/maps/PartnerPlayground/scripts.pory"
 	hidemonpic
 # 61 "data/maps/PartnerPlayground/scripts.pory"
-	msgbox PartnerPlayground_EventScript_NotChosen
+	msgbox PartnerPlayground_NotChosen
 	end
 
 PartnerPlayground_EventScript_Totodile_1:
 # 39 "data/maps/PartnerPlayground/scripts.pory"
-	givemon SPECIES_TOTODILE, 5, ITEM_MASTER_BALL
+	givemon SPECIES_TOTODILE, 50, ITEM_MASTER_BALL
 # 40 "data/maps/PartnerPlayground/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq PartnerPlayground_EventScript_Totodile_4
@@ -147,12 +147,12 @@ PartnerPlayground_EventScript_Squirtle::
 # 91 "data/maps/PartnerPlayground/scripts.pory"
 	hidemonpic
 # 92 "data/maps/PartnerPlayground/scripts.pory"
-	msgbox PartnerPlayground_EventScript_NotChosen
+	msgbox PartnerPlayground_NotChosen
 	end
 
 PartnerPlayground_EventScript_Squirtle_1:
 # 70 "data/maps/PartnerPlayground/scripts.pory"
-	givemon SPECIES_SQUIRTLE, 5, ITEM_MASTER_BALL
+	givemon SPECIES_SQUIRTLE, 50, ITEM_MASTER_BALL
 # 71 "data/maps/PartnerPlayground/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq PartnerPlayground_EventScript_Squirtle_4
@@ -203,12 +203,12 @@ PartnerPlayground_EventScript_Treecko::
 # 122 "data/maps/PartnerPlayground/scripts.pory"
 	hidemonpic
 # 123 "data/maps/PartnerPlayground/scripts.pory"
-	msgbox PartnerPlayground_EventScript_NotChosen
+	msgbox PartnerPlayground_NotChosen
 	end
 
 PartnerPlayground_EventScript_Treecko_1:
 # 101 "data/maps/PartnerPlayground/scripts.pory"
-	givemon SPECIES_TREECKO, 5, ITEM_MASTER_BALL
+	givemon SPECIES_TREECKO, 50, ITEM_MASTER_BALL
 # 102 "data/maps/PartnerPlayground/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq PartnerPlayground_EventScript_Treecko_4
@@ -259,12 +259,12 @@ PartnerPlayground_EventScript_Chikorita::
 # 153 "data/maps/PartnerPlayground/scripts.pory"
 	hidemonpic
 # 154 "data/maps/PartnerPlayground/scripts.pory"
-	msgbox PartnerPlayground_EventScript_NotChosen
+	msgbox PartnerPlayground_NotChosen
 	end
 
 PartnerPlayground_EventScript_Chikorita_1:
 # 132 "data/maps/PartnerPlayground/scripts.pory"
-	givemon SPECIES_CHIKORITA, 5, ITEM_MASTER_BALL
+	givemon SPECIES_CHIKORITA, 50, ITEM_MASTER_BALL
 # 133 "data/maps/PartnerPlayground/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq PartnerPlayground_EventScript_Chikorita_4
@@ -315,12 +315,12 @@ PartnerPlayground_EventScript_Bulbasaur::
 # 184 "data/maps/PartnerPlayground/scripts.pory"
 	hidemonpic
 # 185 "data/maps/PartnerPlayground/scripts.pory"
-	msgbox PartnerPlayground_EventScript_NotChosen
+	msgbox PartnerPlayground_NotChosen
 	end
 
 PartnerPlayground_EventScript_Bulbasaur_1:
 # 163 "data/maps/PartnerPlayground/scripts.pory"
-	givemon SPECIES_BULBASAUR, 5, ITEM_MASTER_BALL
+	givemon SPECIES_BULBASAUR, 50, ITEM_MASTER_BALL
 # 164 "data/maps/PartnerPlayground/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq PartnerPlayground_EventScript_Bulbasaur_4
@@ -371,12 +371,12 @@ PartnerPlayground_EventScript_Torchic::
 # 215 "data/maps/PartnerPlayground/scripts.pory"
 	hidemonpic
 # 216 "data/maps/PartnerPlayground/scripts.pory"
-	msgbox PartnerPlayground_EventScript_NotChosen
+	msgbox PartnerPlayground_NotChosen
 	end
 
 PartnerPlayground_EventScript_Torchic_1:
 # 194 "data/maps/PartnerPlayground/scripts.pory"
-	givemon SPECIES_TORCHIC, 5, ITEM_MASTER_BALL
+	givemon SPECIES_TORCHIC, 50, ITEM_MASTER_BALL
 # 195 "data/maps/PartnerPlayground/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq PartnerPlayground_EventScript_Torchic_4
@@ -427,12 +427,12 @@ PartnerPlayground_EventScript_Cyndaquil::
 # 246 "data/maps/PartnerPlayground/scripts.pory"
 	hidemonpic
 # 247 "data/maps/PartnerPlayground/scripts.pory"
-	msgbox PartnerPlayground_EventScript_NotChosen
+	msgbox PartnerPlayground_NotChosen
 	end
 
 PartnerPlayground_EventScript_Cyndaquil_1:
 # 225 "data/maps/PartnerPlayground/scripts.pory"
-	givemon SPECIES_CYNDAQUIL, 5, ITEM_MASTER_BALL
+	givemon SPECIES_CYNDAQUIL, 50, ITEM_MASTER_BALL
 # 226 "data/maps/PartnerPlayground/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq PartnerPlayground_EventScript_Cyndaquil_4
@@ -483,12 +483,12 @@ PartnerPlayground_EventScript_Charmander::
 # 277 "data/maps/PartnerPlayground/scripts.pory"
 	hidemonpic
 # 278 "data/maps/PartnerPlayground/scripts.pory"
-	msgbox PartnerPlayground_EventScript_NotChosen
+	msgbox PartnerPlayground_NotChosen
 	end
 
 PartnerPlayground_EventScript_Charmander_1:
 # 256 "data/maps/PartnerPlayground/scripts.pory"
-	givemon SPECIES_CHARMANDER, 5, ITEM_MASTER_BALL
+	givemon SPECIES_CHARMANDER, 50, ITEM_MASTER_BALL
 # 257 "data/maps/PartnerPlayground/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq PartnerPlayground_EventScript_Charmander_4
