@@ -9,6 +9,10 @@ PartnerPlayground_EventScript_Machamp::
 	msgbox PartnerPlayground_Text_Machamp, MSGBOX_NPC
 	end
 
+PartnerPlayground_NotChosen::
+	msgbox PartnerPlayground_NotChosen, MSGBOX_NPC
+	end
+
 PartnerPlayground_Text_Sign:
 	.string "{LEFT_ARROW} PARTNER PLAYGROUND\p"
 	.string "“Where new trainers make\n"
@@ -659,5 +663,5 @@ NicknameBoxMon_Text_0:
 	.string "Transferred to PC$"
 
 PartnerPlayground_NotChosen::
-# 310 "data/maps/PartnerPlayground/scripts.pory"
 	.string "You did not choose the Pokemon$"
+
