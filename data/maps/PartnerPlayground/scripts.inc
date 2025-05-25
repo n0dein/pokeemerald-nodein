@@ -49,6 +49,7 @@ PP_CelebrateMudkip::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq PP_NicknameMon
+	hidemonpic
 	return
 
 PP_PCMudkip::
@@ -56,7 +57,10 @@ PP_PCMudkip::
 	msgbox PP_MudkipText1
 	removeobject 1
 	setflag FLAG_SYS_POKEMON_GET
-	call Common_EventScript_NameReceivedBoxMon
+	setflag FLAG_SYS_POKEMON_GET
+	msgbox PP_NicknameChoice, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq PP_NicknameMonPC
 	call Common_EventScript_TransferredToPC
 	return
 
@@ -78,4 +82,7 @@ PP_NicknameChoice::
 PP_NicknameMon::
 	call Common_EventScript_NameReceivedPartyMon
 	end
-	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+
+PP_NicknameMonPC::
+	call Common_EventScript_NameReceivedBoxMon
+	end                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
