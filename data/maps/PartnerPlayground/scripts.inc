@@ -106,16 +106,16 @@ PP_PCTreecko::
 
 PP_Torchic::
 	lockall
-	playmoncry SPECIES_Torchic, CRY_MODE_NORMAL
+	playmoncry SPECIES_TORCHIC, CRY_MODE_NORMAL
 	waitmoncry
-	showmonpic SPECIES_Torchic, 10, 3
+	showmonpic SPECIES_TORCHIC, 10, 3
 	msgbox PP_TorchicChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_NotChosen
 	goto PP_GiveTorchic
 	end
 
 PP_GiveTorchic::
-	givemon SPECIES_Torchic, 5, 
+	givemon SPECIES_TORCHIC, 5, 
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyTorchic
 	goto_if_eq  VAR_RESULT, MON_GIVEN_TO_PC, PP_PCTorchic
 	goto Common_EventScript_NoMoreRoomForPokemon
