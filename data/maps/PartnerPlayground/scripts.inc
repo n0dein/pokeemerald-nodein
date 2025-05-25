@@ -47,8 +47,8 @@ PP_CelebrateMudkip::
 	removeobject 1
 	setflag FLAG_SYS_POKEMON_GET
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq PP_NicknameMon
+	goto_if_eq VAR_RESULT, YES PP_NicknameMon
+	goto_if_eq VAR_RESULT, NO PP_NotNamed
 	hidemonpic
 	end
 
@@ -78,6 +78,10 @@ PP_NotChosen::
 PP_NicknameChoice::
  	.string "Do you want to give a nickname\n"
 	.string "to the POKéMON you received?$"
+
+PP_NotNamed::
+	.string "You can always pick a name later\n"
+	.string "on the summary screen.$"
 
 PP_NicknameMon::
 	call Common_EventScript_NameReceivedPartyMon
