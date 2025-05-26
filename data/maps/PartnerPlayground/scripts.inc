@@ -5,7 +5,6 @@ PP_TriggerUnlock::
 	getpartysize
 	compare VAR_RESULT, 1
 	goto_if_ge VAR_RESULT, 1, PP_UnlockPath
-	closemessage
 	releaseall
 	end
 
@@ -18,8 +17,8 @@ PP_UnlockText::
 	.string "she is so excited to see.$"
 
 PP_UnlockPath::
-	message PP_UnlockText
-	waitmessage
+	msgbox PP_UnlockText, MSGBOX_DEFAULT
+	closemessage
 	setvar VAR_STARTER_GOT, 2
 	return
 
