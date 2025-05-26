@@ -409,6 +409,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Eevee",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MYSTERY_GIFT_MAN",
+      "x": 34,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PP_Pass_Guard_Event",
+      "flag": "FLAG_PP_Pass"
     }
   ],
   "warp_events": [
