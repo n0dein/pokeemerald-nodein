@@ -6,15 +6,6 @@ PartnerPlayground_OnTransition::
 	setvar VAR_STARTER_GOT, 0
 	end
 
-PP_TriggerSetMap::
-	getpartysize
-	compare VAR_RESULT, 1
-	goto_if_ge VAR_RESULT, 1 PP_UnlockPath
-	goto_if_lt VAR_RESULT, 1 PP_EnterPP
-	compare VAR_STARTER_GOT, 1
-	goto_if_eq VAR_STARTER_GOT, 1 PP_PreventExitEast
-	end
-
 PP_UnlockPath::
 	setvar VAR_STARTER_GOT, 2
 	return
@@ -1856,5 +1847,4 @@ PP_EeveeToPC::
 	call Common_EventScript_TransferredToPC
 	goto PP_ReceivedEevee
 	end
-
 

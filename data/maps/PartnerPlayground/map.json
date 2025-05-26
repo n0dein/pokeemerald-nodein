@@ -422,7 +422,7 @@
       "elevation": 0,
       "var": "VAR_STARTER_GOT",
       "var_value": "1",
-      "script": "PP_TriggerSetMap"
+      "script": "PP_EnterPP"
     },
     {
       "type": "trigger",
@@ -431,7 +431,7 @@
       "elevation": 0,
       "var": "VAR_STARTER_GOT",
       "var_value": "1",
-      "script": "PP_TriggerSetMap"
+      "script": "PP_EnterPP"
     },
     {
       "type": "trigger",
@@ -440,7 +440,7 @@
       "elevation": 0,
       "var": "VAR_STARTER_GOT",
       "var_value": "1",
-      "script": "PP_TriggerSetMap"
+      "script": "PP_EnterPP"
     },
     {
       "type": "trigger",
@@ -449,7 +449,7 @@
       "elevation": 0,
       "var": "VAR_STARTER_GOT",
       "var_value": "1",
-      "script": "PP_TriggerSetMap"
+      "script": "PP_EnterPP"
     }
   ],
   "bg_events": [
