@@ -207,20 +207,17 @@ PP_NotNamed::
 	end
 
 PP_ReceivedMudkip::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
 PP_ReceivedTreecko::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
 PP_ReceivedTorchic::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -291,8 +288,7 @@ PP_TurtwigText1::
 	.string "The Tiny Leaf POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedTurtwig::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -353,8 +349,7 @@ PP_ChimcharText1::
 	.string "The Chimp POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedChimchar::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -415,8 +410,7 @@ PP_PiplupText1::
 	.string "The Penguin POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedPiplup::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -477,8 +471,7 @@ PP_PikachuText1::
 	.string "The Electric Mouse POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedPikachu::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -539,8 +532,7 @@ PP_BulbasaurText1::
 	.string "The Seed POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedBulbasaur::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -600,8 +592,7 @@ PP_CharmanderText1::
 	.string "The Lizard POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedCharmander::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -661,8 +652,7 @@ PP_SquirtleText1::
 	.string "The Tiny Turtle POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedSquirtle::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -722,8 +712,7 @@ PP_ChikoritaText1::
 	.string "The Leaf POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedChikorita::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -783,8 +772,7 @@ PP_CyndaquilText1::
 	.string "The Fire Mouse POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedCyndaquil::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -844,8 +832,7 @@ PP_TotodileText1::
 	.string "The Big Jaw POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedTotodile::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -905,8 +892,7 @@ PP_SnivyText1::
 	.string "The Grass Snake POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedSnivy::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -966,8 +952,7 @@ PP_TepigText1::
 	.string "The Fire Pig POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedTepig::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1028,8 +1013,7 @@ PP_OshawottText1::
 	.string "The Sea Otter POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedOshawott::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1090,8 +1074,7 @@ PP_ChespinText1::
 	.string "The Spiny Nut POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedChespin::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1152,8 +1135,7 @@ PP_FennekinText1::
 	.string "The Fox POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedFennekin::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1214,8 +1196,7 @@ PP_FroakieText1::
 	.string "The Bubble Frog POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedFroakie::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1276,8 +1257,7 @@ PP_RowletText1::
 	.string "The Grass Quill POKéMON.$"
 
 PP_ReceivedRowlet::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1338,8 +1318,7 @@ PP_LittenText1::
 	.string "The Fire Cat POKéMON.$"
 
 PP_ReceivedLitten::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1400,8 +1379,7 @@ PP_PopplioText1::
 	.string "The Sea Lion POKéMON.$"
 
 PP_ReceivedPopplio::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1462,8 +1440,7 @@ PP_GrookeyText1::
 	.string "The Chimp POKéMON.$"
 
 PP_ReceivedGrookey::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1524,8 +1501,7 @@ PP_ScorbunnyText1::
 	.string "The Rabbit POKéMON.$"
 
 PP_ReceivedScorbunny::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1586,8 +1562,7 @@ PP_SobbleText1::
 	.string "The Water Lizard POKéMON.$"
 
 PP_ReceivedSobble::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1648,8 +1623,7 @@ PP_SprigatitoText1::
 	.string "The Grass Cat POKéMON.$"
 
 PP_ReceivedSprigatito::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1710,8 +1684,7 @@ PP_FuecocoText1::
 	.string "The Fire Croc POKéMON.$"
 
 PP_ReceivedFuecoco::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1772,8 +1745,7 @@ PP_QuaxlyText1::
 	.string "The Duckling POKéMON.$"
 
 PP_ReceivedQuaxly::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
@@ -1834,8 +1806,7 @@ PP_EeveeText1::
 	.string "The Evolution POKéMON.$"
 
 PP_ReceivedEevee::
-	setvar VAR_STARTER_GOT, 2
-	hidemonpic
+		hidemonpic
 	releaseall
 	end
 
