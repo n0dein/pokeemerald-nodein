@@ -2,7 +2,7 @@
   "id": "MAP_PARTNER_PLAYGROUND",
   "name": "PartnerPlayground",
   "layout": "LAYOUT_PARTNER_PLAYGROUND",
-  "music": "MUS_LITTLEROOT",
+  "music": "MUS_RG_ROUTE1",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
