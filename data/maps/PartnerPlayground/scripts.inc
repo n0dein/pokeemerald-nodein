@@ -9,19 +9,15 @@ PartnerPlayground_OnTransition::
 PP_TriggerSetMap::
 	getpartysize
 	compare VAR_RESULT, 1
-	goto_if_ge PP_UnlockPath
-	goto_if_lt PP_LockPath
+	goto_if_ge VAR_RESULT, 1 PP_UnlockPath
+	goto_if_lt VAR_RESULT, 1 PP_EnterPP::
 	compare VAR_STARTER_GOT, 1
-	goto_if_eq PP_PreventExitEast
+	goto_if_eq VAR_STARTER_GOT, 1 PP_PreventExitEast
 	end
 
 PP_UnlockPath::
-	setvar VAR_STARTER_GOT, 0
+	setvar VAR_STARTER_GOT, 2
 	return
-
-PP_LockPath::
-	compare VAR_STARTER_GOT, 1
-	return 
 
 PP_PreventExitEast::
 	lockall
@@ -39,6 +35,22 @@ PP_Movement_PreventExitEast::
 PP_CantLeave::
 	.string "I can't leave until I pick\n"
 	.string "my first partner POKéMON!$"
+
+PP_EnterPP::
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, PP_Movement_PreventExitEast
+	waitmovement 0
+	msgbox PP_GET_STARTER_TEXT, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_STARTER_GOT, 1
+	releaseall
+	end
+
+PP_GET_STARTER_TEXT::
+	.string "This looks like the park\n"
+	.string "Prfessor Birch was talking about.\p"
+	.string "I should go and select my\n"
+	.string "first partner POKéMON!$"
 
 PartnerPlayground_EventScript_Sign::
 	msgbox PartnerPlayground_Text_Sign, MSGBOX_SIGN
