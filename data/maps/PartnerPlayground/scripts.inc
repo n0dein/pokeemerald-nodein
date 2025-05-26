@@ -16,6 +16,7 @@ PP_PreventExitEast::
 
 PP_Movement_PreventExitEast::
 	walk_left
+	walk_left
 	step_end
 
 PP_CantLeave::
