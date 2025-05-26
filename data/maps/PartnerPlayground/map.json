@@ -486,6 +486,42 @@
       "var": "VAR_STARTER_GOT",
       "var_value": "1",
       "script": "PP_PreventExitEast"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_STARTER_GOT",
+      "var_value": "1",
+      "script": "PP_TriggerUnlock"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_STARTER_GOT",
+      "var_value": "1",
+      "script": "PP_TriggerUnlock"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_STARTER_GOT",
+      "var_value": "1",
+      "script": "PP_TriggerUnlock"
+    },
+    {
+      "type": "trigger",
+      "x": 35,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_STARTER_GOT",
+      "var_value": "1",
+      "script": "PP_TriggerUnlock"
     }
   ],
   "bg_events": [
