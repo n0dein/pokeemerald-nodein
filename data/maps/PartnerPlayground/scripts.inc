@@ -1,10 +1,5 @@
 PartnerPlayground_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, PartnerPlayground_OnTransition
-	.byte 0
-	 
-PartnerPlayground_OnTransition::
-	setvar VAR_STARTER_GOT, 0
-	end
+	.byte 0	
 
 PP_UnlockPath::
 	setvar VAR_STARTER_GOT, 2
