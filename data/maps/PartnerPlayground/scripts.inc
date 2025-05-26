@@ -10,7 +10,7 @@ PP_TriggerSetMap::
 	getpartysize
 	compare VAR_RESULT, 1
 	goto_if_ge VAR_RESULT, 1 PP_UnlockPath
-	goto_if_lt VAR_RESULT, 1 PP_EnterPP::
+	goto_if_lt VAR_RESULT, 1 PP_EnterPP
 	compare VAR_STARTER_GOT, 1
 	goto_if_eq VAR_STARTER_GOT, 1 PP_PreventExitEast
 	end
