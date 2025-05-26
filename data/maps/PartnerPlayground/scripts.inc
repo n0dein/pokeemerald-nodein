@@ -5,6 +5,7 @@ PP_TriggerUnlock::
 	getpartysize
 	compare VAR_RESULT, 1
 	goto_if_ge VAR_RESULT, 1, PP_UnlockPath
+	closemessage
 	releaseall
 	end
 
