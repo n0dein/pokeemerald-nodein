@@ -1805,3 +1805,23 @@ PP_EeveeToPC::
 	call Common_EventScript_TransferredToPC
 	goto PP_ReceivedEevee
 	end
+
+PP_PreventExitEast::
+	lockall
+	msgbox PP_CantLeave, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, PP_Movement_PreventExitEast
+	waitmovement 0
+	releaseall
+	end
+
+PP_Movement_PreventExitEast::
+	walk_left
+	step_end
+
+PP_CantLeave::
+	.string "I can't leave until I pick\n"
+	.string "my first POKéMON!$"
+
+
+
