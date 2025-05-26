@@ -420,7 +420,7 @@
       "x": 37,
       "y": 11,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STARTER_GOT",
       "var_value": "0",
       "script": "PP_PreventExitEast"
     },
@@ -429,7 +429,7 @@
       "x": 37,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STARTER_GOT",
       "var_value": "0",
       "script": "PP_PreventExitEast"
     },
@@ -438,7 +438,7 @@
       "x": 37,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STARTER_GOT",
       "var_value": "0",
       "script": "PP_PreventExitEast"
     },
@@ -447,7 +447,7 @@
       "x": 37,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_STARTER_GOT",
       "var_value": "0",
       "script": "PP_PreventExitEast"
     }
