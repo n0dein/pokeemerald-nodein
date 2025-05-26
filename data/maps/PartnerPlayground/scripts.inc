@@ -1,7 +1,24 @@
 PartnerPlayground_MapScripts::
 	.byte 0	
 
+PP_TriggerUnlock::
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_ge VAR_RESULT, 1, PP_UnlockPath
+	releaseall
+	end
+
+PP_UnlockText::
+	.string "Now that I have my very\n"
+	.string "own partner POKéMON,\p"
+	.string "I can start my adventure!\p"
+	.string "I should show MOM my partner\n"
+	.string "POKéMON first though,\p"
+	.string "she is so excited to see.$"
+
 PP_UnlockPath::
+	message PP_UnlockText
+	waitmessage
 	setvar VAR_STARTER_GOT, 2
 	return
 
