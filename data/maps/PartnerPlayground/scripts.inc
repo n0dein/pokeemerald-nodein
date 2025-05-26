@@ -7,8 +7,38 @@ PartnerPlayground_OnTransition::
 	end
 
 PP_TriggerSetMap::
-	setvar VAR_STARTER_GOT, 1
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_ge PP_UnlockPath
+	goto_if_lt PP_LockPath
+	compare VAR_STARTER_GOT, 1
+	goto_if_eq PP_PreventExitEast
 	end
+
+PP_UnlockPath::
+	setvar VAR_STARTER_GOT, 0
+	return
+
+PP_LockPath::
+	compare VAR_STARTER_GOT, 1
+	return 
+
+PP_PreventExitEast::
+	lockall
+	msgbox PP_CantLeave, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, PP_Movement_PreventExitEast
+	waitmovement 0
+	releaseall
+	end
+
+PP_Movement_PreventExitEast::
+	walk_left
+	step_end
+
+PP_CantLeave::
+	.string "I can't leave until I pick\n"
+	.string "my first partner POKéMON!$"
 
 PartnerPlayground_EventScript_Sign::
 	msgbox PartnerPlayground_Text_Sign, MSGBOX_SIGN
@@ -1814,23 +1844,5 @@ PP_EeveeToPC::
 	call Common_EventScript_TransferredToPC
 	goto PP_ReceivedEevee
 	end
-
-PP_PreventExitEast::
-	lockall
-	msgbox PP_CantLeave, MSGBOX_DEFAULT
-	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, PP_Movement_PreventExitEast
-	waitmovement 0
-	releaseall
-	end
-
-PP_Movement_PreventExitEast::
-	walk_left
-	step_end
-
-PP_CantLeave::
-	.string "I can't leave until I pick\n"
-	.string "my first partner POKéMON!$"
-
 
 
