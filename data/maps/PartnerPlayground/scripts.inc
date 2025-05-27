@@ -1,28 +1,6 @@
 PartnerPlayground_MapScripts::
 	.byte 0	
-
-PP_Check_Pass::
-	checkitem VAR_RESULT, ITEM_POTION
-	goto_if_eq VAR_RESULT, FALSE, PP_Pass_Guard
-	releaseall
-	end
-
-PP_Pass_Guard::
-	setflag FLAG_PP_Pass
-	return
-
-PP_Pass_Guard_Event::
-	lockall
-	faceplayer
-	msgbox PP_Pass_Text, MSGBOX_NPC
-	releaseall
-	end
-
-PP_Pass_Text::
-	.string "You show the guard your\n"
-	.string "Partner Pass.\p"
-	.string "The guard nods and lets you\n"
-	.string "through.$"
+	
 
 PP_TriggerUnlock::
 	getpartysize
