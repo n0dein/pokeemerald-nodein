@@ -2,8 +2,8 @@ PartnerPlayground_MapScripts::
 	.byte 0	
 
 PP_Check_Pass::
-	checkitem VAR_RESULT, ITEM_TEA
-	goto_if_eq VAR_RESULT, TRUE, PP_Pass_Guard
+	checkitem VAR_RESULT, ITEM_POTION
+	goto_if_eq VAR_RESULT, FALSE, PP_Pass_Guard
 	releaseall
 	end
 
