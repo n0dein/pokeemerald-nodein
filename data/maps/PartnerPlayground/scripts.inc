@@ -525,6 +525,7 @@ PP_PikachuText1::
 
 PP_ReceivedPikachu::
 	setflag FLAG_PP_Pikachu
+	warp MAP_PARTNER_PLAYGROUND, 0, VAR_FACING_X, VAR_FACING_Y
 	hidemonpic
 	releaseall
 	end
