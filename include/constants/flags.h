@@ -1222,46 +1222,47 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_PP_Bulbasaur     0x493 // Kanto Starter
-#define FLAG_PP_Charmander    0x494 // Kanto Starter
-#define FLAG_PP_Squirtle      0x495 // Kanto Starter
+#define FLAG_PP_Bulbasaur                                           0x493 // Kanto Starter
+#define FLAG_PP_Charmander                                          0x494 // Kanto Starter
+#define FLAG_PP_Squirtle                                            0x495 // Kanto Starter
 
-#define FLAG_PP_Chikorita     0x496 // Johto Starter
-#define FLAG_PP_Cyndaquil     0x497 // Johto Starter
-#define FLAG_PP_Totodile      0x498 // Johto Starter
+#define FLAG_PP_Chikorita                                           0x496 // Johto Starter
+#define FLAG_PP_Cyndaquil                                           0x497 // Johto Starter
+#define FLAG_PP_Totodile                                            0x498 // Johto Starter
 
-#define FLAG_PP_Treecko       0x499 // Hoenn Starter
-#define FLAG_PP_Torchic       0x49A // Hoenn Starter
-#define FLAG_PP_Mudkip        0x49B // Hoenn Starter
+#define FLAG_PP_Treecko                                             0x499 // Hoenn Starter
+#define FLAG_PP_Torchic                                             0x49A // Hoenn Starter
+#define FLAG_PP_Mudkip                                              0x49B // Hoenn Starter
 
-#define FLAG_PP_Turtwig       0x49C // Sinnoh Starter
-#define FLAG_PP_Chimchar      0x49D // Sinnoh Starter
-#define FLAG_PP_Piplup        0x49E // Sinnoh Starter
+#define FLAG_PP_Turtwig                                             0x49C // Sinnoh Starter
+#define FLAG_PP_Chimchar                                            0x49D // Sinnoh Starter
+#define FLAG_PP_Piplup                                              0x49E // Sinnoh Starter
 
-#define FLAG_PP_Snivy         0x49F // Unova Starter
-#define FLAG_PP_Tepig         0x4A0 // Unova Starter
-#define FLAG_PP_Oshawott      0x4A1 // Unova Starter
+#define FLAG_PP_Snivy                                               0x49F // Unova Starter
+#define FLAG_PP_Tepig                                               0x4A0 // Unova Starter
+#define FLAG_PP_Oshawott                                            0x4A1 // Unova Starter
 
-#define FLAG_PP_Chespin       0x4A2 // Kalos Starter
-#define FLAG_PP_Fennekin      0x4A3 // Kalos Starter
-#define FLAG_PP_Froakie       0x4A4 // Kalos Starter
+#define FLAG_PP_Chespin                                             0x4A2 // Kalos Starter
+#define FLAG_PP_Fennekin                                            0x4A3 // Kalos Starter
+#define FLAG_PP_Froakie                                             0x4A4 // Kalos Starter
 
-#define FLAG_PP_Rowlet        0x4A5 // Alola Starter
-#define FLAG_PP_Litten        0x4A6 // Alola Starter
-#define FLAG_PP_Popplio       0x4A7 // Alola Starter
+#define FLAG_PP_Rowlet                                              0x4A5 // Alola Starter
+#define FLAG_PP_Litten                                              0x4A6 // Alola Starter
+#define FLAG_PP_Popplio                                             0x4A7 // Alola Starter
 
-#define FLAG_PP_Grookey       0x4A8 // Galar Starter
-#define FLAG_PP_Scorbunny     0x4A9 // Galar Starter
-#define FLAG_PP_Sobble        0x4AA // Galar Starter
+#define FLAG_PP_Grookey                                             0x4A8 // Galar Starter
+#define FLAG_PP_Scorbunny                                           0x4A9 // Galar Starter
+#define FLAG_PP_Sobble                                              0x4AA // Galar Starter
 
-#define FLAG_PP_Sprigatito    0x4AB // Paldea Starter
-#define FLAG_PP_Fuecoco       0x4AC // Paldea Starter
-#define FLAG_PP_Quaxly        0x4AD // Paldea Starter
+#define FLAG_PP_Sprigatito                                          0x4AB // Paldea Starter
+#define FLAG_PP_Fuecoco                                             0x4AC // Paldea Starter
+#define FLAG_PP_Quaxly                                              0x4AD // Paldea Starter
 
-#define FLAG_PP_Pikachu       0x4AE // Kanto Special Starter
-#define FLAG_PP_Eevee         0x4AF // Kanto Special Starter
+#define FLAG_PP_Pikachu                                             0x4AE // Kanto Special Starter
+#define FLAG_PP_Eevee                                               0x4AF // Kanto Special Starter
 
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
+#define FLAG_TEST_FLAG_PP                                           0x4B0 // Unused Flag
+
 #define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
 #define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
 #define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag

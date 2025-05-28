@@ -1882,7 +1882,7 @@ PP_EeveeText1::
 	.string "The Evolution POKéMON.$"
 
 PP_ReceivedEevee::
-	setflag FLAG_PP_Eevee
+	clearflag FLAG_PP_Eevee
 	hidemonpic
 	releaseall
 	end
