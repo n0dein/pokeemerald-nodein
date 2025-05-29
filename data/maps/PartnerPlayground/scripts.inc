@@ -1884,15 +1884,15 @@ PP_ReceivedEevee::
 	hidemonpic
     fadescreen 1         // Fade to black
     delay 60             // Wait for fade to visually complete
-    playse SE_POKEBALL_OPEN
+    playse SE_BALL_OPEN
     delay 20
-    playse SE_POKEBALL_SHAKE
+    playse SE_BALL
     delay 20
-    playse SE_POKEBALL_SHAKE
+    playse SE_BALL
     delay 20
-    playse SE_POKEBALL_SHAKE
+    playse SE_BALL
     delay 20
-    playse SE_POKEBALL_CAPTURE
+    playse SE_RG_BALL_CLICK
     delay 20
     setflag FLAG_PP_EEVEE
     hideobjectat 22, 17 
