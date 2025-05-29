@@ -1894,13 +1894,15 @@ PP_ReceivedEevee::
     playse SE_RG_BALL_CLICK
     delay 20
     setflag FLAG_PP_EEVEE
-    applymovement 0xFF, set_invisible
+    applymovement 0xFF, PP_BYE_MON
 	call PP_CelebrateEevee
     fadescreen 0         // Fade back in
     delay 60
     releaseall
     end
 
+PP_BYE_MON::
+	set_invisible
 
 PP_EeveeToPC::
 	call Common_EventScript_TransferredToPC
