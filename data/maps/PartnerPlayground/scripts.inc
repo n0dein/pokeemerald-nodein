@@ -1881,10 +1881,24 @@ PP_EeveeText1::
 	.string "The Evolution POKéMON.$"
 
 PP_ReceivedEevee::
-	setflag FLAG_PP_EEVEE
-	hidemonpic
-	releaseall
-	end
+    fadescreen 1         // Fade to black
+    delay 60             // Wait for fade to visually complete
+    playse SE_POKEBALL_OPEN
+    delay 20
+    playse SE_POKEBALL_SHAKE
+    delay 20
+    playse SE_POKEBALL_SHAKE
+    delay 20
+    playse SE_POKEBALL_SHAKE
+    delay 20
+    playse SE_POKEBALL_CAPTURE
+    delay 20
+    setflag FLAG_PP_EEVEE
+    setobjecthidden 0xFF // Hide the last interacted NPC
+    fadescreen 0         // Fade back in
+    delay 60
+    releaseall
+    end
 
 PP_EeveeToPC::
 	call Common_EventScript_TransferredToPC
