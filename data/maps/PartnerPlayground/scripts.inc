@@ -254,19 +254,19 @@ PP_NotNamed::
 	end
 
 PP_ReceivedMudkip::
-	setflag FLAG_PP_Mudkip
+	setflag FLAG_PP_MUDKIP
 	hidemonpic
 	releaseall
 	end
 
 PP_ReceivedTreecko::
-	setflag FLAG_PP_Treecko
+	setflag FLAG_PP_TREECKO
 	hidemonpic
 	releaseall
 	end
 
 PP_ReceivedTorchic::
-	setflag FLAG_PP_Torchic
+	setflag FLAG_PP_TORCHIC
 	hidemonpic
 	releaseall
 	end
@@ -338,7 +338,7 @@ PP_TurtwigText1::
 	.string "The Tiny Leaf POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedTurtwig::
-	setflag FLAG_PP_Turtwig
+	setflag FLAG_PP_TURTWIG
 	hidemonpic
 	releaseall
 	end
@@ -400,7 +400,7 @@ PP_ChimcharText1::
 	.string "The Chimp POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedChimchar::
-	setflag FLAG_PP_Chimchar
+	setflag FLAG_PP_CHIMCHAR
 	hidemonpic
 	releaseall
 	end
@@ -462,7 +462,7 @@ PP_PiplupText1::
 	.string "The Penguin POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedPiplup::
-	setflag FLAG_PP_Piplup
+	setflag FLAG_PP_PIPLUP
 	hidemonpic
 	releaseall
 	end
@@ -524,7 +524,7 @@ PP_PikachuText1::
 	.string "The Electric Mouse POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedPikachu::
-	setflag FLAG_PP_Pikachu
+	setflag FLAG_PP_PIKACHU
 	hidemonpic
 	releaseall
 	end
@@ -586,7 +586,7 @@ PP_BulbasaurText1::
 	.string "The Seed POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedBulbasaur::
-	setflag FLAG_PP_Bulbasaur
+	setflag FLAG_PP_BULBASAUR
 	hidemonpic
 	releaseall
 	end
@@ -647,7 +647,7 @@ PP_CharmanderText1::
 	.string "The Lizard POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedCharmander::
-	setflag FLAG_PP_Charmander
+	setflag FLAG_PP_CHARMANDER
 	hidemonpic
 	releaseall
 	end
@@ -708,7 +708,7 @@ PP_SquirtleText1::
 	.string "The Tiny Turtle POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedSquirtle::
-	setflag FLAG_PP_Squirtle
+	setflag FLAG_PP_SQUIRTLE
 	hidemonpic
 	releaseall
 	end
@@ -769,7 +769,7 @@ PP_ChikoritaText1::
 	.string "The Leaf POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedChikorita::
-	setflag FLAG_PP_Chikorita
+	setflag FLAG_PP_CHIKORITA
 	hidemonpic
 	releaseall
 	end
@@ -830,7 +830,7 @@ PP_CyndaquilText1::
 	.string "The Fire Mouse POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedCyndaquil::
-	setflag FLAG_PP_Cyndaquil
+	setflag FLAG_PP_CYNDAQUIL
 	hidemonpic
 	releaseall
 	end
@@ -891,7 +891,7 @@ PP_TotodileText1::
 	.string "The Big Jaw POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedTotodile::
-	setflag FLAG_PP_Totodile
+	setflag FLAG_PP_TOTODILE
 	hidemonpic
 	releaseall
 	end
@@ -952,7 +952,7 @@ PP_SnivyText1::
 	.string "The Grass Snake POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedSnivy::
-	setflag FLAG_PP_Snivy
+	setflag FLAG_PP_SNIVY
 	hidemonpic
 	releaseall
 	end
@@ -1013,7 +1013,7 @@ PP_TepigText1::
 	.string "The Fire Pig POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedTepig::
-	setflag FLAG_PP_Tepig
+	setflag FLAG_PP_TEPIG
 	hidemonpic
 	releaseall
 	end
@@ -1075,7 +1075,7 @@ PP_OshawottText1::
 	.string "The Sea Otter POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedOshawott::
-	setflag FLAG_PP_Oshawott
+	setflag FLAG_PP_OSHAWOTT
 	hidemonpic
 	releaseall
 	end
@@ -1137,7 +1137,7 @@ PP_ChespinText1::
 	.string "The Spiny Nut POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedChespin::
-	setflag FLAG_PP_Chespin
+	setflag FLAG_PP_CHESPIN
 	hidemonpic
 	releaseall
 	end
@@ -1199,7 +1199,7 @@ PP_FennekinText1::
 	.string "The Fox POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedFennekin::
-	setflag FLAG_PP_Fennekin
+	setflag FLAG_PP_FENNEKIN
 	hidemonpic
 	releaseall
 	end
@@ -1261,7 +1261,7 @@ PP_FroakieText1::
 	.string "The Bubble Frog POKéMON.$"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 PP_ReceivedFroakie::
-	setflag FLAG_PP_Froakie
+	setflag FLAG_PP_FROAKIE
 	hidemonpic
 	releaseall
 	end
@@ -1323,7 +1323,7 @@ PP_RowletText1::
 	.string "The Grass Quill POKéMON.$"
 
 PP_ReceivedRowlet::
-	setflag FLAG_PP_Rowlet
+	setflag FLAG_PP_ROWLET
 	hidemonpic
 	releaseall
 	end
@@ -1385,7 +1385,7 @@ PP_LittenText1::
 	.string "The Fire Cat POKéMON.$"
 
 PP_ReceivedLitten::
-	setflag FLAG_PP_Litten
+	setflag FLAG_PP_LITTEN
 	hidemonpic
 	releaseall
 	end
@@ -1447,7 +1447,7 @@ PP_PopplioText1::
 	.string "The Sea Lion POKéMON.$"
 
 PP_ReceivedPopplio::
-	setflag FLAG_PP_Popplio
+	setflag FLAG_PP_POPPLIO
 	hidemonpic
 	releaseall
 	end
@@ -1509,7 +1509,7 @@ PP_GrookeyText1::
 	.string "The Chimp POKéMON.$"
 
 PP_ReceivedGrookey::
-	setflag FLAG_PP_Grookey
+	setflag FLAG_PP_GROOKEY
 	hidemonpic
 	releaseall
 	end
@@ -1571,7 +1571,7 @@ PP_ScorbunnyText1::
 	.string "The Rabbit POKéMON.$"
 
 PP_ReceivedScorbunny::
-	setflag FLAG_PP_Scorbunny
+	setflag FLAG_PP_SCORBUNNY
 	hidemonpic
 	releaseall
 	end
@@ -1633,7 +1633,7 @@ PP_SobbleText1::
 	.string "The Water Lizard POKéMON.$"
 
 PP_ReceivedSobble::
-	setflag FLAG_PP_Sobble
+	setflag FLAG_PP_SOBBLE
 	hidemonpic
 	releaseall
 	end
@@ -1695,7 +1695,7 @@ PP_SprigatitoText1::
 	.string "The Grass Cat POKéMON.$"
 
 PP_ReceivedSprigatito::
-	setflag FLAG_PP_Sprigatito
+	setflag FLAG_PP_SPRIGATITO
 	hidemonpic
 	releaseall
 	end
@@ -1757,7 +1757,7 @@ PP_FuecocoText1::
 	.string "The Fire Croc POKéMON.$"
 
 PP_ReceivedFuecoco::
-	setflag FLAG_PP_Fuecoco
+	setflag FLAG_PP_FUECOCO
 	hidemonpic
 	releaseall
 	end
@@ -1819,7 +1819,7 @@ PP_QuaxlyText1::
 	.string "The Duckling POKéMON.$"
 
 PP_ReceivedQuaxly::
-	setflag FLAG_PP_Quaxly
+	setflag FLAG_PP_QUAXLY
 	hidemonpic
 	releaseall
 	end
@@ -1884,7 +1884,7 @@ PP_ReceivedEevee::
 	lock
 	faceplayer
 	fadescreen FADE_TO_BLACK
-	setflag FLAG_PP_Eevee
+	setflag FLAG_PP_EEVEE
 	hidemonpic
 	waitbuttonpress
 	fadescreen FADE_FROM_BLACK
