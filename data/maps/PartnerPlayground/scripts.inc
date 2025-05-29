@@ -525,7 +525,6 @@ PP_PikachuText1::
 
 PP_ReceivedPikachu::
 	setflag FLAG_PP_Pikachu
-	warp MAP_PARTNER_PLAYGROUND, 0, VAR_0x8004, VAR_0x8005
 	hidemonpic
 	releaseall
 	end
@@ -1884,12 +1883,10 @@ PP_EeveeText1::
 PP_ReceivedEevee::
 	lock
 	faceplayer
-	msgbox("ok bye")
-	closemessage
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_PP_Eevee
 	hidemonpic
-	removeobject OBJECT_ID 30
+	removeobject OBJ_EVENT_GFX_SPECIES(EEVEE)
 	fadescreen FADE_FROM_BLACK
 	releaseall
 	end
