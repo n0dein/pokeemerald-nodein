@@ -1717,8 +1717,8 @@ PP_ReceivedSnivy::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_SNIVY
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x18, Movement_PPByeMon
+	waitmovement 0x18
 	call PP_CelebrateSnivy
 	delay 20
 	releaseall
@@ -1746,8 +1746,8 @@ PP_ReceivedTepig::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_TEPIG
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x17, Movement_PPByeMon
+	waitmovement 0x17
 	call PP_CelebrateTepig
 	delay 20
 	releaseall
@@ -1775,8 +1775,8 @@ PP_ReceivedOshawott::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_OSHAWOTT
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x16, Movement_PPByeMon
+	waitmovement 0x16
 	call PP_CelebrateOshawott
 	delay 20
 	releaseall
@@ -1891,8 +1891,8 @@ PP_ReceivedRowlet::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_ROWLET
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x19, Movement_PPByeMon
+	waitmovement 0x19
 	call PP_CelebrateRowlet
 	delay 20
 	releaseall
@@ -1920,8 +1920,8 @@ PP_ReceivedLitten::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_LITTEN
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x1A, Movement_PPByeMon
+	waitmovement 0x1A
 	call PP_CelebrateLitten
 	delay 20
 	releaseall
@@ -1949,8 +1949,8 @@ PP_ReceivedPopplio::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_POPPLIO
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x1B, Movement_PPByeMon
+	waitmovement 0x1B
 	call PP_CelebratePopplio
 	delay 20
 	releaseall
@@ -2152,8 +2152,8 @@ PP_ReceivedPikachu::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_PIKACHU
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x1D, Movement_PPByeMon
+	waitmovement 0x1D
 	call PP_CelebratePikachu
 	delay 20
 	releaseall
