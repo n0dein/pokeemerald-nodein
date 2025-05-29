@@ -1921,10 +1921,6 @@ PP_EeveeText1::
 	.string "You received Eevee!\n"
 	.string "The Evolution POKéMON.$"
 
-PP_NicknameChoice::
-	.string "Would you like to give a nickname\n"
-	.string "to Eevee?$"
-
 /////////////////////////////////////////////////
 // Movement Script — Eevee Disappears (ID 30)
 /////////////////////////////////////////////////
