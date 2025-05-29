@@ -1895,7 +1895,7 @@ PP_ReceivedEevee::
     delay 20
     setflag FLAG_PP_EEVEE
     applymovement 0xFF, MOVEMENT_ACTION_SET_INVISIBLE
-    waitmovement
+    waitmovement 0xFF
 	call PP_CelebrateEevee
     fadescreen 0         // Fade back in
     delay 60
