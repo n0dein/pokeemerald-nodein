@@ -2,7 +2,6 @@
 .set LOCALID_MOM, 4
 .set LOCALID_RIVAL, 7
 .set LOCALID_BIRCH, 8
-.set LOCALID_PP, 16
 
 LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
@@ -1004,7 +1003,6 @@ PP_TEST::
 	showmonpic SPECIES_PALKIA, 10, 3
 	setflag FLAG_TEST_FLAG_PP
 	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_16
 	hidemonpic
 	fadescreen FADE_FROM_BLACK
 	releaseall
