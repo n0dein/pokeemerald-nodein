@@ -1882,8 +1882,15 @@ PP_EeveeText1::
 	.string "The Evolution POKéMON.$"
 
 PP_ReceivedEevee::
-	clearflag FLAG_PP_Eevee
+	lock
+	faceplayer
+	msgbox("ok bye")
+	closemessage
+	fadescreen FADE_TO_BLACK
+	setflag FLAG_PP_Eevee
 	hidemonpic
+	removeobject OBJECT_ID 30
+	fadescreen FADE_FROM_BLACK
 	releaseall
 	end
 
