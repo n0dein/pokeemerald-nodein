@@ -1848,7 +1848,6 @@ PP_GiveEevee::
 	end
 
 PP_PartyEevee::
-	call PP_CelebrateEevee
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_NotNamed
 	call Common_EventScript_GetGiftMonPartySlot
@@ -1883,7 +1882,7 @@ PP_EeveeText1::
 PP_ReceivedEevee::
 	hidemonpic
     fadescreen 1         // Fade to black
-    delay 60             // Wait for fade to visually complete
+    delay 60
     playse SE_BALL_OPEN
     delay 20
     playse SE_BALL
@@ -1895,11 +1894,14 @@ PP_ReceivedEevee::
     playse SE_RG_BALL_CLICK
     delay 20
     setflag FLAG_PP_EEVEE
-    hideobjectat 22, 17 
+    applymovement 0xFF, MOVEMENT_ACTION_SET_INVISIBLE
+    waitmovement
+	call PP_CelebrateEevee
     fadescreen 0         // Fade back in
     delay 60
     releaseall
     end
+
 
 PP_EeveeToPC::
 	call Common_EventScript_TransferredToPC
