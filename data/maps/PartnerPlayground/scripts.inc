@@ -1881,13 +1881,8 @@ PP_EeveeText1::
 	.string "The Evolution POKéMON.$"
 
 PP_ReceivedEevee::
-	lock
-	faceplayer
-	fadescreen FADE_TO_BLACK
 	setflag FLAG_PP_EEVEE
 	hidemonpic
-	waitbuttonpress
-	fadescreen FADE_FROM_BLACK
 	releaseall
 	end
 
