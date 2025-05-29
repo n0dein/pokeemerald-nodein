@@ -31,7 +31,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Scorbunny",
-      "flag": "FLAG_PP_Scorbunny"
+      "flag": "FLAG_PP_SCORBUNNY"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(GROOKEY)",
@@ -44,7 +44,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Grookey",
-      "flag": "FLAG_PP_Grookey"
+      "flag": "FLAG_PP_GROOKEY"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SOBBLE)",
@@ -57,7 +57,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Sobble",
-      "flag": "FLAG_PP_Sobble"
+      "flag": "FLAG_PP_SOBBLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MUDKIP)",
@@ -70,7 +70,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Mudkip",
-      "flag": "FLAG_PP_Mudkip"
+      "flag": "FLAG_PP_MUDKIP"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TORCHIC)",
@@ -83,7 +83,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Torchic",
-      "flag": "FLAG_PP_Torchic"
+      "flag": "FLAG_PP_TORCHIC"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TREECKO)",
@@ -96,7 +96,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Treecko",
-      "flag": "FLAG_PP_Treecko"
+      "flag": "FLAG_PP_TREECKO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SQUIRTLE)",
@@ -109,7 +109,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Squirtle",
-      "flag": "FLAG_PP_Squirtle"
+      "flag": "FLAG_PP_SQUIRTLE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CHARMANDER)",
@@ -122,7 +122,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Charmander",
-      "flag": "FLAG_PP_Charmander"
+      "flag": "FLAG_PP_CHARMANDER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(BULBASAUR)",
@@ -135,7 +135,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Bulbasaur",
-      "flag": "FLAG_PP_Bulbasaur"
+      "flag": "FLAG_PP_BULBASAUR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TOTODILE)",
@@ -148,7 +148,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Totodile",
-      "flag": "FLAG_PP_Totodile"
+      "flag": "FLAG_PP_TOTODILE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CYNDAQUIL)",
@@ -161,7 +161,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Cyndaquil",
-      "flag": "FLAG_PP_Cyndaquil"
+      "flag": "FLAG_PP_CYNDAQUIL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CHIKORITA)",
@@ -174,7 +174,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Chikorita",
-      "flag": "FLAG_PP_Chikorita"
+      "flag": "FLAG_PP_CHIKORITA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CHIMCHAR)",
@@ -187,7 +187,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Chimchar",
-      "flag": "FLAG_PP_Chimchar"
+      "flag": "FLAG_PP_CHIMCHAR"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TURTWIG)",
@@ -200,7 +200,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Turtwig",
-      "flag": "FLAG_PP_Turtwig"
+      "flag": "FLAG_PP_TURTWIG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(PIPLUP)",
@@ -213,7 +213,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Piplup",
-      "flag": "FLAG_PP_Piplup"
+      "flag": "FLAG_PP_PIPLUP"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SPRIGATITO)",
@@ -226,7 +226,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Sprigatito",
-      "flag": "FLAG_PP_Sprigatito"
+      "flag": "FLAG_PP_SPRIGATITO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(FUECOCO)",
@@ -239,7 +239,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Fuecoco",
-      "flag": "FLAG_PP_Fuecoco"
+      "flag": "FLAG_PP_FUECOCO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(QUAXLY)",
@@ -252,7 +252,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Quaxly",
-      "flag": "FLAG_PP_Quaxly"
+      "flag": "FLAG_PP_QUAXLY"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(FROAKIE)",
@@ -265,7 +265,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Froakie",
-      "flag": "FLAG_PP_Froakie"
+      "flag": "FLAG_PP_FROAKIE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(FENNEKIN)",
@@ -278,7 +278,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Fennekin",
-      "flag": "FLAG_PP_Fennekin"
+      "flag": "FLAG_PP_FENNEKIN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(CHESPIN)",
@@ -291,7 +291,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Chespin",
-      "flag": "FLAG_PP_Chespin"
+      "flag": "FLAG_PP_CHESPIN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(OSHAWOTT)",
@@ -304,7 +304,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Oshawott",
-      "flag": "FLAG_PP_Oshawott"
+      "flag": "FLAG_PP_OSHAWOTT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(TEPIG)",
@@ -317,7 +317,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Tepig",
-      "flag": "FLAG_PP_Tepig"
+      "flag": "FLAG_PP_TEPIG"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(SNIVY)",
@@ -330,7 +330,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Snivy",
-      "flag": "FLAG_PP_Snivy"
+      "flag": "FLAG_PP_SNIVY"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(ROWLET)",
@@ -343,7 +343,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Rowlet",
-      "flag": "FLAG_PP_Rowlet"
+      "flag": "FLAG_PP_ROWLET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(LITTEN)",
@@ -356,7 +356,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Litten",
-      "flag": "FLAG_PP_Litten"
+      "flag": "FLAG_PP_LITTEN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(POPPLIO)",
@@ -369,7 +369,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Popplio",
-      "flag": "FLAG_PP_Popplio"
+      "flag": "FLAG_PP_POPPLIO"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(MACHAMP)",
@@ -395,7 +395,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Pikachu",
-      "flag": "FLAG_PP_Pikachu"
+      "flag": "FLAG_PP_PIKACHU"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(EEVEE)",
@@ -408,7 +408,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PP_Eevee",
-      "flag": "FLAG_PP_Eevee"
+      "flag": "FLAG_PP_EEVEE"
     }
   ],
   "warp_events": [

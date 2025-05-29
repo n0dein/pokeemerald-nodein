@@ -1886,7 +1886,7 @@ PP_ReceivedEevee::
 	fadescreen FADE_TO_BLACK
 	setflag FLAG_PP_Eevee
 	hidemonpic
-	removeobject OBJ_EVENT_GFX_SPECIES(EEVEE)
+	waitbuttonpress
 	fadescreen FADE_FROM_BLACK
 	releaseall
 	end

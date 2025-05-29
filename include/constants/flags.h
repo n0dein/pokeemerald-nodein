@@ -1048,35 +1048,35 @@
 #define FLAG_HIDE_SOOTOPOLIS_CITY_KYOGRE                            0x3E5
 #define FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON                           0x3E6
 #define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7
-#define FLAG_PP_Bulbasaur                                           0x493 // Kanto Starter
-#define FLAG_PP_Charmander                                          0x494 // Kanto Starter
-#define FLAG_PP_Squirtle                                            0x495 // Kanto Starter
-#define FLAG_PP_Chikorita                                           0x496 // Johto Starter
-#define FLAG_PP_Cyndaquil                                           0x497 // Johto Starter
-#define FLAG_PP_Totodile                                            0x498 // Johto Starter
-#define FLAG_PP_Treecko                                             0x499 // Hoenn Starter
-#define FLAG_PP_Torchic                                             0x49A // Hoenn Starter
-#define FLAG_PP_Mudkip                                              0x49B // Hoenn Starter
-#define FLAG_PP_Turtwig                                             0x49C // Sinnoh Starter
-#define FLAG_PP_Chimchar                                            0x49D // Sinnoh Starter
-#define FLAG_PP_Piplup                                              0x49E // Sinnoh Starter
-#define FLAG_PP_Snivy                                               0x49F // Unova Starter
-#define FLAG_PP_Tepig                                               0x4A0 // Unova Starter
-#define FLAG_PP_Oshawott                                            0x4A1 // Unova Starter
-#define FLAG_PP_Chespin                                             0x4A2 // Kalos Starter
-#define FLAG_PP_Fennekin                                            0x4A3 // Kalos Starter
-#define FLAG_PP_Froakie                                             0x4A4 // Kalos Starter
-#define FLAG_PP_Rowlet                                              0x4A5 // Alola Starter
-#define FLAG_PP_Litten                                              0x4A6 // Alola Starter
-#define FLAG_PP_Popplio                                             0x4A7 // Alola Starter
-#define FLAG_PP_Grookey                                             0x4A8 // Galar Starter
-#define FLAG_PP_Scorbunny                                           0x4A9 // Galar Starter
-#define FLAG_PP_Sobble                                              0x4AA // Galar Starter
-#define FLAG_PP_Sprigatito                                          0x4AB // Paldea Starter
-#define FLAG_PP_Fuecoco                                             0x4AC // Paldea Starter
-#define FLAG_PP_Quaxly                                              0x4AD // Paldea Starter
-#define FLAG_PP_Pikachu                                             0x4AE // Kanto Special Starter
-#define FLAG_PP_Eevee                                               0x4AF // Kanto Special Starter
+#define FLAG_PP_BULBASAUR                                           0x493 // Kanto Starter
+#define FLAG_PP_CHARMANDER                                          0x494 // Kanto Starter
+#define FLAG_PP_SQUIRTLE                                            0x495 // Kanto Starter
+#define FLAG_PP_CHIKORITA                                           0x496 // Johto Starter
+#define FLAG_PP_CYNDAQUIL                                           0x497 // Johto Starter
+#define FLAG_PP_TOTODILE                                            0x498 // Johto Starter
+#define FLAG_PP_TREECKO                                             0x499 // Hoenn Starter
+#define FLAG_PP_TORCHIC                                             0x49A // Hoenn Starter
+#define FLAG_PP_MUDKIP                                              0x49B // Hoenn Starter
+#define FLAG_PP_TURTWIG                                             0x49C // Sinnoh Starter
+#define FLAG_PP_CHIMCHAR                                            0x49D // Sinnoh Starter
+#define FLAG_PP_PIPLUP                                              0x49E // Sinnoh Starter
+#define FLAG_PP_SNIVY                                               0x49F // Unova Starter
+#define FLAG_PP_TEPIG                                               0x4A0 // Unova Starter
+#define FLAG_PP_OSHAWOTT                                            0x4A1 // Unova Starter
+#define FLAG_PP_CHESPIN                                             0x4A2 // Kalos Starter
+#define FLAG_PP_FENNEKIN                                            0x4A3 // Kalos Starter
+#define FLAG_PP_FROAKIE                                             0x4A4 // Kalos Starter
+#define FLAG_PP_ROWLET                                              0x4A5 // Alola Starter
+#define FLAG_PP_LITTEN                                              0x4A6 // Alola Starter
+#define FLAG_PP_POPPLIO                                             0x4A7 // Alola Starter
+#define FLAG_PP_GROOKEY                                             0x4A8 // Galar Starter
+#define FLAG_PP_SCORBUNNY                                           0x4A9 // Galar Starter
+#define FLAG_PP_SOBBLE                                              0x4AA // Galar Starter
+#define FLAG_PP_SPRIGATITO                                          0x4AB // Paldea Starter
+#define FLAG_PP_FUECOCO                                             0x4AC // Paldea Starter
+#define FLAG_PP_QUAXLY                                              0x4AD // Paldea Starter
+#define FLAG_PP_PIKACHU                                             0x4AE // Kanto Special Starter
+#define FLAG_PP_EEVEE                                               0x4AF // Kanto Special Starter
 #define FLAG_TEST_FLAG_PP                                           0x4B0 // Unused Flag
 
 // Item Ball Flags
