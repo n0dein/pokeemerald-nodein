@@ -1829,6 +1829,9 @@ PP_QuaxlyToPC::
 	goto PP_ReceivedQuaxly
 	end
 
+
+
+
 PP_Eevee::
 	faceplayer
 	lockall
@@ -1841,46 +1844,38 @@ PP_Eevee::
 	end
 
 PP_GiveEevee::
-	givemon SPECIES_EEVEE, 5, 
+	givemon SPECIES_EEVEE, 5,
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyEevee
-	goto_if_eq  VAR_RESULT, MON_GIVEN_TO_PC, PP_PCEevee
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCEevee
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_PartyEevee::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO PP_NotNamed
+	goto_if_eq VAR_RESULT, NO PP_SkipNaming
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+PP_SkipNaming::
 	goto PP_ReceivedEevee
-	end 
-
-PP_CelebrateEevee::
-	playfanfare MUS_OBTAIN_ITEM
-	message PP_EeveeText1
-	waitmessage
-	waitfanfare
-	setflag FLAG_SYS_POKEMON_GET
-	return
+	end
 
 PP_PCEevee::
 	call PP_CelebrateEevee
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO PP_EeveeToPC
+	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming
 	call Common_EventScript_NameReceivedBoxMon
+PP_SkipPCNaming::
 	goto PP_EeveeToPC
-	end 
+	end
 
-PP_EeveeChoice::
-	.string "Do you want to take Eevee with\n"
-	.string "you to be your first partner POKéMON?$"
-
-PP_EeveeText1::
-	.string "You received Eevee!\n"
-	.string "The Evolution POKéMON.$"
+PP_EeveeToPC::
+	call Common_EventScript_TransferredToPC
+	goto PP_ReceivedEevee
+	end
 
 PP_ReceivedEevee::
 	hidemonpic
+	delay 60
     playse SE_BALL_OPEN
 	delay 30
 	playse	SE_BALL_BOUNCE_1
@@ -1899,18 +1894,51 @@ PP_ReceivedEevee::
     delay 50
     playse SE_RG_BALL_CLICK
     delay 20
-    setflag FLAG_PP_EEVEE
-    applymovement 0x1E, Movement_PPByeMon
+	setflag FLAG_PP_EEVEE
+	applymovement 0x1E, Movement_PPByeMon   // 0x1E = Object ID 30 (Eevee)
+	waitmovement 0x1E
 	call PP_CelebrateEevee
-    releaseall
-    end
+	delay 20
+	releaseall
+	end
+
+PP_CelebrateEevee::
+	playfanfare MUS_OBTAIN_ITEM
+	message PP_EeveeText1
+	waitmessage
+	waitfanfare
+	setflag FLAG_SYS_POKEMON_GET
+	return
+
+PP_NotChosen::
+	msgbox PP_DeclineEevee, MSGBOX_DEFAULT
+	releaseall
+	end
+
+// Text
+
+PP_EeveeChoice::
+	.string "Do you want to take Eevee with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_EeveeText1::
+	.string "You received Eevee!\n"
+	.string "The Evolution POKéMON.$"
+
+PP_NicknameChoice::
+	.string "Would you like to give a nickname\n"
+	.string "to Eevee?$"
+
+PP_DeclineEevee::
+	.string "Eevee watches you silently...\n"
+	.string "Maybe you aren't ready yet.$"
+
+/////////////////////////////////////////////////
+// Movement Script — Eevee Disappears (ID 30)
+/////////////////////////////////////////////////
 
 Movement_PPByeMon::
-    set_invisible
-    step_end
+	set_invisible
+	step_end
 
-PP_EeveeToPC::
-	call Common_EventScript_TransferredToPC
-	goto PP_ReceivedEevee
-	end
 
