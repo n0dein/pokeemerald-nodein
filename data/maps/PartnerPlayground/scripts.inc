@@ -1910,9 +1910,6 @@ PP_CelebrateEevee::
 	setflag FLAG_SYS_POKEMON_GET
 	return
 
-
-// Text
-
 PP_EeveeChoice::
 	.string "Do you want to take Eevee with\n"
 	.string "you to be your first partner POKéMON?$"
@@ -1920,10 +1917,6 @@ PP_EeveeChoice::
 PP_EeveeText1::
 	.string "You received Eevee!\n"
 	.string "The Evolution POKéMON.$"
-
-/////////////////////////////////////////////////
-// Movement Script — Eevee Disappears (ID 30)
-/////////////////////////////////////////////////
 
 Movement_PPByeMon::
 	set_invisible
