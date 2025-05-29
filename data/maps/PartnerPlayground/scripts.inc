@@ -1910,10 +1910,6 @@ PP_CelebrateEevee::
 	setflag FLAG_SYS_POKEMON_GET
 	return
 
-PP_NotChosen::
-	msgbox PP_DeclineEevee, MSGBOX_DEFAULT
-	releaseall
-	end
 
 // Text
 
@@ -1928,10 +1924,6 @@ PP_EeveeText1::
 PP_NicknameChoice::
 	.string "Would you like to give a nickname\n"
 	.string "to Eevee?$"
-
-PP_DeclineEevee::
-	.string "Eevee watches you silently...\n"
-	.string "Maybe you aren't ready yet.$"
 
 /////////////////////////////////////////////////
 // Movement Script — Eevee Disappears (ID 30)
