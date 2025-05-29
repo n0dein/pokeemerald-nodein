@@ -1886,16 +1886,15 @@ PP_ReceivedEevee::
     playse SE_BALL_OPEN
     delay 20
     playse SE_BALL
-    delay 20
+    delay 30
     playse SE_BALL
-    delay 20
+    delay 40
     playse SE_BALL
-    delay 20
+    delay 50
     playse SE_RG_BALL_CLICK
     delay 20
     setflag FLAG_PP_EEVEE
-    applymovement 0xFF, MOVEMENT_ACTION_SET_INVISIBLE
-    waitmovement 0xFF
+    applymovement 0xFF, set_invisible
 	call PP_CelebrateEevee
     fadescreen 0         // Fade back in
     delay 60
