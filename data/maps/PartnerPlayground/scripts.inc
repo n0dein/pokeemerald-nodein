@@ -1881,13 +1881,14 @@ PP_EeveeText1::
 
 PP_ReceivedEevee::
 	hidemonpic
-    fadescreen 1         // Fade to black
-    delay 60
     playse SE_BALL_OPEN
 	delay 30
 	playse	SE_BALL_BOUNCE_1
+	waitse
 	playse	SE_BALL_BOUNCE_2
+	waitse
 	playse	SE_BALL_BOUNCE_3
+	waitse
 	playse	SE_BALL_BOUNCE_4
     delay 20
     playse SE_BALL
@@ -1901,8 +1902,6 @@ PP_ReceivedEevee::
     setflag FLAG_PP_EEVEE
     applymovement 0x1E, Movement_PPByeMon
 	call PP_CelebrateEevee
-    fadescreen 0         // Fade back in
-    delay 60
     releaseall
     end
 
