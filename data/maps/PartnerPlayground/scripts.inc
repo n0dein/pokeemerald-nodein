@@ -1884,6 +1884,11 @@ PP_ReceivedEevee::
     fadescreen 1         // Fade to black
     delay 60
     playse SE_BALL_OPEN
+	delay 30
+	playse	SE_BALL_BOUNCE_1
+	playse	SE_BALL_BOUNCE_2
+	playse	SE_BALL_BOUNCE_3
+	playse	SE_BALL_BOUNCE_4
     delay 20
     playse SE_BALL
     delay 30
