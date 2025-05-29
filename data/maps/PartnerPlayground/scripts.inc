@@ -1881,6 +1881,7 @@ PP_EeveeText1::
 	.string "The Evolution POKéMON.$"
 
 PP_ReceivedEevee::
+	hidemonpic
     fadescreen 1         // Fade to black
     delay 60             // Wait for fade to visually complete
     playse SE_POKEBALL_OPEN
@@ -1894,7 +1895,7 @@ PP_ReceivedEevee::
     playse SE_POKEBALL_CAPTURE
     delay 20
     setflag FLAG_PP_EEVEE
-    setobjecthidden 0xFF // Hide the last interacted NPC
+    hideobjectat 22, 17 
     fadescreen 0         // Fade back in
     delay 60
     releaseall
