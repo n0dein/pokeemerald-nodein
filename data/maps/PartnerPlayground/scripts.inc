@@ -1899,7 +1899,7 @@ PP_ReceivedEevee::
     playse SE_RG_BALL_CLICK
     delay 20
     setflag FLAG_PP_EEVEE
-    applymovement 0x30, Movement_PPByeMon
+    applymovement 0x1E, Movement_PPByeMon
 	call PP_CelebrateEevee
     fadescreen 0         // Fade back in
     delay 60
