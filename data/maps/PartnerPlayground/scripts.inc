@@ -910,175 +910,175 @@ PP_SkipNamingEevee::
 //PP_PC Section//
 
 PP_PCBulbasaur::
-	call PP_CelebrateBulbasaur
+	call PP_ReceivedBulbasaur
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Bulbasaur
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCCharmander::
-	call PP_CelebrateCharmander
+	call PP_ReceivedCharmander
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Charmander
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCSquirtle::
-	call PP_CelebrateSquirtle
+	call PP_ReceivedSquirtle
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Squirtle
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCChikorita::
-	call PP_CelebrateChikorita
+	call PP_ReceivedChikorita
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Chikorita
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCCyndaquil::
-	call PP_CelebrateCyndaquil
+	call PP_ReceivedCyndaquil
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Cyndaquil
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCTotodile::
-	call PP_CelebrateTotodile
+	call PP_ReceivedTotodile
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Totodile
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCTreecko::
-	call PP_CelebrateTreecko
+	call PP_ReceivedTreecko
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Treecko
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCTorchic::
-	call PP_CelebrateTorchic
+	call PP_ReceivedTorchic
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Torchic
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCMudkip::
-	call PP_CelebrateMudkip
+	call PP_ReceivedMudkip
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Mudkip
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCTurtwig::
-	call PP_CelebrateTurtwig
+	call PP_ReceivedTurtwig
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Turtwig
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCChimchar::
-	call PP_CelebrateChimchar
+	call PP_ReceivedChimchar
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Chimchar
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCPiplup::
-	call PP_CelebratePiplup
+	call PP_ReceivedPiplup
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Piplup
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCSnivy::
-	call PP_CelebrateSnivy
+	call PP_ReceivedSnivy
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Snivy
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCTepig::
-	call PP_CelebrateTepig
+	call PP_ReceivedTepig
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Tepig
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCOshawott::
-	call PP_CelebrateOshawott
+	call PP_ReceivedOshawott
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Oshawott
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCChespin::
-	call PP_CelebrateChespin
+	call PP_ReceivedChespin
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Chespin
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCFennekin::
-	call PP_CelebrateFennekin
+	call PP_ReceivedFennekin
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Fennekin
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCFroakie::
-	call PP_CelebrateFroakie
+	call PP_ReceivedFroakie
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Froakie
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCRowlet::
-	call PP_CelebrateRowlet
+	call PP_ReceivedRowlet
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Rowlet
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCLitten::
-	call PP_CelebrateLitten
+	call PP_ReceivedLitten
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Litten
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCPopplio::
-	call PP_CelebratePopplio
+	call PP_ReceivedPopplio
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Popplio
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCGrookey::
-	call PP_CelebrateGrookey
+	call PP_ReceivedGrookey
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Grookey
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCScorbunny::
-	call PP_CelebrateScorbunny
+	call PP_ReceivedScorbunny
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Scorbunny
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCSobble::
-	call PP_CelebrateSobble
+	call PP_ReceivedSobble
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Sobble
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCSprigatito::
-	call PP_CelebrateSprigatito
+	call PP_ReceivedSprigatito
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Sprigatito
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCFuecoco::
-	call PP_CelebrateFuecoco
+	call PP_ReceivedFuecoco
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Fuecoco
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCQuaxly::
-	call PP_CelebrateQuaxly
+	call PP_ReceivedQuaxly
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Quaxly
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCPikachu::
-	call PP_CelebratePikachu
+	call PP_ReceivedPikachu
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Pikachu
 	call Common_EventScript_NameReceivedBoxMon
 
 PP_PCEevee::
-	call PP_CelebrateEevee
+	call PP_ReceivedEevee
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Eevee
 	call Common_EventScript_NameReceivedBoxMon
