@@ -402,203 +402,203 @@ PP_Eevee::
 //PP_Give//
 
 PP_GiveBulbasaur::
-	givemon SPECIES_BULBASAUR, 5,
+	givemon SPECIES_BULBASAUR, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyBulbasaur
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCBulbasaur
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveCharmander::
-	givemon SPECIES_CHARMANDER, 5,
+	givemon SPECIES_CHARMANDER, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyCharmander
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCCharmander
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveSquirtle::
-	givemon SPECIES_SQUIRTLE, 5,
+	givemon SPECIES_SQUIRTLE, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartySquirtle
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCSquirtle
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveChikorita::
-	givemon SPECIES_CHIKORITA, 5,
+	givemon SPECIES_CHIKORITA, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyChikorita
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCChikorita
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveCyndaquil::
-	givemon SPECIES_CYNDAQUIL, 5,
+	givemon SPECIES_CYNDAQUIL, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyCyndaquil
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCCyndaquil
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveTotodile::
-	givemon SPECIES_TOTODILE, 5,
+	givemon SPECIES_TOTODILE, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyTotodile
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCTotodile
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveTreecko::
-	givemon SPECIES_TREECKO, 5,
+	givemon SPECIES_TREECKO, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyTreecko
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCTreecko
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveTorchic::
-	givemon SPECIES_TORCHIC, 5,
+	givemon SPECIES_TORCHIC, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyTorchic
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCTorchic
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveMudkip::
-	givemon SPECIES_MUDKIP, 5,
+	givemon SPECIES_MUDKIP, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyMudkip
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCMudkip
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveTurtwig::
-	givemon SPECIES_TURTWIG, 5,
+	givemon SPECIES_TURTWIG, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyTurtwig
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCTurtwig
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveChimchar::
-	givemon SPECIES_CHIMCHAR, 5,
+	givemon SPECIES_CHIMCHAR, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyChimchar
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCChimchar
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GivePiplup::
-	givemon SPECIES_PIPLUP, 5,
+	givemon SPECIES_PIPLUP, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyPiplup
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCPiplup
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveSnivy::
-	givemon SPECIES_SNIVY, 5,
+	givemon SPECIES_SNIVY, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartySnivy
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCSnivy
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveTepig::
-	givemon SPECIES_TEPIG, 5,
+	givemon SPECIES_TEPIG, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyTepig
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCTepig
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveOshawott::
-	givemon SPECIES_OSHAWOTT, 5,
+	givemon SPECIES_OSHAWOTT, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyOshawott
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCOshawott
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveChespin::
-	givemon SPECIES_CHESPIN, 5,
+	givemon SPECIES_CHESPIN, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyChespin
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCChespin
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveFennekin::
-	givemon SPECIES_FENNEKIN, 5,
+	givemon SPECIES_FENNEKIN, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyFennekin
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCFennekin
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveFroakie::
-	givemon SPECIES_FROAKIE, 5,
+	givemon SPECIES_FROAKIE, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyFroakie
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCFroakie
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveRowlet::
-	givemon SPECIES_ROWLET, 5,
+	givemon SPECIES_ROWLET, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyRowlet
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCRowlet
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveLitten::
-	givemon SPECIES_LITTEN, 5,
+	givemon SPECIES_LITTEN, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyLitten
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCLitten
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GivePopplio::
-	givemon SPECIES_POPPLIO, 5,
+	givemon SPECIES_POPPLIO, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyPopplio
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCPopplio
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveGrookey::
-	givemon SPECIES_GROOKEY, 5,
+	givemon SPECIES_GROOKEY, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyGrookey
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCGrookey
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveScorbunny::
-	givemon SPECIES_SCORBUNNY, 5,
+	givemon SPECIES_SCORBUNNY, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyScorbunny
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCScorbunny
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveSobble::
-	givemon SPECIES_SOBBLE, 5,
+	givemon SPECIES_SOBBLE, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartySobble
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCSobble
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveSprigatito::
-	givemon SPECIES_SPRIGATITO, 5,
+	givemon SPECIES_SPRIGATITO, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartySprigatito
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCSprigatito
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveFuecoco::
-	givemon SPECIES_FUECOCO, 5,
+	givemon SPECIES_FUECOCO, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyFuecoco
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCFuecoco
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveQuaxly::
-	givemon SPECIES_QUAXLY, 5,
+	givemon SPECIES_QUAXLY, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyQuaxly
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCQuaxly
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GivePikachu::
-	givemon SPECIES_PIKACHU, 5,
+	givemon SPECIES_PIKACHU, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyPikachu
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCPikachu
 	goto Common_EventScript_NoMoreRoomForPokemon
 	end
 
 PP_GiveEevee::
-	givemon SPECIES_EEVEE, 5,
+	givemon SPECIES_EEVEE, 5
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyEevee
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCEevee
 	goto Common_EventScript_NoMoreRoomForPokemon
@@ -612,174 +612,232 @@ PP_PartyBulbasaur::
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingBulbasaur
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedBulbasaur
+	end
 
 PP_PartyCharmander::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingCharmander
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedCharmander
+	end
 
 PP_PartySquirtle::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingSquirtle
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedSquirtle
+	end
 
 PP_PartyChikorita::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingChikorita
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedChikorita
+	end
 
 PP_PartyCyndaquil::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingCyndaquil
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedCyndaquil
+	end
 
 PP_PartyTotodile::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingTotodile
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedTotodile
+	end
 
 PP_PartyTreecko::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingTreecko
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedTreecko
+	end 
 
 PP_PartyTorchic::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingTorchic
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedTorchic
+	end
 
 PP_PartyMudkip::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingMudkip
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedMudkip
+	end
 
 PP_PartyTurtwig::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingTurtwig
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedTurtwig
+	end
 
 PP_PartyChimchar::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingChimchar
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedChimchar
+	end
 
 PP_PartyPiplup::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingPiplup
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedPiplup
+	end
 
 PP_PartySnivy::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingSnivy
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedSnivy
+	end
 
 PP_PartyTepig::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingTepig
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedTepig
+	end
 
 PP_PartyOshawott::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingOshawott
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedOshawott
+	end
 
 PP_PartyChespin::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingChespin
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedChespin
+	end
 
 PP_PartyFennekin::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingFennekin
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedFennekin
+	end
 
 PP_PartyFroakie::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingFroakie
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedFroakie
+	end
 
 PP_PartyRowlet::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingRowlet
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedRowlet
+	end
 
 PP_PartyLitten::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingLitten
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedLitten
+	end
 
 PP_PartyPopplio::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingPopplio
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedPopplio
+	end
 
 PP_PartyGrookey::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingGrookey
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedGrookey
+	end
 
 PP_PartyScorbunny::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingScorbunny
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedScorbunny
+	end
 
 PP_PartySobble::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingSobble
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedSobble
+	end
 
 PP_PartySprigatito::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingSprigatito
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedSprigatito
+	end
 
 PP_PartyFuecoco::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingFuecoco
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedFuecoco
+	end
 
 PP_PartyQuaxly::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingQuaxly
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedQuaxly
+	end
 
 PP_PartyPikachu::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingPikachu
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedPikachu
+	end
 
 PP_PartyEevee::
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipNamingEevee
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
+	goto PP_ReceivedEevee
+	end
 
 //PP_Nickname Section//
 
@@ -910,178 +968,178 @@ PP_SkipNamingEevee::
 //PP_PC Section//
 
 PP_PCBulbasaur::
-	call PP_ReceivedBulbasaur
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Bulbasaur
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedBulbasaur
 
 PP_PCCharmander::
-	call PP_ReceivedCharmander
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Charmander
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedCharmander
 
 PP_PCSquirtle::
-	call PP_ReceivedSquirtle
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Squirtle
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedSquirtle
 
 PP_PCChikorita::
-	call PP_ReceivedChikorita
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Chikorita
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedChikorita
 
 PP_PCCyndaquil::
-	call PP_ReceivedCyndaquil
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Cyndaquil
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedCyndaquil
 
 PP_PCTotodile::
-	call PP_ReceivedTotodile
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Totodile
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedTotodile
 
-PP_PCTreecko::
-	call PP_ReceivedTreecko
+PP_PCTreecko:: 
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Treecko
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedTreecko
 
 PP_PCTorchic::
-	call PP_ReceivedTorchic
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Torchic
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedTorchic
 
 PP_PCMudkip::
-	call PP_ReceivedMudkip
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Mudkip
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedMudkip
 
 PP_PCTurtwig::
-	call PP_ReceivedTurtwig
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Turtwig
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedTurtwig
 
 PP_PCChimchar::
-	call PP_ReceivedChimchar
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Chimchar
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedChimchar
 
 PP_PCPiplup::
-	call PP_ReceivedPiplup
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Piplup
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedPiplup
 
 PP_PCSnivy::
-	call PP_ReceivedSnivy
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Snivy
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedSnivy
 
 PP_PCTepig::
-	call PP_ReceivedTepig
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Tepig
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedTepig
 
 PP_PCOshawott::
-	call PP_ReceivedOshawott
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Oshawott
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedOshawott
 
 PP_PCChespin::
-	call PP_ReceivedChespin
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Chespin
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedChespin
 
 PP_PCFennekin::
-	call PP_ReceivedFennekin
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Fennekin
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedFennekin
 
 PP_PCFroakie::
-	call PP_ReceivedFroakie
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Froakie
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedFroakie
 
 PP_PCRowlet::
-	call PP_ReceivedRowlet
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Rowlet
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedRowlet
 
 PP_PCLitten::
-	call PP_ReceivedLitten
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Litten
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedLitten
 
 PP_PCPopplio::
-	call PP_ReceivedPopplio
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Popplio
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedPopplio
 
 PP_PCGrookey::
-	call PP_ReceivedGrookey
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Grookey
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedGrookey
 
 PP_PCScorbunny::
-	call PP_ReceivedScorbunny
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Scorbunny
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedScorbunny
 
 PP_PCSobble::
-	call PP_ReceivedSobble
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Sobble
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedSobble
 
 PP_PCSprigatito::
-	call PP_ReceivedSprigatito
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Sprigatito
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedSprigatito
 
 PP_PCFuecoco::
-	call PP_ReceivedFuecoco
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Fuecoco
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedFuecoco
 
 PP_PCQuaxly::
-	call PP_ReceivedQuaxly
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Quaxly
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedQuaxly
 
 PP_PCPikachu::
-	call PP_ReceivedPikachu
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Pikachu
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedPikachu
 
 PP_PCEevee::
-	call PP_ReceivedEevee
 	msgbox PP_NicknameChoice, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO PP_SkipPCNaming_Eevee
 	call Common_EventScript_NameReceivedBoxMon
+	call PP_ReceivedEevee
 
 
 //PP_SkipPCName Section//
@@ -2678,5 +2736,5 @@ PP_NotChosenText::
 	.string "partner pass to receive additional\n"
 	.string "starter POKéMON.\p"
 
+//END//
 
-	
