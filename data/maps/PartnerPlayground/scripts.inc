@@ -2427,126 +2427,238 @@ PP_EeveeChoice::
     .string "Do you want to take Eevee with\n"
     .string "you to be your first partner POKéMON?$"
 
+PP_PikachuChoice::
+	.string "Do you want to take Pikachu with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_BulbasaurChoice::	
+	.string "Do you want to take Bulbasaur with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_CharmanderChoice::
+	.string "Do you want to take Charmander with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_SquirtleChoice::
+	.string "Do you want to take Squirtle with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_ChikoritaChoice::
+	.string "Do you want to take Chikorita with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_CyndaquilChoice::
+	.string "Do you want to take Cyndaquil with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_TotodileChoice::
+	.string "Do you want to take Totodile with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_TreeckoChoice::
+	.string "Do you want to take Treecko with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_TorchicChoice::
+	.string "Do you want to take Torchic with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_MudkipChoice::
+	.string "Do you want to take Mudkip with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_TurtwigChoice::
+	.string "Do you want to take Turtwig with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_ChimcharChoice::
+	.string "Do you want to take Chimchar with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_PiplupChoice::
+	.string "Do you want to take Piplup with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_SnivyChoice::
+	.string "Do you want to take Snivy with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_TepigChoice::
+	.string "Do you want to take Tepig with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_OshawottChoice::
+	.string "Do you want to take Oshawott with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_ChespinChoice::
+	.string "Do you want to take Chespin with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_FennekinChoice::
+	.string "Do you want to take Fennekin with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_FroakieChoice::
+	.string "Do you want to take Froakie with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_RowletChoice::
+	.string "Do you want to take Rowlet with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_LittenChoice::
+	.string "Do you want to take Litten with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_PopplioChoice::
+	.string "Do you want to take Popplio with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_GrookeyChoice::
+	.string "Do you want to take Grookey with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_ScorbunnyChoice::
+	.string "Do you want to take Scorbunny with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_SobbleChoice::
+	.string "Do you want to take Sobble with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_SprigatitoChoice::
+	.string "Do you want to take Sprigatito with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_FuecocoChoice::
+	.string "Do you want to take Fuecoco with\n"
+	.string "you to be your first partner POKéMON?$"
+
+PP_QuaxlyChoice::
+	.string "Do you want to take Quaxly with\n"
+	.string "you to be your first partner POKéMON?$"
+
 //PP_Text1 Section//
 
 PP_BulbasaurText1::
     .string "You received Bulbasaur!\n"
-    .string "The Grass and Poison Type \"Seed\" POKéMON.$"
+    .string "The Grass and Poison Type Seed POKéMON.$"
 
 PP_CharmanderText1::
     .string "You received Charmander!\n"
-    .string "The Fire-Type \"Lizard\" POKéMON.$"
+    .string "The Fire-Type Lizard POKéMON.$"
 
 PP_SquirtleText1::
     .string "You received Squirtle!\n"
-    .string "The Water-Type \"Tiny Turtle\" POKéMON.$"
+    .string "The Water-Type Tiny Turtle POKéMON.$"
 
 PP_ChikoritaText1::
     .string "You received Chikorita!\n"
-    .string "The Grass-Type \"Leaf\" POKéMON.$"
+    .string "The Grass-Type Leaf POKéMON.$"
 
 PP_CyndaquilText1::
     .string "You received Cyndaquil!\n"
-    .string "The Fire-Type \"Fire Mouse\" POKéMON.$"
+    .string "The Fire-Type Fire Mouse POKéMON.$"
 
 PP_TotodileText1::
     .string "You received Totodile!\n"
-    .string "The Water-Type \"Big Jaw\" POKéMON.$"
+    .string "The Water-Type Big Jaw POKéMON.$"
 
 PP_TreeckoText1::
     .string "You received Treecko!\n"
-    .string "The Grass-Type \"Wood Gecko\" POKéMON.$"
+    .string "The Grass-Type Wood Gecko POKéMON.$"
 
 PP_TorchicText1::
     .string "You received Torchic!\n"
-    .string "The Fire-Type \"Chick\" POKéMON.$"
+    .string "The Fire-Type Chick POKéMON.$"
 
 PP_MudkipText1::
     .string "You received Mudkip!\n"
-    .string "The Water-Type \"Mud Fish\" POKéMON.$"
+    .string "The Water-Type Mud Fish POKéMON.$"
 
 PP_TurtwigText1::
     .string "You received Turtwig!\n"
-    .string "The Grass-Type \"Tiny Leaf\" POKéMON.$"
+    .string "The Grass-Type Tiny Leaf POKéMON.$"
 
 PP_ChimcharText1::
     .string "You received Chimchar!\n"
-    .string "The Fire-Type \"Chimp\" POKéMON.$"
+    .string "The Fire-Type Chimp POKéMON.$"
 
 PP_PiplupText1::
     .string "You received Piplup!\n"
-    .string "The Water-Type \"Penguin\" POKéMON.$"
+    .string "The Water-Type Penguin POKéMON.$"
 
 PP_SnivyText1::
     .string "You received Snivy!\n"
-    .string "The Grass-Type \"Grass Snake\" POKéMON.$"
+    .string "The Grass-Type Grass Snake POKéMON.$"
 
 PP_TepigText1::
     .string "You received Tepig!\n"
-    .string "The Fire-Type \"Fire Pig\" POKéMON.$"
+    .string "The Fire-Type Fire Pig POKéMON.$"
 
 PP_OshawottText1::
     .string "You received Oshawott!\n"
-    .string "The Water-Type \"Sea Otter\" POKéMON.$"
+    .string "The Water-Type Sea Otter POKéMON.$"
 
 PP_ChespinText1::
     .string "You received Chespin!\n"
-    .string "The Grass-Type \"Spiny Nut\" POKéMON.$"
+    .string "The Grass-Type Spiny Nut POKéMON.$"
 
 PP_FennekinText1::
     .string "You received Fennekin!\n"
-    .string "The Fire-Type \"Fox\" POKéMON.$"
+    .string "The Fire-Type Fox POKéMON.$"
 
 PP_FroakieText1::
     .string "You received Froakie!\n"
-    .string "The Water-Type \"Bubble Frog\" POKéMON.$"
+    .string "The Water-Type Bubble Frog POKéMON.$"
 
 PP_RowletText1::
     .string "You received Rowlet!\n"
-    .string "The Grass and Flying Type \"Grass Quill\" POKéMON.$"
+    .string "The Grass and Flying Type Grass Quill POKéMON.$"
 
 PP_LittenText1::
     .string "You received Litten!\n"
-    .string "The Fire-Type \"Fire Cat\" POKéMON.$"
+    .string "The Fire-Type Fire Cat POKéMON.$"
 
 PP_PopplioText1::
     .string "You received Popplio!\n"
-    .string "The Water-Type \"Sea Lion\" POKéMON.$"
+    .string "The Water-Type Sea Lion POKéMON.$"
 
 PP_GrookeyText1::
     .string "You received Grookey!\n"
-    .string "The Grass-Type \"Chimp\" POKéMON.$"
+    .string "The Grass-Type Chimp POKéMON.$"
 
 PP_ScorbunnyText1::
     .string "You received Scorbunny!\n"
-    .string "The Fire-Type \"Rabbit\" POKéMON.$"
+    .string "The Fire-Type Rabbit POKéMON.$"
 
 PP_SobbleText1::
     .string "You received Sobble!\n"
-    .string "The Water-Type \"Water Lizard\" POKéMON.$"
+    .string "The Water-Type Water Lizard POKéMON.$"
 
 PP_SprigatitoText1::
     .string "You received Sprigatito!\n"
-    .string "The Grass-Type \"Grass Cat\" POKéMON.$"
+    .string "The Grass-Type Grass Cat POKéMON.$"
 
 PP_FuecocoText1::
     .string "You received Fuecoco!\n"
-    .string "The Fire-Type \"Fire Croc\" POKéMON.$"
+    .string "The Fire-Type Fire Croc POKéMON.$"
 
 PP_QuaxlyText1::
     .string "You received Quaxly!\n"
-    .string "The Water-Type \"Duckling\" POKéMON.$"
+    .string "The Water-Type Duckling POKéMON.$"
 
 PP_PikachuText1::
     .string "You received Pikachu!\n"
-    .string "The Electric-Type \"Mouse\" POKéMON.$"
+    .string "The Electric-Type Mouse POKéMON.$"
 
 PP_EeveeText1::
     .string "You received Eevee!\n"
-    .string "The Normal-Type \"Evolution\" POKéMON.$"
+    .string "The Normal-Type Evolution POKéMON.$"
 
 Movement_PPByeMon::
 	set_invisible
 	step_end
 
-
+	
