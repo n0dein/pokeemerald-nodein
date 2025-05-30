@@ -781,6 +781,12 @@ PP_PartyEevee::
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
 
+//PP_Nickname Section//
+
+PP_NicknameChoice::
+	.string "Would you like to give a nickname\n"
+	.string "to the POKéMON you received?$"
+
 
 //PP_SkipNaming Section//
 	
@@ -2661,4 +2667,4 @@ Movement_PPByeMon::
 	set_invisible
 	step_end
 
-	
+
