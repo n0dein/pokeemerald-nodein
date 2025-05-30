@@ -2667,4 +2667,16 @@ Movement_PPByeMon::
 	set_invisible
 	step_end
 
+PP_NotChosen::
+	hidemonpic
+	msgbox PP_NotChosenText, MSGBOX_DEFAULT
+	releaseall
+	end
 
+PP_NotChosenText::
+	.string "You can always come back later with a\n"
+	.string "partner pass to receive additional\n"
+	.string "starter POKéMON.\p"
+
+
+	
