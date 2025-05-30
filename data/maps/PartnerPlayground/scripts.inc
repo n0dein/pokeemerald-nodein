@@ -1369,8 +1369,8 @@ PP_ReceivedBulbasaur::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_BULBASAUR
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x09, Movement_PPByeMon
+	waitmovement 0x09
 	call PP_CelebrateBulbasaur
 	delay 20
 	releaseall
@@ -1398,8 +1398,8 @@ PP_ReceivedCharmander::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_CHARMANDER
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x08, Movement_PPByeMon
+	waitmovement 0x08
 	call PP_CelebrateCharmander
 	delay 20
 	releaseall
@@ -1427,8 +1427,8 @@ PP_ReceivedSquirtle::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_SQUIRTLE
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x07, Movement_PPByeMon
+	waitmovement 0x07
 	call PP_CelebrateSquirtle
 	delay 20
 	releaseall
@@ -1456,8 +1456,8 @@ PP_ReceivedChikorita::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_CHIKORITA
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x0C, Movement_PPByeMon
+	waitmovement 0x0C
 	call PP_CelebrateChikorita
 	delay 20
 	releaseall
@@ -1485,8 +1485,8 @@ PP_ReceivedCyndaquil::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_CYNDAQUIL
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x0B, Movement_PPByeMon
+	waitmovement 0x0B
 	call PP_CelebrateCyndaquil
 	delay 20
 	releaseall
@@ -1514,8 +1514,8 @@ PP_ReceivedTotodile::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_TOTODILE
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x0A, Movement_PPByeMon
+	waitmovement 0x0A
 	call PP_CelebrateTotodile
 	delay 20
 	releaseall
@@ -1543,8 +1543,8 @@ PP_ReceivedTreecko::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_TREECKO
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x06, Movement_PPByeMon
+	waitmovement 0x06
 	call PP_CelebrateTreecko
 	delay 20
 	releaseall
@@ -1572,8 +1572,8 @@ PP_ReceivedTorchic::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_TORCHIC
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x05, Movement_PPByeMon
+	waitmovement 0x05
 	call PP_CelebrateTorchic
 	delay 20
 	releaseall
@@ -1601,8 +1601,8 @@ PP_ReceivedMudkip::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_MUDKIP
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x04, Movement_PPByeMon
+	waitmovement 0x04
 	call PP_CelebrateMudkip
 	delay 20
 	releaseall
@@ -1630,8 +1630,8 @@ PP_ReceivedTurtwig::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_TURTWIG
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x0E, Movement_PPByeMon
+	waitmovement 0x0E
 	call PP_CelebrateTurtwig
 	delay 20
 	releaseall
@@ -1659,8 +1659,8 @@ PP_ReceivedChimchar::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_CHIMCHAR
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x0D, Movement_PPByeMon
+	waitmovement 0x0D
 	call PP_CelebrateChimchar
 	delay 20
 	releaseall
@@ -1688,8 +1688,8 @@ PP_ReceivedPiplup::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_PIPLUP
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x0F, Movement_PPByeMon
+	waitmovement 0x0F
 	call PP_CelebratePiplup
 	delay 20
 	releaseall
@@ -1804,8 +1804,8 @@ PP_ReceivedChespin::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_CHESPIN
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x15, Movement_PPByeMon
+	waitmovement 0x15
 	call PP_CelebrateChespin
 	delay 20
 	releaseall
@@ -1833,8 +1833,8 @@ PP_ReceivedFennekin::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_FENNEKIN
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x14, Movement_PPByeMon
+	waitmovement 0x14
 	call PP_CelebrateFennekin
 	delay 20
 	releaseall
@@ -1862,8 +1862,8 @@ PP_ReceivedFroakie::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_FROAKIE
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x13, Movement_PPByeMon
+	waitmovement 0x13
 	call PP_CelebrateFroakie
 	delay 20
 	releaseall
@@ -1978,8 +1978,8 @@ PP_ReceivedGrookey::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_GROOKEY
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x02, Movement_PPByeMon
+	waitmovement 0x02
 	call PP_CelebrateGrookey
 	delay 20
 	releaseall
@@ -2007,8 +2007,8 @@ PP_ReceivedScorbunny::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_SCORBUNNY
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x01, Movement_PPByeMon
+	waitmovement 0x01
 	call PP_CelebrateScorbunny
 	delay 20
 	releaseall
@@ -2036,8 +2036,8 @@ PP_ReceivedSobble::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_SOBBLE
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x03, Movement_PPByeMon
+	waitmovement 0x03
 	call PP_CelebrateSobble
 	delay 20
 	releaseall
@@ -2065,8 +2065,8 @@ PP_ReceivedSprigatito::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_SPRIGATITO
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x10, Movement_PPByeMon
+	waitmovement 0x10
 	call PP_CelebrateSprigatito
 	delay 20
 	releaseall
@@ -2094,8 +2094,8 @@ PP_ReceivedFuecoco::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_FUECOCO
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x17, Movement_PPByeMon
+	waitmovement 0x17
 	call PP_CelebrateFuecoco
 	delay 20
 	releaseall
@@ -2123,8 +2123,8 @@ PP_ReceivedQuaxly::
 	playse SE_RG_BALL_CLICK
 	delay 20
 	setflag FLAG_PP_QUAXLY
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
+	applymovement 0x12, Movement_PPByeMon
+	waitmovement 0x12
 	call PP_CelebrateQuaxly
 	delay 20
 	releaseall
