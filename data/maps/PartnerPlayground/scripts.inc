@@ -2854,8 +2854,8 @@ PP_NotChosen::
 
 PP_NotChosenText::
 	.string "You can always come back later with a\n"
-	.string "partner pass to receive additional\n"
-	.string "starter POKéMON.\$"
+	.string "partner pass to receive additional\p"
+	.string "starter POKéMON.$"
 
 //END//
 
