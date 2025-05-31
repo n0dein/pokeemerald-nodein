@@ -855,175 +855,175 @@ PP_NicknameChoiceNO::
 	
 PP_SkipNamingBulbasaur::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedBulbasaur
 	end
 
 PP_SkipNamingCharmander::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedCharmander
 	end
 
 PP_SkipNamingSquirtle::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedSquirtle
 	end
 
 PP_SkipNamingChikorita::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedChikorita
 	end
 
 PP_SkipNamingCyndaquil::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedCyndaquil
 	end
 
 PP_SkipNamingTotodile::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedTotodile
 	end
 
 PP_SkipNamingTreecko::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedTreecko
 	end
 
 PP_SkipNamingTorchic::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedTorchic
 	end
 
 PP_SkipNamingMudkip::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedMudkip
 	end
 
 PP_SkipNamingTurtwig::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedTurtwig
 	end
 
 PP_SkipNamingChimchar::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedChimchar
 	end
 
 PP_SkipNamingPiplup::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedPiplup
 	end
 
 PP_SkipNamingSnivy::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedSnivy
 	end
 
 PP_SkipNamingTepig::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedTepig
 	end
 
 PP_SkipNamingOshawott::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedOshawott
 	end
 
 PP_SkipNamingChespin::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedChespin
 	end
 
 PP_SkipNamingFennekin::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedFennekin
 	end
 
 PP_SkipNamingFroakie::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedFroakie
 	end
 
 PP_SkipNamingRowlet::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedRowlet
 	end
 
 PP_SkipNamingLitten::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedLitten
 	end
 
 PP_SkipNamingPopplio::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedPopplio
 	end
 
 PP_SkipNamingGrookey::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedGrookey
 	end
 
 PP_SkipNamingScorbunny::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedScorbunny
 	end
 
 PP_SkipNamingSobble::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedSobble
 	end
 
 PP_SkipNamingSprigatito::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedSprigatito
 	end
 
 PP_SkipNamingFuecoco::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedFuecoco
 	end
 
 PP_SkipNamingQuaxly::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedQuaxly
 	end
 
 PP_SkipNamingPikachu::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedPikachu
 	end
 
 PP_SkipNamingEevee::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ReceivedEevee
 	end
 
@@ -1209,175 +1209,175 @@ PP_PCEevee::
 
 PP_SkipPCNaming_Bulbasaur::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_BulbasaurToPC
 	end
 
 PP_SkipPCNaming_Charmander::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_CharmanderToPC
 	end
 
 PP_SkipPCNaming_Squirtle::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_SquirtleToPC
 	end
 
 PP_SkipPCNaming_Chikorita::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ChikoritaToPC
 	end
 
 PP_SkipPCNaming_Cyndaquil::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_CyndaquilToPC
 	end
 
 PP_SkipPCNaming_Totodile::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_TotodileToPC
 	end
 
 PP_SkipPCNaming_Treecko::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_TreeckoToPC
 	end
 
 PP_SkipPCNaming_Torchic::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_TorchicToPC
 	end
 
 PP_SkipPCNaming_Mudkip::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_MudkipToPC
 	end
 
 PP_SkipPCNaming_Turtwig::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_TurtwigToPC
 	end
 
 PP_SkipPCNaming_Chimchar::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ChimcharToPC
 	end
 
 PP_SkipPCNaming_Piplup::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_PiplupToPC
 	end
 
 PP_SkipPCNaming_Snivy::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_SnivyToPC
 	end
 
 PP_SkipPCNaming_Tepig::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_TepigToPC
 	end
 
 PP_SkipPCNaming_Oshawott::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_OshawottToPC
 	end
 
 PP_SkipPCNaming_Chespin::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ChespinToPC
 	end
 
 PP_SkipPCNaming_Fennekin::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_FennekinToPC
 	end
 
 PP_SkipPCNaming_Froakie::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_FroakieToPC
 	end
 
 PP_SkipPCNaming_Rowlet::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_RowletToPC
 	end
 
 PP_SkipPCNaming_Litten::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_LittenToPC
 	end
 
 PP_SkipPCNaming_Popplio::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_PopplioToPC
 	end
 
 PP_SkipPCNaming_Grookey::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_GrookeyToPC
 	end
 
 PP_SkipPCNaming_Scorbunny::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_ScorbunnyToPC
 	end
 
 PP_SkipPCNaming_Sobble::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_SobbleToPC
 	end
 
 PP_SkipPCNaming_Sprigatito::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_SprigatitoToPC
 	end
 
 PP_SkipPCNaming_Fuecoco::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_FuecocoToPC
 	end
 
 PP_SkipPCNaming_Quaxly::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_QuaxlyToPC
 	end
 
 PP_SkipPCNaming_Pikachu::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_PikachuToPC
 	end
 
 PP_SkipPCNaming_Eevee::
 	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
-	waitmessage
+	closemessage
 	goto PP_EeveeToPC
 	end
 
@@ -1532,9 +1532,7 @@ PP_EeveeToPC::
 
 //PP_Received Section//
 
-PP_ReceivedBulbasaur::
-	hidemonpic
-	delay 60
+PP_BallScene::
 	playse SE_BALL_OPEN
 	delay 30
 	playse SE_BALL_BOUNCE_1
@@ -1553,6 +1551,12 @@ PP_ReceivedBulbasaur::
 	delay 50
 	playse SE_RG_BALL_CLICK
 	delay 20
+	return
+
+
+PP_ReceivedBulbasaur::
+	hidemonpic
+	call PP_BallScene
 	setflag FLAG_PP_BULBASAUR
 	applymovement 0x09, Movement_PPByeMon
 	waitmovement 0x09
@@ -1563,25 +1567,7 @@ PP_ReceivedBulbasaur::
 
 PP_ReceivedCharmander::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_CHARMANDER
 	applymovement 0x08, Movement_PPByeMon
 	waitmovement 0x08
@@ -1592,25 +1578,7 @@ PP_ReceivedCharmander::
 
 PP_ReceivedSquirtle::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_SQUIRTLE
 	applymovement 0x07, Movement_PPByeMon
 	waitmovement 0x07
@@ -1621,25 +1589,7 @@ PP_ReceivedSquirtle::
 
 PP_ReceivedChikorita::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_CHIKORITA
 	applymovement 0x0C, Movement_PPByeMon
 	waitmovement 0x0C
@@ -1650,25 +1600,7 @@ PP_ReceivedChikorita::
 
 PP_ReceivedCyndaquil::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_CYNDAQUIL
 	applymovement 0x0B, Movement_PPByeMon
 	waitmovement 0x0B
@@ -1679,25 +1611,7 @@ PP_ReceivedCyndaquil::
 
 PP_ReceivedTotodile::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_TOTODILE
 	applymovement 0x0A, Movement_PPByeMon
 	waitmovement 0x0A
@@ -1708,25 +1622,7 @@ PP_ReceivedTotodile::
 
 PP_ReceivedTreecko::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_TREECKO
 	applymovement 0x06, Movement_PPByeMon
 	waitmovement 0x06
@@ -1737,25 +1633,7 @@ PP_ReceivedTreecko::
 
 PP_ReceivedTorchic::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_TORCHIC
 	applymovement 0x05, Movement_PPByeMon
 	waitmovement 0x05
@@ -1766,25 +1644,7 @@ PP_ReceivedTorchic::
 
 PP_ReceivedMudkip::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_MUDKIP
 	applymovement 0x04, Movement_PPByeMon
 	waitmovement 0x04
@@ -1795,25 +1655,7 @@ PP_ReceivedMudkip::
 
 PP_ReceivedTurtwig::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_TURTWIG
 	applymovement 0x0E, Movement_PPByeMon
 	waitmovement 0x0E
@@ -1824,25 +1666,7 @@ PP_ReceivedTurtwig::
 
 PP_ReceivedChimchar::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_CHIMCHAR
 	applymovement 0x0D, Movement_PPByeMon
 	waitmovement 0x0D
@@ -1853,25 +1677,7 @@ PP_ReceivedChimchar::
 
 PP_ReceivedPiplup::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_PIPLUP
 	applymovement 0x0F, Movement_PPByeMon
 	waitmovement 0x0F
@@ -1882,25 +1688,7 @@ PP_ReceivedPiplup::
 
 PP_ReceivedSnivy::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_SNIVY
 	applymovement 0x18, Movement_PPByeMon
 	waitmovement 0x18
@@ -1911,25 +1699,7 @@ PP_ReceivedSnivy::
 
 PP_ReceivedTepig::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_TEPIG
 	applymovement 0x17, Movement_PPByeMon
 	waitmovement 0x17
@@ -1940,25 +1710,7 @@ PP_ReceivedTepig::
 
 PP_ReceivedOshawott::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_OSHAWOTT
 	applymovement 0x16, Movement_PPByeMon
 	waitmovement 0x16
@@ -1969,25 +1721,7 @@ PP_ReceivedOshawott::
 
 PP_ReceivedChespin::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_CHESPIN
 	applymovement 0x15, Movement_PPByeMon
 	waitmovement 0x15
@@ -1998,25 +1732,7 @@ PP_ReceivedChespin::
 
 PP_ReceivedFennekin::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_FENNEKIN
 	applymovement 0x14, Movement_PPByeMon
 	waitmovement 0x14
@@ -2027,25 +1743,7 @@ PP_ReceivedFennekin::
 
 PP_ReceivedFroakie::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_FROAKIE
 	applymovement 0x13, Movement_PPByeMon
 	waitmovement 0x13
@@ -2056,25 +1754,7 @@ PP_ReceivedFroakie::
 
 PP_ReceivedRowlet::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_ROWLET
 	applymovement 0x19, Movement_PPByeMon
 	waitmovement 0x19
@@ -2085,25 +1765,7 @@ PP_ReceivedRowlet::
 
 PP_ReceivedLitten::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_LITTEN
 	applymovement 0x1A, Movement_PPByeMon
 	waitmovement 0x1A
@@ -2114,25 +1776,7 @@ PP_ReceivedLitten::
 
 PP_ReceivedPopplio::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_POPPLIO
 	applymovement 0x1B, Movement_PPByeMon
 	waitmovement 0x1B
@@ -2143,25 +1787,7 @@ PP_ReceivedPopplio::
 
 PP_ReceivedGrookey::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_GROOKEY
 	applymovement 0x02, Movement_PPByeMon
 	waitmovement 0x02
@@ -2172,25 +1798,7 @@ PP_ReceivedGrookey::
 
 PP_ReceivedScorbunny::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_SCORBUNNY
 	applymovement 0x01, Movement_PPByeMon
 	waitmovement 0x01
@@ -2201,25 +1809,7 @@ PP_ReceivedScorbunny::
 
 PP_ReceivedSobble::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_SOBBLE
 	applymovement 0x03, Movement_PPByeMon
 	waitmovement 0x03
@@ -2230,25 +1820,7 @@ PP_ReceivedSobble::
 
 PP_ReceivedSprigatito::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_SPRIGATITO
 	applymovement 0x10, Movement_PPByeMon
 	waitmovement 0x10
@@ -2259,25 +1831,7 @@ PP_ReceivedSprigatito::
 
 PP_ReceivedFuecoco::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_FUECOCO
 	applymovement 0x17, Movement_PPByeMon
 	waitmovement 0x17
@@ -2288,25 +1842,7 @@ PP_ReceivedFuecoco::
 
 PP_ReceivedQuaxly::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_QUAXLY
 	applymovement 0x12, Movement_PPByeMon
 	waitmovement 0x12
@@ -2317,25 +1853,7 @@ PP_ReceivedQuaxly::
 
 PP_ReceivedPikachu::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_PIKACHU
 	applymovement 0x1D, Movement_PPByeMon
 	waitmovement 0x1D
@@ -2346,25 +1864,7 @@ PP_ReceivedPikachu::
 
 PP_ReceivedEevee::
 	hidemonpic
-	delay 60
-	playse SE_BALL_OPEN
-	delay 30
-	playse SE_BALL_BOUNCE_1
-	waitse
-	playse SE_BALL_BOUNCE_2
-	waitse
-	playse SE_BALL_BOUNCE_3
-	waitse
-	playse SE_BALL_BOUNCE_4
-	delay 20
-	playse SE_BALL
-	delay 30
-	playse SE_BALL
-	delay 40
-	playse SE_BALL
-	delay 50
-	playse SE_RG_BALL_CLICK
-	delay 20
+	call PP_BallScene
 	setflag FLAG_PP_EEVEE
 	applymovement 0x1E, Movement_PPByeMon
 	waitmovement 0x1E
