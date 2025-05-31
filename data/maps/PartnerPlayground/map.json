@@ -522,6 +522,42 @@
       "var": "VAR_STARTER_GOT",
       "var_value": "1",
       "script": "PP_TriggerUnlock"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "2",
+      "script": "PP_Lo"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "2",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "2",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 34,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "2",
+      "script": "NULL"
     }
   ],
   "bg_events": [

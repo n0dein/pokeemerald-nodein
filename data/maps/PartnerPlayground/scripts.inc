@@ -10,18 +10,35 @@ PP_TriggerUnlock::
 	end
 
 PP_UnlockText::
-	.string "Now that I have my very\n"
-	.string "own partner POKéMON,\p"
-	.string "I can start my adventure!\p"
-	.string "I should show MOM my partner\n"
-	.string "POKéMON first though,\p"
-	.string "she is so excited to see.$"
+	.string "My brother would want to see\n"
+	.string "my new POKéMON.\p"
+	.string "Let's show him first, then\n"
+	.string "I can start my adventure!$"	
 
 PP_UnlockPath::
 	msgbox PP_UnlockText, MSGBOX_DEFAULT
 	closemessage
 	setvar VAR_STARTER_GOT, 2
 	return
+
+PP_LockPath::
+	lockall
+	msgbox PP_NoEntryText, MSGBOX_DEFAULT
+	closemessage
+	applymovement OBJ_EVENT_ID_PLAYER, PP_Movement_PreventEnter
+	waitmovement 0
+	releaseall
+	end
+
+PP_NoEntryText::
+	.string "I can't enter the park yet.\p"
+	.string "I need to return with a\n"
+	.string "partner pass!$"
+
+PP_Movement_PreventEnter::
+	walk_right
+	walk_right
+	step_end
 
 PP_PreventExitEast::
 	lockall
@@ -53,8 +70,8 @@ PP_EnterPP::
 
 PP_GET_STARTER_TEXT::
 	.string "This looks like the park\n"
-	.string "Prfessor Birch was talking about.\p"
-	.string "I should go and select my\n"
+	.string "the Professor was talking about.\p"
+	.string "I should go and choose my\n"
 	.string "first partner POKéMON!$"
 
 PartnerPlayground_EventScript_Sign::
@@ -1566,6 +1583,7 @@ PP_ReceivedBulbasaur::
 	waitmovement 0x09
 	call PP_CelebrateBulbasaur
 	setflag FLAG_PP_BULBASAUR
+	warp MAP_PARTNER_PLAYGROUND, 36, 9
 	releaseall
 	end
 
@@ -1578,7 +1596,8 @@ PP_ReceivedCharmander::
     waitmovement 0x08
     call PP_CelebrateCharmander
     setflag FLAG_PP_CHARMANDER
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedSquirtle::
@@ -1590,7 +1609,8 @@ PP_ReceivedSquirtle::
     waitmovement 0x07
     call PP_CelebrateSquirtle
     setflag FLAG_PP_SQUIRTLE
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedChikorita::
@@ -1602,7 +1622,8 @@ PP_ReceivedChikorita::
     waitmovement 0x0C
     call PP_CelebrateChikorita
     setflag FLAG_PP_CHIKORITA
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedCyndaquil::
@@ -1614,7 +1635,8 @@ PP_ReceivedCyndaquil::
     waitmovement 0x0B
     call PP_CelebrateCyndaquil
     setflag FLAG_PP_CYNDAQUIL
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedTotodile::
@@ -1626,7 +1648,8 @@ PP_ReceivedTotodile::
     waitmovement 0x0A
     call PP_CelebrateTotodile
     setflag FLAG_PP_TOTODILE
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedTreecko::
@@ -1638,7 +1661,8 @@ PP_ReceivedTreecko::
     waitmovement 0x06
     call PP_CelebrateTreecko
     setflag FLAG_PP_TREECKO
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedTorchic::
@@ -1650,7 +1674,8 @@ PP_ReceivedTorchic::
     waitmovement 0x05
     call PP_CelebrateTorchic
     setflag FLAG_PP_TORCHIC
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedMudkip::
@@ -1662,7 +1687,8 @@ PP_ReceivedMudkip::
     waitmovement 0x04
     call PP_CelebrateMudkip
     setflag FLAG_PP_MUDKIP
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedTurtwig::
@@ -1674,7 +1700,8 @@ PP_ReceivedTurtwig::
     waitmovement 0x0E
     call PP_CelebrateTurtwig
     setflag FLAG_PP_TURTWIG
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedChimchar::
@@ -1686,7 +1713,8 @@ PP_ReceivedChimchar::
     waitmovement 0x0D
     call PP_CelebrateChimchar
     setflag FLAG_PP_CHIMCHAR
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedPiplup::
@@ -1698,7 +1726,8 @@ PP_ReceivedPiplup::
     waitmovement 0x0F
     call PP_CelebratePiplup
     setflag FLAG_PP_PIPLUP
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedSnivy::
@@ -1710,7 +1739,8 @@ PP_ReceivedSnivy::
     waitmovement 0x18
     call PP_CelebrateSnivy
     setflag FLAG_PP_SNIVY
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedTepig::
@@ -1722,7 +1752,8 @@ PP_ReceivedTepig::
     waitmovement 0x17
     call PP_CelebrateTepig
     setflag FLAG_PP_TEPIG
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedOshawott::
@@ -1734,7 +1765,8 @@ PP_ReceivedOshawott::
     waitmovement 0x16
     call PP_CelebrateOshawott
     setflag FLAG_PP_OSHAWOTT
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedChespin::
@@ -1746,7 +1778,8 @@ PP_ReceivedChespin::
     waitmovement 0x15
     call PP_CelebrateChespin
     setflag FLAG_PP_CHESPIN
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedFennekin::
@@ -1758,7 +1791,8 @@ PP_ReceivedFennekin::
     waitmovement 0x14
     call PP_CelebrateFennekin
     setflag FLAG_PP_FENNEKIN
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedFroakie::
@@ -1770,7 +1804,8 @@ PP_ReceivedFroakie::
     waitmovement 0x13
     call PP_CelebrateFroakie
     setflag FLAG_PP_FROAKIE
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedRowlet::
@@ -1782,7 +1817,8 @@ PP_ReceivedRowlet::
     waitmovement 0x19
     call PP_CelebrateRowlet
     setflag FLAG_PP_ROWLET
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedLitten::
@@ -1794,7 +1830,8 @@ PP_ReceivedLitten::
     waitmovement 0x1A
     call PP_CelebrateLitten
     setflag FLAG_PP_LITTEN
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedPopplio::
@@ -1806,7 +1843,8 @@ PP_ReceivedPopplio::
     waitmovement 0x1B
     call PP_CelebratePopplio
     setflag FLAG_PP_POPPLIO
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedGrookey::
@@ -1818,7 +1856,8 @@ PP_ReceivedGrookey::
     waitmovement 0x02
     call PP_CelebrateGrookey
     setflag FLAG_PP_GROOKEY
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedScorbunny::
@@ -1830,7 +1869,8 @@ PP_ReceivedScorbunny::
     waitmovement 0x01
     call PP_CelebrateScorbunny
     setflag FLAG_PP_SCORBUNNY
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedSobble::
@@ -1842,7 +1882,8 @@ PP_ReceivedSobble::
     waitmovement 0x03
     call PP_CelebrateSobble
     setflag FLAG_PP_SOBBLE
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedSprigatito::
@@ -1854,7 +1895,8 @@ PP_ReceivedSprigatito::
     waitmovement 0x10
     call PP_CelebrateSprigatito
     setflag FLAG_PP_SPRIGATITO
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedFuecoco::
@@ -1866,7 +1908,8 @@ PP_ReceivedFuecoco::
     waitmovement 0x17
     call PP_CelebrateFuecoco
     setflag FLAG_PP_FUECOCO
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedQuaxly::
@@ -1878,7 +1921,8 @@ PP_ReceivedQuaxly::
     waitmovement 0x12
     call PP_CelebrateQuaxly
     setflag FLAG_PP_QUAXLY
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedPikachu::
@@ -1890,7 +1934,8 @@ PP_ReceivedPikachu::
     waitmovement 0x1D
     call PP_CelebratePikachu
     setflag FLAG_PP_PIKACHU
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 PP_ReceivedEevee::
@@ -1902,7 +1947,8 @@ PP_ReceivedEevee::
     waitmovement 0x1E
     call PP_CelebrateEevee
     setflag FLAG_PP_EEVEE
-    releaseall
+    warp MAP_PARTNER_PLAYGROUND, 36, 9
+	releaseall
     end
 
 
@@ -2260,7 +2306,8 @@ PP_QuaxlyChoice::
 
 PP_BulbasaurText1::
     .string "You received Bulbasaur!\n"
-    .string "The Grass and Poison Type Seed POKéMON.$"
+    .string "The Grass and Poison Type\p"
+	.string "Seed POKéMON.$"
 
 PP_CharmanderText1::
     .string "You received Charmander!\n"
@@ -2308,7 +2355,8 @@ PP_PiplupText1::
 
 PP_SnivyText1::
     .string "You received Snivy!\n"
-    .string "The Grass-Type Grass Snake POKéMON.$"
+    .string "The Grass-Type Grass\p"
+	.string "Snake POKéMON.$"
 
 PP_TepigText1::
     .string "You received Tepig!\n"
@@ -2332,7 +2380,8 @@ PP_FroakieText1::
 
 PP_RowletText1::
     .string "You received Rowlet!\n"
-    .string "The Grass and Flying Type Grass Quill POKéMON.$"
+    .string "The Grass and Flying Type\p"
+	.string "Grass Quill POKéMON.$"
 
 PP_LittenText1::
     .string "You received Litten!\n"
@@ -2352,7 +2401,8 @@ PP_ScorbunnyText1::
 
 PP_SobbleText1::
     .string "You received Sobble!\n"
-    .string "The Water-Type Water Lizard POKéMON.$"
+    .string "The Water-Type Water\p" 
+	.string "Lizard POKéMON.$"
 
 PP_SprigatitoText1::
     .string "You received Sprigatito!\n"
