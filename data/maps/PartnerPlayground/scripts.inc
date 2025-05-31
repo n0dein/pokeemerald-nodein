@@ -1553,15 +1553,19 @@ PP_BallScene::
 	delay 20
 	return
 
+Movement_PPBallScene::
+	enter_pokeball
+	step_end
 
 PP_ReceivedBulbasaur::
 	hidemonpic
+	applymovement 0x09, Movement_PPBallScene
+	waitmovement 0x09
 	call PP_BallScene
-	setflag FLAG_PP_BULBASAUR
 	applymovement 0x09, Movement_PPByeMon
 	waitmovement 0x09
 	call PP_CelebrateBulbasaur
-	delay 20
+	setflag FLAG_PP_BULBASAUR
 	releaseall
 	end
 
