@@ -1570,312 +1570,340 @@ PP_ReceivedBulbasaur::
 	end
 
 PP_ReceivedCharmander::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_CHARMANDER
-	applymovement 0x08, Movement_PPByeMon
-	waitmovement 0x08
-	call PP_CelebrateCharmander
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x08, Movement_PPBallScene
+    waitmovement 0x08
+    call PP_BallScene
+    applymovement 0x08, Movement_PPByeMon
+    waitmovement 0x08
+    call PP_CelebrateCharmander
+    setflag FLAG_PP_CHARMANDER
+    releaseall
+    end
 
 PP_ReceivedSquirtle::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_SQUIRTLE
-	applymovement 0x07, Movement_PPByeMon
-	waitmovement 0x07
-	call PP_CelebrateSquirtle
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x07, Movement_PPBallScene
+    waitmovement 0x07
+    call PP_BallScene
+    applymovement 0x07, Movement_PPByeMon
+    waitmovement 0x07
+    call PP_CelebrateSquirtle
+    setflag FLAG_PP_SQUIRTLE
+    releaseall
+    end
 
 PP_ReceivedChikorita::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_CHIKORITA
-	applymovement 0x0C, Movement_PPByeMon
-	waitmovement 0x0C
-	call PP_CelebrateChikorita
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x0C, Movement_PPBallScene
+    waitmovement 0x0C
+    call PP_BallScene
+    applymovement 0x0C, Movement_PPByeMon
+    waitmovement 0x0C
+    call PP_CelebrateChikorita
+    setflag FLAG_PP_CHIKORITA
+    releaseall
+    end
 
 PP_ReceivedCyndaquil::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_CYNDAQUIL
-	applymovement 0x0B, Movement_PPByeMon
-	waitmovement 0x0B
-	call PP_CelebrateCyndaquil
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x0B, Movement_PPBallScene
+    waitmovement 0x0B
+    call PP_BallScene
+    applymovement 0x0B, Movement_PPByeMon
+    waitmovement 0x0B
+    call PP_CelebrateCyndaquil
+    setflag FLAG_PP_CYNDAQUIL
+    releaseall
+    end
 
 PP_ReceivedTotodile::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_TOTODILE
-	applymovement 0x0A, Movement_PPByeMon
-	waitmovement 0x0A
-	call PP_CelebrateTotodile
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x0A, Movement_PPBallScene
+    waitmovement 0x0A
+    call PP_BallScene
+    applymovement 0x0A, Movement_PPByeMon
+    waitmovement 0x0A
+    call PP_CelebrateTotodile
+    setflag FLAG_PP_TOTODILE
+    releaseall
+    end
 
 PP_ReceivedTreecko::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_TREECKO
-	applymovement 0x06, Movement_PPByeMon
-	waitmovement 0x06
-	call PP_CelebrateTreecko
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x06, Movement_PPBallScene
+    waitmovement 0x06
+    call PP_BallScene
+    applymovement 0x06, Movement_PPByeMon
+    waitmovement 0x06
+    call PP_CelebrateTreecko
+    setflag FLAG_PP_TREECKO
+    releaseall
+    end
 
 PP_ReceivedTorchic::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_TORCHIC
-	applymovement 0x05, Movement_PPByeMon
-	waitmovement 0x05
-	call PP_CelebrateTorchic
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x05, Movement_PPBallScene
+    waitmovement 0x05
+    call PP_BallScene
+    applymovement 0x05, Movement_PPByeMon
+    waitmovement 0x05
+    call PP_CelebrateTorchic
+    setflag FLAG_PP_TORCHIC
+    releaseall
+    end
 
 PP_ReceivedMudkip::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_MUDKIP
-	applymovement 0x04, Movement_PPByeMon
-	waitmovement 0x04
-	call PP_CelebrateMudkip
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x04, Movement_PPBallScene
+    waitmovement 0x04
+    call PP_BallScene
+    applymovement 0x04, Movement_PPByeMon
+    waitmovement 0x04
+    call PP_CelebrateMudkip
+    setflag FLAG_PP_MUDKIP
+    releaseall
+    end
 
 PP_ReceivedTurtwig::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_TURTWIG
-	applymovement 0x0E, Movement_PPByeMon
-	waitmovement 0x0E
-	call PP_CelebrateTurtwig
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x0E, Movement_PPBallScene
+    waitmovement 0x0E
+    call PP_BallScene
+    applymovement 0x0E, Movement_PPByeMon
+    waitmovement 0x0E
+    call PP_CelebrateTurtwig
+    setflag FLAG_PP_TURTWIG
+    releaseall
+    end
 
 PP_ReceivedChimchar::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_CHIMCHAR
-	applymovement 0x0D, Movement_PPByeMon
-	waitmovement 0x0D
-	call PP_CelebrateChimchar
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x0D, Movement_PPBallScene
+    waitmovement 0x0D
+    call PP_BallScene
+    applymovement 0x0D, Movement_PPByeMon
+    waitmovement 0x0D
+    call PP_CelebrateChimchar
+    setflag FLAG_PP_CHIMCHAR
+    releaseall
+    end
 
 PP_ReceivedPiplup::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_PIPLUP
-	applymovement 0x0F, Movement_PPByeMon
-	waitmovement 0x0F
-	call PP_CelebratePiplup
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x0F, Movement_PPBallScene
+    waitmovement 0x0F
+    call PP_BallScene
+    applymovement 0x0F, Movement_PPByeMon
+    waitmovement 0x0F
+    call PP_CelebratePiplup
+    setflag FLAG_PP_PIPLUP
+    releaseall
+    end
 
 PP_ReceivedSnivy::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_SNIVY
-	applymovement 0x18, Movement_PPByeMon
-	waitmovement 0x18
-	call PP_CelebrateSnivy
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x18, Movement_PPBallScene
+    waitmovement 0x18
+    call PP_BallScene
+    applymovement 0x18, Movement_PPByeMon
+    waitmovement 0x18
+    call PP_CelebrateSnivy
+    setflag FLAG_PP_SNIVY
+    releaseall
+    end
 
 PP_ReceivedTepig::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_TEPIG
-	applymovement 0x17, Movement_PPByeMon
-	waitmovement 0x17
-	call PP_CelebrateTepig
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x17, Movement_PPBallScene
+    waitmovement 0x17
+    call PP_BallScene
+    applymovement 0x17, Movement_PPByeMon
+    waitmovement 0x17
+    call PP_CelebrateTepig
+    setflag FLAG_PP_TEPIG
+    releaseall
+    end
 
 PP_ReceivedOshawott::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_OSHAWOTT
-	applymovement 0x16, Movement_PPByeMon
-	waitmovement 0x16
-	call PP_CelebrateOshawott
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x16, Movement_PPBallScene
+    waitmovement 0x16
+    call PP_BallScene
+    applymovement 0x16, Movement_PPByeMon
+    waitmovement 0x16
+    call PP_CelebrateOshawott
+    setflag FLAG_PP_OSHAWOTT
+    releaseall
+    end
 
 PP_ReceivedChespin::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_CHESPIN
-	applymovement 0x15, Movement_PPByeMon
-	waitmovement 0x15
-	call PP_CelebrateChespin
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x15, Movement_PPBallScene
+    waitmovement 0x15
+    call PP_BallScene
+    applymovement 0x15, Movement_PPByeMon
+    waitmovement 0x15
+    call PP_CelebrateChespin
+    setflag FLAG_PP_CHESPIN
+    releaseall
+    end
 
 PP_ReceivedFennekin::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_FENNEKIN
-	applymovement 0x14, Movement_PPByeMon
-	waitmovement 0x14
-	call PP_CelebrateFennekin
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x14, Movement_PPBallScene
+    waitmovement 0x14
+    call PP_BallScene
+    applymovement 0x14, Movement_PPByeMon
+    waitmovement 0x14
+    call PP_CelebrateFennekin
+    setflag FLAG_PP_FENNEKIN
+    releaseall
+    end
 
 PP_ReceivedFroakie::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_FROAKIE
-	applymovement 0x13, Movement_PPByeMon
-	waitmovement 0x13
-	call PP_CelebrateFroakie
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x13, Movement_PPBallScene
+    waitmovement 0x13
+    call PP_BallScene
+    applymovement 0x13, Movement_PPByeMon
+    waitmovement 0x13
+    call PP_CelebrateFroakie
+    setflag FLAG_PP_FROAKIE
+    releaseall
+    end
 
 PP_ReceivedRowlet::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_ROWLET
-	applymovement 0x19, Movement_PPByeMon
-	waitmovement 0x19
-	call PP_CelebrateRowlet
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x19, Movement_PPBallScene
+    waitmovement 0x19
+    call PP_BallScene
+    applymovement 0x19, Movement_PPByeMon
+    waitmovement 0x19
+    call PP_CelebrateRowlet
+    setflag FLAG_PP_ROWLET
+    releaseall
+    end
 
 PP_ReceivedLitten::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_LITTEN
-	applymovement 0x1A, Movement_PPByeMon
-	waitmovement 0x1A
-	call PP_CelebrateLitten
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x1A, Movement_PPBallScene
+    waitmovement 0x1A
+    call PP_BallScene
+    applymovement 0x1A, Movement_PPByeMon
+    waitmovement 0x1A
+    call PP_CelebrateLitten
+    setflag FLAG_PP_LITTEN
+    releaseall
+    end
 
 PP_ReceivedPopplio::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_POPPLIO
-	applymovement 0x1B, Movement_PPByeMon
-	waitmovement 0x1B
-	call PP_CelebratePopplio
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x1B, Movement_PPBallScene
+    waitmovement 0x1B
+    call PP_BallScene
+    applymovement 0x1B, Movement_PPByeMon
+    waitmovement 0x1B
+    call PP_CelebratePopplio
+    setflag FLAG_PP_POPPLIO
+    releaseall
+    end
 
 PP_ReceivedGrookey::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_GROOKEY
-	applymovement 0x02, Movement_PPByeMon
-	waitmovement 0x02
-	call PP_CelebrateGrookey
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x02, Movement_PPBallScene
+    waitmovement 0x02
+    call PP_BallScene
+    applymovement 0x02, Movement_PPByeMon
+    waitmovement 0x02
+    call PP_CelebrateGrookey
+    setflag FLAG_PP_GROOKEY
+    releaseall
+    end
 
 PP_ReceivedScorbunny::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_SCORBUNNY
-	applymovement 0x01, Movement_PPByeMon
-	waitmovement 0x01
-	call PP_CelebrateScorbunny
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x01, Movement_PPBallScene
+    waitmovement 0x01
+    call PP_BallScene
+    applymovement 0x01, Movement_PPByeMon
+    waitmovement 0x01
+    call PP_CelebrateScorbunny
+    setflag FLAG_PP_SCORBUNNY
+    releaseall
+    end
 
 PP_ReceivedSobble::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_SOBBLE
-	applymovement 0x03, Movement_PPByeMon
-	waitmovement 0x03
-	call PP_CelebrateSobble
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x03, Movement_PPBallScene
+    waitmovement 0x03
+    call PP_BallScene
+    applymovement 0x03, Movement_PPByeMon
+    waitmovement 0x03
+    call PP_CelebrateSobble
+    setflag FLAG_PP_SOBBLE
+    releaseall
+    end
 
 PP_ReceivedSprigatito::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_SPRIGATITO
-	applymovement 0x10, Movement_PPByeMon
-	waitmovement 0x10
-	call PP_CelebrateSprigatito
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x10, Movement_PPBallScene
+    waitmovement 0x10
+    call PP_BallScene
+    applymovement 0x10, Movement_PPByeMon
+    waitmovement 0x10
+    call PP_CelebrateSprigatito
+    setflag FLAG_PP_SPRIGATITO
+    releaseall
+    end
 
 PP_ReceivedFuecoco::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_FUECOCO
-	applymovement 0x17, Movement_PPByeMon
-	waitmovement 0x17
-	call PP_CelebrateFuecoco
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x17, Movement_PPBallScene
+    waitmovement 0x17
+    call PP_BallScene
+    applymovement 0x17, Movement_PPByeMon
+    waitmovement 0x17
+    call PP_CelebrateFuecoco
+    setflag FLAG_PP_FUECOCO
+    releaseall
+    end
 
 PP_ReceivedQuaxly::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_QUAXLY
-	applymovement 0x12, Movement_PPByeMon
-	waitmovement 0x12
-	call PP_CelebrateQuaxly
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x12, Movement_PPBallScene
+    waitmovement 0x12
+    call PP_BallScene
+    applymovement 0x12, Movement_PPByeMon
+    waitmovement 0x12
+    call PP_CelebrateQuaxly
+    setflag FLAG_PP_QUAXLY
+    releaseall
+    end
 
 PP_ReceivedPikachu::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_PIKACHU
-	applymovement 0x1D, Movement_PPByeMon
-	waitmovement 0x1D
-	call PP_CelebratePikachu
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x1D, Movement_PPBallScene
+    waitmovement 0x1D
+    call PP_BallScene
+    applymovement 0x1D, Movement_PPByeMon
+    waitmovement 0x1D
+    call PP_CelebratePikachu
+    setflag FLAG_PP_PIKACHU
+    releaseall
+    end
 
 PP_ReceivedEevee::
-	hidemonpic
-	call PP_BallScene
-	setflag FLAG_PP_EEVEE
-	applymovement 0x1E, Movement_PPByeMon
-	waitmovement 0x1E
-	call PP_CelebrateEevee
-	delay 20
-	releaseall
-	end
+    hidemonpic
+    applymovement 0x1E, Movement_PPBallScene
+    waitmovement 0x1E
+    call PP_BallScene
+    applymovement 0x1E, Movement_PPByeMon
+    waitmovement 0x1E
+    call PP_CelebrateEevee
+    setflag FLAG_PP_EEVEE
+    releaseall
+    end
 
 
 //PP_Celebrate Section//
