@@ -845,122 +845,185 @@ PP_NicknameChoice::
 	.string "Would you like to give a nickname\n"
 	.string "to the POKéMON you received?$"
 
+PP_NicknameChoiceNO::
+	.string "You chose not to give this POKéMON\n"
+	.string "a nickname.\p"
+	.string "You can always nickname it later\n"
+	.string "in the summary screen.$"
 
 //PP_SkipNaming Section//
 	
 PP_SkipNamingBulbasaur::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedBulbasaur
 	end
 
 PP_SkipNamingCharmander::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedCharmander
 	end
 
 PP_SkipNamingSquirtle::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedSquirtle
 	end
 
 PP_SkipNamingChikorita::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedChikorita
 	end
 
 PP_SkipNamingCyndaquil::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedCyndaquil
 	end
 
 PP_SkipNamingTotodile::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedTotodile
 	end
 
 PP_SkipNamingTreecko::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedTreecko
 	end
 
 PP_SkipNamingTorchic::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedTorchic
 	end
 
 PP_SkipNamingMudkip::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedMudkip
 	end
 
 PP_SkipNamingTurtwig::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedTurtwig
 	end
 
 PP_SkipNamingChimchar::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedChimchar
 	end
 
 PP_SkipNamingPiplup::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedPiplup
 	end
 
 PP_SkipNamingSnivy::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedSnivy
 	end
 
 PP_SkipNamingTepig::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedTepig
 	end
 
 PP_SkipNamingOshawott::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedOshawott
 	end
 
 PP_SkipNamingChespin::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedChespin
 	end
 
 PP_SkipNamingFennekin::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedFennekin
 	end
 
 PP_SkipNamingFroakie::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedFroakie
 	end
 
 PP_SkipNamingRowlet::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedRowlet
 	end
 
 PP_SkipNamingLitten::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedLitten
 	end
 
 PP_SkipNamingPopplio::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedPopplio
 	end
 
 PP_SkipNamingGrookey::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedGrookey
 	end
 
 PP_SkipNamingScorbunny::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedScorbunny
 	end
 
 PP_SkipNamingSobble::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedSobble
 	end
 
 PP_SkipNamingSprigatito::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedSprigatito
 	end
 
 PP_SkipNamingFuecoco::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedFuecoco
 	end
 
 PP_SkipNamingQuaxly::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedQuaxly
 	end
 
 PP_SkipNamingPikachu::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedPikachu
 	end
 
 PP_SkipNamingEevee::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ReceivedEevee
 	end
 
@@ -1145,118 +1208,176 @@ PP_PCEevee::
 //PP_SkipPCName Section//
 
 PP_SkipPCNaming_Bulbasaur::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_BulbasaurToPC
 	end
 
 PP_SkipPCNaming_Charmander::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_CharmanderToPC
 	end
 
 PP_SkipPCNaming_Squirtle::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_SquirtleToPC
 	end
 
 PP_SkipPCNaming_Chikorita::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ChikoritaToPC
 	end
 
 PP_SkipPCNaming_Cyndaquil::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_CyndaquilToPC
 	end
 
 PP_SkipPCNaming_Totodile::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_TotodileToPC
 	end
 
 PP_SkipPCNaming_Treecko::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_TreeckoToPC
 	end
 
 PP_SkipPCNaming_Torchic::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_TorchicToPC
 	end
 
 PP_SkipPCNaming_Mudkip::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_MudkipToPC
 	end
 
 PP_SkipPCNaming_Turtwig::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_TurtwigToPC
 	end
 
 PP_SkipPCNaming_Chimchar::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ChimcharToPC
 	end
 
 PP_SkipPCNaming_Piplup::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_PiplupToPC
 	end
 
 PP_SkipPCNaming_Snivy::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_SnivyToPC
 	end
 
 PP_SkipPCNaming_Tepig::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_TepigToPC
 	end
 
 PP_SkipPCNaming_Oshawott::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_OshawottToPC
 	end
 
 PP_SkipPCNaming_Chespin::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ChespinToPC
 	end
 
 PP_SkipPCNaming_Fennekin::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_FennekinToPC
 	end
 
 PP_SkipPCNaming_Froakie::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_FroakieToPC
 	end
 
 PP_SkipPCNaming_Rowlet::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_RowletToPC
 	end
 
 PP_SkipPCNaming_Litten::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_LittenToPC
 	end
 
 PP_SkipPCNaming_Popplio::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_PopplioToPC
 	end
 
 PP_SkipPCNaming_Grookey::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_GrookeyToPC
 	end
 
 PP_SkipPCNaming_Scorbunny::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_ScorbunnyToPC
 	end
 
 PP_SkipPCNaming_Sobble::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_SobbleToPC
 	end
 
 PP_SkipPCNaming_Sprigatito::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_SprigatitoToPC
 	end
 
 PP_SkipPCNaming_Fuecoco::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_FuecocoToPC
 	end
 
 PP_SkipPCNaming_Quaxly::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_QuaxlyToPC
 	end
 
 PP_SkipPCNaming_Pikachu::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_PikachuToPC
 	end
 
 PP_SkipPCNaming_Eevee::
+	msgbox PP_NicknameChoiceNO, MSGBOX_DEFAULT
+	waitmessage
 	goto PP_EeveeToPC
 	end
 
@@ -2734,7 +2855,7 @@ PP_NotChosen::
 PP_NotChosenText::
 	.string "You can always come back later with a\n"
 	.string "partner pass to receive additional\n"
-	.string "starter POKéMON.\p"
+	.string "starter POKéMON.\$"
 
 //END//
 
