@@ -1574,8 +1574,12 @@ Movement_PPBallScene::
 
 PP_Warp::
 	warp MAP_PARTNER_PLAYGROUND, 36, 9
-	applymovement OBJ_EVENT_ID_PLAYER, PP_WARP_MOVEMENT
+	applymovement 0x0F, PP_WARP_MOVEMENT
 	waitmovement OBJ_EVENT_ID_PLAYER
+	call PP_Bell
+	return
+
+PP_Bell::
 	playse SE_BIKE_BELL
 	waitse
 	message PP_UnlockText
@@ -1583,7 +1587,7 @@ PP_Warp::
 	return
 
 PP_WARP_MOVEMENT::
-	face_right
+	walk_right
 	step_end
 
 PP_ReceivedBulbasaur::
