@@ -16,8 +16,6 @@ PP_UnlockText::
 	.string "I can start my adventure!$"	
 
 PP_UnlockPath::
-	msgbox PP_UnlockText, MSGBOX_DEFAULT
-	closemessage
 	setvar VAR_STARTER_GOT, 2
 	return
 
@@ -1574,6 +1572,20 @@ Movement_PPBallScene::
 	enter_pokeball
 	step_end
 
+PP_Warp::
+	warp MAP_PARTNER_PLAYGROUND, 36, 9
+	applymovement OBJ_EVENT_PLAYER, PP_WARP_MOVEMENT
+	waitmovement 0
+	playse SE_BIKE_BELL
+	delay 20
+	msgbox PP_UnlockText, MSGBOX_DEFAULT
+	closemessage
+	return
+
+PP_WARP_MOVEMENT::
+	face_right
+	step_end
+
 PP_ReceivedBulbasaur::
 	hidemonpic
 	applymovement 0x09, Movement_PPBallScene
@@ -1583,8 +1595,7 @@ PP_ReceivedBulbasaur::
 	waitmovement 0x09
 	call PP_CelebrateBulbasaur
 	setflag FLAG_PP_BULBASAUR
-	warp MAP_PARTNER_PLAYGROUND, 36, 9
-	turnobject OBJ_EVENT_ID_PLAYER, face_right
+	call PP_Warp
 	releaseall
 	end
 
@@ -1597,7 +1608,7 @@ PP_ReceivedCharmander::
     waitmovement 0x08
     call PP_CelebrateCharmander
     setflag FLAG_PP_CHARMANDER
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1610,7 +1621,7 @@ PP_ReceivedSquirtle::
     waitmovement 0x07
     call PP_CelebrateSquirtle
     setflag FLAG_PP_SQUIRTLE
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1623,7 +1634,7 @@ PP_ReceivedChikorita::
     waitmovement 0x0C
     call PP_CelebrateChikorita
     setflag FLAG_PP_CHIKORITA
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1636,7 +1647,7 @@ PP_ReceivedCyndaquil::
     waitmovement 0x0B
     call PP_CelebrateCyndaquil
     setflag FLAG_PP_CYNDAQUIL
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1649,7 +1660,7 @@ PP_ReceivedTotodile::
     waitmovement 0x0A
     call PP_CelebrateTotodile
     setflag FLAG_PP_TOTODILE
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1662,7 +1673,7 @@ PP_ReceivedTreecko::
     waitmovement 0x06
     call PP_CelebrateTreecko
     setflag FLAG_PP_TREECKO
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1675,7 +1686,7 @@ PP_ReceivedTorchic::
     waitmovement 0x05
     call PP_CelebrateTorchic
     setflag FLAG_PP_TORCHIC
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1688,7 +1699,7 @@ PP_ReceivedMudkip::
     waitmovement 0x04
     call PP_CelebrateMudkip
     setflag FLAG_PP_MUDKIP
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1701,7 +1712,7 @@ PP_ReceivedTurtwig::
     waitmovement 0x0E
     call PP_CelebrateTurtwig
     setflag FLAG_PP_TURTWIG
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1714,7 +1725,7 @@ PP_ReceivedChimchar::
     waitmovement 0x0D
     call PP_CelebrateChimchar
     setflag FLAG_PP_CHIMCHAR
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1727,7 +1738,7 @@ PP_ReceivedPiplup::
     waitmovement 0x0F
     call PP_CelebratePiplup
     setflag FLAG_PP_PIPLUP
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1740,7 +1751,7 @@ PP_ReceivedSnivy::
     waitmovement 0x18
     call PP_CelebrateSnivy
     setflag FLAG_PP_SNIVY
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1753,7 +1764,7 @@ PP_ReceivedTepig::
     waitmovement 0x17
     call PP_CelebrateTepig
     setflag FLAG_PP_TEPIG
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1766,7 +1777,7 @@ PP_ReceivedOshawott::
     waitmovement 0x16
     call PP_CelebrateOshawott
     setflag FLAG_PP_OSHAWOTT
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1779,7 +1790,7 @@ PP_ReceivedChespin::
     waitmovement 0x15
     call PP_CelebrateChespin
     setflag FLAG_PP_CHESPIN
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1792,7 +1803,7 @@ PP_ReceivedFennekin::
     waitmovement 0x14
     call PP_CelebrateFennekin
     setflag FLAG_PP_FENNEKIN
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1805,7 +1816,7 @@ PP_ReceivedFroakie::
     waitmovement 0x13
     call PP_CelebrateFroakie
     setflag FLAG_PP_FROAKIE
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1818,7 +1829,7 @@ PP_ReceivedRowlet::
     waitmovement 0x19
     call PP_CelebrateRowlet
     setflag FLAG_PP_ROWLET
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1831,7 +1842,7 @@ PP_ReceivedLitten::
     waitmovement 0x1A
     call PP_CelebrateLitten
     setflag FLAG_PP_LITTEN
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1844,7 +1855,7 @@ PP_ReceivedPopplio::
     waitmovement 0x1B
     call PP_CelebratePopplio
     setflag FLAG_PP_POPPLIO
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1857,7 +1868,7 @@ PP_ReceivedGrookey::
     waitmovement 0x02
     call PP_CelebrateGrookey
     setflag FLAG_PP_GROOKEY
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1870,7 +1881,7 @@ PP_ReceivedScorbunny::
     waitmovement 0x01
     call PP_CelebrateScorbunny
     setflag FLAG_PP_SCORBUNNY
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1883,7 +1894,7 @@ PP_ReceivedSobble::
     waitmovement 0x03
     call PP_CelebrateSobble
     setflag FLAG_PP_SOBBLE
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1896,7 +1907,7 @@ PP_ReceivedSprigatito::
     waitmovement 0x10
     call PP_CelebrateSprigatito
     setflag FLAG_PP_SPRIGATITO
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1909,7 +1920,7 @@ PP_ReceivedFuecoco::
     waitmovement 0x17
     call PP_CelebrateFuecoco
     setflag FLAG_PP_FUECOCO
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1922,7 +1933,7 @@ PP_ReceivedQuaxly::
     waitmovement 0x12
     call PP_CelebrateQuaxly
     setflag FLAG_PP_QUAXLY
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1935,7 +1946,7 @@ PP_ReceivedPikachu::
     waitmovement 0x1D
     call PP_CelebratePikachu
     setflag FLAG_PP_PIKACHU
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
@@ -1948,7 +1959,7 @@ PP_ReceivedEevee::
     waitmovement 0x1E
     call PP_CelebrateEevee
     setflag FLAG_PP_EEVEE
-    warp MAP_PARTNER_PLAYGROUND, 36, 9
+    call PP_Warp
 	releaseall
     end
 
