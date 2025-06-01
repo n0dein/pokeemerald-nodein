@@ -1575,11 +1575,11 @@ Movement_PPBallScene::
 PP_Warp::
 	warp MAP_PARTNER_PLAYGROUND, 36, 9
 	applymovement OBJ_EVENT_ID_PLAYER, PP_WARP_MOVEMENT
-	waitmovement 0
+	waitmovement OBJ_EVENT_ID_PLAYER
 	playse SE_BIKE_BELL
-	delay 20
-	msgbox PP_UnlockText, MSGBOX_DEFAULT
-	closemessage
+	waitse
+	message PP_UnlockText
+	waitmessage
 	return
 
 PP_WARP_MOVEMENT::
