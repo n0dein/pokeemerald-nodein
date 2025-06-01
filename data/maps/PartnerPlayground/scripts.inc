@@ -3,11 +3,15 @@ PartnerPlayground_MapScripts::
 
 PP_AfterWarpScript::
     compare VAR_STARTER_GOT, 2
-	goto_if_lt return
+	goto_if_lt VAR_RESULT, 2, PP_End
     applymovement OBJ_EVENT_ID_PLAYER, PP_WARP_MOVEMENT
     waitmovement 0
     call PP_Bell
     return
+
+PP_End::
+	releaseall
+	end
 
 PP_TriggerUnlock::
 	getpartysize
