@@ -1583,8 +1583,8 @@ PP_ReceivedBulbasaur::
 	waitmovement 0x09
 	call PP_CelebrateBulbasaur
 	setflag FLAG_PP_BULBASAUR
-	warp MAP_PARTNER_PLAYGROUND, 37, 9
-	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
+	warp MAP_PARTNER_PLAYGROUND, 36, 9
+	turnobject OBJ_EVENT_ID_PLAYER, face_right
 	releaseall
 	end
 
