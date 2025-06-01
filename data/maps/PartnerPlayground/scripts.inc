@@ -608,7 +608,7 @@ PP_GiveQuaxly::
 	end
 
 PP_GivePikachu::
-	givemon SPECIES_PIKACHU, 5
+	givemon SPECIES_PIKACHU, 5, ITEM_NONE, ITEM_POKE_BALL
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PP_PartyPikachu
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PP_PCPikachu
 	goto Common_EventScript_NoMoreRoomForPokemon
@@ -1583,7 +1583,8 @@ PP_ReceivedBulbasaur::
 	waitmovement 0x09
 	call PP_CelebrateBulbasaur
 	setflag FLAG_PP_BULBASAUR
-	warp MAP_PARTNER_PLAYGROUND, 36, 9
+	warp MAP_PARTNER_PLAYGROUND, 37, 9
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_EAST
 	releaseall
 	end
 
