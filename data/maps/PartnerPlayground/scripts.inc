@@ -1574,7 +1574,7 @@ Movement_PPBallScene::
 
 PP_Warp::
 	warp MAP_PARTNER_PLAYGROUND, 36, 9
-	applymovement OBJ_EVENT_PLAYER, PP_WARP_MOVEMENT
+	applymovement OBJ_EVENT_ID_PLAYER, PP_WARP_MOVEMENT
 	waitmovement 0
 	playse SE_BIKE_BELL
 	delay 20
