@@ -1574,6 +1574,7 @@ Movement_PPBallScene::
 
 PP_Warp::
 	warp MAP_PARTNER_PLAYGROUND, 36, 9
+	delay 10
 	applymovement OBJ_EVENT_ID_PLAYER, PP_WARP_MOVEMENT
 	waitmovement OBJ_EVENT_ID_PLAYER
 	call PP_Bell
