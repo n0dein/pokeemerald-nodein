@@ -414,6 +414,13 @@
   "warp_events": [
 
   ],
+  "map_scripts": [
+  {
+    "type": "MAP_SCRIPT_ON_TRANSITION",
+    "script": "PP_AfterWarpScript"
+  }
+],
+
   "coord_events": [
     {
       "type": "trigger",

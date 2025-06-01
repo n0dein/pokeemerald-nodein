@@ -1,6 +1,13 @@
 PartnerPlayground_MapScripts::
 	.byte 0	
-	
+
+PP_AfterWarpScript::
+    compare VAR_STARTER_GOT, 2
+	goto_if_lt return
+    applymovement OBJ_EVENT_ID_PLAYER, PP_WARP_MOVEMENT
+    waitmovement 0
+    call PP_Bell
+    return
 
 PP_TriggerUnlock::
 	getpartysize
@@ -1575,10 +1582,6 @@ Movement_PPBallScene::
 PP_Warp::
 	warp MAP_PARTNER_PLAYGROUND, 36, 9
 	delay 10
-	applymovement OBJ_EVENT_ID_PLAYER, PP_WARP_MOVEMENT
-	waitmovement OBJ_EVENT_ID_PLAYER
-	call PP_Bell
-	return
 
 PP_Bell::
 	playse SE_BIKE_BELL
