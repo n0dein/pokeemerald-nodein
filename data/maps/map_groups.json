@@ -93,7 +93,9 @@
     "Underwater_Route129",
     "Underwater_Route105",
     "Underwater_Route125",
-    "PartnerPlayground"
+    "PartnerPlayground",
+    "Route101_East",
+    "Route103_South"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -101,7 +103,9 @@
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
     "LittlerootTown_ProfessorBirchsLab",
-    "NewBirchLab"
+    "NewBirchLab",
+    "PaleoParkEntrance",
+    "PaleoPark"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

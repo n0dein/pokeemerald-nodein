@@ -1160,3 +1160,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PartnerPlayground/scripts.inc"
 	
 		
+
+	.include "data/maps/Route101_East/scripts.inc"
+
+	.include "data/maps/PaleoParkEntrance/scripts.inc"
+
+	.include "data/maps/Route103_South/scripts.inc"
+
+	.include "data/maps/PaleoPark/scripts.inc"

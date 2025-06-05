@@ -1,0 +1,66 @@
+{
+  "id": "MAP_ROUTE103_SOUTH",
+  "name": "Route103_South",
+  "layout": "LAYOUT_ROUTE103_SOUTH",
+  "music": "MUS_ROUTE101",
+  "region_map_section": "MAPSEC_ROUTE_103",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_ROUTE101_EAST",
+      "offset": 0,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE110",
+      "offset": -82,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+
+  ],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_PALEO_PARK",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 19,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_PALEO_PARK",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 25,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_PALEO_PARK",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_PALEO_PARK",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+
+  ],
+  "bg_events": [
+
+  ]
+}

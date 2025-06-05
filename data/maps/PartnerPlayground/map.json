@@ -414,13 +414,6 @@
   "warp_events": [
 
   ],
-  "map_scripts": [
-  {
-    "type": "MAP_SCRIPT_ON_TRANSITION",
-    "script": "PP_AfterWarpScript"
-  }
-],
-
   "coord_events": [
     {
       "type": "trigger",
@@ -575,6 +568,12 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PartnerPlayground_EventScript_Sign"
+    }
+  ],
+  "map_scripts": [
+    {
+      "script": "PP_AfterWarpScript",
+      "type": "MAP_SCRIPT_ON_TRANSITION"
     }
   ]
 }
