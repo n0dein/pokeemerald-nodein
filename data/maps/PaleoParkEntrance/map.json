@@ -45,7 +45,14 @@
     },
     {
       "x": 9,
-      "y": 1,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE101_EAST",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 10,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_ROUTE101_EAST",
       "dest_warp_id": "1"

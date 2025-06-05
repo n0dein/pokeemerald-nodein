@@ -4444,7 +4444,7 @@
     {
       "id": "LAYOUT_PALEO_PARK_ENTRANCE",
       "name": "PaleoParkEntrance_Layout",
-      "width": 12,
+      "width": 13,
       "height": 7,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_PokemonDayCare",
@@ -4465,7 +4465,7 @@
       "id": "LAYOUT_PALEO_PARK",
       "name": "PaleoPark_Layout",
       "width": 40,
-      "height": 30,
+      "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/PaleoPark/border.bin",
