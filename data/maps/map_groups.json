@@ -95,7 +95,10 @@
     "Underwater_Route125",
     "PartnerPlayground",
     "Route101_East",
-    "Route103_South"
+    "Route103_South",
+    "Hohto_Passage",
+    "CianwoodCity",
+    "Route41"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
