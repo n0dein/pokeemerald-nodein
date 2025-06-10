@@ -35,5 +35,5 @@ enum ColorMapType
 // Shadows values
 #define BASE_SHADOW_INTENSITY (16 - OW_SHADOW_INTENSITY)
 #define SHADOW_COLOR_INDEX     9 // Within the weather palette, shadow sprites' color index
-
+#define OW_SHADOW_INTENSITY 4 // The intensity of the shadow in overworld
 #endif // GUARD_CONSTANTS_FIELD_WEATHER_H
