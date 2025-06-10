@@ -1951,23 +1951,6 @@ u8 CreateVirtualObject(u16 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevati
     return spriteId;
 }
 
-// Return address of first conscious party mon or NULL
-struct Pokemon *GetFirstLiveMon(void)
-{
-    u32 i;
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        struct Pokemon *mon = &gPlayerParty[i];
-        if ((OW_FOLLOWERS_ALLOWED_SPECIES && GetMonData(mon, MON_DATA_SPECIES_OR_EGG) != VarGet(OW_FOLLOWERS_ALLOWED_SPECIES))
-         || (OW_FOLLOWERS_ALLOWED_MET_LVL && GetMonData(mon, MON_DATA_MET_LEVEL) != VarGet(OW_FOLLOWERS_ALLOWED_MET_LVL))
-         || (OW_FOLLOWERS_ALLOWED_MET_LOC && GetMonData(mon, MON_DATA_MET_LOCATION) != VarGet(OW_FOLLOWERS_ALLOWED_MET_LOC)))
-            continue;
-
-        if (gPlayerParty[i].hp > 0 && !(gPlayerParty[i].box.isEgg || gPlayerParty[i].box.isBadEgg))
-            return &gPlayerParty[i];
-    }
-    return NULL;
-}
 
 // Return follower ObjectEvent or NULL
 struct ObjectEvent *GetFollowerObject(void)
