@@ -90,7 +90,8 @@ SINGLE_BATTLE_TEST("Knock Off does not remove items through Substitute")
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_WOBBUFFET) { Item(ITEM_LEFTOVERS); };
     } WHEN {
-        TURN { MOVE(opponent, MOVE_SUBSTITUTE); MOVE(player, MOVE_KNOCK_OFF); }
+        TURN { MOVE(opponent, MOVE_SUBSTITUTE);
+               MOVE(player, MOVE_KNOCK_OFF); }
     } SCENE {
         ANIMATION(ANIM_TYPE_MOVE, MOVE_KNOCK_OFF, player);
         NOT { ANIMATION(ANIM_TYPE_GENERAL, B_ANIM_ITEM_KNOCKOFF); }
@@ -99,6 +100,7 @@ SINGLE_BATTLE_TEST("Knock Off does not remove items through Substitute")
     }
 }
 
+<<<<<<< HEAD
 SINGLE_BATTLE_TEST("Knock Off does not remove items through Protect")
 {
     GIVEN {
@@ -135,6 +137,8 @@ SINGLE_BATTLE_TEST("Knock Off does not remove items if target is immune")
     }
 }
 
+=======
+>>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
 SINGLE_BATTLE_TEST("Recycle cannot recover an item removed by Knock Off")
 {
     GIVEN {

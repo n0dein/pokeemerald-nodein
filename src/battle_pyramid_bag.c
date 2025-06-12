@@ -578,7 +578,7 @@ static bool8 LoadPyramidBagGfx(void)
         }
         break;
     case 2:
-        LoadPalette(gBattlePyramidBagInterface_Pal, BG_PLTT_ID(0), PLTT_SIZE_4BPP);
+        LoadCompressedPalette(gBattlePyramidBagInterface_Pal, BG_PLTT_ID(0), PLTT_SIZE_4BPP);
         gPyramidBagMenu->state++;
         break;
     case 3:
@@ -1559,10 +1559,13 @@ static void FreeItemIconSprite(u8 spriteArrId)
 static void LoadPyramidBagPalette(void)
 {
     struct SpritePalette spritePalette;
+    u16 *palPtr = Alloc(2 * PLTT_SIZE_4BPP);
 
-    spritePalette.data = gBattlePyramidBag_Pal + PLTT_ID(gSaveBlock2Ptr->frontier.lvlMode);
+    LZDecompressWram(gBattlePyramidBag_Pal, palPtr);
+    spritePalette.data = palPtr + PLTT_ID(gSaveBlock2Ptr->frontier.lvlMode);
     spritePalette.tag = TAG_PYRAMID_BAG;
     LoadSpritePalette(&spritePalette);
+    Free(palPtr);
 }
 
 static void CreatePyramidBagSprite(void)

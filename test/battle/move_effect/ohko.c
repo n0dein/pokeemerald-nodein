@@ -9,7 +9,7 @@ ASSUMPTIONS
 SINGLE_BATTLE_TEST("OHKO moves can hit semi-invulnerable mons when the user has No-Guard")
 {
     GIVEN {
-        ASSUME(GetItemHoldEffect(ITEM_FOCUS_SASH) == HOLD_EFFECT_FOCUS_SASH);
+        ASSUME(GetMoveEffect(MOVE_SHEER_COLD) == EFFECT_OHKO);
         PLAYER(SPECIES_WOBBUFFET) { Ability(ABILITY_NO_GUARD); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
@@ -21,6 +21,7 @@ SINGLE_BATTLE_TEST("OHKO moves can hit semi-invulnerable mons when the user has 
     }
 }
 
+<<<<<<< HEAD
 SINGLE_BATTLE_TEST("OHKO moves can can be endured by Focus Sash")
 {
     GIVEN {
@@ -52,3 +53,9 @@ TO_DO_BATTLE_TEST("OHKO moves faints the target, skipping regular damage calcula
 TO_DO_BATTLE_TEST("OHKO moves always fails if the target has a higher level than the user")
 TO_DO_BATTLE_TEST("OHKO moves's accuracy increases by 1% for every level the user has over the target")
 TO_DO_BATTLE_TEST("OHKO moves's ignores non-stage accuracy modifiers") // Gravity, Wide Lens, Compound Eyes
+=======
+TO_DO_BATTLE_TEST("Fissure faints the target, skipping regular damage calculations")
+TO_DO_BATTLE_TEST("Fissure always fails if the target has a higher level than the user")
+TO_DO_BATTLE_TEST("Fissure's accuracy increases by 1% for every level the user has over the target")
+TO_DO_BATTLE_TEST("Fissure's ignores non-stage accuracy modifiers") // Gravity, Wide Lens, Compound Eyes
+>>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)

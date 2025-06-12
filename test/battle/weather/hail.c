@@ -2,6 +2,7 @@
 #include "test/battle.h"
 
 // Please add Hail interactions with move, item and ability effects on their respective files.
+<<<<<<< HEAD
 ASSUMPTIONS
 {
     ASSUME(GetMoveEffect(MOVE_HAIL) == EFFECT_HAIL);
@@ -10,6 +11,8 @@ ASSUMPTIONS
     ASSUME(GetSpeciesType(SPECIES_GLALIE, 0) == TYPE_ICE || GetSpeciesType(SPECIES_GLALIE, 1) == TYPE_ICE);
 }
 
+=======
+>>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
 SINGLE_BATTLE_TEST("Hail deals 1/16 damage per turn")
 {
     s16 hailDamage;

@@ -42,6 +42,7 @@ SINGLE_BATTLE_TEST("Galvanize can not turn certain moves into Electric type move
     }
 }
 
+<<<<<<< HEAD
 SINGLE_BATTLE_TEST("Galvanize boosts power of affected moves by 20% (Gen7+) or 30% (Gen1-6)", s16 damage)
 {
     u32 ability, genConfig;
@@ -165,5 +166,9 @@ TO_DO_BATTLE_TEST("Galvanize doesn't affect Tera Starstorm's type");
 TO_DO_BATTLE_TEST("Galvanize doesn't affect Max Strike's type");
 TO_DO_BATTLE_TEST("Galvanize doesn't affect Terrain Pulse's type");
 TO_DO_BATTLE_TEST("Galvanize doesn't affect damaging Z-Move types");
+=======
+TO_DO_BATTLE_TEST("Galvanize boosts power of affected moves by 20% (Gen7+)");
+TO_DO_BATTLE_TEST("Galvanize boosts power of affected moves by 30% (Gen6)");
+>>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
 TO_DO_BATTLE_TEST("(DYNAMAX) Galvanize turns Max Strike into Max Lightning when not used by Gigantamax Pikachu/Toxtricity");
 //TO_DO_BATTLE_TEST("(DYNAMAX) Galvanize doesn't turn Max Strike into Max Lightning when used by Gigantamax Pikachu/Toxtricity, instead becoming G-Max Volt Crash/Stun Shock"); // Marked in Bulbapedia as "needs research", so this assumes that it behaves like Pixilate.

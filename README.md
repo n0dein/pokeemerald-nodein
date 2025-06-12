@@ -6,7 +6,23 @@ Some new music and changes to the Mauville Corner have been made as well, so kee
 existing project. Credits to AsparagusEduardo for the basis of this merge here, I just mainly tweaked things around to help
 out any developers who may want to use this as well.
 
+<<<<<<< HEAD
 Updated to pokeemerald-expansion v1.11.1
+=======
+<!-- If you want to re-record or change these gifs, here are some notes that I used: https://files.catbox.moe/05001g.md -->
+
+**`pokeemerald-expansion`** is a GBA ROM hack base that equips developers with a comprehensive toolkit for creating Pokémon ROM hacks. **`pokeemerald-expansion`** is built on top of [pret's `pokeemerald`](https://github.com/pret/pokeemerald) decompilation project. **It is not a playable Pokémon game on its own.** 
+
+# [Features](FEATURES.md)
+
+**`pokeemerald-expansion`** offers hundreds of features from various [core series Pokémon games](https://bulbapedia.bulbagarden.net/wiki/Core_series), along with popular quality-of-life enhancements designed to streamline development and improve the player experience. A full list of those featues can be found in [`FEATURES.md`](FEATURES.md).
+
+# [Credits](CREDITS.md)
+
+ [![](https://img.shields.io/github/all-contributors/rh-hideout/pokeemerald-expansion/master)](CREDITS.md)
+
+If you use **`pokeemerald-expansion`**, please credit **RHH (Rom Hacking Hideout)**. Optionally, include the version number for clarity.
+>>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
 
 To pull from this branch here, just simply use these commands here:
 ```

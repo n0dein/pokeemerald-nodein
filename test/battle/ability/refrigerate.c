@@ -20,6 +20,7 @@ SINGLE_BATTLE_TEST("Refrigerate turns a Normal-type move into a Ice-type move")
     }
 }
 
+<<<<<<< HEAD
 SINGLE_BATTLE_TEST("Refrigerate boosts power of affected moves by 20% (Gen7+) or 30% (Gen1-6)", s16 damage)
 {
     u32 ability, genConfig;
@@ -141,5 +142,17 @@ TO_DO_BATTLE_TEST("Refrigerate doesn't affect Tera Starstorm's type");
 TO_DO_BATTLE_TEST("Refrigerate doesn't affect Max Strike's type");
 TO_DO_BATTLE_TEST("Refrigerate doesn't affect Terrain Pulse's type");
 TO_DO_BATTLE_TEST("Refrigerate doesn't affect damaging Z-Move types");
+=======
+TO_DO_BATTLE_TEST("Refrigerate can not turn certain moves into Ice type moves");
+TO_DO_BATTLE_TEST("Refrigerate boosts power of affected moves by 20% (Gen7+)");
+TO_DO_BATTLE_TEST("Refrigerate boosts power of affected moves by 30% (Gen6)");
+>>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
 TO_DO_BATTLE_TEST("(DYNAMAX) Refrigerate turns Max Strike into Max Hailstorm when not used by Gigantamax Lapras");
 //TO_DO_BATTLE_TEST("(DYNAMAX) Refrigerate doesn't turn Max Strike into Max Hailstorm when used by Gigantamax Lapras, instead becoming G-Max Resonance"); // Marked in Bulbapedia as "needs research", so this assumes that it behaves like Pixilate.
+
+// Gen 6-7
+TO_DO_BATTLE_TEST("Refrigerate overrides Electrify (Gen6-7)");
+TO_DO_BATTLE_TEST("Refrigerate overrides Ion Deluge (Gen6-7)");
+// Gen 8+
+//TO_DO_BATTLE_TEST("Refrigerate doesn't override Electrify (Gen8+)");  // Bulbapedia doesn't list this effect, so it assumes it behaves like Pixilate.
+//TO_DO_BATTLE_TEST("Refrigerate doesn't override Ion Deluge (Gen8+)"); // Ion Deluge doesn't exist in Gen 8+, but we probably could assume it behaves similar to under Electrify. TODO: Test by hacking SV.

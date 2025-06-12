@@ -1,6 +1,7 @@
 #include "global.h"
 #include "test/battle.h"
 
+<<<<<<< HEAD
 ASSUMPTIONS
 {
     ASSUME(GetMoveEffect(MOVE_SKY_DROP) == EFFECT_SKY_DROP);
@@ -122,3 +123,6 @@ SINGLE_BATTLE_TEST("Sky Drop stops the confusion count until the target is dropp
         ANIMATION(ANIM_TYPE_STATUS, B_ANIM_STATUS_CONFUSION, player);
     }
 }
+=======
+TO_DO_BATTLE_TEST("TODO: Write Sky Drop (Move Effect) test titles")
+>>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)

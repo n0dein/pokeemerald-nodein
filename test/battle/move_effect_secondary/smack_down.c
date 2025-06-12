@@ -1,14 +1,10 @@
 #include "global.h"
 #include "test/battle.h"
 
-ASSUMPTIONS
-{
-    ASSUME(GetMoveEffect(MOVE_SMACK_DOWN) == EFFECT_SMACK_DOWN);
-}
-
 SINGLE_BATTLE_TEST("Smack Down does not ground mons behind substitutes")
 {
     GIVEN {
+        ASSUME(MoveHasAdditionalEffect(MOVE_SMACK_DOWN, MOVE_EFFECT_SMACK_DOWN) == TRUE);
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_SKARMORY);
     } WHEN {
@@ -21,7 +17,7 @@ SINGLE_BATTLE_TEST("Smack Down does not ground mons behind substitutes")
 SINGLE_BATTLE_TEST("Thousand Arrows does not ground mons behind substitutes")
 {
     GIVEN {
-        ASSUME(GetMoveEffect(MOVE_THOUSAND_ARROWS) == EFFECT_SMACK_DOWN);
+        ASSUME(MoveHasAdditionalEffect(MOVE_THOUSAND_ARROWS, MOVE_EFFECT_SMACK_DOWN));
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_SKARMORY);
     } WHEN {
@@ -30,6 +26,7 @@ SINGLE_BATTLE_TEST("Thousand Arrows does not ground mons behind substitutes")
         NOT MESSAGE("The opposing Skarmory fell straight down!");
     }
 }
+<<<<<<< HEAD
 
 SINGLE_BATTLE_TEST("Smack Down does not ground mons through Protect")
 {
@@ -57,3 +54,5 @@ SINGLE_BATTLE_TEST("Smack Down does not ground target if target is immune")
         NOT MESSAGE("The opposing Gliscor fell straight down!");
     }
 }
+=======
+>>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)

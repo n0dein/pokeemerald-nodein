@@ -1,8 +1,3 @@
-#include "fieldmap.h"
-
-// Whether a palette has a night version, located at ((x + 9) % 16).pal
-#define SWAP_PAL(x) ((x) < NUM_PALS_IN_PRIMARY ? 1 << (x) : 1 << ((x) - NUM_PALS_IN_PRIMARY))
-
 const struct Tileset gTileset_General =
 {
     .isCompressed = TRUE,

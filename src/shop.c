@@ -42,7 +42,7 @@
 #include "constants/songs.h"
 
 #define TAG_SCROLL_ARROW   2100
-#define TAG_ITEM_ICON_BASE 9110 // immune to time blending
+#define TAG_ITEM_ICON_BASE 2110
 
 #define MAX_ITEMS_SHOWN 8
 
@@ -745,8 +745,13 @@ static void BuyMenuInitBgs(void)
 static void BuyMenuDecompressBgGraphics(void)
 {
     DecompressAndCopyTileDataToVram(1, gShopMenu_Gfx, 0x3A0, 0x3E3, 0);
+<<<<<<< HEAD
     DecompressDataWithHeaderWram(gShopMenu_Tilemap, sShopData->tilemapBuffers[0]);
     LoadPalette(gShopMenu_Pal, BG_PLTT_ID(12), PLTT_SIZE_4BPP);
+=======
+    LZDecompressWram(gShopMenu_Tilemap, sShopData->tilemapBuffers[0]);
+    LoadCompressedPalette(gShopMenu_Pal, BG_PLTT_ID(12), PLTT_SIZE_4BPP);
+>>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
 }
 
 static void BuyMenuInitWindows(void)

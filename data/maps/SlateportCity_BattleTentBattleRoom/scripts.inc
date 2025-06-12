@@ -47,7 +47,6 @@ SlateportCity_BattleTentBattleRoom_EventScript_EnterRoom::
 	factory_setopponentgfx
 	setobjectxyperm LOCALID_SLATEPORT_TENT_BATTLE_OPPONENT, 5, 1
 	removeobject LOCALID_SLATEPORT_TENT_BATTLE_OPPONENT
-	delay 1
 	addobject LOCALID_SLATEPORT_TENT_BATTLE_OPPONENT
 	applymovement LOCALID_SLATEPORT_TENT_BATTLE_OPPONENT, SlateportCity_BattleTentBattleRoom_Movement_OpponentEnter
 	waitmovement 0

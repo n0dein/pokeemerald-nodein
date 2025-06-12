@@ -15,8 +15,7 @@ static void LoadTypeIconsPerBattler(u32, u32);
 static bool32 UseDoubleBattleCoords(u32);
 
 static u32 GetMonPublicType(u32, u32);
-static bool32 ShouldHideUncaughtType(u32 species);
-static bool32 ShouldHideUnseenType(u32 species);
+static bool32 ShouldHideUncaughtType(u32);
 static u32 GetMonDefensiveTeraType(struct Pokemon *, struct Pokemon*, u32, u32, u32, u32);
 static u32 IsIllusionActiveAndTypeUnchanged(struct Pokemon*, u32, u32);
 
@@ -179,13 +178,13 @@ const union AnimCmd *const sSpriteAnimTable_TypeIcons[] =
     [TYPE_STELLAR] =    sSpriteAnim_TypeIcon_Mystery,
 };
 
-const struct SpritePalette sTypeIconPal1 =
+const struct CompressedSpritePalette sTypeIconPal1 =
 {
     .data = gBattleIcons_Pal1,
     .tag = TYPE_ICON_TAG
 };
 
-const struct SpritePalette sTypeIconPal2 =
+const struct CompressedSpritePalette sTypeIconPal2 =
 {
     .data = gBattleIcons_Pal2,
     .tag = TYPE_ICON_TAG_2
@@ -240,11 +239,7 @@ void LoadTypeIcons(u32 battler)
 {
     u32 position;
 
-    struct Pokemon* mon = GetBattlerMon(battler);
-    u32 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
-
-    if (B_SHOW_TYPES == SHOW_TYPES_NEVER 
-        || (B_SHOW_TYPES == SHOW_TYPES_SEEN && !GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN)))
+    if (B_SHOW_TYPES == SHOW_TYPES_NEVER)
         return;
 
     LoadTypeSpritesAndPalettes();
@@ -260,8 +255,8 @@ static void LoadTypeSpritesAndPalettes(void)
 
     LoadCompressedSpriteSheet(&sSpriteSheet_TypeIcons1);
     LoadCompressedSpriteSheet(&sSpriteSheet_TypeIcons2);
-    LoadSpritePalette(&sTypeIconPal1);
-    LoadSpritePalette(&sTypeIconPal2);
+    LoadCompressedSpritePalette(&sTypeIconPal1);
+    LoadCompressedSpritePalette(&sTypeIconPal2);
 }
 
 static void LoadTypeIconsPerBattler(u32 battler, u32 position)
@@ -296,12 +291,12 @@ static bool32 UseDoubleBattleCoords(u32 position)
 
 static u32 GetMonPublicType(u32 battlerId, u32 typeNum)
 {
-    struct Pokemon* mon = GetBattlerMon(battlerId);
+    struct Pokemon* mon = GetPartyBattlerData(battlerId);
     u32 monSpecies = GetMonData(mon,MON_DATA_SPECIES,NULL);
     struct Pokemon* monIllusion;
     u32 illusionSpecies;
 
-    if (ShouldHideUncaughtType(monSpecies) || ShouldHideUnseenType(monSpecies))
+    if (ShouldHideUncaughtType(monSpecies))
         return TYPE_MYSTERY;
 
     monIllusion = GetIllusionMonPtr(battlerId);
@@ -321,18 +316,7 @@ static bool32 ShouldHideUncaughtType(u32 species)
     if (B_SHOW_TYPES != SHOW_TYPES_CAUGHT)
         return FALSE;
 
-    if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_CAUGHT))
-        return FALSE;
-
-    return TRUE;
-}
-
-static bool32 ShouldHideUnseenType(u32 species)
-{
-    if (B_SHOW_TYPES != SHOW_TYPES_SEEN)
-        return FALSE;
-
-    if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN))
+    if (GetSetPokedexFlag(SpeciesToNationalPokedexNum(species),FLAG_GET_CAUGHT))
         return FALSE;
 
     return TRUE;

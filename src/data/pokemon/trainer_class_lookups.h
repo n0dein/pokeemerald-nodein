@@ -1,4 +1,4 @@
-const u16 gFacilityClassToPicIndex[] =
+const u8 gFacilityClassToPicIndex[] =
 {
     [FACILITY_CLASS_HIKER] = TRAINER_PIC_HIKER,
     [FACILITY_CLASS_AQUA_GRUNT_M] = TRAINER_PIC_AQUA_GRUNT_M,
@@ -84,6 +84,7 @@ const u16 gFacilityClassToPicIndex[] =
     [FACILITY_CLASS_RS_MAY] = TRAINER_PIC_RS_MAY,
 };
 
+<<<<<<< HEAD
 const u16 gTrainerPicToTrainerBackPic[] =
 {
     [TRAINER_BACK_PIC_BRENDAN] = TRAINER_PIC_BRENDAN,
@@ -97,6 +98,9 @@ const u16 gTrainerPicToTrainerBackPic[] =
 };
 
 const enum TrainerClassID gFacilityClassToTrainerClass[] =
+=======
+const u8 gFacilityClassToTrainerClass[] =
+>>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
 {
     [FACILITY_CLASS_HIKER] = TRAINER_CLASS_HIKER,
     [FACILITY_CLASS_AQUA_GRUNT_M] = TRAINER_CLASS_TEAM_AQUA,
