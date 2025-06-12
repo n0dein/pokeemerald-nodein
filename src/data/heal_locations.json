@@ -132,23 +132,5 @@
       "x": 3,
       "y": 52
     },
-    {
-      "id": "HEAL_LOCATION_CIANWOOD_CITY",
-      "map": "MAP_CIANWOOD_CITY",
-      "x": 29,
-      "y": 36
-    },
-    {
-      "id": "HEAL_LOCATION_CIANWOOD_CITY",
-      "map": "MAP_CIANWOOD_CITY_",
-      "x": 29,
-      "y": 36
-    },
-    {
-      "id": "HEAL_LOCATION_ROUTE41_",
-      "map": "MAP_ROUTE41_",
-      "x": 32,
-      "y": 63
-    }
   ]
 }
