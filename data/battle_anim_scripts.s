@@ -13746,69 +13746,7 @@ gBattleAnimMove_DoubleIronBash::
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 8 @@@@@@@@@@@@@@@@@@@@@@@
 gBattleAnimMove_DynamaxCannon::
-	loadspritegfx ANIM_TAG_ELECTRIC_ORBS
-	loadspritegfx ANIM_TAG_CIRCLE_OF_LIGHT
-	loadspritegfx ANIM_TAG_ORBS @hyper beam
-	loadspritegfx ANIM_TAG_WATER_GUN @water gun colour
-	loadspritegfx ANIM_TAG_ASSURANCE_HAND @purple colour
-	loadspritegfx ANIM_TAG_HYDRO_PUMP
-	loadspritegfx ANIM_TAG_SPARK_2 @spark
-	loadspritegfx ANIM_TAG_LEAF @green
-	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_ELECTRIC_ORBS, 0, 15, 15, RGB(30, 2, 11)
-	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_CIRCLE_OF_LIGHT, 0, 15, 15, RGB(30, 2, 11)
-	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_HYDRO_PUMP, 0, 12, 12, RGB(30, 2, 11)
-	setalpha 8, 8
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BG, 2, 0, 15, 0
-	waitforvisualfinish
-	loopsewithpan SE_M_CHARGE, SOUND_PAN_ATTACKER, 14, 10
-	createsprite gGrowingChargeOrb3SpriteTemplate, ANIM_ATTACKER, 2, 0 @;Charge circle
-	call LightThatBurnsTheSkyGreenSparks
-	call LightThatBurnsTheSkyGreenSparks
-	call LightThatBurnsTheSkyGreenSparks
-	call LightThatBurnsTheSkyGreenSparks
-	call LightThatBurnsTheSkyGreenSparks
-	delay 20
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, F_PAL_BG, 2, 15, 0, 0
-	fadetobg BG_DYNAMAX_CANNON
-	waitbgfadein
-	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_TARGET, 4, 4, 0, 12, RGB(31, 4, 10) @Pinkish Red
-	panse SE_M_SOLAR_BEAM, SOUND_PAN_ATTACKER SOUND_PAN_TARGET 2 0
-	createsprite gShakeMonOrPlatformSpriteTemplate, ANIM_ATTACKER, 2, 4, 1, 180, 1
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_ATTACKER, 0, 4, 87, 1
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	createvisualtask AnimTask_ShakeMon2, 2, ANIM_TARGET, 0, 4, 81, 1
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	call DynamaxCannonLaunch
-	waitforvisualfinish
-	restorebg
-	waitbgfadein
-	blendoff
-	end
-
-DynamaxCannonLaunch:
-	createsprite gSpriteTemplate_DynamaxCannonOrb, ANIM_TARGET, 2, 0, 0, 16
-	delay 2
-	createsprite gSpriteTemplate_DynamaxCannonOrb, ANIM_TARGET, 2, 0, 0, 16
-	delay 2
-	return
+	goto gBattleAnimMove_HyperBeam
 
 gBattleAnimMove_SnipeShot::
 	loadspritegfx ANIM_TAG_IMPACT_2
@@ -14353,6 +14291,7 @@ gBattleAnimMove_PyroBall::
 	end
 
 gBattleAnimMove_BehemothBlade::
+<<<<<<< HEAD
 	loadspritegfx ANIM_TAG_CUT @Cut
 	loadspritegfx ANIM_TAG_SWORD @Sword
 	loadspritegfx ANIM_TAG_HYDRO_PUMP @Blue Colour
@@ -14461,94 +14400,12 @@ BehemothBladeSlashes:
 	playsewithpan SE_SHINY, SOUND_PAN_TARGET
 	delay 1
 	return
+=======
+	goto gBattleAnimMove_SacredSword
+>>>>>>> parent of 7f4f391e9b (New Attack Animations: 25w20a (#6886))
 
 gBattleAnimMove_BehemothBash::
-	loadspritegfx ANIM_TAG_ROUND_SHADOW @fly
-	loadspritegfx ANIM_TAG_AIR_WAVE_2 @black color
-	loadspritegfx ANIM_TAG_ROCKS @rock colour
-	loadspritegfx ANIM_TAG_SMALL_ROCK @small rock
-	monbg ANIM_TARGET
-	setalpha 12, 8
-	playsewithpan SE_M_DOUBLE_TEAM, SOUND_PAN_TARGET
-	createsprite gSunsteelStrikeBlackFlyBallTemplate, ANIM_ATTACKER, 2, 0, 0, 13, 336
-	createvisualtask AnimTask_HorizontalShake, 5, ANIM_ATK_PARTNER, 1, 20
-	delay 24
-	createsprite gSunsteelStrikeRocksTemplate, ANIM_ATTACKER, 2, 0, 0     @The rock particles mess up the fly animation
-	createsprite gSunsteelStrikeRocksTemplate, ANIM_ATTACKER, 2, 0, 1
-	createsprite gSunsteelStrikeRocksTemplate, ANIM_ATTACKER, 2, 0, 2
-	createsprite gSunsteelStrikeRocksTemplate, ANIM_ATTACKER, 2, 0, 3
-	waitforvisualfinish
-	unloadspritegfx ANIM_TAG_ROUND_SHADOW @fly
-	unloadspritegfx ANIM_TAG_AIR_WAVE_2 @black color
-	loadspritegfx ANIM_TAG_METEOR @superpower
-	loadspritegfx ANIM_TAG_GOLD_RING @beam
-	loadspritegfx ANIM_TAG_SMALL_RED_EYE @red color
-	loadspritegfx ANIM_TAG_IMPACT @hit
-	playsewithpan SE_ORB, SOUND_PAN_ATTACKER
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, (F_PAL_BG | F_PAL_ATTACKER), 3, 0, 15, 0
-	waitforvisualfinish
-	call BehemothBashBeam
-	call BehemothBashBeam
-	call BehemothBashBeam
-	call BehemothBashBeam
-	call BehemothBashBeam
-	call BehemothBashBeam
-	call BehemothBashBeam
-	call BehemothBashBeam
-	call BehemothBashBeam
-	call BehemothBashBeam
-	stopsound
-	playsewithpan SE_M_MEGA_KICK2, SOUND_PAN_TARGET
-	createsprite gSunsteelStrikeSuperpowerTemplate, ANIM_TARGET, 2, 20
-	delay 20
-	createsprite gSunsteelStrikeRedImpactTemplate, ANIM_ATTACKER, 2, 0, 0, 1, 0
-	createvisualtask AnimTask_ShakeMon, 5, ANIM_TARGET, 6, 0, 8, 1
-	waitforvisualfinish
-	unloadspritegfx ANIM_TAG_METEOR @superpower
-	unloadspritegfx ANIM_TAG_GOLD_RING @beam
-	unloadspritegfx ANIM_TAG_SMALL_RED_EYE @red color
-	unloadspritegfx ANIM_TAG_IMPACT @hit
-	loadspritegfx ANIM_TAG_SMALL_EMBER @FireSpreadEffect
-	clearmonbg ANIM_TARGET
-	blendoff
-	loadspritegfx ANIM_TAG_EXPLOSION
-	createvisualtask AnimTask_ShakeMon2, 5, ANIM_PLAYER_LEFT, 8, 0, 40, 1
-	createvisualtask AnimTask_ShakeMon2, 5, ANIM_PLAYER_RIGHT, 8, 0, 40, 1
-	createvisualtask AnimTask_ShakeMon2, 5, ANIM_OPPONENT_LEFT, 8, 0, 40, 1
-	createvisualtask AnimTask_ShakeMon2, 5, ANIM_OPPONENT_RIGHT, 8, 0, 40, 1
-	createvisualtask AnimTask_ShakeMon2, 5, ANIM_ATTACKER_FORCE, 8, 0, 40, 1
-	call OpposingExplosion1
-	call OpposingExplosion1
-	waitforvisualfinish
-	visible ANIM_ATTACKER
-	createvisualtask AnimTask_BlendBattleAnimPal, 10, (F_PAL_BG | F_PAL_ATTACKER), 3, 15, 0, 0
-	waitforvisualfinish
-	blendoff
-	clearmonbg ANIM_TARGET
-	end
-BehemothBashBeam:
-	createsprite gSunsteelStrikeYellowBeamTemplate, ANIM_TARGET, 2, 20
-	delay 1
-	createsprite gSunsteelStrikeRedBeamTemplate, ANIM_TARGET, 2, 20
-	delay 1
-	return
-OpposingExplosion1:
-	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
-	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, 0, 0, 1, 1
-	delay 6
-	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
-	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, 24, -24, 1, 1
-	delay 6
-	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
-	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, -16, 16, 1, 1
-	delay 6
-	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
-	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, -24, -12, 1, 1
-	delay 6
-	playsewithpan SE_M_EXPLOSION, SOUND_PAN_TARGET
-	createsprite gExplosionSpriteTemplate, ANIM_TARGET, 3, 16, 16, 1, 1
-	delay 6
-	return
+	goto gBattleAnimMove_SunsteelStrike
 
 gBattleAnimMove_AuraWheel::
 	loadspritegfx ANIM_TAG_IMPACT
@@ -14972,88 +14829,7 @@ BasicExplosion:
 	return
 
 gBattleAnimMove_Eternabeam::
-	loadspritegfx ANIM_TAG_HYDRO_PUMP
-	loadspritegfx ANIM_TAG_ROUND_SHADOW
-	loadspritegfx ANIM_TAG_BLUE_STAR
-	loadspritegfx ANIM_TAG_PURPLE_DRAKE
-	loadspritegfx ANIM_TAG_EXPLOSION
-	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_HYDRO_PUMP, 0, 12, 12, RGB(31, 4, 10)    @Pinkish Red
-	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_ROUND_SHADOW, 0, 13, 13, RGB(31, 4, 10)  @Pinkish Red
-	createvisualtask AnimTask_BlendParticle, 5, ANIM_TAG_EXPLOSION, 0, 12, 12, RGB(11, 1, 22)
-	fadetobgfromset BG_SPACIAL_REND_ON_OPPONENT BG_SPACIAL_REND_ON_PLAYER BG_SPACIAL_REND_ON_OPPONENT
-	playsewithpan SE_M_FLY, SOUND_PAN_ATTACKER
-	invisible ANIM_ATTACKER
-	createsprite gDevastatingDrakeDrakeUpSpriteTemplate, ANIM_ATTACKER, 2, 0, 0, 0x04E0, 36, 21, 1, ANIM_ATTACKER
-	waitforvisualfinish
-	createsoundtask SoundTask_LoopSEAdjustPanning, SE_M_SOLAR_BEAM, 0xf0, 0xffc0, SOUND_PAN_TARGET, 0x1, 0xf, 0x0, 0x5
-	call OblivionWingBeam
-	call OblivionWingBeam
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 50, 1
-	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_TARGET, 2, 4, 0, 12, RGB(31, 4, 10) @Pinkish Red
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	call OblivionWingBeam
-	createvisualtask AnimTask_ShakeMon, 2, ANIM_TARGET, 0, 3, 50, 1
-	call EternabeamGeyser
-	delay 5
-	call EternabeamGeyser
-	delay 5
-	call EternabeamGeyser
-	delay 5
-	visible ANIM_ATTACKER
-	waitforvisualfinish
-	restorebg
-	waitbgfadein
-	blendoff
-	end
-EternabeamGeyser:
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, 3, 5, 1, 0
-	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, -11, -15, 1, 0
-	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, 8, -5, 1, 0
-	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, -6, 18, 1, 0
-	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, 0, 5, 1, 0
-	playsewithpan SE_M_SELF_DESTRUCT, SOUND_PAN_TARGET
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, 3, -11, ANIM_TARGET, 0
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, -11, -31, ANIM_TARGET, 0
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, 8, -21, ANIM_TARGET, 0
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, -6, 2, ANIM_TARGET, 0
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, 0, -11, ANIM_TARGET, 0
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, 3, -27, ANIM_TARGET, 0
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, -11, -47, ANIM_TARGET, 0
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, 8, -47, ANIM_TARGET, 0
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, -6, -14, ANIM_TARGET, 0
-	delay 0
-	createsprite gDevastatingDrakeExplosionSpriteTemplate, ANIM_TARGET, 4, 0, -27, ANIM_TARGET, 0
-	delay 0
-	return
+	goto gBattleAnimMove_HyperBeam
 
 gBattleAnimMove_SteelBeam::
 	loadspritegfx ANIM_TAG_CLAW_SLASH
@@ -19410,6 +19186,7 @@ SaltCureEffect:
 	playsewithpan SE_M_ICY_WIND, SOUND_PAN_TARGET
 	return
 
+<<<<<<< HEAD
 gBattleAnimMove_GlaiveRush::
 	loadspritegfx ANIM_TAG_CUT @Cut
 	loadspritegfx ANIM_TAG_SWORD @Sword
@@ -20098,9 +19875,26 @@ gBattleAnimMove_MagicalTorque::
 	call UnsetPsychicBg
 	end
 
+=======
+>>>>>>> parent of 7f4f391e9b (New Attack Animations: 25w20a (#6886))
 gBattleAnimMove_TeraBlast::
 gBattleAnimMove_OrderUp::
+gBattleAnimMove_GlaiveRush::
+gBattleAnimMove_TripleDive::
+gBattleAnimMove_Doodle::
+gBattleAnimMove_Ruination::
+gBattleAnimMove_CollisionCourse::
+gBattleAnimMove_ElectroDrift::
+gBattleAnimMove_ArmorCannon::
+gBattleAnimMove_BlazingTorque::
+gBattleAnimMove_WickedTorque::
+gBattleAnimMove_NoxiousTorque::
+gBattleAnimMove_CombatTorque::
+gBattleAnimMove_MagicalTorque::
+gBattleAnimMove_Psyblade::
 gBattleAnimMove_MatchaGotcha::
+gBattleAnimMove_MightyCleave::
+gBattleAnimMove_SupercellSlam::
 	end @to do
 
 @@@@@@@@@@@@@@@@@@@@@@@ GEN 1-3 @@@@@@@@@@@@@@@@@@@@@@@
