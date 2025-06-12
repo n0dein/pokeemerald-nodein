@@ -319,10 +319,17 @@ static void ExpansionIntro_InitBgs(void)
 static void ExpansionIntro_LoadGraphics(void)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     DecompressDataWithHeaderVram(sBgTiles_PoweredBy, (void*) BG_CHAR_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG3].charBaseIndex));
     DecompressDataWithHeaderVram(sBgMap_PoweredBy, (u16*) BG_SCREEN_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG3].mapBaseIndex));
     DecompressDataWithHeaderVram(sBgTiles_RhhCredits, (void*) BG_CHAR_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG2].charBaseIndex));
     DecompressDataWithHeaderVram(sBgMap_RhhCredits, (u16*) BG_SCREEN_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG2].mapBaseIndex));
+=======
+    LZ77UnCompVram(sBgTiles_PoweredBy, (void*) BG_CHAR_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG3].charBaseIndex));
+    LZ77UnCompVram(sBgMap_PoweredBy, (u16*) BG_SCREEN_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG3].mapBaseIndex));
+    LZ77UnCompVram(sBgTiles_RhhCredits, (void*) BG_CHAR_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG2].charBaseIndex));
+    LZ77UnCompVram(sBgMap_RhhCredits, (u16*) BG_SCREEN_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG2].mapBaseIndex));
+>>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
     LoadPalette(sBgPal_Credits, 0x00, 0x60);
 =======
     LZ77UnCompVram(sBgTiles_PoweredBy, (void*) BG_CHAR_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG3].charBaseIndex));

@@ -1600,9 +1600,15 @@ static void LoadDuoFightSceneGfx(void)
     while (FreeTempTileDataBuffersIfPossible())
         ;
 <<<<<<< HEAD
+<<<<<<< HEAD
     DecompressDataWithHeaderWram(gRaySceneDuoFight_Clouds2_Tilemap, sRayScene->tilemapBuffers[0]);
     DecompressDataWithHeaderWram(gRaySceneDuoFight_Clouds1_Tilemap, sRayScene->tilemapBuffers[1]);
     DecompressDataWithHeaderWram(gRaySceneDuoFight_Clouds3_Tilemap, sRayScene->tilemapBuffers[2]);
+=======
+    LZDecompressWram(gRaySceneDuoFight_Clouds2_Tilemap, sRayScene->tilemapBuffers[0]);
+    LZDecompressWram(gRaySceneDuoFight_Clouds1_Tilemap, sRayScene->tilemapBuffers[1]);
+    LZDecompressWram(gRaySceneDuoFight_Clouds3_Tilemap, sRayScene->tilemapBuffers[2]);
+>>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
     LoadPalette(gRaySceneDuoFight_Clouds_Pal, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
 =======
     LZDecompressWram(gRaySceneDuoFight_Clouds2_Tilemap, sRayScene->tilemapBuffers[0]);
@@ -2050,9 +2056,15 @@ static void LoadTakesFlightSceneGfx(void)
     while (FreeTempTileDataBuffersIfPossible())
         ;
 <<<<<<< HEAD
+<<<<<<< HEAD
     DecompressDataWithHeaderWram(gRaySceneDuoFight_Clouds2_Tilemap, sRayScene->tilemapBuffers[0]);
     DecompressDataWithHeaderWram(gRaySceneTakesFlight_Bg_Tilemap, sRayScene->tilemapBuffers[1]);
     DecompressDataWithHeaderWram(gRaySceneTakesFlight_Rayquaza_Tilemap, sRayScene->tilemapBuffers[2]);
+=======
+    LZDecompressWram(gRaySceneDuoFight_Clouds2_Tilemap, sRayScene->tilemapBuffers[0]);
+    LZDecompressWram(gRaySceneTakesFlight_Bg_Tilemap, sRayScene->tilemapBuffers[1]);
+    LZDecompressWram(gRaySceneTakesFlight_Rayquaza_Tilemap, sRayScene->tilemapBuffers[2]);
+>>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
     LoadPalette(gRaySceneTakesFlight_Rayquaza_Pal, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
 =======
     LZDecompressWram(gRaySceneDuoFight_Clouds2_Tilemap, sRayScene->tilemapBuffers[0]);
@@ -2262,8 +2274,8 @@ static void LoadDescendsSceneGfx(void)
     DecompressAndCopyTileDataToVram(1, gRaySceneDescends_Bg_Gfx, 0, 0, 0);
     while (FreeTempTileDataBuffersIfPossible())
         ;
-    DecompressDataWithHeaderWram(gRaySceneDescends_Light_Tilemap, sRayScene->tilemapBuffers[0]);
-    DecompressDataWithHeaderWram(gRaySceneDescends_Bg_Tilemap, sRayScene->tilemapBuffers[3]);
+    LZDecompressWram(gRaySceneDescends_Light_Tilemap, sRayScene->tilemapBuffers[0]);
+    LZDecompressWram(gRaySceneDescends_Bg_Tilemap, sRayScene->tilemapBuffers[3]);
     CpuFastFill16(0, sRayScene->tilemapBuffers[2], BG_SCREEN_SIZE);
     CpuFastCopy(sRayScene->tilemapBuffers[3], sRayScene->tilemapBuffers[1], BG_SCREEN_SIZE);
     CpuFastFill16(0, &sRayScene->tilemapBuffers[1][0x100], 0x340);
@@ -2514,10 +2526,17 @@ static void LoadChargesSceneGfx(void)
     while (FreeTempTileDataBuffersIfPossible())
         ;
 <<<<<<< HEAD
+<<<<<<< HEAD
     DecompressDataWithHeaderWram(gRaySceneCharges_Orbs_Tilemap, sRayScene->tilemapBuffers[0]);
     DecompressDataWithHeaderWram(gRaySceneCharges_Rayquaza_Tilemap, sRayScene->tilemapBuffers[1]);
     DecompressDataWithHeaderWram(gRaySceneCharges_Streaks_Tilemap, sRayScene->tilemapBuffers[2]);
     DecompressDataWithHeaderWram(gRaySceneCharges_Bg_Tilemap, sRayScene->tilemapBuffers[3]);
+=======
+    LZDecompressWram(gRaySceneCharges_Orbs_Tilemap, sRayScene->tilemapBuffers[0]);
+    LZDecompressWram(gRaySceneCharges_Rayquaza_Tilemap, sRayScene->tilemapBuffers[1]);
+    LZDecompressWram(gRaySceneCharges_Streaks_Tilemap, sRayScene->tilemapBuffers[2]);
+    LZDecompressWram(gRaySceneCharges_Bg_Tilemap, sRayScene->tilemapBuffers[3]);
+>>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
     LoadPalette(gRaySceneCharges_Bg_Pal, BG_PLTT_ID(0), 4 * PLTT_SIZE_4BPP);
 =======
     LZDecompressWram(gRaySceneCharges_Orbs_Tilemap, sRayScene->tilemapBuffers[0]);
@@ -2710,9 +2729,15 @@ static void LoadChasesAwaySceneGfx(void)
     while (FreeTempTileDataBuffersIfPossible())
         ;
 <<<<<<< HEAD
+<<<<<<< HEAD
     DecompressDataWithHeaderWram(gRaySceneChasesAway_Bg_Tilemap, sRayScene->tilemapBuffers[1]);
     DecompressDataWithHeaderWram(gRaySceneChasesAway_Light_Tilemap, sRayScene->tilemapBuffers[0]);
     DecompressDataWithHeaderWram(gRaySceneChasesAway_Ring_Tilemap, sRayScene->tilemapBuffers[2]);
+=======
+    LZDecompressWram(gRaySceneChasesAway_Bg_Tilemap, sRayScene->tilemapBuffers[1]);
+    LZDecompressWram(gRaySceneChasesAway_Light_Tilemap, sRayScene->tilemapBuffers[0]);
+    LZDecompressWram(gRaySceneChasesAway_Ring_Tilemap, sRayScene->tilemapBuffers[2]);
+>>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
     LoadPalette(gRaySceneChasesAway_Bg_Pal, BG_PLTT_ID(0), 3 * PLTT_SIZE_4BPP);
 =======
     LZDecompressWram(gRaySceneChasesAway_Bg_Tilemap, sRayScene->tilemapBuffers[1]);

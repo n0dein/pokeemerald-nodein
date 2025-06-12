@@ -26,7 +26,6 @@
 #include "pokemon_icon.h"
 #include "trainer_pokemon_sprites.h"
 #include "contest_util.h"
-#include "decompress.h"
 #include "constants/songs.h"
 #include "constants/game_stat.h"
 #include "constants/battle_frontier.h"
@@ -536,47 +535,47 @@ static bool8 LoadCardGfx(void)
     {
     case 0:
         if (sData->cardType != CARD_TYPE_FRLG)
-            DecompressDataWithHeaderWram(gHoennTrainerCardBg_Tilemap, sData->bgTilemap);
+            LZ77UnCompWram(gHoennTrainerCardBg_Tilemap, sData->bgTilemap);
         else
-            DecompressDataWithHeaderWram(gKantoTrainerCardBg_Tilemap, sData->bgTilemap);
+            LZ77UnCompWram(gKantoTrainerCardBg_Tilemap, sData->bgTilemap);
         break;
     case 1:
         if (sData->cardType != CARD_TYPE_FRLG)
-            DecompressDataWithHeaderWram(gHoennTrainerCardBack_Tilemap, sData->backTilemap);
+            LZ77UnCompWram(gHoennTrainerCardBack_Tilemap, sData->backTilemap);
         else
-            DecompressDataWithHeaderWram(gKantoTrainerCardBack_Tilemap, sData->backTilemap);
+            LZ77UnCompWram(gKantoTrainerCardBack_Tilemap, sData->backTilemap);
         break;
     case 2:
         if (!sData->isLink)
         {
             if (sData->cardType != CARD_TYPE_FRLG)
-                DecompressDataWithHeaderWram(gHoennTrainerCardFront_Tilemap, sData->frontTilemap);
+                LZ77UnCompWram(gHoennTrainerCardFront_Tilemap, sData->frontTilemap);
             else
-                DecompressDataWithHeaderWram(gKantoTrainerCardFront_Tilemap, sData->frontTilemap);
+                LZ77UnCompWram(gKantoTrainerCardFront_Tilemap, sData->frontTilemap);
         }
         else
         {
             if (sData->cardType != CARD_TYPE_FRLG)
-                DecompressDataWithHeaderWram(gHoennTrainerCardFrontLink_Tilemap, sData->frontTilemap);
+                LZ77UnCompWram(gHoennTrainerCardFrontLink_Tilemap, sData->frontTilemap);
             else
-                DecompressDataWithHeaderWram(gKantoTrainerCardFrontLink_Tilemap, sData->frontTilemap);
+                LZ77UnCompWram(gKantoTrainerCardFrontLink_Tilemap, sData->frontTilemap);
         }
         break;
     case 3:
         if (sData->cardType != CARD_TYPE_FRLG)
-            DecompressDataWithHeaderWram(sHoennTrainerCardBadges_Gfx, sData->badgeTiles);
+            LZ77UnCompWram(sHoennTrainerCardBadges_Gfx, sData->badgeTiles);
         else
-            DecompressDataWithHeaderWram(sKantoTrainerCardBadges_Gfx, sData->badgeTiles);
+            LZ77UnCompWram(sKantoTrainerCardBadges_Gfx, sData->badgeTiles);
         break;
     case 4:
         if (sData->cardType != CARD_TYPE_FRLG)
-            DecompressDataWithHeaderWram(gHoennTrainerCard_Gfx, sData->cardTiles);
+            LZ77UnCompWram(gHoennTrainerCard_Gfx, sData->cardTiles);
         else
-            DecompressDataWithHeaderWram(gKantoTrainerCard_Gfx, sData->cardTiles);
+            LZ77UnCompWram(gKantoTrainerCard_Gfx, sData->cardTiles);
         break;
     case 5:
         if (sData->cardType == CARD_TYPE_FRLG)
-            DecompressDataWithHeaderWram(sTrainerCardStickers_Gfx, sData->stickerTiles);
+            LZ77UnCompWram(sTrainerCardStickers_Gfx, sData->stickerTiles);
         break;
     default:
         sData->gfxLoadState = 0;

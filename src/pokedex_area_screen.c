@@ -1,6 +1,5 @@
 #include "global.h"
 #include "bg.h"
-#include "decompress.h"
 #include "event_data.h"
 #include "gpu_regs.h"
 #include "graphics.h"
@@ -785,7 +784,7 @@ static void LoadAreaUnknownGraphics(void)
         .size = sizeof(sPokedexAreaScreen->areaUnknownGraphicsBuffer),
         .tag = TAG_AREA_UNKNOWN,
     };
-    DecompressDataWithHeaderWram(gPokedexAreaScreenAreaUnknown_Gfx, sPokedexAreaScreen->areaUnknownGraphicsBuffer);
+    LZ77UnCompWram(gPokedexAreaScreenAreaUnknown_Gfx, sPokedexAreaScreen->areaUnknownGraphicsBuffer);
     LoadSpriteSheet(&spriteSheet);
     LoadSpritePalette(&sAreaUnknownSpritePalette);
 }

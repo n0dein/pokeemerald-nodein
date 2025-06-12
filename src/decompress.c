@@ -2,175 +2,20 @@
 #include "malloc.h"
 #include "data.h"
 #include "decompress.h"
-#include "decompress_error_handler.h"
 #include "pokemon.h"
 #include "pokemon_sprite_visualizer.h"
 #include "text.h"
 #include "menu.h"
 
-//  === WARNING === WARNING === WARNING ===
-//  === No user serviceable code before ===
-//  === the SpecialPokePic function, do ===
-//  === not modify code unless magician ===
-//  === WARNING === WARNING === WARNING ===
+void LZDecompressWram(const u32 *src, void *dest)
+{
+    LZ77UnCompWram(src, dest);
+}
 
-static void SmolDecompressData(const struct SmolHeader *header, const u32 *data, void *dest);
-static void SmolDecompressTilemap(const struct SmolTilemapHeader *header, const u32 *data, u16 *dest);
-
-static bool32 isModeLoEncoded(enum CompressionMode mode);
-static bool32 isModeSymEncoded(enum CompressionMode mode);
-static bool32 isModeSymDelta(enum CompressionMode mode);
-
-
-#define TABLE_READ_K(tableVal)((tableVal & 7))
-#define TABLE_READ_SYMBOL(tableVal)((tableVal & 0xFF) >> 3)
-#define TABLE_READ_Y(tableVal)((tableVal >> 8) & 0xFF)
-#define TABLE_READ_MASK(tableVal)((tableVal >> 16))
-
-/*
-Layout is the following:
-u32 kVal:3;
-u32 symbol:5; // Set in BuildDecompressionTable
-u32 yVal:8;
-u32 mask:8;
-*/
-
-#define SET_TABLE_ENTRY(k, y, mask)(((k) & 7) | ((y) << 8) | ((mask) << 16))
-
-static IWRAM_DATA u32 sWorkingYkTable[TANS_TABLE_SIZE] = {0};
-
-// Helper struct to build the tANS decode tables without having to do calculations at run-time
-// Mask Table is 0, 1, 3, 7, 15, 31, 63.
-static const u32 sYkTemplate[2*TANS_TABLE_SIZE] = {
-    [0] = 0,
-    [1] = SET_TABLE_ENTRY(6, (1 << 6) - 64, 63),
-    [2] = SET_TABLE_ENTRY(5, (2 << 5) - 64, 31),
-    [3] = SET_TABLE_ENTRY(5, (3 << 5) - 64, 31),
-    [4] = SET_TABLE_ENTRY(4, (4 << 4) - 64, 15),
-    [5] = SET_TABLE_ENTRY(4, (5 << 4) - 64, 15),
-    [6] = SET_TABLE_ENTRY(4, (6 << 4) - 64, 15),
-    [7] = SET_TABLE_ENTRY(4, (7 << 4) - 64, 15),
-    [8] = SET_TABLE_ENTRY(3, (8 << 3) - 64, 7),
-    [9] = SET_TABLE_ENTRY(3, (9 << 3) - 64, 7),
-    [10] = SET_TABLE_ENTRY(3, (10 << 3) - 64, 7),
-    [11] = SET_TABLE_ENTRY(3, (11 << 3) - 64, 7),
-    [12] = SET_TABLE_ENTRY(3, (12 << 3) - 64, 7),
-    [13] = SET_TABLE_ENTRY(3, (13 << 3) - 64, 7),
-    [14] = SET_TABLE_ENTRY(3, (14 << 3) - 64, 7),
-    [15] = SET_TABLE_ENTRY(3, (15 << 3) - 64, 7),
-    [16] = SET_TABLE_ENTRY(2, (16 << 2) - 64, 3),
-    [17] = SET_TABLE_ENTRY(2, (17 << 2) - 64, 3),
-    [18] = SET_TABLE_ENTRY(2, (18 << 2) - 64, 3),
-    [19] = SET_TABLE_ENTRY(2, (19 << 2) - 64, 3),
-    [20] = SET_TABLE_ENTRY(2, (20 << 2) - 64, 3),
-    [21] = SET_TABLE_ENTRY(2, (21 << 2) - 64, 3),
-    [22] = SET_TABLE_ENTRY(2, (22 << 2) - 64, 3),
-    [23] = SET_TABLE_ENTRY(2, (23 << 2) - 64, 3),
-    [24] = SET_TABLE_ENTRY(2, (24 << 2) - 64, 3),
-    [25] = SET_TABLE_ENTRY(2, (25 << 2) - 64, 3),
-    [26] = SET_TABLE_ENTRY(2, (26 << 2) - 64, 3),
-    [27] = SET_TABLE_ENTRY(2, (27 << 2) - 64, 3),
-    [28] = SET_TABLE_ENTRY(2, (28 << 2) - 64, 3),
-    [29] = SET_TABLE_ENTRY(2, (29 << 2) - 64, 3),
-    [30] = SET_TABLE_ENTRY(2, (30 << 2) - 64, 3),
-    [31] = SET_TABLE_ENTRY(2, (31 << 2) - 64, 3),
-    [32] = SET_TABLE_ENTRY(1, (32 << 1) - 64, 1),
-    [33] = SET_TABLE_ENTRY(1, (33 << 1) - 64, 1),
-    [34] = SET_TABLE_ENTRY(1, (34 << 1) - 64, 1),
-    [35] = SET_TABLE_ENTRY(1, (35 << 1) - 64, 1),
-    [36] = SET_TABLE_ENTRY(1, (36 << 1) - 64, 1),
-    [37] = SET_TABLE_ENTRY(1, (37 << 1) - 64, 1),
-    [38] = SET_TABLE_ENTRY(1, (38 << 1) - 64, 1),
-    [39] = SET_TABLE_ENTRY(1, (39 << 1) - 64, 1),
-    [40] = SET_TABLE_ENTRY(1, (40 << 1) - 64, 1),
-    [41] = SET_TABLE_ENTRY(1, (41 << 1) - 64, 1),
-    [42] = SET_TABLE_ENTRY(1, (42 << 1) - 64, 1),
-    [43] = SET_TABLE_ENTRY(1, (43 << 1) - 64, 1),
-    [44] = SET_TABLE_ENTRY(1, (44 << 1) - 64, 1),
-    [45] = SET_TABLE_ENTRY(1, (45 << 1) - 64, 1),
-    [46] = SET_TABLE_ENTRY(1, (46 << 1) - 64, 1),
-    [47] = SET_TABLE_ENTRY(1, (47 << 1) - 64, 1),
-    [48] = SET_TABLE_ENTRY(1, (48 << 1) - 64, 1),
-    [49] = SET_TABLE_ENTRY(1, (49 << 1) - 64, 1),
-    [50] = SET_TABLE_ENTRY(1, (50 << 1) - 64, 1),
-    [51] = SET_TABLE_ENTRY(1, (51 << 1) - 64, 1),
-    [52] = SET_TABLE_ENTRY(1, (52 << 1) - 64, 1),
-    [53] = SET_TABLE_ENTRY(1, (53 << 1) - 64, 1),
-    [54] = SET_TABLE_ENTRY(1, (54 << 1) - 64, 1),
-    [55] = SET_TABLE_ENTRY(1, (55 << 1) - 64, 1),
-    [56] = SET_TABLE_ENTRY(1, (56 << 1) - 64, 1),
-    [57] = SET_TABLE_ENTRY(1, (57 << 1) - 64, 1),
-    [58] = SET_TABLE_ENTRY(1, (58 << 1) - 64, 1),
-    [59] = SET_TABLE_ENTRY(1, (59 << 1) - 64, 1),
-    [60] = SET_TABLE_ENTRY(1, (60 << 1) - 64, 1),
-    [61] = SET_TABLE_ENTRY(1, (61 << 1) - 64, 1),
-    [62] = SET_TABLE_ENTRY(1, (62 << 1) - 64, 1),
-    [63] = SET_TABLE_ENTRY(1, (63 << 1) - 64, 1),
-    [64] = SET_TABLE_ENTRY(0, 64 - 64, 0),
-    [65] = SET_TABLE_ENTRY(0, 65 - 64, 0),
-    [66] = SET_TABLE_ENTRY(0, 66 - 64, 0),
-    [67] = SET_TABLE_ENTRY(0, 67 - 64, 0),
-    [68] = SET_TABLE_ENTRY(0, 68 - 64, 0),
-    [69] = SET_TABLE_ENTRY(0, 69 - 64, 0),
-    [70] = SET_TABLE_ENTRY(0, 70 - 64, 0),
-    [71] = SET_TABLE_ENTRY(0, 71 - 64, 0),
-    [72] = SET_TABLE_ENTRY(0, 72 - 64, 0),
-    [73] = SET_TABLE_ENTRY(0, 73 - 64, 0),
-    [74] = SET_TABLE_ENTRY(0, 74 - 64, 0),
-    [75] = SET_TABLE_ENTRY(0, 75 - 64, 0),
-    [76] = SET_TABLE_ENTRY(0, 76 - 64, 0),
-    [77] = SET_TABLE_ENTRY(0, 77 - 64, 0),
-    [78] = SET_TABLE_ENTRY(0, 78 - 64, 0),
-    [79] = SET_TABLE_ENTRY(0, 79 - 64, 0),
-    [80] = SET_TABLE_ENTRY(0, 80 - 64, 0),
-    [81] = SET_TABLE_ENTRY(0, 81 - 64, 0),
-    [82] = SET_TABLE_ENTRY(0, 82 - 64, 0),
-    [83] = SET_TABLE_ENTRY(0, 83 - 64, 0),
-    [84] = SET_TABLE_ENTRY(0, 84 - 64, 0),
-    [85] = SET_TABLE_ENTRY(0, 85 - 64, 0),
-    [86] = SET_TABLE_ENTRY(0, 86 - 64, 0),
-    [87] = SET_TABLE_ENTRY(0, 87 - 64, 0),
-    [88] = SET_TABLE_ENTRY(0, 88 - 64, 0),
-    [89] = SET_TABLE_ENTRY(0, 89 - 64, 0),
-    [90] = SET_TABLE_ENTRY(0, 90 - 64, 0),
-    [91] = SET_TABLE_ENTRY(0, 91 - 64, 0),
-    [92] = SET_TABLE_ENTRY(0, 92 - 64, 0),
-    [93] = SET_TABLE_ENTRY(0, 93 - 64, 0),
-    [94] = SET_TABLE_ENTRY(0, 94 - 64, 0),
-    [95] = SET_TABLE_ENTRY(0, 95 - 64, 0),
-    [96] = SET_TABLE_ENTRY(0, 96 - 64, 0),
-    [97] = SET_TABLE_ENTRY(0, 97 - 64, 0),
-    [98] = SET_TABLE_ENTRY(0, 98 - 64, 0),
-    [99] = SET_TABLE_ENTRY(0, 99 - 64, 0),
-    [100] = SET_TABLE_ENTRY(0, 100 - 64, 0),
-    [101] = SET_TABLE_ENTRY(0, 101 - 64, 0),
-    [102] = SET_TABLE_ENTRY(0, 102 - 64, 0),
-    [103] = SET_TABLE_ENTRY(0, 103 - 64, 0),
-    [104] = SET_TABLE_ENTRY(0, 104 - 64, 0),
-    [105] = SET_TABLE_ENTRY(0, 105 - 64, 0),
-    [106] = SET_TABLE_ENTRY(0, 106 - 64, 0),
-    [107] = SET_TABLE_ENTRY(0, 107 - 64, 0),
-    [108] = SET_TABLE_ENTRY(0, 108 - 64, 0),
-    [109] = SET_TABLE_ENTRY(0, 109 - 64, 0),
-    [110] = SET_TABLE_ENTRY(0, 110 - 64, 0),
-    [111] = SET_TABLE_ENTRY(0, 111 - 64, 0),
-    [112] = SET_TABLE_ENTRY(0, 112 - 64, 0),
-    [113] = SET_TABLE_ENTRY(0, 113 - 64, 0),
-    [114] = SET_TABLE_ENTRY(0, 114 - 64, 0),
-    [115] = SET_TABLE_ENTRY(0, 115 - 64, 0),
-    [116] = SET_TABLE_ENTRY(0, 116 - 64, 0),
-    [117] = SET_TABLE_ENTRY(0, 117 - 64, 0),
-    [118] = SET_TABLE_ENTRY(0, 118 - 64, 0),
-    [119] = SET_TABLE_ENTRY(0, 119 - 64, 0),
-    [120] = SET_TABLE_ENTRY(0, 120 - 64, 0),
-    [121] = SET_TABLE_ENTRY(0, 121 - 64, 0),
-    [122] = SET_TABLE_ENTRY(0, 122 - 64, 0),
-    [123] = SET_TABLE_ENTRY(0, 123 - 64, 0),
-    [124] = SET_TABLE_ENTRY(0, 124 - 64, 0),
-    [125] = SET_TABLE_ENTRY(0, 125 - 64, 0),
-    [126] = SET_TABLE_ENTRY(0, 126 - 64, 0),
-    [127] = SET_TABLE_ENTRY(0, 127 - 64, 0),
-};
+void LZDecompressVram(const u32 *src, void *dest)
+{
+    LZ77UnCompVram(src, dest);
+}
 
 // Checks if `ptr` is likely LZ77 data
 // Checks word-alignment, min/max size, and header byte
@@ -215,7 +60,7 @@ u32 LoadCompressedSpriteSheet(const struct CompressedSpriteSheet *src)
 
 u32 LoadCompressedSpriteSheetOverrideBuffer(const struct CompressedSpriteSheet *src, void *buffer)
 {
-    DecompressDataWithHeaderWram(src->data, buffer);
+    LZDecompressWram(src->data, buffer);
     return DoLoadCompressedSpriteSheet(src, buffer);
 }
 
@@ -310,6 +155,7 @@ void HandleLoadSpecialPokePic(bool32 isFrontPic, void *dest, s32 species, u32 pe
     LoadSpecialPokePic(dest, species, personality, isFrontPic);
 }
 
+<<<<<<< HEAD
 //  Wrapper function for all decompression calls using formats with headers
 //  calls the correct decompression function depending on the header
 //  VRAM version
@@ -1180,6 +1026,8 @@ static bool32 isModeSymDelta(enum CompressionMode mode)
     return FALSE;
 }
 
+=======
+>>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
 void LoadSpecialPokePic(void *dest, s32 species, u32 personality, bool8 isFrontPic)
 {
     species = SanitizeSpeciesId(species);
@@ -1190,25 +1038,25 @@ void LoadSpecialPokePic(void *dest, s32 species, u32 personality, bool8 isFrontP
     {
     #if P_GENDER_DIFFERENCES
         if (gSpeciesInfo[species].frontPicFemale != NULL && IsPersonalityFemale(species, personality))
-            DecompressDataWithHeaderWram(gSpeciesInfo[species].frontPicFemale, dest);
+            LZ77UnCompWram(gSpeciesInfo[species].frontPicFemale, dest);
         else
     #endif
         if (gSpeciesInfo[species].frontPic != NULL)
-            DecompressDataWithHeaderWram(gSpeciesInfo[species].frontPic, dest);
+            LZ77UnCompWram(gSpeciesInfo[species].frontPic, dest);
         else
-            DecompressDataWithHeaderWram(gSpeciesInfo[SPECIES_NONE].frontPic, dest);
+            LZ77UnCompWram(gSpeciesInfo[SPECIES_NONE].frontPic, dest);
     }
     else
     {
     #if P_GENDER_DIFFERENCES
         if (gSpeciesInfo[species].backPicFemale != NULL && IsPersonalityFemale(species, personality))
-            DecompressDataWithHeaderWram(gSpeciesInfo[species].backPicFemale, dest);
+            LZ77UnCompWram(gSpeciesInfo[species].backPicFemale, dest);
         else
     #endif
         if (gSpeciesInfo[species].backPic != NULL)
-            DecompressDataWithHeaderWram(gSpeciesInfo[species].backPic, dest);
+            LZ77UnCompWram(gSpeciesInfo[species].backPic, dest);
         else
-            DecompressDataWithHeaderWram(gSpeciesInfo[SPECIES_NONE].backPic, dest);
+            LZ77UnCompWram(gSpeciesInfo[SPECIES_NONE].backPic, dest);
     }
 
     if (species == SPECIES_SPINDA && isFrontPic)
@@ -1218,9 +1066,9 @@ void LoadSpecialPokePic(void *dest, s32 species, u32 personality, bool8 isFrontP
     }
 }
 
-void Unused_DecompressDataWithHeaderWramIndirect(const void **src, void *dest)
+void Unused_LZDecompressWramIndirect(const void **src, void *dest)
 {
-    DecompressDataWithHeaderWram(*src, dest);
+    LZ77UnCompWram(*src, dest);
 }
 
 static void UNUSED StitchObjectsOn8x8Canvas(s32 object_size, s32 object_count, u8 *src_tiles, u8 *dest_tiles)
@@ -1374,16 +1222,8 @@ static void UNUSED StitchObjectsOn8x8Canvas(s32 object_size, s32 object_count, u
 
 u32 GetDecompressedDataSize(const u32 *ptr)
 {
-    union CompressionHeader *header = (union CompressionHeader *)ptr;
-    switch (header->smol.mode)
-    {
-        case MODE_LZ77:
-            return header->lz77.size;
-        case IS_TILEMAP:
-            return header->smolTilemap.tilemapSize;
-        default:
-            return header->smol.imageSize*SMOL_IMAGE_SIZE_MULTIPLIER;
-    }
+    const u8 *ptr8 = (const u8 *)ptr;
+    return (ptr8[3] << 16) | (ptr8[2] << 8) | (ptr8[1]);
 }
 
 bool32 IsCompressedData(const u32 *ptr)
@@ -1420,8 +1260,8 @@ bool8 LoadCompressedSpriteSheetUsingHeap(const struct CompressedSpriteSheet *src
     struct SpriteSheet dest;
     void *buffer;
 
-    buffer = AllocZeroed(GetDecompressedDataSize(&src->data[0]));
-    DecompressDataWithHeaderWram(src->data, buffer);
+    buffer = AllocZeroed(src->data[0] >> 8);
+    LZ77UnCompWram(src->data, buffer);
 
     dest.data = buffer;
     dest.size = src->size;
@@ -1431,6 +1271,7 @@ bool8 LoadCompressedSpriteSheetUsingHeap(const struct CompressedSpriteSheet *src
     Free(buffer);
     return FALSE;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1469,3 +1310,5 @@ bool8 LoadCompressedSpritePaletteUsingHeap(const struct CompressedSpritePalette 
 =======
 >>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 }
+=======
+>>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))

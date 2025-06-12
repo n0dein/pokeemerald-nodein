@@ -925,7 +925,11 @@ static void UNUSED LoadTrainerGfx_TrainerCard(u8 gender, u16 palOffset, u8 *dest
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     DecompressDataWithHeaderVram(gTrainerSprites[gender].frontPic.data, dest);
+=======
+    LZDecompressVram(gTrainerSprites[gender].frontPic.data, dest);
+>>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
     LoadPalette(gTrainerSprites[gender].palette.data, palOffset, PLTT_SIZE_4BPP);
 =======
     LZDecompressVram(gTrainerSprites[gender].frontPic.data, dest);

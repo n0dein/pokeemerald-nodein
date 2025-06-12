@@ -943,7 +943,7 @@ static bool8 LoadBerryBlenderGfx(void)
     {
     case 0:
         sBerryBlender->tilesBuffer = AllocZeroed(GetDecompressedDataSize(gBerryBlenderCenter_Gfx) + 100);
-        DecompressDataWithHeaderWram(gBerryBlenderCenter_Gfx, sBerryBlender->tilesBuffer);
+        LZDecompressWram(gBerryBlenderCenter_Gfx, sBerryBlender->tilesBuffer);
         sBerryBlender->loadGfxState++;
         break;
     case 1:
@@ -957,7 +957,7 @@ static bool8 LoadBerryBlenderGfx(void)
         sBerryBlender->loadGfxState++;
         break;
     case 3:
-        DecompressDataWithHeaderWram(gBerryBlenderOuter_Gfx, sBerryBlender->tilesBuffer);
+        LZDecompressWram(gBerryBlenderOuter_Gfx, sBerryBlender->tilesBuffer);
         sBerryBlender->loadGfxState++;
         break;
     case 4:
@@ -965,7 +965,7 @@ static bool8 LoadBerryBlenderGfx(void)
         sBerryBlender->loadGfxState++;
         break;
     case 5:
-        DecompressDataWithHeaderWram(gBerryBlenderOuter_Tilemap, sBerryBlender->tilesBuffer);
+        LZDecompressWram(gBerryBlenderOuter_Tilemap, sBerryBlender->tilesBuffer);
         sBerryBlender->loadGfxState++;
         break;
     case 6:
