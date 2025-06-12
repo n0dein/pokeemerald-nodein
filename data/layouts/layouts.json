@@ -94,7 +94,7 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
-      "width": 20,
+      "width": 40,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
@@ -4440,6 +4440,66 @@
       "secondary_tileset": "gTileset_Pacifidlog",
       "border_filepath": "data/layouts/CianwoodCity/border.bin",
       "blockdata_filepath": "data/layouts/CianwoodCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_BIRCH_LAB",
+      "name": "NewBirchLab_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/NewBirchLab/border.bin",
+      "blockdata_filepath": "data/layouts/NewBirchLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARTNER_PLAYGROUND",
+      "name": "PartnerPlayground_Layout",
+      "width": 40,
+      "height": 52,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/PartnerPlayground/border.bin",
+      "blockdata_filepath": "data/layouts/PartnerPlayground/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE101_EAST",
+      "name": "Route101_East_Layout",
+      "width": 30,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route101_East/border.bin",
+      "blockdata_filepath": "data/layouts/Route101_East/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALEO_PARK_ENTRANCE",
+      "name": "PaleoParkEntrance_Layout",
+      "width": 13,
+      "height": 7,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonDayCare",
+      "border_filepath": "data/layouts/PaleoParkEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/PaleoParkEntrance/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE103_SOUTH",
+      "name": "Route103_South_Layout",
+      "width": 30,
+      "height": 21,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route103_South/border.bin",
+      "blockdata_filepath": "data/layouts/Route103_South/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALEO_PARK",
+      "name": "PaleoPark_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/PaleoPark/border.bin",
+      "blockdata_filepath": "data/layouts/PaleoPark/map.bin"
     }
   ]
 }
