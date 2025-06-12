@@ -6,6 +6,7 @@
 #define EXPANSION_VERSION_MAJOR 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define EXPANSION_VERSION_MINOR 13
 #define EXPANSION_VERSION_PATCH 0
 =======
@@ -22,6 +23,10 @@
 #define EXPANSION_VERSION_MINOR 11
 #define EXPANSION_VERSION_PATCH 4
 >>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
+=======
+#define EXPANSION_VERSION_MINOR 12
+#define EXPANSION_VERSION_PATCH 1
+>>>>>>> parent of 0e968b31a9 (Start of 1.13 cycle)
 
 // FALSE if this this version of Expansion is not a tagged commit, i.e.
 // it contains unreleased changes.
