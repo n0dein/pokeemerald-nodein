@@ -2,6 +2,7 @@
 #define GUARD_CONSTANTS_EXPANSION_H
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Last version: 1.11.4
 #define EXPANSION_VERSION_MAJOR 1
 <<<<<<< HEAD
@@ -9,6 +10,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 #define EXPANSION_VERSION_MINOR 13
+=======
+// Last version: 1.11.3
+#define EXPANSION_VERSION_MAJOR 1
+#define EXPANSION_VERSION_MINOR 12
+>>>>>>> parent of d25f637b4e (Master to Upcoming, 2025-05-30 (#7027))
 #define EXPANSION_VERSION_PATCH 0
 =======
 #define EXPANSION_VERSION_MINOR 11

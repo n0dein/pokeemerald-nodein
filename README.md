@@ -28,6 +28,7 @@ To pull from this branch here, just simply use these commands here:
 ```
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 git remote add AGSMG https://github.com/agsmgmaster64/worldlinkdeluxe-ame/
 git pull AGSMG gacha-expansion
 =======
@@ -36,6 +37,9 @@ Based off RHH's pokeemerald-expansion 1.11.4 https://github.com/rh-hideout/pokee
 =======
 Based off RHH's pokeemerald-expansion 1.11.3 https://github.com/rh-hideout/pokeemerald-expansion/
 >>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
+=======
+Based off RHH's pokeemerald-expansion 1.11.3 https://github.com/rh-hideout/pokeemerald-expansion/
+>>>>>>> parent of d25f637b4e (Master to Upcoming, 2025-05-30 (#7027))
 ```
 
 
