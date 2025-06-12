@@ -1168,3 +1168,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Route103_South/scripts.inc"
 
 	.include "data/maps/PaleoPark/scripts.inc"
+
+	.include "data/maps/CianwoodCity_/scripts.inc"
+
+	.include "data/maps/Hohto_Passage_/scripts.inc"
+
+	.include "data/maps/Route41_/scripts.inc"

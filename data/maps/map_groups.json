@@ -93,19 +93,19 @@
     "Underwater_Route129",
     "Underwater_Route105",
     "Underwater_Route125",
-    "PartnerPlayground",
-    "Route101_East",
-    "Route103_South"
+    "Hohto_Passage",
+    "CianwoodCity",
+    "Route41",
+    "Route41_",
+    "CianwoodCity_",
+    "Hohto_Passage_"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
     "LittlerootTown_BrendansHouse_2F",
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_ProfessorBirchsLab",
-    "NewBirchLab",
-    "PaleoParkEntrance",
-    "PaleoPark"
+    "LittlerootTown_ProfessorBirchsLab"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",
