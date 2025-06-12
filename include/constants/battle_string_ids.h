@@ -2,6 +2,7 @@
 #define GUARD_CONSTANTS_BATTLE_STRING_IDS_H
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 enum StringID
 {
     STRINGID_INTROMSG,
@@ -741,6 +742,8 @@ enum StringID
     STRINGID_COUNT
 };
 =======
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 #define STRINGID_INTROMSG       0
 #define STRINGID_INTROSENDOUT   1
 #define STRINGID_RETURNMON      2
@@ -1477,7 +1480,10 @@ enum StringID
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,
 // and are instead handled explicitly by BufferStringBattle.
 #define BATTLESTRINGS_TABLE_START  STRINGID_TRAINER1LOSETEXT
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
 // The below IDs are all indexes into battle message tables,
 // used to determine which of a set of messages to print.

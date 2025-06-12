@@ -274,6 +274,7 @@ void BattleAI_SetupAIData(u8 defaultScoreMoves, u32 battler)
 u32 BattleAI_ChooseMoveOrAction(u32 battler)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (gAiThinkingStruct->aiAction & AI_ACTION_FLEE)
     {
         gAiBattleData->actionFlee = TRUE;
@@ -375,15 +376,21 @@ u32 BattleAI_ChooseMoveIndex(u32 battler)
     if (gBattleStruct->gimmick.usableGimmick[battler] == GIMMICK_TERA && (gAiThinkingStruct->aiFlags[battler] & AI_FLAG_SMART_TERA))
         DecideTerastal(battler);
 
+=======
+    u32 ret;
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
     if (!IsDoubleBattle())
         ret = ChooseMoveOrAction_Singles(battler);
     else
         ret = ChooseMoveOrAction_Doubles(battler);
+<<<<<<< HEAD
 
     if (gBattleStruct->gimmick.usableGimmick[battler] != GIMMICK_NONE)
         ReconsiderGimmick(battler, gBattlerTarget, gBattleMons[battler].moves[chosenMoveIndex]);
 
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
     // Clear protect structures, some flags may be set during AI calcs
     // e.g. pranksterElevated from GetBattleMovePriority
@@ -528,6 +535,7 @@ static void CalcBattlerAiMovesData(struct AiLogicData *aiData, u32 battlerAtk, u
         move = moves[moveIndex];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (IsMoveUnusable(moveIndex, move, moveLimitations))
             continue;
 
@@ -536,6 +544,8 @@ static void CalcBattlerAiMovesData(struct AiLogicData *aiData, u32 battlerAtk, u
         aiData->moveAccuracy[battlerAtk][battlerDef][moveIndex] = Ai_SetMoveAccuracy(aiData, battlerAtk, battlerDef, move);
 
 =======
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         if (move != MOVE_NONE
             && move != MOVE_UNAVAILABLE
             //&& !IsBattleMoveStatus(move)  /* we want to get effectiveness and accuracy of status moves */
@@ -544,7 +554,10 @@ static void CalcBattlerAiMovesData(struct AiLogicData *aiData, u32 battlerAtk, u
             dmg = AI_CalcDamage(move, battlerAtk, battlerDef, &effectiveness, TRUE, weather, rollType);
             aiData->moveAccuracy[battlerAtk][battlerDef][moveIndex] = Ai_SetMoveAccuracy(aiData, battlerAtk, battlerDef, move);
         }
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         aiData->simulatedDmg[battlerAtk][battlerDef][moveIndex] = dmg;
         aiData->effectiveness[battlerAtk][battlerDef][moveIndex] = effectiveness;
     }
@@ -612,6 +625,7 @@ void SetAiLogicDataForTurn(struct AiLogicData *aiData)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 u32 GetPartyMonAbility(struct Pokemon *mon)
 {
     //  Doesn't have any special handling yet
@@ -662,6 +676,9 @@ static u32 ChooseMoveOrAction_Singles(u32 battler)
 =======
 static u32 ChooseMoveOrAction_Singles(u32 battlerAi)
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+static u32 ChooseMoveOrAction_Singles(u32 battlerAi)
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     u8 currentMoveArray[MAX_MON_MOVES];
     u8 consideredMoveArray[MAX_MON_MOVES];
@@ -1277,11 +1294,15 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             break;
         case EFFECT_EXPLOSION:
 <<<<<<< HEAD
+<<<<<<< HEAD
         case EFFECT_MISTY_EXPLOSION:
             if (!(gAiThinkingStruct->aiFlags[battlerAtk] & AI_FLAG_WILL_SUICIDE))
 =======
             if (!(AI_THINKING_STRUCT->aiFlags[battlerAtk] & AI_FLAG_WILL_SUICIDE))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!(AI_THINKING_STRUCT->aiFlags[battlerAtk] & AI_FLAG_WILL_SUICIDE))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                 ADJUST_SCORE(-2);
 
             if (effectiveness == UQ_4_12(0.0))
@@ -1528,25 +1549,36 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
         case EFFECT_ATTACK_DOWN:
         case EFFECT_ATTACK_DOWN_2:
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_ATK))
 =======
             if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_ATK)) //|| !HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_PHYSICAL))
                 ADJUST_SCORE(-10);
             else if (aiData->abilities[battlerDef] == ABILITY_HYPER_CUTTER)
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_ATK)) //|| !HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_PHYSICAL))
+                ADJUST_SCORE(-10);
+            else if (aiData->abilities[battlerDef] == ABILITY_HYPER_CUTTER)
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_DEFENSE_DOWN:
         case EFFECT_DEFENSE_DOWN_2:
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_DEF))
 =======
             if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_DEF))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_DEF))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_SPEED_DOWN:
         case EFFECT_SPEED_DOWN_2:
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_SPEED))
 =======
@@ -1554,33 +1586,50 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-10);
             else if (aiData->abilities[battlerDef] == ABILITY_SPEED_BOOST)
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_SPEED))
+                ADJUST_SCORE(-10);
+            else if (aiData->abilities[battlerDef] == ABILITY_SPEED_BOOST)
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_SPECIAL_ATTACK_DOWN:
         case EFFECT_SPECIAL_ATTACK_DOWN_2:
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_SPATK))
 =======
             if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_SPATK)) //|| !HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_SPECIAL))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_SPATK)) //|| !HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_SPECIAL))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_SPECIAL_DEFENSE_DOWN:
         case EFFECT_SPECIAL_DEFENSE_DOWN_2:
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_SPDEF))
 =======
             if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_SPDEF))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_SPDEF))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                 ADJUST_SCORE(-10);
             break;
         case EFFECT_ACCURACY_DOWN:
         case EFFECT_ACCURACY_DOWN_2:
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_ACC))
 =======
             if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_ACC))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_ACC))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                 ADJUST_SCORE(-10);
             else if (aiData->abilities[battlerDef] == ABILITY_KEEN_EYE || aiData->abilities[battlerDef] == ABILITY_MINDS_EYE
                         || (B_ILLUMINATE_EFFECT >= GEN_9 && aiData->abilities[battlerDef] == ABILITY_ILLUMINATE))
@@ -1590,6 +1639,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
         case EFFECT_EVASION_DOWN_2:
         case EFFECT_TICKLE:
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_ATK))
                 ADJUST_SCORE(-10);
             else if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_DEF))
@@ -1598,6 +1648,11 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-10);
             else if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_DEF))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_ATK))
+                ADJUST_SCORE(-10);
+            else if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_DEF))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                 ADJUST_SCORE(-8);
             break;
         case EFFECT_VENOM_DRENCH:
@@ -1607,6 +1662,7 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             }
             else
             {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_SPEED))
                     ADJUST_SCORE(-10);
@@ -1620,10 +1676,18 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                     ADJUST_SCORE(-8);
                 else if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_ATK))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+                if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_SPEED))
+                    ADJUST_SCORE(-10);
+                else if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_SPATK))
+                    ADJUST_SCORE(-8);
+                else if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_ATK))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                     ADJUST_SCORE(-6);
             }
             break;
         case EFFECT_NOBLE_ROAR:
+<<<<<<< HEAD
 <<<<<<< HEAD
             if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_SPATK))
                 ADJUST_SCORE(-10);
@@ -1633,6 +1697,11 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
                 ADJUST_SCORE(-10);
             else if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_ATK))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_SPATK))
+                ADJUST_SCORE(-10);
+            else if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_ATK))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                 ADJUST_SCORE(-8);
             break;
         case EFFECT_CAPTIVATE:
@@ -1694,10 +1763,14 @@ static s32 AI_CheckBadMove(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
             break;
         case EFFECT_TOXIC_THREAD:
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (!CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_SPEED))
 =======
             if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_SPEED))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!ShouldLowerStat(battlerAtk, battlerDef, aiData->abilities[battlerDef], STAT_SPEED))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
                 ADJUST_SCORE(-1);    // may still want to just poison
             //fallthrough
         case EFFECT_POISON:
@@ -2974,12 +3047,16 @@ static s32 AI_TryToFaint(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
         return score; // status moves aren't accounted here
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     enum BattleMoveEffects effect = GetMoveEffect(move);
     if (CanIndexMoveFaintTarget(battlerAtk, battlerDef, movesetIndex, AI_ATTACKING)
         && effect != EFFECT_EXPLOSION && effect != EFFECT_MISTY_EXPLOSION)
 =======
     if (CanIndexMoveFaintTarget(battlerAtk, battlerDef, movesetIndex, 0) && GetMoveEffect(move) != EFFECT_EXPLOSION)
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    if (CanIndexMoveFaintTarget(battlerAtk, battlerDef, movesetIndex, 0) && GetMoveEffect(move) != EFFECT_EXPLOSION)
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     {
         if (AI_IsFaster(battlerAtk, battlerDef, move))
             ADJUST_SCORE(FAST_KILL);
@@ -3129,6 +3206,7 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
     } // global move effect check
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Specific logic for spread moves.
     if (moveTarget == MOVE_TARGET_FOES_AND_ALLY)
     {
@@ -3219,6 +3297,8 @@ static s32 AI_DoubleBattle(u32 battlerAtk, u32 battlerDef, u32 move, s32 score)
 
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     // check specific target
     if (IS_TARGETING_PARTNER(battlerAtk, battlerDef))
     {
@@ -4022,10 +4102,14 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
         break;
     case EFFECT_LOCK_ON:
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (HasMoveWithEffect(battlerAtk, EFFECT_OHKO) || HasMoveWithEffect(battlerAtk, EFFECT_SHEER_COLD))
 =======
         if (HasMoveEffect(battlerAtk, EFFECT_OHKO))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+        if (HasMoveEffect(battlerAtk, EFFECT_OHKO))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             ADJUST_SCORE(GOOD_EFFECT);
         else if (HasMoveWithLowAccuracy(battlerAtk, battlerDef, 85, TRUE, aiData->abilities[battlerAtk], aiData->abilities[battlerDef], aiData->holdEffects[battlerAtk], aiData->holdEffects[battlerDef]))
             ADJUST_SCORE(GOOD_EFFECT);

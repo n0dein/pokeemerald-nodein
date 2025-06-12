@@ -387,10 +387,14 @@ bool32 MovesWithCategoryUnusable(u32 attacker, u32 target, u32 category)
 
 // To save computation time this function has 2 variants. One saves, sets and restores battlers, while the other doesn't.
 <<<<<<< HEAD
+<<<<<<< HEAD
 struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, enum AIConsiderGimmick considerGimmickAtk, enum AIConsiderGimmick considerGimmickDef)
 =======
 struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, enum DamageRollType rollType)
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, enum DamageRollType rollType)
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     struct SimulatedDamage dmg;
 
@@ -399,10 +403,14 @@ struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 b
     SetBattlerData(battlerAtk);
     SetBattlerData(battlerDef);
 <<<<<<< HEAD
+<<<<<<< HEAD
     dmg = AI_CalcDamage(move, battlerAtk, battlerDef, typeEffectiveness, considerGimmickAtk, considerGimmickDef, AI_GetWeather());
 =======
     dmg = AI_CalcDamage(move, battlerAtk, battlerDef, typeEffectiveness, considerZPower, AI_GetWeather(), rollType);
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    dmg = AI_CalcDamage(move, battlerAtk, battlerDef, typeEffectiveness, considerZPower, AI_GetWeather(), rollType);
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     RestoreBattlerData(battlerAtk);
     RestoreBattlerData(battlerDef);
     return dmg;
@@ -628,6 +636,14 @@ static inline void CalcDynamicMoveDamage(struct DamageCalculationData *damageCal
     case EFFECT_ENDEAVOR:
         // If target has less HP than user, Endeavor does no damage
         expected = minimum = max(0, gBattleMons[damageCalcData->battlerDef].hp - gBattleMons[damageCalcData->battlerAtk].hp);
+<<<<<<< HEAD
+=======
+        break;
+    case EFFECT_SUPER_FANG:
+        expected = minimum = (abilityAtk == ABILITY_PARENTAL_BOND
+            ? max(2, gBattleMons[damageCalcData->battlerDef].hp * 3 / 4)
+            : max(1, gBattleMons[damageCalcData->battlerDef].hp / 2));
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         break;
     case EFFECT_SUPER_FANG:
         expected = minimum = (abilityAtk == ABILITY_PARENTAL_BOND
@@ -674,6 +690,7 @@ static inline void CalcDynamicMoveDamage(struct DamageCalculationData *damageCal
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 static inline bool32 ShouldCalcCritDamage(u32 battlerAtk, u32 battlerDef, u32 move, struct AiLogicData *aiData)
 {
     s32 critChanceIndex = 0;
@@ -701,12 +718,16 @@ struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, u
 =======
 struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, u32 weather, enum DamageRollType rollType)
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, u32 weather, enum DamageRollType rollType)
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     struct SimulatedDamage simDamage;
     s32 moveType;
     u32 moveEffect = GetMoveEffect(move);
     uq4_12_t effectivenessMultiplier;
     bool32 isDamageMoveUnusable = FALSE;
+<<<<<<< HEAD
 <<<<<<< HEAD
     bool32 toggledGimmickAtk = FALSE;
     bool32 toggledGimmickDef = FALSE;
@@ -717,6 +738,11 @@ struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, u
     struct AiLogicData *aiData = AI_DATA;
     AI_DATA->aiCalcInProgress = TRUE;
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    bool32 toggledGimmick = FALSE;
+    struct AiLogicData *aiData = AI_DATA;
+    AI_DATA->aiCalcInProgress = TRUE;
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
     if (moveEffect == EFFECT_NATURE_POWER)
         move = GetNaturePowerMove(battlerAtk);
@@ -734,6 +760,7 @@ struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, u
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (gBattleStruct->gimmick.usableGimmick[battlerDef] && GetActiveGimmick(battlerDef) == GIMMICK_NONE
         && gBattleStruct->gimmick.usableGimmick[battlerDef] != GIMMICK_NONE && considerGimmickDef == USE_GIMMICK)
     {
@@ -745,6 +772,9 @@ struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, u
 =======
     SetMoveDamageCategory(battlerAtk, battlerDef, move);
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    SetMoveDamageCategory(battlerAtk, battlerDef, move);
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     SetTypeBeforeUsingMove(move, battlerAtk);
     moveType = GetBattleMoveType(move);
     effectivenessMultiplier = CalcTypeEffectivenessMultiplier(move, moveType, battlerAtk, battlerDef, aiData->abilities[battlerDef], FALSE);
@@ -856,12 +886,16 @@ struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, u
     if (toggledGimmickAtk)
         SetActiveGimmick(battlerAtk, GIMMICK_NONE);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (toggledGimmickDef)
         SetActiveGimmick(battlerDef, GIMMICK_NONE);
     gAiLogicData->aiCalcInProgress = FALSE;
 =======
     AI_DATA->aiCalcInProgress = FALSE;
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    AI_DATA->aiCalcInProgress = FALSE;
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     return simDamage;
 }
 
@@ -1880,10 +1914,14 @@ s32 ProtectChecks(u32 battlerAtk, u32 battlerDef, u32 move, u32 predictedMove)
 
 // stat stages
 <<<<<<< HEAD
+<<<<<<< HEAD
 bool32 CanLowerStat(u32 battlerAtk, u32 battlerDef, u32 abilityDef, u32 stat)
 =======
 bool32 ShouldLowerStat(u32 battlerAtk, u32 battlerDef, u32 battlerAbility, u32 stat)
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+bool32 ShouldLowerStat(u32 battlerAtk, u32 battlerDef, u32 battlerAbility, u32 stat)
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     if (gBattleMons[battlerDef].statStages[stat] > MIN_STAT_STAGE && battlerAbility != ABILITY_CONTRARY)
     {
@@ -1910,6 +1948,7 @@ bool32 ShouldLowerStat(u32 battlerAtk, u32 battlerDef, u32 battlerAbility, u32 s
         return TRUE;
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (stat == STAT_SPEED)
     {
@@ -1990,6 +2029,9 @@ u32 IncreaseStatDownScore(u32 battlerAtk, u32 battlerDef, u32 stat)
     }
 
     return (tempScore > BEST_EFFECT) ? BEST_EFFECT : tempScore; // don't inflate score so only max +4
+=======
+    return FALSE;
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 }
 
 bool32 BattlerStatCanRise(u32 battler, u32 battlerAbility, u32 stat)
@@ -2173,7 +2215,10 @@ bool32 ShouldLowerEvasion(u32 battlerAtk, u32 battlerDef, u32 defAbility)
 }
 
 bool32 CanIndexMoveFaintTarget(u32 battlerAtk, u32 battlerDef, u32 index, u32 numHits)
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     s32 dmg;
     u16 *moves = gBattleMons[battlerAtk].moves;
@@ -3828,10 +3873,14 @@ s32 AI_CalcPartyMonDamage(u32 move, u32 battlerAtk, u32 battlerDef, struct Battl
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     dmg = AI_CalcDamage(move, battlerAtk, battlerDef, &effectiveness, NO_GIMMICK, NO_GIMMICK, AI_GetWeather());
 =======
     dmg = AI_CalcDamage(move, battlerAtk, battlerDef, &effectiveness, FALSE, AI_GetWeather(), rollType);
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    dmg = AI_CalcDamage(move, battlerAtk, battlerDef, &effectiveness, FALSE, AI_GetWeather(), rollType);
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     // restores original gBattleMon struct
     FreeRestoreBattleMons(savedBattleMons);
 
@@ -4059,6 +4108,7 @@ static u32 IncreaseStatUpScoreInternal(u32 battlerAtk, u32 battlerDef, u32 statI
         return NO_INCREASE;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Don't increase stats if opposing battler has Encore
     if (HasBattlerSideMoveWithEffect(battlerDef, EFFECT_ENCORE))
         return NO_INCREASE;
@@ -4080,6 +4130,9 @@ static u32 IncreaseStatUpScoreInternal(u32 battlerAtk, u32 battlerDef, u32 statI
 =======
     // If predicting switch, stat increases are great momentum
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    // If predicting switch, stat increases are great momentum
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     if (IsBattlerPredictedToSwitch(battlerDef))
         tempScore += WEAK_EFFECT;
 
@@ -4203,9 +4256,12 @@ void IncreaseBurnScore(u32 battlerAtk, u32 battlerDef, u32 move, s32 *score)
     {
         if (HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_PHYSICAL)
 <<<<<<< HEAD
+<<<<<<< HEAD
             || (!(gAiThinkingStruct->aiFlags[battlerAtk] & AI_FLAG_OMNISCIENT) // Not Omniscient but expects physical attacker
                 && GetSpeciesBaseAttack(gBattleMons[battlerDef].species) >= GetSpeciesBaseSpAttack(gBattleMons[battlerDef].species) + 10))
 =======
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             || (!(AI_THINKING_STRUCT->aiFlags[battlerAtk] & AI_FLAG_OMNISCIENT) // Not Omniscient but expects physical attacker
                 && gSpeciesInfo[gBattleMons[battlerDef].species].baseAttack >= gSpeciesInfo[gBattleMons[battlerDef].species].baseSpAttack + 10))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
@@ -4292,9 +4348,12 @@ void IncreaseFrostbiteScore(u32 battlerAtk, u32 battlerDef, u32 move, s32 *score
     {
         if (HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_SPECIAL)
 <<<<<<< HEAD
+<<<<<<< HEAD
             || (!(gAiThinkingStruct->aiFlags[battlerAtk] & AI_FLAG_OMNISCIENT) // Not Omniscient but expects special attacker
                 && GetSpeciesBaseSpAttack(gBattleMons[battlerDef].species) >= GetSpeciesBaseAttack(gBattleMons[battlerDef].species) + 10))
 =======
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             || (!(AI_THINKING_STRUCT->aiFlags[battlerAtk] & AI_FLAG_OMNISCIENT) // Not Omniscient but expects special attacker
                 && gSpeciesInfo[gBattleMons[battlerDef].species].baseSpAttack >= gSpeciesInfo[gBattleMons[battlerDef].species].baseAttack + 10))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
@@ -4350,10 +4409,14 @@ bool32 ShouldUseZMove(u32 battlerAtk, u32 battlerDef, u32 chosenMove)
             return FALSE;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         dmg = AI_CalcDamageSaveBattlers(chosenMove, battlerAtk, battlerDef, &effectiveness, NO_GIMMICK, NO_GIMMICK);
 =======
         dmg = AI_CalcDamageSaveBattlers(chosenMove, battlerAtk, battlerDef, &effectiveness, FALSE, DMG_ROLL_DEFAULT);
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+        dmg = AI_CalcDamageSaveBattlers(chosenMove, battlerAtk, battlerDef, &effectiveness, FALSE, DMG_ROLL_DEFAULT);
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
         if (!IsBattleMoveStatus(chosenMove) && dmg.minimum >= gBattleMons[battlerDef].hp)
             return FALSE;   // don't waste damaging z move if can otherwise faint target

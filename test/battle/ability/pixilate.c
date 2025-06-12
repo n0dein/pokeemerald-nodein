@@ -22,6 +22,7 @@ SINGLE_BATTLE_TEST("Pixilate turns a Normal-type move into a Fairy-type move")
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 SINGLE_BATTLE_TEST("Pixilate boosts power of affected moves by 20% (Gen7+) or 30% (Gen1-6)", s16 damage)
 {
     u32 ability, genConfig;
@@ -149,6 +150,11 @@ TO_DO_BATTLE_TEST("Pixilate can not turn certain moves into Fairy type moves");
 TO_DO_BATTLE_TEST("Pixilate boosts power of affected moves by 20% (Gen7+)");
 TO_DO_BATTLE_TEST("Pixilate boosts power of affected moves by 30% (Gen6)");
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+TO_DO_BATTLE_TEST("Pixilate can not turn certain moves into Fairy type moves");
+TO_DO_BATTLE_TEST("Pixilate boosts power of affected moves by 20% (Gen7+)");
+TO_DO_BATTLE_TEST("Pixilate boosts power of affected moves by 30% (Gen6)");
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 TO_DO_BATTLE_TEST("(DYNAMAX) Pixilate turns Max Strike into Max Starfall when not used by Gigantamax Alcremie");
 TO_DO_BATTLE_TEST("(DYNAMAX) Pixilate doesn't turn Max Strike into Max Starfall when used by Gigantamax Alcremie, instead becoming G-Max Finale");
 

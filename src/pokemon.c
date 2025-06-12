@@ -4536,6 +4536,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Check for additional conditions (only if the primary method passes). Skips if there's no additional conditions.
     for (i = 0; params != NULL && params[i].condition != CONDITIONS_END; i++)
     {
@@ -4831,6 +4832,8 @@ u32 GetEvolutionTargetSpecies(struct Pokemon *mon, enum EvolutionMode mode, u16 
 
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     if (heldItem == ITEM_ENIGMA_BERRY_E_READER)
     #if FREE_ENIGMA_BERRY == FALSE
         holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;

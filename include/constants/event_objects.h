@@ -246,10 +246,13 @@
 #define OBJ_EVENT_GFX_POKE_BALL                  239
 #define OBJ_EVENT_GFX_OW_MON                     240
 <<<<<<< HEAD
+<<<<<<< HEAD
 #define OBJ_EVENT_GFX_LIGHT_SPRITE               241
 #define OW_OBJECT_VANILLA_SHADOWS                242
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit

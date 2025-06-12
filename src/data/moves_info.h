@@ -2832,6 +2832,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Minimize"),
         .description = COMPOUND_STRING(
 <<<<<<< HEAD
+<<<<<<< HEAD
             "Minimizes the user's size to\n"
         #if B_MINIMIZE_EVASION >= GEN_5
             "sharply raise evasiveness."),
@@ -2842,6 +2843,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Minimizes the user's size\n"
             "to raise evasiveness."),
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            "Minimizes the user's size\n"
+            "to raise evasiveness."),
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         .effect = EFFECT_MINIMIZE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -3675,11 +3680,14 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Poison Gas"),
         .description = COMPOUND_STRING(
 <<<<<<< HEAD
+<<<<<<< HEAD
         #if B_UPDATED_MOVE_DATA >= GEN_5
             "Envelops the foes in a toxic\n"
         #else
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             "Envelops the foe in a toxic\n"
             "gas that may poison."),
         #if B_UPDATED_MOVE_DATA >= GEN_6
@@ -6005,6 +6013,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Rapid Spin"),
         .description = COMPOUND_STRING(
 <<<<<<< HEAD
+<<<<<<< HEAD
             "Spins attack that removes\n"
         #if B_SPEED_BUFFING_RAPID_SPIN >= GEN_8
             "some effects and ups speed."),
@@ -6015,6 +6024,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Spins the body at high\n"
             "speed to strike the foe."),
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            "Spins the body at high\n"
+            "speed to strike the foe."),
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         .effect = EFFECT_RAPID_SPIN,
         .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 50 : 20,
         .type = TYPE_NORMAL,
@@ -6231,12 +6244,15 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "The effectiveness varies\n"
             "with the user."),
 <<<<<<< HEAD
+<<<<<<< HEAD
         #else
             "The type and effectiveness\n"
             "vary with the user."),
         #endif
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         .power = B_HIDDEN_POWER_DMG >= GEN_6 ? 60 : 1,
         .effect = EFFECT_HIDDEN_POWER,
         .type = TYPE_NORMAL,
@@ -9556,6 +9572,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .name = COMPOUND_STRING("Tailwind"),
         .description = COMPOUND_STRING(
 <<<<<<< HEAD
+<<<<<<< HEAD
             "Whips up a breeze, doubling\n"
         #if B_TAILWIND_TURNS >= GEN_5
             "ally Speed for 4 turns."),
@@ -9566,6 +9583,10 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
             "Whips up a turbulent breeze\n"
             "that raises Speed."),
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            "Whips up a turbulent breeze\n"
+            "that raises Speed."),
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         .effect = EFFECT_TAILWIND,
         .power = 0,
         .type = TYPE_FLYING,

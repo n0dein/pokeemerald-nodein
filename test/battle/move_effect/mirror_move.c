@@ -43,6 +43,7 @@ SINGLE_BATTLE_TEST("Mirror Move's called powder move fails against Grass Types")
     GIVEN {
         ASSUME(IsPowderMove(MOVE_STUN_SPORE));
 <<<<<<< HEAD
+<<<<<<< HEAD
         ASSUME(GetSpeciesType(SPECIES_ODDISH, 0) == TYPE_GRASS);
         ASSUME(GetMoveEffect(MOVE_STUN_SPORE) == EFFECT_NON_VOLATILE_STATUS);
         ASSUME(GetMoveNonVolatileStatus(MOVE_STUN_SPORE) == MOVE_EFFECT_PARALYSIS);
@@ -50,6 +51,10 @@ SINGLE_BATTLE_TEST("Mirror Move's called powder move fails against Grass Types")
         ASSUME(gSpeciesInfo[SPECIES_ODDISH].types[0] == TYPE_GRASS);
         ASSUME(GetMoveEffect(MOVE_STUN_SPORE) == EFFECT_PARALYZE);
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+        ASSUME(gSpeciesInfo[SPECIES_ODDISH].types[0] == TYPE_GRASS);
+        ASSUME(GetMoveEffect(MOVE_STUN_SPORE) == EFFECT_PARALYZE);
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         PLAYER(SPECIES_ODDISH);
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {

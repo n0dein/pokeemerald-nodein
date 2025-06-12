@@ -120,6 +120,7 @@ struct MoveInfo
         } protect;
         u32 status;
 <<<<<<< HEAD
+<<<<<<< HEAD
         u32 moveProperty;
         u32 holdEffect;
         u32 type;
@@ -129,12 +130,17 @@ struct MoveInfo
         u32 recoilPercentage;
         u32 nonVolatileStatus;
 =======
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         u16 moveProperty;
         u16 holdEffect;
         u16 type;
         u16 fixedDamage;
         u16 absorbPercentage;
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     } argument;
 
     // primary/secondary effects
@@ -469,10 +475,14 @@ static inline u32 GetMoveTwoTurnAttackWeather(u32 moveId)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 static inline enum ProtectMethod GetMoveProtectMethod(u32 moveId)
 =======
 static inline u32 GetMoveProtectSide(u32 moveId)
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+static inline u32 GetMoveProtectSide(u32 moveId)
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     return gMovesInfo[SanitizeMoveId(moveId)].argument.protect.side;
 }
@@ -511,6 +521,7 @@ static inline u32 GetMoveAbsorbPercentage(u32 moveId)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 static inline u32 GetMoveRecoil(u32 moveId)
 {
     return gMovesInfo[SanitizeMoveId(moveId)].argument.recoilPercentage;
@@ -537,6 +548,8 @@ static inline u32 GetMoveDamagePercentage(u32 move)
 
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 static inline const struct AdditionalEffect *GetMoveAdditionalEffectById(u32 moveId, u32 effect)
 {
     return &gMovesInfo[SanitizeMoveId(moveId)].additionalEffects[effect];

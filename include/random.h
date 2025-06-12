@@ -191,21 +191,27 @@ enum RandomTag
     RNG_AI_SWITCH_FREE_TURN,
     RNG_AI_SWITCH_ALL_MOVES_BAD,
 <<<<<<< HEAD
+<<<<<<< HEAD
     RNG_AI_CONSERVE_TERA,
     RNG_AI_SWITCH_ALL_SCORES_BAD,
     RNG_AI_PP_STALL_DISREGARD_MOVE,
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     RNG_SHELL_SIDE_ARM,
     RNG_RANDOM_TARGET,
     RNG_AI_PREDICT_ABILITY,
     RNG_AI_PREDICT_SWITCH,
+<<<<<<< HEAD
 <<<<<<< HEAD
     RNG_AI_PREDICT_MOVE,
     RNG_AI_STATUS_FOCUS_PUNCH,
     RNG_AI_BOOST_INTO_HAZE,
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     RNG_HEALER,
     RNG_DEXNAV_ENCOUNTER_LEVEL,
 };

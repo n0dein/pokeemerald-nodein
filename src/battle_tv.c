@@ -933,6 +933,7 @@ static void AddMovePoints(u8 caseId, u16 arg1, u8 arg2, u8 arg3)
         u8 baseFromEffect = gBattleMoveEffects[GetMoveEffect(arg2)].battleTvScore;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Changes depending on the effect
         switch (effect)
         {
@@ -989,11 +990,16 @@ static void AddMovePoints(u8 caseId, u16 arg1, u8 arg2, u8 arg3)
         {
         case MOVE_EFFECT_SLEEP:
 =======
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         // Various cases to add/remove points
         if (GetMoveRecoil(arg2) > 0)
             baseFromEffect++; // Recoil moves
         if (GetMoveEffect(arg2) == EFFECT_RAPID_SPIN)
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             baseFromEffect++;
         if (MoveHasAdditionalEffect(arg2, MOVE_EFFECT_SP_ATK_MINUS_2) || MoveHasAdditionalEffect(arg2, MOVE_EFFECT_ATK_DEF_DOWN))
             baseFromEffect += 2; // Overheat, Superpower, etc.

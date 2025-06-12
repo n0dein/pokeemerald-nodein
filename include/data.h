@@ -237,6 +237,7 @@ static inline const u8 *GetTrainerNameFromId(u16 trainerId)
 static inline const u8 GetTrainerPicFromId(u16 trainerId)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     enum DifficultyLevel partnerDifficulty = GetBattlePartnerDifficultyLevel(trainerId);
 
     if (trainerId > TRAINER_PARTNER(PARTNER_NONE))
@@ -245,6 +246,10 @@ static inline const u8 GetTrainerPicFromId(u16 trainerId)
     u32 sanitizedTrainerId = SanitizeTrainerId(trainerId);
     enum DifficultyLevel difficulty = GetTrainerDifficultyLevel(sanitizedTrainerId);
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    u32 sanitizedTrainerId = SanitizeTrainerId(trainerId);
+    enum DifficultyLevel difficulty = GetTrainerDifficultyLevel(sanitizedTrainerId);
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
     return GetTrainerStructFromId(trainerId)->trainerPic;
 }
@@ -263,7 +268,10 @@ static inline const bool32 IsTrainerDoubleBattle(u16 trainerId)
     enum DifficultyLevel difficulty = GetTrainerDifficultyLevel(sanitizedTrainerId);
 
     return gTrainers[difficulty][sanitizedTrainerId].doubleBattle;
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 }
 
 static inline const u8 GetTrainerPartySizeFromId(u16 trainerId)

@@ -15,6 +15,7 @@
 #define FORM_CHANGE_TERMINATOR                  0
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 enum FormChanges
 {
     FORM_CHANGE_TERMINATOR,
@@ -130,6 +131,8 @@ enum FormChanges
     FORM_CHANGE_DEPOSIT,
 };
 =======
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 // Form change that activates when the specified item is given to or taken from the selected Pokémon.
 // param1: item to hold.
 // param2: ability to check for, optional.
@@ -266,6 +269,9 @@ enum FormChanges
 
 // Form change that activates when the Pokémon is deposited into the PC or Daycare.
 #define FORM_CHANGE_DEPOSIT                     27
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
 #endif // GUARD_CONSTANTS_FORM_CHANGE_TYPES_H

@@ -2,6 +2,7 @@
 #include "test/battle.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ASSUMPTIONS
 {
     ASSUME(GetMoveEffect(MOVE_MAGIC_ROOM) == EFFECT_MAGIC_ROOM);
@@ -39,3 +40,6 @@ DOUBLE_BATTLE_TEST("Magic Room prevents item hold effects")
 =======
 TO_DO_BATTLE_TEST("TODO: Write Magic Room (Move Effect) test titles")
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+TO_DO_BATTLE_TEST("TODO: Write Magic Room (Move Effect) test titles")
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))

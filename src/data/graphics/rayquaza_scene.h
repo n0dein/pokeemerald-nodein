@@ -119,4 +119,7 @@ const u32 gRaySceneChasesAway_Light_Tilemap[]    = INCBIN_U32("graphics/rayquaza
 const u32 gRaySceneChasesAway_Bg_Tilemap[]       = INCBIN_U32("graphics/rayquaza_scene/scene_5/bg.bin.lz");
 const u32 gRaySceneChasesAway_Ring_Tilemap[]     = INCBIN_U32("graphics/rayquaza_scene/scene_5/ring.bin.lz");
 const u32 gRaySceneChasesAway_Bg_Pal[]           = INCBIN_U32("graphics/rayquaza_scene/scene_5/bg.gbapal.lz");
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))

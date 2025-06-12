@@ -49,6 +49,7 @@ TO_DO_BATTLE_TEST("Aerilate boosts power of affected moves by 20% (Gen7+)");
 TO_DO_BATTLE_TEST("Aerilate boosts power of affected moves by 30% (Gen6)");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     GIVEN {
         WITH_CONFIG(GEN_CONFIG_ATE_MULTIPLIER, genConfig);
         ASSUME(GetMoveType(MOVE_TACKLE) == TYPE_NORMAL);
@@ -176,10 +177,15 @@ TO_DO_BATTLE_TEST("Aerilate doesn't affect Terrain Pulse's type");
 TO_DO_BATTLE_TEST("Aerilate doesn't affect damaging Z-Move types");
 TO_DO_BATTLE_TEST("(DYNAMAX) Aerilate turns Max Strike into Max Airstream"); // All other -ate abilities do this, so interpolating this as no Aerilate mon is available in a Dynamax game
 =======
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 // Gen 6-7
 TO_DO_BATTLE_TEST("Aerilate overrides Electrify (Gen6-7)");
 TO_DO_BATTLE_TEST("Aerilate overrides Ion Deluge (Gen6-7)");
 // Gen 8+
 //TO_DO_BATTLE_TEST("Aerilate doesn't override Electrify (Gen8+)");  // No mon with Aerilate exists in Gen8+, but probably behaves similar to Pixilate, which does.
 //TO_DO_BATTLE_TEST("Aerilate doesn't override Ion Deluge (Gen8+)"); // Ion Deluge doesn't exist in Gen 8+, but we probably could assume it behaves similar to under Electrify. TODO: Test by hacking SV.
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))

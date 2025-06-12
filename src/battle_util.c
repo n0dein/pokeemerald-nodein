@@ -3375,11 +3375,15 @@ static void CancellerInLove(u32 *effect)
             gHitMarker |= HITMARKER_UNABLE_TO_USE_MOVE;
             gProtectStructs[gBattlerAttacker].unableToUseMove = TRUE;
 <<<<<<< HEAD
+<<<<<<< HEAD
             CancelMultiTurnMoves(gBattlerAttacker, SKY_DROP_ATTACKCANCELLER_CHECK);
             gBattlescriptCurrInstr = BattleScript_MoveUsedIsInLove;
 =======
             CancelMultiTurnMoves(gBattlerAttacker);
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            CancelMultiTurnMoves(gBattlerAttacker);
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         }
         *effect = 1;
     }
@@ -6396,6 +6400,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
             gHitMarker &= ~HITMARKER_SYNCHRONISE_EFFECT;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             bool32 statusChanged = CanSetNonVolatileStatus(gBattlerTarget,
                                                            gBattlerAttacker,
                                                            gLastUsedAbility,
@@ -6410,6 +6415,9 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
 =======
             if (!(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!(gBattleMons[gBattlerAttacker].status1 & STATUS1_ANY))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             {
                 gBattleStruct->synchronizeMoveEffect &= ~(MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN);
                 if (B_SYNCHRONIZE_TOXIC < GEN_5 && gBattleStruct->synchronizeMoveEffect == MOVE_EFFECT_TOXIC)
@@ -6418,6 +6426,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 gBattleScripting.moveEffect = gBattleStruct->synchronizeMoveEffect + MOVE_EFFECT_AFFECTS_USER;
                 gBattleScripting.battler = gBattlerAbility = gBattlerTarget;
                 PREPARE_ABILITY_BUFFER(gBattleTextBuff1, ABILITY_SYNCHRONIZE);
+<<<<<<< HEAD
 <<<<<<< HEAD
                 BattleScriptCall(BattleScript_SynchronizeActivates);
                 gHitMarker |= HITMARKER_STATUS_ABILITY_EFFECT;
@@ -6434,6 +6443,13 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_SynchronizeActivates;
+                gHitMarker |= HITMARKER_STATUS_ABILITY_EFFECT;
+                effect++;
+            }
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         }
         break;
     case ABILITYEFFECT_ATK_SYNCHRONIZE:
@@ -6441,6 +6457,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
         {
             gHitMarker &= ~HITMARKER_SYNCHRONISE_EFFECT;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             bool32 statusChanged = CanSetNonVolatileStatus(gBattlerAttacker,
                                                            gBattlerTarget,
@@ -6456,6 +6473,9 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
 =======
             if (!(gBattleMons[gBattlerTarget].status1 & STATUS1_ANY))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+            if (!(gBattleMons[gBattlerTarget].status1 & STATUS1_ANY))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             {
                 gBattleStruct->synchronizeMoveEffect &= ~(MOVE_EFFECT_AFFECTS_USER | MOVE_EFFECT_CERTAIN);
                 if (gBattleStruct->synchronizeMoveEffect == MOVE_EFFECT_TOXIC)
@@ -6464,6 +6484,7 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 gBattleScripting.moveEffect = gBattleStruct->synchronizeMoveEffect;
                 gBattleScripting.battler = gBattlerAbility = gBattlerAttacker;
                 PREPARE_ABILITY_BUFFER(gBattleTextBuff1, ABILITY_SYNCHRONIZE);
+<<<<<<< HEAD
 <<<<<<< HEAD
                 BattleScriptCall(BattleScript_SynchronizeActivates);
                 gHitMarker |= HITMARKER_STATUS_ABILITY_EFFECT;
@@ -6480,6 +6501,13 @@ u32 AbilityBattleEffects(u32 caseID, u32 battler, u32 ability, u32 special, u32 
                 effect++;
             }
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_SynchronizeActivates;
+                gHitMarker |= HITMARKER_STATUS_ABILITY_EFFECT;
+                effect++;
+            }
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         }
         break;
 
@@ -6656,6 +6684,7 @@ bool32 IsMoldBreakerTypeAbility(u32 battler, u32 ability)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 static inline bool32 CanBreakThroughAbility(u32 battlerAtk, u32 battlerDef, u32 ability, u32 hasAbilityShield, u32 ignoreMoldBreaker)
 {
     if (hasAbilityShield || ignoreMoldBreaker)
@@ -6665,6 +6694,10 @@ static inline bool32 CanBreakThroughAbility(u32 battlerAtk, u32 battlerDef, u32 
 static inline bool32 CanBreakThroughAbility(u32 battlerAtk, u32 battlerDef, u32 ability)
 {
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+static inline bool32 CanBreakThroughAbility(u32 battlerAtk, u32 battlerDef, u32 ability)
+{
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     return ((IsMoldBreakerTypeAbility(battlerAtk, ability) || MoveIgnoresTargetAbility(gCurrentMove))
          && battlerDef != battlerAtk
          && gAbilitiesInfo[gBattleMons[battlerDef].ability].breakable
@@ -6681,6 +6714,7 @@ u32 GetBattlerAbilityIgnoreMoldBreaker(u32 battler)
 u32 GetBattlerAbility(u32 battler)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return GetBattlerAbilityInternal(battler, FALSE);
 }
 
@@ -6690,6 +6724,9 @@ u32 GetBattlerAbilityInternal(u32 battler, u32 ignoreMoldBreaker)
 =======
     bool32 noAbilityShield = GetBattlerHoldEffectIgnoreAbility(battler, TRUE) != HOLD_EFFECT_ABILITY_SHIELD;
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    bool32 noAbilityShield = GetBattlerHoldEffectIgnoreAbility(battler, TRUE) != HOLD_EFFECT_ABILITY_SHIELD;
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     bool32 abilityCantBeSuppressed = gAbilitiesInfo[gBattleMons[battler].ability].cantBeSuppressed;
 
     if (abilityCantBeSuppressed)
@@ -6701,12 +6738,18 @@ u32 GetBattlerAbilityInternal(u32 battler, u32 ignoreMoldBreaker)
                 return ABILITY_NONE;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (CanBreakThroughAbility(gBattlerAttacker, battler, gBattleMons[gBattlerAttacker].ability, hasAbilityShield, ignoreMoldBreaker))
 =======
         if (!gBattleStruct->bypassMoldBreakerChecks
          && noAbilityShield
          && CanBreakThroughAbility(gBattlerAttacker, battler, gBattleMons[gBattlerAttacker].ability))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+        if (!gBattleStruct->bypassMoldBreakerChecks
+         && noAbilityShield
+         && CanBreakThroughAbility(gBattlerAttacker, battler, gBattleMons[gBattlerAttacker].ability))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             return ABILITY_NONE;
 
         return gBattleMons[battler].ability;
@@ -6721,12 +6764,18 @@ u32 GetBattlerAbilityInternal(u32 battler, u32 ignoreMoldBreaker)
         return ABILITY_NONE;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (CanBreakThroughAbility(gBattlerAttacker, battler, gBattleMons[gBattlerAttacker].ability, hasAbilityShield, ignoreMoldBreaker))
 =======
     if (!gBattleStruct->bypassMoldBreakerChecks
      && noAbilityShield
      && CanBreakThroughAbility(gBattlerAttacker, battler, gBattleMons[gBattlerAttacker].ability))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    if (!gBattleStruct->bypassMoldBreakerChecks
+     && noAbilityShield
+     && CanBreakThroughAbility(gBattlerAttacker, battler, gBattleMons[gBattlerAttacker].ability))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         return ABILITY_NONE;
 
     return gBattleMons[battler].ability;
@@ -8400,7 +8449,14 @@ u32 ItemBattleEffects(enum ItemCaseId caseID, u32 battler, bool32 moveTurn)
         case HOLD_EFFECT_RESTORE_STATS:
             effect = RestoreWhiteHerbStats(battler);
             if (effect != 0)
+<<<<<<< HEAD
                 BattleScriptCall(BattleScript_WhiteHerbRet);
+=======
+            {
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_WhiteHerbRet;
+            }
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             break;
         }
         break;
@@ -10147,6 +10203,7 @@ static inline uq4_12_t GetGlaiveRushModifier(u32 battlerDef)
 static inline uq4_12_t GetZMaxMoveAgainstProtectionModifier(struct DamageCalculationData *damageCalcData)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!IsZMove(damageCalcData->move) && !IsMaxMove(damageCalcData->move))
         return UQ_4_12(1.0);
 
@@ -10155,6 +10212,9 @@ static inline uq4_12_t GetZMaxMoveAgainstProtectionModifier(struct DamageCalcula
 =======
     if ((IsZMove(damageCalcData->move) || IsMaxMove(damageCalcData->move)) && IS_BATTLER_PROTECTED(damageCalcData->battlerDef))
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    if ((IsZMove(damageCalcData->move) || IsMaxMove(damageCalcData->move)) && IS_BATTLER_PROTECTED(damageCalcData->battlerDef))
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         return UQ_4_12(0.25);
     return UQ_4_12(1.0);
 }
@@ -10419,6 +10479,7 @@ static inline s32 DoMoveDamageCalcVars(struct DamageCalculationData *damageCalcD
     DAMAGE_APPLY_MODIFIER(GetOtherModifiers(damageCalcData, typeEffectivenessModifier, abilityAtk, abilityDef, holdEffectAtk, holdEffectDef));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     return dmg;
 }
 
@@ -10453,6 +10514,8 @@ static inline s32 DoFixedDamageMoveCalc(struct DamageCalculationData *damageCalc
 
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     if (dmg == 0)
         dmg = 1;
     return dmg;
@@ -11262,6 +11325,7 @@ bool32 CanBattlerGetOrLoseItem(u32 battler, u16 itemId)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 u32 GetBattlerVisualSpecies(u32 battler)
 {
     u32 illusionSpecies = GetIllusionMonSpecies(battler);
@@ -11293,6 +11357,10 @@ struct Pokemon *GetIllusionMonPtr(u32 battler)
 =======
 struct Pokemon *GetIllusionMonPtr(u32 battler)
 {
+=======
+struct Pokemon *GetIllusionMonPtr(u32 battler)
+{
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     if (gBattleStruct->illusion[battler].broken)
         return NULL;
     if (!gBattleStruct->illusion[battler].set)
@@ -11303,7 +11371,10 @@ struct Pokemon *GetIllusionMonPtr(u32 battler)
             SetIllusionMon(&gEnemyParty[gBattlerPartyIndexes[battler]], battler);
     }
     if (!gBattleStruct->illusion[battler].on)
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         return NULL;
 
     return gBattleStruct->illusion[battler].mon;

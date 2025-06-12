@@ -27,6 +27,7 @@ SINGLE_BATTLE_TEST("Metronome's called powder move fails against Grass Types")
     GIVEN {
         ASSUME(IsPowderMove(MOVE_POISON_POWDER));
 <<<<<<< HEAD
+<<<<<<< HEAD
         ASSUME(GetSpeciesType(SPECIES_TANGELA, 0) == TYPE_GRASS);
         ASSUME(GetMoveEffect(MOVE_POISON_POWDER) == EFFECT_NON_VOLATILE_STATUS);
         ASSUME(GetMoveNonVolatileStatus(MOVE_POISON_POWDER) == MOVE_EFFECT_POISON);
@@ -34,6 +35,10 @@ SINGLE_BATTLE_TEST("Metronome's called powder move fails against Grass Types")
         ASSUME(gSpeciesInfo[SPECIES_TANGELA].types[0] == TYPE_GRASS);
         ASSUME(GetMoveEffect(MOVE_POISON_POWDER) == EFFECT_POISON);
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+        ASSUME(gSpeciesInfo[SPECIES_TANGELA].types[0] == TYPE_GRASS);
+        ASSUME(GetMoveEffect(MOVE_POISON_POWDER) == EFFECT_POISON);
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         PLAYER(SPECIES_WOBBUFFET);
         OPPONENT(SPECIES_TANGELA);
     } WHEN {

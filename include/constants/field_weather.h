@@ -23,10 +23,13 @@
 #define FADE_TO_WHITE    3
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Shadows values
 #define BASE_SHADOW_INTENSITY (16 - OW_SHADOW_INTENSITY)
 #define SHADOW_COLOR_INDEX     9 // Within the weather palette, shadow sprites' color index
 #define OW_SHADOW_INTENSITY 4 // The intensity of the shadow in overworld
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 #endif // GUARD_CONSTANTS_FIELD_WEATHER_H

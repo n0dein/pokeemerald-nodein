@@ -330,7 +330,10 @@ static void ExpansionIntro_LoadGraphics(void)
     LZ77UnCompVram(sBgTiles_RhhCredits, (void*) BG_CHAR_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG2].charBaseIndex));
     LZ77UnCompVram(sBgMap_RhhCredits, (u16*) BG_SCREEN_ADDR(sBgTemplates_RhhCopyrightScreen[EXPANSION_INTRO_BG2].mapBaseIndex));
     LoadCompressedPalette(sBgPal_Credits, 0x00, 0x60);
+<<<<<<< HEAD
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
     LoadCompressedSpriteSheet(&sSpriteSheet_DizzyEgg);
     LoadCompressedSpriteSheet(&sSpriteSheet_Porygon);

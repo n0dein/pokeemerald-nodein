@@ -196,6 +196,7 @@ AI_SINGLE_BATTLE_TEST("Choiced Pokémon won't use status move if they are trappe
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 AI_SINGLE_BATTLE_TEST("Choiced Pokémon will switch if locked into a move the player is immune to")
 {
@@ -253,3 +254,5 @@ AI_SINGLE_BATTLE_TEST("Choiced Pokémon will only see choiced moves when conside
 }
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))

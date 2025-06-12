@@ -3399,10 +3399,14 @@ void AnimTask_ScaryFace(u8 taskId)
 
     if (gAnimMoveIndex == MOVE_BITTER_MALICE)
 <<<<<<< HEAD
+<<<<<<< HEAD
         onPlayer = !IsOnPlayerSide(gBattleAnimAttacker);
 =======
         onPlayer = GetBattlerSide(gBattleAnimAttacker) == B_SIDE_PLAYER;
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+        onPlayer = GetBattlerSide(gBattleAnimAttacker) == B_SIDE_PLAYER;
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     else
         onPlayer = GetBattlerSide(gBattleAnimTarget) == B_SIDE_OPPONENT;
 

@@ -5611,6 +5611,7 @@ BattleScript_LocalBattleLost::
 	jumpifhalfword CMP_EQUAL, gTrainerBattleParameter + 2, TRAINER_SECRET_BASE, BattleScript_LocalBattleLostEnd
 BattleScript_LocalBattleLostPrintWhiteOut::
 <<<<<<< HEAD
+<<<<<<< HEAD
 	getmoneyreward
 	printstring STRINGID_PLAYERWHITEOUT
 	waitmessage B_WAIT_TIME_LONG
@@ -5620,6 +5621,8 @@ BattleScript_LocalBattleLostPrintWhiteOut::
 	waitmessage B_WAIT_TIME_LONG
 	printstring STRINGID_PLAYERWHITEOUT3
 =======
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 .if B_WHITEOUT_MONEY >= GEN_4
 	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_LocalBattleLostEnd
 	printstring STRINGID_PLAYERWHITEOUT
@@ -5633,8 +5636,11 @@ BattleScript_LocalBattleLostEnd::
 	printstring STRINGID_PLAYERWHITEOUT2_TRAINER
 	waitmessage B_WAIT_TIME_LONG
 <<<<<<< HEAD
+<<<<<<< HEAD
 	printstring STRINGID_PLAYERWHITEOUT3
 =======
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 	getmoneyreward
 	printstring STRINGID_PLAYERPAIDPRIZEMONEY
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
@@ -7573,6 +7579,7 @@ BattleScript_AbilityRaisesDefenderStat::
 	return
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 BattleScript_AbilityCantRaiseDefenderStat::
 	saveattacker
 	copybyte gBattlerAttacker, gBattlerTarget
@@ -7585,6 +7592,9 @@ BattleScript_AbilityPopUpTarget::
 =======
 BattleScript_AbilityPopUpTarget:
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+BattleScript_AbilityPopUpTarget:
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 	copybyte gBattlerAbility, gBattlerTarget
 BattleScript_AbilityPopUp:
 	.if B_ABILITY_POP_UP == TRUE
@@ -10190,6 +10200,7 @@ BattleScript_SleepClausePreventsEnd::
 	waitmessage B_WAIT_TIME_LONG
 	end2
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 BattleScript_QuestionForfeitBattle::
 	printselectionstring STRINGID_QUESTIONFORFEITBATTLE
@@ -10208,3 +10219,5 @@ BattleScript_ForfeitBattleGaveMoney::
 
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))

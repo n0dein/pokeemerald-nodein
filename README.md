@@ -27,11 +27,15 @@ If you use **`pokeemerald-expansion`**, please credit **RHH (Rom Hacking Hideout
 To pull from this branch here, just simply use these commands here:
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 git remote add AGSMG https://github.com/agsmgmaster64/worldlinkdeluxe-ame/
 git pull AGSMG gacha-expansion
 =======
 Based off RHH's pokeemerald-expansion 1.11.4 https://github.com/rh-hideout/pokeemerald-expansion/
 >>>>>>> parent of efa2fb3be7 (Expansion 1.12.0)
+=======
+Based off RHH's pokeemerald-expansion 1.11.3 https://github.com/rh-hideout/pokeemerald-expansion/
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 ```
 
 

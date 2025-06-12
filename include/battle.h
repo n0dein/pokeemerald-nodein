@@ -823,15 +823,20 @@ struct BattleStruct
     u8 numSpreadTargets:2;
     u8 noTargetPresent:1;
 <<<<<<< HEAD
+<<<<<<< HEAD
     u8 cheekPouchActivated:1;
     s16 savedcheekPouchDamage; // Cheek Pouch can happen in the middle of an attack execution so we need to store the current dmg
 =======
     u8 usedMicleBerry;
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+    u8 usedMicleBerry;
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     struct MessageStatus slideMessageStatus;
     u8 trainerSlideSpriteIds[MAX_BATTLERS_COUNT];
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 struct AiBattleData
 {
@@ -847,6 +852,8 @@ struct AiBattleData
 
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 // The palaceFlags member of struct BattleStruct contains 1 flag per move to indicate which moves the AI should consider,
 // and 1 flag per battler to indicate whether the battler is awake and at <= 50% HP (which affects move choice).
 // The assert below is to ensure palaceFlags is large enough to store these flags without overlap.

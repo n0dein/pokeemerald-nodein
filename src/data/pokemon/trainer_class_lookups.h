@@ -85,6 +85,7 @@ const u8 gFacilityClassToPicIndex[] =
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const u16 gTrainerPicToTrainerBackPic[] =
 {
     [TRAINER_BACK_PIC_BRENDAN] = TRAINER_PIC_BRENDAN,
@@ -101,6 +102,9 @@ const enum TrainerClassID gFacilityClassToTrainerClass[] =
 =======
 const u8 gFacilityClassToTrainerClass[] =
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+const u8 gFacilityClassToTrainerClass[] =
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     [FACILITY_CLASS_HIKER] = TRAINER_CLASS_HIKER,
     [FACILITY_CLASS_AQUA_GRUNT_M] = TRAINER_CLASS_TEAM_AQUA,

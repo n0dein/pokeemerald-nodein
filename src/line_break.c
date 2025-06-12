@@ -34,6 +34,7 @@ void BreakStringAutomatic(u8 *src, u32 maxWidth, u32 screenLines, u8 fontId)
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 void BreakStringNaive(u8 *src, u32 maxWidth, u32 screenLines, u8 fontId, enum ToggleScrollPrompt toggleScrollPrompt)
 {
     u32 currIndex = 0;
@@ -55,6 +56,9 @@ void BreakStringNaive(u8 *src, u32 maxWidth, u32 screenLines, u8 fontId, enum To
 
 #define SCROLL_PROMPT_WIDTH 8
 void BreakSubStringNaive(u8 *src, u32 maxWidth, u32 screenLines, u8 fontId, enum ToggleScrollPrompt toggleScrollPrompt)
+=======
+void BreakSubStringAutomatic(u8 *src, u32 maxWidth, u32 screenLines, u8 fontId)
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     //  If the string already has line breaks, don't interfere with them
     if (StringHasManualBreaks(src))

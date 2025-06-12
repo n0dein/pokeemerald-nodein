@@ -27,6 +27,7 @@ SINGLE_BATTLE_TEST("Thousand Arrows does not ground mons behind substitutes")
     }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 SINGLE_BATTLE_TEST("Smack Down does not ground mons through Protect")
 {
@@ -56,3 +57,5 @@ SINGLE_BATTLE_TEST("Smack Down does not ground target if target is immune")
 }
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))

@@ -52,10 +52,13 @@ bool32 SetUpFieldMove_RockSmash(void);
 bool8 FldEff_UseRockSmash(void);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // defog
 bool32 SetUpFieldMove_Defog(void);
 bool8 FldEff_Defog(void);
 
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 #endif // GUARD_FLDEFF_H

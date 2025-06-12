@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const u32 gBerryCheck_Gfx[] = INCBIN_U32("graphics/bag/check_berry.4bpp.smol");
 const u16 gBerryCheck_Pal[] = INCBIN_U16("graphics/bag/check_berry.gbapal");
 =======
 const u32 gBerryCheck_Gfx[] = INCBIN_U32("graphics/bag/check_berry.4bpp.lz");
 const u32 gBerryCheck_Pal[] = INCBIN_U32("graphics/bag/check_berry.gbapal.lz");
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+const u32 gBerryCheck_Gfx[] = INCBIN_U32("graphics/bag/check_berry.4bpp.lz");
+const u32 gBerryCheck_Pal[] = INCBIN_U32("graphics/bag/check_berry.gbapal.lz");
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
 const u32 gBerryTag_Gfx[] = INCBIN_U32("graphics/bag/berry_tag.bin.smolTM");
 const u32 gBerryTag_Tilemap[] = INCBIN_U32("graphics/bag/berry_tag_title.bin.smolTM");
