@@ -866,13 +866,6 @@ bool8 BattleInitAllSprites(u8 *state1, u8 *battler)
         }
         break;
     case 5:
-<<<<<<< HEAD
-<<<<<<< HEAD
-        if (!IsOnPlayerSide(*battler) || !(gBattleTypeFlags & BATTLE_TYPE_SAFARI))
-            UpdateHealthboxAttribute(gHealthboxSpriteIds[*battler], GetBattlerMon(*battler), HEALTHBOX_ALL);
-=======
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         if (GetBattlerSide(*battler) == B_SIDE_PLAYER)
         {
             if (!(gBattleTypeFlags & BATTLE_TYPE_SAFARI))
@@ -882,7 +875,6 @@ bool8 BattleInitAllSprites(u8 *state1, u8 *battler)
         {
             UpdateHealthboxAttribute(gHealthboxSpriteIds[*battler], &gEnemyParty[gBattlerPartyIndexes[*battler]], HEALTHBOX_ALL);
         }
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
         SetHealthboxSpriteInvisible(gHealthboxSpriteIds[*battler]);
         (*battler)++;
         if (*battler == gBattlersCount)
@@ -1033,28 +1025,9 @@ void BattleLoadSubstituteOrMonSpriteGfx(u8 battler, bool8 loadMonSprite)
             position = GetBattlerPosition(battler);
 
         if (IsContest())
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            DecompressDataWithHeaderVram(gBattleAnimSpriteGfx_SubstituteBack, gMonSpritesGfxPtr->spritesGfx[position]);
-        else if (!IsOnPlayerSide(battler))
-            DecompressDataWithHeaderVram(gBattleAnimSpriteGfx_Substitute, gMonSpritesGfxPtr->spritesGfx[position]);
-=======
-=======
             LZDecompressVram(gBattleAnimSpriteGfx_SubstituteBack, gMonSpritesGfxPtr->spritesGfx[position]);
         else if (GetBattlerSide(battler) != B_SIDE_PLAYER)
             LZDecompressVram(gBattleAnimSpriteGfx_Substitute, gMonSpritesGfxPtr->spritesGfx[position]);
-        else
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
-            LZDecompressVram(gBattleAnimSpriteGfx_SubstituteBack, gMonSpritesGfxPtr->spritesGfx[position]);
-        else if (GetBattlerSide(battler) != B_SIDE_PLAYER)
-            LZDecompressVram(gBattleAnimSpriteGfx_Substitute, gMonSpritesGfxPtr->spritesGfx[position]);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-            LZDecompressVram(gBattleAnimSpriteGfx_SubstituteBack, gMonSpritesGfxPtr->spritesGfx[position]);
-        else if (!IsOnPlayerSide(battler))
-            LZDecompressVram(gBattleAnimSpriteGfx_Substitute, gMonSpritesGfxPtr->spritesGfx[position]);
->>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
         else
             LZDecompressVram(gBattleAnimSpriteGfx_SubstituteBack, gMonSpritesGfxPtr->spritesGfx[position]);
 

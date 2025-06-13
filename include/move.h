@@ -119,28 +119,11 @@ struct MoveInfo
             u16 property; // can be used to remove the hardcoded values
         } protect;
         u32 status;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        u32 moveProperty;
-        u32 holdEffect;
-        u32 type;
-        u32 fixedDamage;
-        u32 damagePercentage;
-        u32 absorbPercentage;
-        u32 recoilPercentage;
-        u32 nonVolatileStatus;
-=======
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         u16 moveProperty;
         u16 holdEffect;
         u16 type;
         u16 fixedDamage;
         u16 absorbPercentage;
-<<<<<<< HEAD
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     } argument;
 
     // primary/secondary effects
@@ -474,15 +457,7 @@ static inline u32 GetMoveTwoTurnAttackWeather(u32 moveId)
     return gMovesInfo[SanitizeMoveId(moveId)].argument.twoTurnAttack.status;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-static inline enum ProtectMethod GetMoveProtectMethod(u32 moveId)
-=======
 static inline u32 GetMoveProtectSide(u32 moveId)
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-static inline u32 GetMoveProtectSide(u32 moveId)
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     return gMovesInfo[SanitizeMoveId(moveId)].argument.protect.side;
 }
@@ -507,7 +482,7 @@ static inline u32 GetMoveArgType(u32 moveId)
     return gMovesInfo[SanitizeMoveId(moveId)].argument.type;
 }
 
-static inline u32 GetMoveFixedHPDamage(u32 moveId)
+static inline u32 GetMoveFixedDamage(u32 moveId)
 {
     return gMovesInfo[SanitizeMoveId(moveId)].argument.fixedDamage;
 }
@@ -520,36 +495,6 @@ static inline u32 GetMoveAbsorbPercentage(u32 moveId)
     return gMovesInfo[moveId].argument.absorbPercentage;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-static inline u32 GetMoveRecoil(u32 moveId)
-{
-    return gMovesInfo[SanitizeMoveId(moveId)].argument.recoilPercentage;
-}
-
-static inline u32 GetMoveNonVolatileStatus(u32 move)
-{
-    move = SanitizeMoveId(move);
-    switch(GetMoveEffect(move))
-    {
-    case EFFECT_NON_VOLATILE_STATUS:
-    case EFFECT_YAWN:
-    case EFFECT_DARK_VOID:
-        return gMovesInfo[move].argument.nonVolatileStatus;
-    default:
-        return MOVE_EFFECT_NONE;
-    }
-}
-
-static inline u32 GetMoveDamagePercentage(u32 move)
-{
-    return gMovesInfo[SanitizeMoveId(move)].argument.damagePercentage;
-}
-
-=======
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 static inline const struct AdditionalEffect *GetMoveAdditionalEffectById(u32 moveId, u32 effect)
 {
     return &gMovesInfo[SanitizeMoveId(moveId)].additionalEffects[effect];

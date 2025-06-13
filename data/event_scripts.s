@@ -25,7 +25,6 @@
 #include "constants/event_objects.h"
 #include "constants/event_object_movement.h"
 #include "constants/field_effects.h"
-#include "constants/field_move.h"
 #include "constants/field_poison.h"
 #include "constants/field_specials.h"
 #include "constants/field_tasks.h"
@@ -1155,21 +1154,3 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
 	.include "data/scripts/dexnav.inc"
-
-	.include "data/maps/Hohto_Passage/scripts.inc"
-
-	.include "data/maps/CianwoodCity/scripts.inc"
-
-	.include "data/maps/Route41/scripts.inc"
-
-	.include "data/maps/NewBirchLab/scripts.inc"
-
-	.include "data/maps/PartnerPlayground/scripts.inc"
-
-	.include "data/maps/Route101_East/scripts.inc"
-
-	.include "data/maps/PaleoParkEntrance/scripts.inc"
-
-	.include "data/maps/Route103_South/scripts.inc"
-
-	.include "data/maps/PaleoPark/scripts.inc"

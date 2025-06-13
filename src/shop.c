@@ -745,22 +745,8 @@ static void BuyMenuInitBgs(void)
 static void BuyMenuDecompressBgGraphics(void)
 {
     DecompressAndCopyTileDataToVram(1, gShopMenu_Gfx, 0x3A0, 0x3E3, 0);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    DecompressDataWithHeaderWram(gShopMenu_Tilemap, sShopData->tilemapBuffers[0]);
-=======
-    LZDecompressWram(gShopMenu_Tilemap, sShopData->tilemapBuffers[0]);
->>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
-    LoadPalette(gShopMenu_Pal, BG_PLTT_ID(12), PLTT_SIZE_4BPP);
-=======
     LZDecompressWram(gShopMenu_Tilemap, sShopData->tilemapBuffers[0]);
     LoadCompressedPalette(gShopMenu_Pal, BG_PLTT_ID(12), PLTT_SIZE_4BPP);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-    LZDecompressWram(gShopMenu_Tilemap, sShopData->tilemapBuffers[0]);
-    LoadCompressedPalette(gShopMenu_Pal, BG_PLTT_ID(12), PLTT_SIZE_4BPP);
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 }
 
 static void BuyMenuInitWindows(void)

@@ -239,11 +239,11 @@ void SetBattlerData(u32 battlerId)
         if (illusionSpecies != SPECIES_NONE && ShouldFailForIllusion(illusionSpecies, battlerId))
         {
             // If the battler's type has not been changed, AI assumes the types of the illusion mon.
-            if (gBattleMons[battlerId].types[0] == GetSpeciesType(species, 0)
-                && gBattleMons[battlerId].types[1] == GetSpeciesType(species, 1))
+            if (gBattleMons[battlerId].types[0] == gSpeciesInfo[species].types[0]
+                && gBattleMons[battlerId].types[1] == gSpeciesInfo[species].types[1])
             {
-                gBattleMons[battlerId].types[0] = GetSpeciesType(illusionSpecies, 0);
-                gBattleMons[battlerId].types[1] = GetSpeciesType(illusionSpecies, 1);
+                gBattleMons[battlerId].types[0] = gSpeciesInfo[illusionSpecies].types[0];
+                gBattleMons[battlerId].types[1] = gSpeciesInfo[illusionSpecies].types[1];
             }
             species = illusionSpecies;
         }
@@ -252,9 +252,9 @@ void SetBattlerData(u32 battlerId)
         if (AI_PARTY->mons[side][gBattlerPartyIndexes[battlerId]].ability != ABILITY_NONE)
             gBattleMons[battlerId].ability = AI_PARTY->mons[side][gBattlerPartyIndexes[battlerId]].ability;
         // Check if mon can only have one ability.
-        else if (GetSpeciesAbility(species, 1) == ABILITY_NONE
-                || GetSpeciesAbility(species, 1) == GetSpeciesAbility(species, 0))
-            gBattleMons[battlerId].ability = GetSpeciesAbility(species, 0);
+        else if (gSpeciesInfo[species].abilities[1] == ABILITY_NONE
+                || gSpeciesInfo[species].abilities[1] == gSpeciesInfo[species].abilities[0])
+            gBattleMons[battlerId].ability = gSpeciesInfo[species].abilities[0];
         // The ability is unknown.
         else
             gBattleMons[battlerId].ability = ABILITY_NONE;
@@ -325,12 +325,12 @@ bool32 IsBattlerTrapped(u32 battler, bool32 checkSwitch)
 
 u32 GetTotalBaseStat(u32 species)
 {
-    return GetSpeciesBaseHP(species)
-        + GetSpeciesBaseAttack(species)
-        + GetSpeciesBaseDefense(species)
-        + GetSpeciesBaseSpeed(species)
-        + GetSpeciesBaseSpAttack(species)
-        + GetSpeciesBaseSpDefense(species);
+    return gSpeciesInfo[species].baseHP
+        + gSpeciesInfo[species].baseAttack
+        + gSpeciesInfo[species].baseDefense
+        + gSpeciesInfo[species].baseSpeed
+        + gSpeciesInfo[species].baseSpAttack
+        + gSpeciesInfo[species].baseSpDefense;
 }
 
 bool32 IsTruantMonVulnerable(u32 battlerAI, u32 opposingBattler)
@@ -386,15 +386,7 @@ bool32 MovesWithCategoryUnusable(u32 attacker, u32 target, u32 category)
 }
 
 // To save computation time this function has 2 variants. One saves, sets and restores battlers, while the other doesn't.
-<<<<<<< HEAD
-<<<<<<< HEAD
-struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, enum AIConsiderGimmick considerGimmickAtk, enum AIConsiderGimmick considerGimmickDef)
-=======
 struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, enum DamageRollType rollType)
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, enum DamageRollType rollType)
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     struct SimulatedDamage dmg;
 
@@ -402,15 +394,7 @@ struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 b
     SaveBattlerData(battlerDef);
     SetBattlerData(battlerAtk);
     SetBattlerData(battlerDef);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    dmg = AI_CalcDamage(move, battlerAtk, battlerDef, typeEffectiveness, considerGimmickAtk, considerGimmickDef, AI_GetWeather());
-=======
     dmg = AI_CalcDamage(move, battlerAtk, battlerDef, typeEffectiveness, considerZPower, AI_GetWeather(), rollType);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-    dmg = AI_CalcDamage(move, battlerAtk, battlerDef, typeEffectiveness, considerZPower, AI_GetWeather(), rollType);
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     RestoreBattlerData(battlerAtk);
     RestoreBattlerData(battlerDef);
     return dmg;
@@ -517,7 +501,6 @@ bool32 IsDamageMoveUnusable(u32 battlerAtk, u32 battlerDef, u32 move, u32 moveTy
             return TRUE;
         break;
     case EFFECT_EXPLOSION:
-    case EFFECT_MISTY_EXPLOSION:
     case EFFECT_MIND_BLOWN:
         if (battlerDefAbility == ABILITY_DAMP || partnerDefAbility == ABILITY_DAMP)
             return TRUE;
@@ -636,26 +619,15 @@ static inline void CalcDynamicMoveDamage(struct DamageCalculationData *damageCal
     case EFFECT_ENDEAVOR:
         // If target has less HP than user, Endeavor does no damage
         expected = minimum = max(0, gBattleMons[damageCalcData->battlerDef].hp - gBattleMons[damageCalcData->battlerAtk].hp);
-<<<<<<< HEAD
-=======
-        break;
-    case EFFECT_SUPER_FANG:
-        expected = minimum = (abilityAtk == ABILITY_PARENTAL_BOND
-            ? max(2, gBattleMons[damageCalcData->battlerDef].hp * 3 / 4)
-            : max(1, gBattleMons[damageCalcData->battlerDef].hp / 2));
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         break;
     case EFFECT_SUPER_FANG:
         expected = minimum = (abilityAtk == ABILITY_PARENTAL_BOND
             ? max(2, gBattleMons[damageCalcData->battlerDef].hp * 3 / 4)
             : max(1, gBattleMons[damageCalcData->battlerDef].hp / 2));
         break;
-<<<<<<< HEAD
-=======
     case EFFECT_FINAL_GAMBIT:
         expected = minimum = gBattleMons[damageCalcData->battlerAtk].hp;
         break;
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
     case EFFECT_BEAT_UP:
         if (B_BEAT_UP >= GEN_5)
         {
@@ -689,92 +661,33 @@ static inline void CalcDynamicMoveDamage(struct DamageCalculationData *damageCal
     *minimumDamage = minimum;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-static inline bool32 ShouldCalcCritDamage(u32 battlerAtk, u32 battlerDef, u32 move, struct AiLogicData *aiData)
-{
-    s32 critChanceIndex = 0;
-
-    // Get crit chance
-    if (GetGenConfig(GEN_CONFIG_CRIT_CHANCE) == GEN_1)
-        critChanceIndex = CalcCritChanceStageGen1(battlerAtk, battlerDef, move, FALSE, aiData->abilities[battlerAtk], aiData->abilities[battlerDef], aiData->holdEffects[battlerAtk]);
-    else
-        critChanceIndex = CalcCritChanceStage(battlerAtk, battlerDef, move, FALSE, aiData->abilities[battlerAtk], aiData->abilities[battlerDef], aiData->holdEffects[battlerAtk]);
-
-    if (critChanceIndex == CRITICAL_HIT_ALWAYS)
-        return TRUE;
-    if (critChanceIndex >= RISKY_AI_CRIT_STAGE_THRESHOLD // Not guaranteed but above Risky threshold
-        && (gAiThinkingStruct->aiFlags[battlerAtk] & AI_FLAG_RISKY)
-        && GetGenConfig(GEN_CONFIG_CRIT_CHANCE) != GEN_1)
-        return TRUE;
-    if (critChanceIndex >= RISKY_AI_CRIT_THRESHOLD_GEN_1 // Not guaranteed but above Risky threshold
-        && (gAiThinkingStruct->aiFlags[battlerAtk] & AI_FLAG_RISKY)
-        && GetGenConfig(GEN_CONFIG_CRIT_CHANCE) == GEN_1)
-        return TRUE;
-    return FALSE;
-}
-
-struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, enum AIConsiderGimmick considerGimmickAtk, enum AIConsiderGimmick considerGimmickDef, u32 weather)
-=======
 struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, u32 weather, enum DamageRollType rollType)
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, u32 weather, enum DamageRollType rollType)
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     struct SimulatedDamage simDamage;
     s32 moveType;
     u32 moveEffect = GetMoveEffect(move);
     uq4_12_t effectivenessMultiplier;
     bool32 isDamageMoveUnusable = FALSE;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    bool32 toggledGimmickAtk = FALSE;
-    bool32 toggledGimmickDef = FALSE;
-    struct AiLogicData *aiData = gAiLogicData;
-    gAiLogicData->aiCalcInProgress = TRUE;
-=======
     bool32 toggledGimmick = FALSE;
     struct AiLogicData *aiData = AI_DATA;
     AI_DATA->aiCalcInProgress = TRUE;
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-    bool32 toggledGimmick = FALSE;
-    struct AiLogicData *aiData = AI_DATA;
-    AI_DATA->aiCalcInProgress = TRUE;
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
     if (moveEffect == EFFECT_NATURE_POWER)
         move = GetNaturePowerMove(battlerAtk);
 
     // Temporarily enable gimmicks for damage calcs if planned
     if (gBattleStruct->gimmick.usableGimmick[battlerAtk] && GetActiveGimmick(battlerAtk) == GIMMICK_NONE
-        && gBattleStruct->gimmick.usableGimmick[battlerAtk] != GIMMICK_NONE && considerGimmickAtk == USE_GIMMICK)
+        && !(gBattleStruct->gimmick.usableGimmick[battlerAtk] == GIMMICK_Z_MOVE && !considerZPower))
     {
         // Set Z-Move variables if needed
         if (gBattleStruct->gimmick.usableGimmick[battlerAtk] == GIMMICK_Z_MOVE && IsViableZMove(battlerAtk, move))
             gBattleStruct->zmove.baseMoves[battlerAtk] = move;
 
-        toggledGimmickAtk = TRUE;
+        toggledGimmick = TRUE;
         SetActiveGimmick(battlerAtk, gBattleStruct->gimmick.usableGimmick[battlerAtk]);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (gBattleStruct->gimmick.usableGimmick[battlerDef] && GetActiveGimmick(battlerDef) == GIMMICK_NONE
-        && gBattleStruct->gimmick.usableGimmick[battlerDef] != GIMMICK_NONE && considerGimmickDef == USE_GIMMICK)
-    {
-        toggledGimmickDef = TRUE;
-        SetActiveGimmick(battlerDef, gBattleStruct->gimmick.usableGimmick[battlerDef]);
-    }
-
-    SetDynamicMoveCategory(battlerAtk, battlerDef, move);
-=======
     SetMoveDamageCategory(battlerAtk, battlerDef, move);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-    SetMoveDamageCategory(battlerAtk, battlerDef, move);
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     SetTypeBeforeUsingMove(move, battlerAtk);
     moveType = GetBattleMoveType(move);
     effectivenessMultiplier = CalcTypeEffectivenessMultiplier(move, moveType, battlerAtk, battlerDef, aiData->abilities[battlerDef], FALSE);
@@ -883,19 +796,9 @@ struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, u
     gBattleStruct->dynamicMoveType = 0;
     gBattleStruct->swapDamageCategory = FALSE;
     gBattleStruct->zmove.baseMoves[battlerAtk] = MOVE_NONE;
-    if (toggledGimmickAtk)
+    if (toggledGimmick)
         SetActiveGimmick(battlerAtk, GIMMICK_NONE);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (toggledGimmickDef)
-        SetActiveGimmick(battlerDef, GIMMICK_NONE);
-    gAiLogicData->aiCalcInProgress = FALSE;
-=======
     AI_DATA->aiCalcInProgress = FALSE;
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-    AI_DATA->aiCalcInProgress = FALSE;
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     return simDamage;
 }
 
@@ -1015,7 +918,7 @@ static bool32 AI_IsMoveEffectInPlus(u32 battlerAtk, u32 battlerDef, u32 move, s3
                 case MOVE_EFFECT_SP_DEF_MINUS_1:
                 case MOVE_EFFECT_ACC_MINUS_1:
                 case MOVE_EFFECT_EVS_MINUS_1:
-                    if (CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_ATK + (additionalEffect->moveEffect - MOVE_EFFECT_ATK_MINUS_1)) && noOfHitsToKo != 1)
+                    if (ShouldLowerStat(battlerAtk, battlerDef, abilityDef, STAT_ATK + (additionalEffect->moveEffect - MOVE_EFFECT_ATK_MINUS_1)) && noOfHitsToKo != 1)
                         return TRUE;
                     break;
                 case MOVE_EFFECT_ATK_MINUS_2:
@@ -1025,7 +928,7 @@ static bool32 AI_IsMoveEffectInPlus(u32 battlerAtk, u32 battlerDef, u32 move, s3
                 case MOVE_EFFECT_SP_DEF_MINUS_2:
                 case MOVE_EFFECT_ACC_MINUS_2:
                 case MOVE_EFFECT_EVS_MINUS_2:
-                    if (CanLowerStat(battlerAtk, battlerDef, abilityDef, STAT_ATK + (additionalEffect->moveEffect - MOVE_EFFECT_ATK_MINUS_2)) && noOfHitsToKo != 1)
+                    if (ShouldLowerStat(battlerAtk, battlerDef, abilityDef, STAT_ATK + (additionalEffect->moveEffect - MOVE_EFFECT_ATK_MINUS_2)) && noOfHitsToKo != 1)
                         return TRUE;
                     break;
             }
@@ -1049,9 +952,7 @@ static bool32 AI_IsMoveEffectInMinus(u32 battlerAtk, u32 battlerDef, u32 move, s
     {
     case EFFECT_MAX_HP_50_RECOIL:
     case EFFECT_MIND_BLOWN:
-    case EFFECT_CHLOROBLAST:
     case EFFECT_EXPLOSION:
-    case EFFECT_MISTY_EXPLOSION:
     case EFFECT_FINAL_GAMBIT:
         return TRUE;
     case EFFECT_RECOIL_IF_MISS:
@@ -1439,12 +1340,28 @@ bool32 AI_IsAbilityOnSide(u32 battlerId, u32 ability)
         return FALSE;
 }
 
+u32 AI_GetBattlerAbility(u32 battler)
+{
+    if (gAbilitiesInfo[gBattleMons[battler].ability].cantBeSuppressed)
+        return gBattleMons[battler].ability;
+
+    if (gStatuses3[battler] & STATUS3_GASTRO_ACID)
+        return ABILITY_NONE;
+
+    if (IsNeutralizingGasOnField()
+     && gBattleMons[battler].ability != ABILITY_NEUTRALIZING_GAS
+     && GetBattlerHoldEffectIgnoreAbility(battler, TRUE) != HOLD_EFFECT_ABILITY_SHIELD)
+        return ABILITY_NONE;
+
+    return gBattleMons[battler].ability;
+}
+
 // does NOT include ability suppression checks
 s32 AI_DecideKnownAbilityForTurn(u32 battlerId)
 {
     u32 validAbilities[NUM_ABILITY_SLOTS];
     u8 i, numValidAbilities = 0;
-    u32 knownAbility = GetBattlerAbilityIgnoreMoldBreaker(battlerId); // during ai checking for mold breaker could lead to inaccuracies
+    u32 knownAbility = AI_GetBattlerAbility(battlerId);
     u32 indexAbility;
     u32 abilityAiRatings[NUM_ABILITY_SLOTS] = {0};
 
@@ -1469,7 +1386,7 @@ s32 AI_DecideKnownAbilityForTurn(u32 battlerId)
 
     for (i = 0; i < NUM_ABILITY_SLOTS; i++)
     {
-        indexAbility = GetSpeciesAbility(gBattleMons[battlerId].species, i);
+        indexAbility = gSpeciesInfo[gBattleMons[battlerId].species].abilities[i];
         if (indexAbility != ABILITY_NONE)
         {
             abilityAiRatings[numValidAbilities] = gAbilitiesInfo[indexAbility].aiRating;
@@ -1748,7 +1665,7 @@ bool32 ShouldTryOHKO(u32 battlerAtk, u32 battlerDef, u32 atkAbility, u32 defAbil
     else    // test the odds
     {
         u32 odds = accuracy + (gBattleMons[battlerAtk].level - gBattleMons[battlerDef].level);
-        if (B_SHEER_COLD_ACC >= GEN_7 && GetMoveEffect(move) == EFFECT_SHEER_COLD && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE))
+        if (B_SHEER_COLD_ACC >= GEN_7 && move == MOVE_SHEER_COLD && !IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE))
             odds -= 10;
         if (Random() % 100 + 1 < odds && gBattleMons[battlerAtk].level >= gBattleMons[battlerDef].level)
             return TRUE;
@@ -1862,19 +1779,8 @@ bool32 ShouldSetSnow(u32 battler, u32 ability, u32 holdEffect)
     return FALSE;
 }
 
-bool32 IsBattlerDamagedByStatus(u32 battler)
+void ProtectChecks(u32 battlerAtk, u32 battlerDef, u32 move, u32 predictedMove, s32 *score)
 {
-    return gBattleMons[battler].status1 & (STATUS1_BURN | STATUS1_FROSTBITE | STATUS1_POISON | STATUS1_TOXIC_POISON)
-        || gBattleMons[battler].status2 & (STATUS2_WRAPPED | STATUS2_NIGHTMARE | STATUS2_CURSED)
-        || gStatuses3[battler] & (STATUS3_PERISH_SONG | STATUS3_LEECHSEED)
-        || gStatuses4[battler] & (STATUS4_SALT_CURE)
-        || gSideStatuses[GetBattlerSide(battler)] & (SIDE_STATUS_SEA_OF_FIRE | SIDE_STATUS_DAMAGE_NON_TYPES);
-}
-
-s32 ProtectChecks(u32 battlerAtk, u32 battlerDef, u32 move, u32 predictedMove)
-{
-    s32 score = 0;
-
     // TODO more sophisticated logic
     u32 uses = gDisableStructs[battlerAtk].protectUses;
 
@@ -1887,41 +1793,33 @@ s32 ProtectChecks(u32 battlerAtk, u32 battlerDef, u32 move, u32 predictedMove)
     if (uses == 0)
     {
         if (predictedMove != MOVE_NONE && predictedMove != 0xFFFF && !IsBattleMoveStatus(predictedMove))
-            score += DECENT_EFFECT;
+            ADJUST_SCORE_PTR(DECENT_EFFECT);
         else if (Random() % 256 < 100)
-            score += WEAK_EFFECT;
+            ADJUST_SCORE_PTR(WEAK_EFFECT);
     }
     else
     {
         if (IsDoubleBattle())
-            score -= (2 * min(uses, 3));
+            ADJUST_SCORE_PTR(-(2 * min(uses, 3)));
         else
-            score -= (min(uses, 3));
+            ADJUST_SCORE_PTR(-(min(uses, 3)));
     }
 
-    if (IsBattlerDamagedByStatus(battlerAtk))
+    if (gBattleMons[battlerAtk].status1 & (STATUS1_PSN_ANY | STATUS1_BURN | STATUS1_FROSTBITE)
+     || gBattleMons[battlerAtk].status2 & (STATUS2_CURSED | STATUS2_INFATUATION)
+     || gStatuses3[battlerAtk] & (STATUS3_PERISH_SONG | STATUS3_LEECHSEED | STATUS3_YAWN))
     {
-        score -= 1;
+        ADJUST_SCORE_PTR(-1);
     }
 
-    if (IsBattlerDamagedByStatus(battlerDef))
-    {
-        score += DECENT_EFFECT;
-    }
-
-    return score;
+    if (gBattleMons[battlerDef].status1 & STATUS1_TOXIC_POISON
+      || gBattleMons[battlerDef].status2 & (STATUS2_CURSED | STATUS2_INFATUATION)
+      || gStatuses3[battlerDef] & (STATUS3_PERISH_SONG | STATUS3_LEECHSEED | STATUS3_YAWN))
+        ADJUST_SCORE_PTR(DECENT_EFFECT);
 }
 
 // stat stages
-<<<<<<< HEAD
-<<<<<<< HEAD
-bool32 CanLowerStat(u32 battlerAtk, u32 battlerDef, u32 abilityDef, u32 stat)
-=======
 bool32 ShouldLowerStat(u32 battlerAtk, u32 battlerDef, u32 battlerAbility, u32 stat)
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-bool32 ShouldLowerStat(u32 battlerAtk, u32 battlerDef, u32 battlerAbility, u32 stat)
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     if (gBattleMons[battlerDef].statStages[stat] > MIN_STAT_STAGE && battlerAbility != ABILITY_CONTRARY)
     {
@@ -1948,90 +1846,7 @@ bool32 ShouldLowerStat(u32 battlerAtk, u32 battlerDef, u32 battlerAbility, u32 s
         return TRUE;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (stat == STAT_SPEED)
-    {
-        // If AI is faster and doesn't have any mons left, lowering speed doesn't give any
-        return !(AI_IsFaster(battlerAtk, battlerDef, gAiThinkingStruct->moveConsidered)
-            && CountUsablePartyMons(battlerAtk) == 0
-            && !HasMoveWithEffect(battlerAtk, EFFECT_ELECTRO_BALL));
-    }
-
-    return TRUE;
-=======
     return FALSE;
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-}
-
-u32 IncreaseStatDownScore(u32 battlerAtk, u32 battlerDef, u32 stat)
-{
-    u32 tempScore = NO_INCREASE;
-
-    // Don't increase score if target is already -3 stat stage
-    if (stat != STAT_SPEED && gBattleMons[battlerDef].statStages[stat] <= DEFAULT_STAT_STAGE - 3)
-        return NO_INCREASE;
-
-    // Don't decrease stat if target will die to residual damage
-    if (GetBattlerSecondaryDamage(battlerDef) >= gBattleMons[battlerDef].hp)
-        return NO_INCREASE;
-
-    // Don't decrese stat if opposing battler has Encore
-    if (HasBattlerSideMoveWithEffect(battlerDef, EFFECT_ENCORE))
-        return NO_INCREASE;
-
-    // TODO: Avoid decreasing stat if
-    // player can kill ai in 2 hits with decreased attack / sp atk stages
-    // ai can kill target in 2 hits without decreasing defense / sp def stages
-
-    switch (stat)
-    {
-    case STAT_ATK:
-        if (HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_PHYSICAL))
-            tempScore += DECENT_EFFECT;
-        break;
-    case STAT_DEF:
-        if (HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_PHYSICAL))
-            tempScore += DECENT_EFFECT;
-        break;
-    case STAT_SPEED:
-        if (AI_IsSlower(battlerAtk, battlerDef, gAiThinkingStruct->moveConsidered))
-            tempScore += DECENT_EFFECT;
-        break;
-    case STAT_SPATK:
-        if (HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_SPECIAL))
-            tempScore += DECENT_EFFECT;
-        break;
-    case STAT_SPDEF:
-        if (HasMoveWithCategory(battlerAtk, DAMAGE_CATEGORY_SPECIAL))
-            tempScore += DECENT_EFFECT;
-        break;
-    case STAT_ACC:
-        if (gBattleMons[battlerDef].status1 & STATUS1_PSN_ANY)
-            tempScore += WEAK_EFFECT;
-        if (gStatuses3[battlerDef] & STATUS3_LEECHSEED)
-            tempScore += WEAK_EFFECT;
-        if (gStatuses3[battlerDef] & STATUS3_ROOTED)
-            tempScore += WEAK_EFFECT;
-        if (gBattleMons[battlerDef].status2 & STATUS2_CURSED)
-            tempScore += WEAK_EFFECT;
-        break;
-    case STAT_EVASION:
-        if (gBattleMons[battlerDef].status1 & STATUS1_PSN_ANY)
-            tempScore += WEAK_EFFECT;
-        if (gStatuses3[battlerDef] & STATUS3_LEECHSEED)
-            tempScore += WEAK_EFFECT;
-        if (gStatuses3[battlerDef] & STATUS3_ROOTED)
-            tempScore += WEAK_EFFECT;
-        if (gBattleMons[battlerDef].status2 & STATUS2_CURSED)
-            tempScore += WEAK_EFFECT;
-        break;
-    }
-
-    return (tempScore > BEST_EFFECT) ? BEST_EFFECT : tempScore; // don't inflate score so only max +4
-=======
-    return FALSE;
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 }
 
 bool32 BattlerStatCanRise(u32 battler, u32 battlerAbility, u32 stat)
@@ -2089,9 +1904,6 @@ u32 CountNegativeStatStages(u32 battlerId)
     return count;
 }
 
-<<<<<<< HEAD
-bool32 CanIndexMoveFaintTarget(u32 battlerAtk, u32 battlerDef, u32 moveIndex, enum DamageCalcContext calcContext)
-=======
 bool32 ShouldLowerAttack(u32 battlerAtk, u32 battlerDef, u32 defAbility)
 {
     if (AI_IsFaster(battlerAtk, battlerDef, AI_THINKING_STRUCT->moveConsidered)
@@ -2215,10 +2027,6 @@ bool32 ShouldLowerEvasion(u32 battlerAtk, u32 battlerDef, u32 defAbility)
 }
 
 bool32 CanIndexMoveFaintTarget(u32 battlerAtk, u32 battlerDef, u32 index, u32 numHits)
-<<<<<<< HEAD
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 {
     s32 dmg;
     u16 *moves = gBattleMons[battlerAtk].moves;
@@ -3016,8 +2824,8 @@ static bool32 PartyBattlerShouldAvoidHazards(u32 currBattler, u32 switchBattler)
     u32 species = GetMonData(mon, MON_DATA_SPECIES);
     u32 flags = gSideStatuses[GetBattlerSide(currBattler)] & (SIDE_STATUS_SPIKES | SIDE_STATUS_STEALTH_ROCK | SIDE_STATUS_STEELSURGE | SIDE_STATUS_STICKY_WEB | SIDE_STATUS_TOXIC_SPIKES);
     s32 hazardDamage = 0;
-    u32 type1 = GetSpeciesType(species, 0);
-    u32 type2 = GetSpeciesType(species, 1);
+    u32 type1 = gSpeciesInfo[species].types[0];
+    u32 type2 = gSpeciesInfo[species].types[1];
     u32 maxHp = GetMonData(mon, MON_DATA_MAX_HP);
 
     if (flags == 0)
@@ -3872,15 +3680,7 @@ s32 AI_CalcPartyMonDamage(u32 move, u32 battlerAtk, u32 battlerDef, struct Battl
         AI_THINKING_STRUCT->saved[battlerAtk].saved = FALSE;
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    dmg = AI_CalcDamage(move, battlerAtk, battlerDef, &effectiveness, NO_GIMMICK, NO_GIMMICK, AI_GetWeather());
-=======
     dmg = AI_CalcDamage(move, battlerAtk, battlerDef, &effectiveness, FALSE, AI_GetWeather(), rollType);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-    dmg = AI_CalcDamage(move, battlerAtk, battlerDef, &effectiveness, FALSE, AI_GetWeather(), rollType);
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     // restores original gBattleMon struct
     FreeRestoreBattleMons(savedBattleMons);
 
@@ -4107,32 +3907,7 @@ static u32 IncreaseStatUpScoreInternal(u32 battlerAtk, u32 battlerDef, u32 statI
     if (AI_DATA->abilities[battlerDef] == ABILITY_OPPORTUNIST)
         return NO_INCREASE;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Don't increase stats if opposing battler has Encore
-    if (HasBattlerSideMoveWithEffect(battlerDef, EFFECT_ENCORE))
-        return NO_INCREASE;
-
-    // Don't increase stats if opposing battler has used Haze effect
-    if (!RandomPercentage(RNG_AI_BOOST_INTO_HAZE, BOOST_INTO_HAZE_CHANCE) &&
-        (HasBattlerSideUsedMoveWithEffect(battlerDef, EFFECT_HAZE)
-        || HasBattlerSideUsedMoveWithAdditionalEffect(battlerDef, MOVE_EFFECT_CLEAR_SMOG)
-        || HasBattlerSideUsedMoveWithAdditionalEffect(battlerDef, MOVE_EFFECT_HAZE)))
-        return NO_INCREASE;
-
-    // Don't increase if AI is at +1 and opponent has Haze effect
-    if (gBattleMons[battlerAtk].statStages[statId] >= MAX_STAT_STAGE - 5 && (HasBattlerSideMoveWithEffect(battlerDef, EFFECT_HAZE)
-        || HasBattlerSideMoveWithAdditionalEffect(battlerDef, MOVE_EFFECT_CLEAR_SMOG)
-        || HasBattlerSideMoveWithAdditionalEffect(battlerDef, MOVE_EFFECT_HAZE)))
-        return NO_INCREASE;
-
-    // Predicting switch
-=======
     // If predicting switch, stat increases are great momentum
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-    // If predicting switch, stat increases are great momentum
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     if (IsBattlerPredictedToSwitch(battlerDef))
         tempScore += WEAK_EFFECT;
 
@@ -4255,16 +4030,8 @@ void IncreaseBurnScore(u32 battlerAtk, u32 battlerDef, u32 move, s32 *score)
     if (AI_CanBurn(battlerAtk, battlerDef, AI_DATA->abilities[battlerDef], BATTLE_PARTNER(battlerAtk), move, AI_DATA->partnerMove))
     {
         if (HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_PHYSICAL)
-<<<<<<< HEAD
-<<<<<<< HEAD
-            || (!(gAiThinkingStruct->aiFlags[battlerAtk] & AI_FLAG_OMNISCIENT) // Not Omniscient but expects physical attacker
-                && GetSpeciesBaseAttack(gBattleMons[battlerDef].species) >= GetSpeciesBaseSpAttack(gBattleMons[battlerDef].species) + 10))
-=======
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             || (!(AI_THINKING_STRUCT->aiFlags[battlerAtk] & AI_FLAG_OMNISCIENT) // Not Omniscient but expects physical attacker
                 && gSpeciesInfo[gBattleMons[battlerDef].species].baseAttack >= gSpeciesInfo[gBattleMons[battlerDef].species].baseSpAttack + 10))
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
         {
             if (GetMoveCategory(GetBestDmgMoveFromBattler(battlerDef, battlerAtk)) == DAMAGE_CATEGORY_PHYSICAL)
                 ADJUST_SCORE_PTR(DECENT_EFFECT);
@@ -4347,16 +4114,8 @@ void IncreaseFrostbiteScore(u32 battlerAtk, u32 battlerDef, u32 move, s32 *score
     if (AI_CanGiveFrostbite(battlerAtk, battlerDef, AI_DATA->abilities[battlerDef], BATTLE_PARTNER(battlerAtk), move, AI_DATA->partnerMove))
     {
         if (HasMoveWithCategory(battlerDef, DAMAGE_CATEGORY_SPECIAL)
-<<<<<<< HEAD
-<<<<<<< HEAD
-            || (!(gAiThinkingStruct->aiFlags[battlerAtk] & AI_FLAG_OMNISCIENT) // Not Omniscient but expects special attacker
-                && GetSpeciesBaseSpAttack(gBattleMons[battlerDef].species) >= GetSpeciesBaseAttack(gBattleMons[battlerDef].species) + 10))
-=======
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             || (!(AI_THINKING_STRUCT->aiFlags[battlerAtk] & AI_FLAG_OMNISCIENT) // Not Omniscient but expects special attacker
                 && gSpeciesInfo[gBattleMons[battlerDef].species].baseSpAttack >= gSpeciesInfo[gBattleMons[battlerDef].species].baseAttack + 10))
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
         {
             if (GetMoveCategory(GetBestDmgMoveFromBattler(battlerDef, battlerAtk)) == DAMAGE_CATEGORY_SPECIAL)
                 ADJUST_SCORE_PTR(DECENT_EFFECT);
@@ -4408,15 +4167,7 @@ bool32 ShouldUseZMove(u32 battlerAtk, u32 battlerDef, u32 chosenMove)
         else if (!IsBattleMoveStatus(chosenMove) && IsBattleMoveStatus(zMove))
             return FALSE;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        dmg = AI_CalcDamageSaveBattlers(chosenMove, battlerAtk, battlerDef, &effectiveness, NO_GIMMICK, NO_GIMMICK);
-=======
         dmg = AI_CalcDamageSaveBattlers(chosenMove, battlerAtk, battlerDef, &effectiveness, FALSE, DMG_ROLL_DEFAULT);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-        dmg = AI_CalcDamageSaveBattlers(chosenMove, battlerAtk, battlerDef, &effectiveness, FALSE, DMG_ROLL_DEFAULT);
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
         if (!IsBattleMoveStatus(chosenMove) && dmg.minimum >= gBattleMons[battlerDef].hp)
             return FALSE;   // don't waste damaging z move if can otherwise faint target
@@ -4426,267 +4177,6 @@ bool32 ShouldUseZMove(u32 battlerAtk, u32 battlerDef, u32 chosenMove)
 
     return FALSE;
 }
-
-void SetAIUsingGimmick(u32 battler, enum AIConsiderGimmick use)
-{
-    if (use == USE_GIMMICK)
-        gAiBattleData->aiUsingGimmick |= (1<<battler);
-    else
-        gAiBattleData->aiUsingGimmick &= ~(1<<battler);
-}
-
-bool32 IsAIUsingGimmick(u32 battler)
-{
-    return (gAiBattleData->aiUsingGimmick & (1<<battler)) != 0;
-}
-
-struct AltTeraCalcs {
-    struct SimulatedDamage takenWithTera[MAX_MON_MOVES];
-    struct SimulatedDamage dealtWithoutTera[MAX_MON_MOVES];
-};
-
-enum AIConsiderGimmick ShouldTeraFromCalcs(u32 battler, u32 opposingBattler, struct AltTeraCalcs *altCalcs);
-
-void DecideTerastal(u32 battler)
-{
-    if (gBattleStruct->gimmick.usableGimmick[battler] != GIMMICK_TERA)
-        return;
-
-    if (!(gAiThinkingStruct->aiFlags[battler] & AI_FLAG_SMART_TERA))
-        return;
-
-    // TODO: Currently only single battles are considered.
-    if (IsDoubleBattle())
-        return;
-
-    // TODO: A lot of these checks are most effective for an omnicient ai.
-    // If we don't have enough information about the opponent's moves, consider simpler checks based on type effectivness.
-
-    u32 opposingBattler = GetOppositeBattler(battler);
-
-    // Default calculations automatically assume gimmicks for the attacker, but not the defender.
-    // Consider calcs for the other possibilities.
-    struct AltTeraCalcs altCalcs;
-
-    struct SimulatedDamage noDmg = {0};
-
-    uq4_12_t effectivenessTakenWithTera[MAX_MON_MOVES];
-
-    u16* aiMoves = GetMovesArray(battler);
-    u16* oppMoves = GetMovesArray(opposingBattler);
-
-    uq4_12_t effectiveness;
-
-    for (int i = 0; i < MAX_MON_MOVES; i++)
-    {
-        if (!IsMoveUnusable(i, aiMoves[i], gAiLogicData->moveLimitations[battler]) && !IsBattleMoveStatus(aiMoves[i]))
-            altCalcs.dealtWithoutTera[i] = AI_CalcDamage(aiMoves[i], battler, opposingBattler, &effectiveness, NO_GIMMICK, NO_GIMMICK, AI_GetWeather());
-        else
-            altCalcs.dealtWithoutTera[i] = noDmg;
-
-
-        if (!IsMoveUnusable(i, oppMoves[i], gAiLogicData->moveLimitations[opposingBattler]) && !IsBattleMoveStatus(oppMoves[i]))
-        {
-            altCalcs.takenWithTera[i] = AI_CalcDamage(oppMoves[i], opposingBattler, battler, &effectiveness, USE_GIMMICK, USE_GIMMICK, AI_GetWeather());
-            effectivenessTakenWithTera[i] = effectiveness;
-        }
-        else
-        {
-            altCalcs.takenWithTera[i] = noDmg;
-            effectivenessTakenWithTera[i] = Q_4_12(0.0);
-        }
-    }
-
-
-    enum AIConsiderGimmick res = ShouldTeraFromCalcs(battler, opposingBattler, &altCalcs);
-
-
-    if (res == USE_GIMMICK)
-    {
-        // Damage calcs for damage received assumed we wouldn't tera. Adjust that so that further AI decisions are more accurate.
-        for (int i = 0; i < MAX_MON_MOVES; i++)
-        {
-            gAiLogicData->simulatedDmg[opposingBattler][battler][i] = altCalcs.takenWithTera[i];
-            gAiLogicData->effectiveness[opposingBattler][battler][i] = effectivenessTakenWithTera[i];
-        }
-    }
-    else
-    {
-        // Damage calcs for damage dealt assumed we would tera. Adjust that so that further AI decisions are more accurate.
-        for (int i = 0; i < MAX_MON_MOVES; i++)
-            gAiLogicData->simulatedDmg[battler][opposingBattler][i] = altCalcs.dealtWithoutTera[i];
-    }
-
-    SetAIUsingGimmick(battler, res);
-    return;
-}
-
-// macros are not expanded recursively
-#define dealtWithTera gAiLogicData->simulatedDmg[battler][opposingBattler]
-#define dealtWithoutTera altCalcs->dealtWithoutTera
-#define takenWithTera altCalcs->takenWithTera
-#define takenWithoutTera gAiLogicData->simulatedDmg[opposingBattler][battler]
-
-enum AIConsiderGimmick ShouldTeraFromCalcs(u32 battler, u32 opposingBattler, struct AltTeraCalcs *altCalcs) {
-    struct Pokemon* party = GetBattlerParty(battler);
-
-    // Check how many pokemon we have that could tera
-    int numPossibleTera = 0;
-    for (int i = 0; i < PARTY_SIZE; i++)
-    {
-        if (GetMonData(&party[i], MON_DATA_HP) != 0
-         && GetMonData(&party[i], MON_DATA_SPECIES_OR_EGG) != SPECIES_NONE
-         && GetMonData(&party[i], MON_DATA_SPECIES_OR_EGG) != SPECIES_EGG
-         && GetMonData(&party[i], MON_DATA_TERA_TYPE) > 0)
-            numPossibleTera++;
-    }
-
-    u16 aiHp = gBattleMons[battler].hp;
-    u16 oppHp = gBattleMons[opposingBattler].hp;
-
-    u16* aiMoves = GetMovesArray(battler);
-    u16* oppMoves = GetMovesArray(opposingBattler);
-
-    // Check whether tera enables a KO
-    bool32 hasKoWithout = FALSE;
-    u16 killingMove = MOVE_NONE;
-
-    for (int i = 0; i < MAX_MON_MOVES; i++)
-    {
-        if (dealtWithTera[i].median >= oppHp)
-        {
-            u16 move = aiMoves[i];
-            if (killingMove == MOVE_NONE || GetBattleMovePriority(battler, gAiLogicData->abilities[battler], move) > GetBattleMovePriority(battler, gAiLogicData->abilities[battler], killingMove))
-                killingMove = move;
-        }
-        if (dealtWithoutTera[i].median >= oppHp)
-            hasKoWithout = TRUE;
-    }
-
-    bool32 enablesKo = (killingMove != MOVE_NONE) && !hasKoWithout;
-
-    // Check whether tera saves us from a KO
-    bool32 savedFromKo = FALSE;
-    bool32 getsKodRegardlessBySingleMove = FALSE;
-
-    for (int i = 0; i < MAX_MON_MOVES; i++)
-    {
-        if (takenWithoutTera[i].maximum >= aiHp && takenWithTera[i].maximum >= aiHp)
-            getsKodRegardlessBySingleMove = TRUE;
-
-        if (takenWithoutTera[i].maximum >= aiHp && takenWithTera[i].maximum < aiHp)
-            savedFromKo = TRUE;
-    }
-
-    if (getsKodRegardlessBySingleMove)
-        savedFromKo = FALSE;
-
-    // Check whether opponent can punish tera by ko'ing
-    u16 hardPunishingMove = MOVE_NONE;
-    for (int i = 0; i < MAX_MON_MOVES; i++)
-    {
-        if (takenWithTera[i].maximum >= aiHp)
-        {
-            u16 move = oppMoves[i];
-            if (hardPunishingMove == MOVE_NONE || GetBattleMovePriority(opposingBattler, gAiLogicData->abilities[opposingBattler], move) > GetBattleMovePriority(opposingBattler, gAiLogicData->abilities[opposingBattler], hardPunishingMove))
-                hardPunishingMove = move;
-        }
-    }
-
-    // Check whether there is a move that deals over half hp, and all such moves are reduced to under 1/4 hp by tera
-    // (e.g. a weakness becomes a resistance, a 4x weakness becomes neutral, etc)
-    bool32 takesBigHit = FALSE;
-    bool32 savedFromAllBigHits = TRUE;
-    for (int i = 0; i < MAX_MON_MOVES; i++)
-    {
-        if (takenWithoutTera[i].median > aiHp/2)
-        {
-            takesBigHit = TRUE;
-            if (takenWithTera[i].median > aiHp/4)
-                savedFromAllBigHits = FALSE;
-        }
-    }
-
-    // Check for any benefit whatsoever. Only used for the last possible mon that could tera.
-    bool32 anyOffensiveBenefit = FALSE;
-    for (int i = 0; i < MAX_MON_MOVES; i++)
-    {
-        if (dealtWithTera[i].median > dealtWithoutTera[i].median)
-            anyOffensiveBenefit = TRUE;
-    }
-
-    bool32 anyDefensiveBenefit = FALSE;
-    bool32 anyDefensiveDrawback = FALSE;
-    for (int i = 0; i < MAX_MON_MOVES; i++)
-    {
-        if (takenWithTera[i].median < takenWithoutTera[i].median)
-            anyDefensiveBenefit = TRUE;
-
-        if (takenWithTera[i].median > takenWithoutTera[i].median)
-            anyDefensiveDrawback = TRUE;
-    }
-
-    // Make decisions
-    // This is done after all loops to minimize the possibility of a timing attack in which the player could
-    // determine whether the AI will tera based on the time taken to select a move.
-
-    if (enablesKo)
-    {
-        if (hardPunishingMove == MOVE_NONE)
-        {
-            return USE_GIMMICK;
-        }
-        else
-        {
-            // will we go first?
-            if (AI_WhoStrikesFirst(battler, opposingBattler, killingMove) == AI_IS_FASTER && GetBattleMovePriority(battler, gAiLogicData->abilities[battler], killingMove) >= GetBattleMovePriority(opposingBattler, gAiLogicData->abilities[opposingBattler], hardPunishingMove))
-                return USE_GIMMICK;
-        }
-    }
-
-    // Decide to conserve tera based on number of possible later oppotunities
-    u16 conserveTeraChance = AI_CONSERVE_TERA_CHANCE_PER_MON * (numPossibleTera-1);
-    if (RandomPercentage(RNG_AI_CONSERVE_TERA, conserveTeraChance))
-        return NO_GIMMICK;
-
-    if (savedFromKo)
-    {
-        if (hardPunishingMove == MOVE_NONE)
-        {
-            return USE_GIMMICK;
-        }
-        else
-        {
-            // If tera saves us from a ko from one move, but enables a ko otherwise, randomly predict
-            // savesFromKo being true ensures opponent doesn't have a ko if we don't tera
-            if (Random() % 100 < AI_TERA_PREDICT_CHANCE)
-                return USE_GIMMICK;
-        }
-    }
-
-    if (hardPunishingMove != MOVE_NONE)
-        return NO_GIMMICK;
-
-    if (takesBigHit && savedFromAllBigHits)
-        return USE_GIMMICK;
-
-    // No strongly compelling reason to tera. Conserve it if possible.
-    if (numPossibleTera > 1)
-        return NO_GIMMICK;
-
-    if (anyOffensiveBenefit || (anyDefensiveBenefit && !anyDefensiveDrawback))
-        return USE_GIMMICK;
-
-    // TODO: Effects other than direct damage are not yet considered. For example, may want to tera poison to avoid a Toxic.
-
-
-    return NO_GIMMICK;
-}
-#undef dealtWithTera
-#undef dealtWithoutTera
-#undef takenWithTera
-#undef takenWithoutTera
-
 
 bool32 AI_IsBattlerAsleepOrComatose(u32 battlerId)
 {

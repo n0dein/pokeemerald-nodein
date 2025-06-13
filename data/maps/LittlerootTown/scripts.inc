@@ -990,20 +990,6 @@ LittlerootTown_Text_GoodLuckCatchingPokemon:
 	.string "Are you going to catch POKéMON?\n"
 	.string "Good luck!$"
 
-PP_TEST::
-	lockall
-	faceplayer
-	msgbox LittlerootTown_Text_TownSign, MSGBOX_NPC
-	closemessage
-	showmonpic SPECIES_PALKIA, 10, 3
-	setflag FLAG_TEST_FLAG_PP
-	fadescreen FADE_TO_BLACK
-	hidemonpic
-	fadescreen FADE_FROM_BLACK
-	releaseall
-	end
-
-
 LittlerootTown_Text_TownSign:
 	.string "LITTLEROOT TOWN\n"
 	.string "“A town that can't be shaded any hue.”$"

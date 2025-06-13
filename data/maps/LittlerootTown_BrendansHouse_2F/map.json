@@ -232,13 +232,6 @@
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
       "dest_warp_id": "2"
-    },
-    {
-      "x": 7,
-      "y": 6,
-      "elevation": 0,
-      "dest_map": "MAP_CIANWOOD_CITY",
-      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

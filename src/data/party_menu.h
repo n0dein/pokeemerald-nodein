@@ -783,8 +783,6 @@ static const u8 sPartyMenuActionCounts[] =
     [ACTIONS_ZYGARDE_CUBE]  = ARRAY_COUNT(sPartyMenuAction_ZygardeCube),
 };
 
-<<<<<<< HEAD
-=======
 static const u16 sFieldMoves[FIELD_MOVES_COUNT + 1] =
 {
     [FIELD_MOVE_CUT]          = MOVE_CUT,
@@ -828,7 +826,6 @@ struct
     [FIELD_MOVE_SWEET_SCENT]  = {SetUpFieldMove_SweetScent,  PARTY_MSG_CANT_USE_HERE},
 };
 
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
 static const u8 *const sUnionRoomTradeMessages[] =
 {
     [UR_TRADE_MSG_NOT_MON_PARTNER_WANTS - 1]       = gText_NotPkmnOtherTrainerWants,

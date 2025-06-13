@@ -733,17 +733,6 @@ const struct SpeciesInfo gSpeciesInfoGen6[] =
         .iconPalIndex = 0,
         SHADOW(1, 10, SHADOW_SIZE_L)
         FOOTPRINT(Greninja)
-    #if OW_BATTLE_ONLY_FORMS
-        OVERWORLD(
-            sPicTable_GreninjaAsh,
-            SIZE_32x32,
-            SHADOW_SIZE_M,
-            TRACKS_FOOT,
-            sAnimTable_Following,
-            gOverworldPalette_GreninjaAsh,
-            gShinyOverworldPalette_GreninjaAsh
-        )
-    #endif //OW_BATTLE_ONLY_FORMS
         .levelUpLearnset = sGreninjaLevelUpLearnset,
         .teachableLearnset = sGreninjaTeachableLearnset,
         .formSpeciesIdTable = sGreninjaFormSpeciesIdTable,

@@ -1357,7 +1357,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Launches shock waves that\n"
             "always inflict 20 HP damage."),
-        .effect = EFFECT_FIXED_HP_DAMAGE,
+        .effect = EFFECT_FIXED_DAMAGE_ARG,
         .power = 1,
         .type = TYPE_NORMAL,
         .accuracy = 90,
@@ -2199,7 +2199,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Launches shock waves that\n"
             "always inflict 40 HP damage."),
-        .effect = EFFECT_FIXED_HP_DAMAGE,
+        .effect = EFFECT_FIXED_DAMAGE_ARG,
         .power = 1,
         .type = TYPE_DRAGON,
         .accuracy = 100,
@@ -2831,22 +2831,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Minimize"),
         .description = COMPOUND_STRING(
-<<<<<<< HEAD
-<<<<<<< HEAD
-            "Minimizes the user's size to\n"
-        #if B_MINIMIZE_EVASION >= GEN_5
-            "sharply raise evasiveness."),
-        #else
-            "raise evasiveness."),
-        #endif
-=======
             "Minimizes the user's size\n"
             "to raise evasiveness."),
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-            "Minimizes the user's size\n"
-            "to raise evasiveness."),
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         .effect = EFFECT_MINIMIZE,
         .power = 0,
         .type = TYPE_NORMAL,
@@ -3679,15 +3665,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Poison Gas"),
         .description = COMPOUND_STRING(
-<<<<<<< HEAD
-<<<<<<< HEAD
-        #if B_UPDATED_MOVE_DATA >= GEN_5
-            "Envelops the foes in a toxic\n"
-        #else
-=======
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             "Envelops the foe in a toxic\n"
             "gas that may poison."),
         #if B_UPDATED_MOVE_DATA >= GEN_6
@@ -4279,7 +4256,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Attacks with sharp fangs\n"
             "and cuts half the foe's HP."),
-        .effect = EFFECT_FIXED_PERCENT_DAMAGE,
+        .effect = EFFECT_SUPER_FANG,
         .power = 1,
         .type = TYPE_NORMAL,
         .accuracy = 90,
@@ -4287,7 +4264,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_PHYSICAL,
-        .argument = { .damagePercentage = 50 },
         .makesContact = TRUE,
         .ignoresKingsRock = (B_UPDATED_MOVE_FLAGS == GEN_3 || B_UPDATED_MOVE_FLAGS == GEN_4),
         .contestEffect = CONTEST_EFFECT_BADLY_STARTLE_MONS_WITH_GOOD_APPEALS,
@@ -6012,22 +5988,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Rapid Spin"),
         .description = COMPOUND_STRING(
-<<<<<<< HEAD
-<<<<<<< HEAD
-            "Spins attack that removes\n"
-        #if B_SPEED_BUFFING_RAPID_SPIN >= GEN_8
-            "some effects and ups speed."),
-        #else
-            "certain effects."),
-        #endif
-=======
             "Spins the body at high\n"
             "speed to strike the foe."),
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-            "Spins the body at high\n"
-            "speed to strike the foe."),
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         .effect = EFFECT_RAPID_SPIN,
         .power = B_UPDATED_MOVE_DATA >= GEN_8 ? 50 : 20,
         .type = TYPE_NORMAL,
@@ -6243,16 +6205,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "The effectiveness varies\n"
             "with the user."),
-<<<<<<< HEAD
-<<<<<<< HEAD
-        #else
-            "The type and effectiveness\n"
-            "vary with the user."),
-        #endif
-=======
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         .power = B_HIDDEN_POWER_DMG >= GEN_6 ? 60 : 1,
         .effect = EFFECT_HIDDEN_POWER,
         .type = TYPE_NORMAL,
@@ -8645,7 +8597,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "A chilling attack that\n"
             "causes fainting if it hits."),
-        .effect = EFFECT_SHEER_COLD,
+        .effect = EFFECT_OHKO,
         .power = 1,
         .type = TYPE_ICE,
         .accuracy = 30,
@@ -9571,22 +9523,8 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
     {
         .name = COMPOUND_STRING("Tailwind"),
         .description = COMPOUND_STRING(
-<<<<<<< HEAD
-<<<<<<< HEAD
-            "Whips up a breeze, doubling\n"
-        #if B_TAILWIND_TURNS >= GEN_5
-            "ally Speed for 4 turns."),
-        #else
-            "ally Speed for 3 turns."),
-        #endif
-=======
             "Whips up a turbulent breeze\n"
             "that raises Speed."),
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-            "Whips up a turbulent breeze\n"
-            "that raises Speed."),
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         .effect = EFFECT_TAILWIND,
         .power = 0,
         .type = TYPE_FLYING,
@@ -17042,7 +16980,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Halves the foe's HP with\n"
             "the power of nature."),
-        .effect = EFFECT_FIXED_PERCENT_DAMAGE,
+        .effect = EFFECT_SUPER_FANG,
         .power = 1,
         .type = TYPE_FAIRY,
         .accuracy = 90,
@@ -18495,7 +18433,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Hit everything and faint.\n"
             "Powers up on Misty Terrain."),
-        .effect = EFFECT_MISTY_EXPLOSION,
+        .effect = EFFECT_EXPLOSION,
         .power = 100,
         .type = TYPE_FAIRY,
         .accuracy = 100,
@@ -19271,7 +19209,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "A user-hurting blast of\n"
             "amassed chlorophyll."),
-        .effect = EFFECT_CHLOROBLAST,
+        .effect = EFFECT_MAX_HP_50_RECOIL,
         .power = B_UPDATED_MOVE_DATA >= GEN_9 ? 150 : 120,
         .type = TYPE_GRASS,
         .accuracy = 95,
@@ -20122,7 +20060,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "Summons a ruinous disaster\n"
             "and cuts half the foe's HP."),
-        .effect = EFFECT_FIXED_PERCENT_DAMAGE,
+        .effect = EFFECT_SUPER_FANG,
         .power = 1,
         .type = TYPE_DARK,
         .accuracy = 90,
@@ -21575,7 +21513,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .description = COMPOUND_STRING(
             "The Land Spirit Pokémon\n"
             "greatly reduces the foe's HP."),
-        .effect = EFFECT_FIXED_PERCENT_DAMAGE,
+        .effect = EFFECT_GUARDIAN_OF_ALOLA,
         .power = 1,
         .type = TYPE_FAIRY,
         .accuracy = 0,
@@ -21583,7 +21521,6 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_ALL] =
         .target = MOVE_TARGET_SELECTED,
         .priority = 0,
         .category = DAMAGE_CATEGORY_SPECIAL,
-        .argument = { .damagePercentage = 75 },
         .battleAnimScript = gBattleAnimMove_GuardianOfAlola,
     },
     [MOVE_SEARING_SUNRAZE_SMASH] =

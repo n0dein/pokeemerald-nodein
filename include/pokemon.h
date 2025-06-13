@@ -1,21 +1,13 @@
 #ifndef GUARD_POKEMON_H
 #define GUARD_POKEMON_H
 
-#include "contest_effect.h"
 #include "sprite.h"
-<<<<<<< HEAD
-<<<<<<< HEAD
-#include "constants/battle.h"
-#include "constants/form_change_types.h"
-=======
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 #include "constants/items.h"
-#include "constants/map_groups.h"
 #include "constants/regions.h"
 #include "constants/region_map_sections.h"
-#include "constants/trainers.h"
+#include "constants/map_groups.h"
+#include "constants/battle.h"
+#include "contest_effect.h"
 
 #define GET_BASE_SPECIES_ID(speciesId) (GetFormSpeciesId(speciesId, 0))
 #define FORM_SPECIES_END (0xffff)
@@ -618,18 +610,8 @@ extern struct Pokemon gEnemyParty[PARTY_SIZE];
 extern struct SpriteTemplate gMultiuseSpriteTemplate;
 extern u16 gFollowerSteps;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-extern const u16 gFacilityClassToPicIndex[];
-extern const enum TrainerClassID gFacilityClassToTrainerClass[];
-=======
 extern const u8 gFacilityClassToPicIndex[];
 extern const u8 gFacilityClassToTrainerClass[];
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-extern const u8 gFacilityClassToPicIndex[];
-extern const u8 gFacilityClassToTrainerClass[];
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 extern const struct SpeciesInfo gSpeciesInfo[];
 extern const u32 gExperienceTables[][MAX_LEVEL + 1];
 extern const u8 gPPUpGetMask[];
@@ -661,7 +643,7 @@ void CreateMonWithEVSpreadNatureOTID(struct Pokemon *mon, u16 species, u8 level,
 void ConvertPokemonToBattleTowerPokemon(struct Pokemon *mon, struct BattleTowerPokemon *dest);
 bool8 ShouldIgnoreDeoxysForm(u8 caseId, u8 battler);
 u16 GetUnionRoomTrainerPic(void);
-enum TrainerClassID GetUnionRoomTrainerClass(void);
+u16 GetUnionRoomTrainerClass(void);
 void CreateEnemyEventMon(void);
 void CalculateMonStats(struct Pokemon *mon);
 void BoxMonToMon(const struct BoxPokemon *src, struct Pokemon *dest);
@@ -714,22 +696,14 @@ u16 GetAbilityBySpecies(u16 species, u8 abilityNum);
 u16 GetMonAbility(struct Pokemon *mon);
 void CreateSecretBaseEnemyParty(struct SecretBase *secretBaseRecord);
 u8 GetSecretBaseTrainerPicIndex(void);
-enum TrainerClassID GetSecretBaseTrainerClass(void);
+u8 GetSecretBaseTrainerClass(void);
 bool8 IsPlayerPartyAndPokemonStorageFull(void);
 bool8 IsPokemonStorageFull(void);
 const u8 *GetSpeciesName(u16 species);
 const u8 *GetSpeciesCategory(u16 species);
 const u8 *GetSpeciesPokedexDescription(u16 species);
-u32 GetSpeciesHeight(u16 species);
-u32 GetSpeciesWeight(u16 species);
-u32 GetSpeciesType(u16 species, u8 slot);
-u32 GetSpeciesAbility(u16 species, u8 slot);
-u32 GetSpeciesBaseHP(u16 species);
-u32 GetSpeciesBaseAttack(u16 species);
-u32 GetSpeciesBaseDefense(u16 species);
-u32 GetSpeciesBaseSpAttack(u16 species);
-u32 GetSpeciesBaseSpDefense(u16 species);
-u32 GetSpeciesBaseSpeed(u16 species);
+u16 GetSpeciesHeight(u16 species);
+u16 GetSpeciesWeight(u16 species);
 const struct LevelUpMove *GetSpeciesLevelUpLearnset(u16 species);
 const u16 *GetSpeciesTeachableLearnset(u16 species);
 const u16 *GetSpeciesEggMoves(u16 species);

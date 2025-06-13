@@ -44,6 +44,7 @@
 #include "constants/event_objects.h"
 #include "constants/field_effects.h"
 #include "constants/items.h"
+#include "constants/map_types.h"
 #include "constants/mauville_old_man.h"
 #include "constants/rgb.h"
 #include "constants/region_map_sections.h"
@@ -1935,8 +1936,6 @@ u8 CreateVirtualObject(u16 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevati
     return spriteId;
 }
 
-<<<<<<< HEAD
-=======
 // Return address of first conscious party mon or NULL
 struct Pokemon *GetFirstLiveMon(void)
 {
@@ -1956,7 +1955,6 @@ struct Pokemon *GetFirstLiveMon(void)
     }
     return NULL;
 }
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
 
 // Return follower ObjectEvent or NULL
 struct ObjectEvent *GetFollowerObject(void)
@@ -2270,7 +2268,7 @@ bool32 IsFollowerVisible(void)
 
 static bool8 SpeciesHasType(u16 species, u8 type)
 {
-    return GetSpeciesType(species, 0) == type || GetSpeciesType(species, 1) == type;
+    return gSpeciesInfo[species].types[0] == type || gSpeciesInfo[species].types[1] == type;
 }
 
 // Display an emote above an object event

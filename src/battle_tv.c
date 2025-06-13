@@ -774,8 +774,7 @@ void BattleTv_SetDataBasedOnMove(u16 move, u16 weatherFlags, struct DisableStruc
         tvPtr->side[atkSide].wishMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
         tvPtr->side[atkSide].wishMoveSlot = moveSlot;
     }
-    enum BattleMoveEffects effect = GetMoveEffect(move);
-    if (effect == EFFECT_EXPLOSION || effect == EFFECT_MISTY_EXPLOSION)
+    if (GetMoveEffect(move) == EFFECT_EXPLOSION)
     {
         tvPtr->side[atkSide ^ BIT_SIDE].explosionMonId = gBattlerPartyIndexes[gBattlerAttacker] + 1;
         tvPtr->side[atkSide ^ BIT_SIDE].explosionMoveSlot = moveSlot;
@@ -932,74 +931,10 @@ static void AddMovePoints(u8 caseId, u16 arg1, u8 arg2, u8 arg3)
     {
         u8 baseFromEffect = gBattleMoveEffects[GetMoveEffect(arg2)].battleTvScore;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // Changes depending on the effect
-        switch (effect)
-        {
-        case EFFECT_FIXED_HP_DAMAGE:
-            baseFromEffect *= (GetMoveFixedHPDamage(move) / 20);
-            break;
-        case EFFECT_TWO_TURNS_ATTACK:
-            for (i = 0; i < GetMoveAdditionalEffectCount(move); i++)
-            {
-                const struct AdditionalEffect *additionalEffect = GetMoveAdditionalEffectById(move, i);
-                switch ((enum MoveEffects)additionalEffect->moveEffect)
-                {
-                case MOVE_EFFECT_ATK_PLUS_1:
-                case MOVE_EFFECT_DEF_PLUS_1:
-                case MOVE_EFFECT_SP_ATK_PLUS_1:
-                case MOVE_EFFECT_SP_DEF_PLUS_1:
-                case MOVE_EFFECT_SPD_PLUS_1:
-                case MOVE_EFFECT_ACC_PLUS_1:
-                case MOVE_EFFECT_EVS_PLUS_1:
-                    if (additionalEffect->self == TRUE && (additionalEffect->chance == 100 || additionalEffect->chance == 0))
-                        baseFromEffect += 2;
-                    break;
-                case MOVE_EFFECT_ATK_PLUS_2:
-                case MOVE_EFFECT_DEF_PLUS_2:
-                case MOVE_EFFECT_SP_ATK_PLUS_2:
-                case MOVE_EFFECT_SP_DEF_PLUS_2:
-                case MOVE_EFFECT_SPD_PLUS_2:
-                case MOVE_EFFECT_ACC_PLUS_2:
-                case MOVE_EFFECT_EVS_PLUS_2:
-                    if (additionalEffect->self == TRUE && (additionalEffect->chance == 100 || additionalEffect->chance == 0))
-                        baseFromEffect += 3;
-                    break;
-                case MOVE_EFFECT_FLINCH:
-                    if (additionalEffect->self == FALSE)
-                        baseFromEffect += 3;
-                    break;
-                default:
-                    break;
-                }
-            }
-            break;
-        case EFFECT_FIRST_TURN_ONLY:
-            if (MoveHasAdditionalEffectWithChance(move, MOVE_EFFECT_FLINCH, 100))
-                baseFromEffect += 3;
-            break;
-        case EFFECT_CONFUSE:
-            if (GetMoveTarget(move) == MOVE_TARGET_FOES_AND_ALLY)
-                baseFromEffect += 2;
-            break;
-        default:
-            break;
-        }
-        switch(GetMoveNonVolatileStatus(arg2))
-        {
-        case MOVE_EFFECT_SLEEP:
-=======
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
         // Various cases to add/remove points
         if (GetMoveRecoil(arg2) > 0)
             baseFromEffect++; // Recoil moves
         if (GetMoveEffect(arg2) == EFFECT_RAPID_SPIN)
-<<<<<<< HEAD
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             baseFromEffect++;
         if (MoveHasAdditionalEffect(arg2, MOVE_EFFECT_SP_ATK_MINUS_2) || MoveHasAdditionalEffect(arg2, MOVE_EFFECT_ATK_DEF_DOWN))
             baseFromEffect += 2; // Overheat, Superpower, etc.

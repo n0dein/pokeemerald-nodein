@@ -64,7 +64,6 @@
 #define B_ACTION_FINISHED               12
 #define B_ACTION_CANCEL_PARTNER         12 // when choosing an action
 #define B_ACTION_NOTHING_FAINTED        13 // when choosing an action
-#define B_ACTION_UNK_14                 14
 #define B_ACTION_DEBUG                  20
 #define B_ACTION_THROW_BALL             21 // R to throw last used ball
 #define B_ACTION_NONE                   0xFF
@@ -805,9 +804,10 @@ struct BattleStruct
     u16 commanderActive[MAX_BATTLERS_COUNT];
     u32 stellarBoostFlags[NUM_BATTLE_SIDES]; // stored as a bitfield of flags for all types for each side
     u8 monCausingSleepClause[NUM_BATTLE_SIDES]; // Stores which pokemon on a given side is causing Sleep Clause to be active as the mon's index in the party
-    u16 opponentMonCanTera:6;
-    u16 opponentMonCanDynamax:6;
-    u16 additionalEffectsCounter:4; // A counter for the additionalEffects applied by the current move in Cmd_setadditionaleffects
+    u8 additionalEffectsCounter:4; // A counter for the additionalEffects applied by the current move in Cmd_setadditionaleffects
+    s16 savedcheekPouchDamage; // Cheek Pouch can happen in the middle of an attack execution so we need to store the current dmg
+    u8 cheekPouchActivated:1;
+    u8 padding2:3;
     u8 pursuitStoredSwitch; // Stored id for the Pursuit target's switch
     s32 battlerExpReward;
     u16 prevTurnSpecies[MAX_BATTLERS_COUNT]; // Stores species the AI has in play at start of turn
@@ -821,39 +821,16 @@ struct BattleStruct
     u8 calculatedSpreadMoveAccuracy:1;
     u8 printedStrongWindsWeakenedAttack:1;
     u8 numSpreadTargets:2;
+    u8 bypassMoldBreakerChecks:1; // for ABILITYEFFECT_IMMUNITY
     u8 noTargetPresent:1;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    u8 cheekPouchActivated:1;
-    s16 savedcheekPouchDamage; // Cheek Pouch can happen in the middle of an attack execution so we need to store the current dmg
-=======
     u8 usedMicleBerry;
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-    u8 usedMicleBerry;
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
     struct MessageStatus slideMessageStatus;
     u8 trainerSlideSpriteIds[MAX_BATTLERS_COUNT];
+    u16 opponentMonCanTera:6;
+    u16 opponentMonCanDynamax:6;
+    u16 padding:4;
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-struct AiBattleData
-{
-    s32 finalScore[MAX_BATTLERS_COUNT][MAX_BATTLERS_COUNT][MAX_MON_MOVES]; // AI, target, moves to make debugging easier
-    u8 playerStallMons[PARTY_SIZE];
-    u8 chosenMoveIndex[MAX_BATTLERS_COUNT];
-    u8 chosenTarget[MAX_BATTLERS_COUNT];
-    u16 aiUsingGimmick:6;
-    u8 actionFlee:1;
-    u8 choiceWatch:1;
-    u8 padding:6;
-};
-
-=======
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 // The palaceFlags member of struct BattleStruct contains 1 flag per move to indicate which moves the AI should consider,
 // and 1 flag per battler to indicate whether the battler is awake and at <= 50% HP (which affects move choice).
 // The assert below is to ensure palaceFlags is large enough to store these flags without overlap.
@@ -914,11 +891,11 @@ static inline bool32 IsBattleMoveRecoil(u32 move)
     gBattleMons[battler].types[2] = TYPE_MYSTERY;    \
 }
 
-#define RESTORE_BATTLER_TYPE(battler)                                                \
-{                                                                                    \
-    gBattleMons[battler].types[0] = GetSpeciesType(gBattleMons[battler].species, 0); \
-    gBattleMons[battler].types[1] = GetSpeciesType(gBattleMons[battler].species, 1); \
-    gBattleMons[battler].types[2] = TYPE_MYSTERY;                                    \
+#define RESTORE_BATTLER_TYPE(battler)                                                      \
+{                                                                                          \
+    gBattleMons[battler].types[0] = gSpeciesInfo[gBattleMons[battler].species].types[0];   \
+    gBattleMons[battler].types[1] = gSpeciesInfo[gBattleMons[battler].species].types[1];   \
+    gBattleMons[battler].types[2] = TYPE_MYSTERY;                                          \
 }
 
 #define IS_BATTLER_PROTECTED(battler)(gProtectStructs[battler].protected              \

@@ -1139,19 +1139,4 @@
 #undef B_FLAG_INVERSE_BATTLE
 #define B_FLAG_INVERSE_BATTLE            TESTING_FLAG_INVERSE_BATTLE
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Compression DebugPrintf switch
-#define T_COMPRESSION_SHOULD_PRINT FALSE
-
-=======
->>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
-//  Move animation testing
-#define T_SHOULD_RUN_MOVE_ANIM  FALSE       //  If TRUE, enables the move animation tests, these are very computationally heavy and takes a long time to run.
-
-=======
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 #endif // GUARD_CONFIG_TEST_H

@@ -47,40 +47,7 @@
 // AI held item-based move scoring
 #define LOW_ACCURACY_THRESHOLD                                  75 // Moves with accuracy equal OR below this value are considered low accuracy 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// AI move scoring
-#define STATUS_MOVE_FOCUS_PUNCH_CHANCE                          50 // Chance the AI will use a status move if the player's best move is Focus Punch
-#define BOOST_INTO_HAZE_CHANCE                                  0 // Chance the AI will use a stat boosting move if the player has used Haze
-
-// AI damage calc considerations
-#define RISKY_AI_CRIT_STAGE_THRESHOLD                           2   // Stat stages at which Risky will assume it gets a crit
-#define RISKY_AI_CRIT_THRESHOLD_GEN_1                           128 // "Stat stage" at which Risky will assume it gets a crit with gen 1 mechanics (this translates to an X / 255 % crit threshold)
-
 // AI prediction chances
 #define PREDICT_SWITCH_CHANCE                                   50
-#define PREDICT_MOVE_CHANCE                                     100
-
-// AI Terastalization chances
-#define AI_CONSERVE_TERA_CHANCE_PER_MON                         10 // Chance for AI with smart tera flag to decide not to tera before considering defensive benefit is this*(X-1), where X is the number of alive pokemon that could tera
-#define AI_TERA_PREDICT_CHANCE                                  40 // Chance for AI with smart tera flag to tera in the situation where tera would save it from a KO, but could be punished by a KO from a different move. 
-
-// AI PP Stall detection chance per roll
-#define PP_STALL_DISREGARD_MOVE_PERCENTAGE                      50
-// Score reduction if any roll for PP stall detection passes
-#define PP_STALL_SCORE_REDUCTION                                20
-
-// AI's acceptable number of hits to KO the partner via friendly fire in a double battle.
-#define FRIENDLY_FIRE_RISKY_THRESHOLD           2
-#define FRIENDLY_FIRE_NORMAL_THRESHOLD          3
-#define FRIENDLY_FIRE_CONSERVATIVE_THRESHOLD    4
-=======
-// AI prediction chances
-#define PREDICT_SWITCH_CHANCE                                   50
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-// AI prediction chances
-#define PREDICT_SWITCH_CHANCE                                   50
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 
 #endif // GUARD_CONFIG_AI_H

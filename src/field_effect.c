@@ -37,6 +37,7 @@
 #include "constants/metatile_behaviors.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "constants/map_types.h"
 
 #define subsprite_table(ptr) {.subsprites = ptr, .subspriteCount = (sizeof ptr) / (sizeof(struct Subsprite))}
 
@@ -923,22 +924,8 @@ u8 CreateTrainerSprite(u8 trainerSpriteID, s16 x, s16 y, u8 subpriority, u8 *buf
 
 static void UNUSED LoadTrainerGfx_TrainerCard(u8 gender, u16 palOffset, u8 *dest)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    DecompressDataWithHeaderVram(gTrainerSprites[gender].frontPic.data, dest);
-=======
-    LZDecompressVram(gTrainerSprites[gender].frontPic.data, dest);
->>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
-    LoadPalette(gTrainerSprites[gender].palette.data, palOffset, PLTT_SIZE_4BPP);
-=======
     LZDecompressVram(gTrainerSprites[gender].frontPic.data, dest);
     LoadCompressedPalette(gTrainerSprites[gender].palette.data, palOffset, PLTT_SIZE_4BPP);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-    LZDecompressVram(gTrainerSprites[gender].frontPic.data, dest);
-    LoadCompressedPalette(gTrainerSprites[gender].palette.data, palOffset, PLTT_SIZE_4BPP);
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 }
 
 u8 AddNewGameBirchObject(s16 x, s16 y, u8 subpriority)

@@ -59,6 +59,7 @@
 #include "constants/field_specials.h"
 #include "constants/items.h"
 #include "constants/heal_locations.h"
+#include "constants/map_types.h"
 #include "constants/mystery_gift.h"
 #include "constants/slot_machine.h"
 #include "constants/songs.h"
@@ -70,7 +71,6 @@
 #include "palette.h"
 #include "battle_util.h"
 #include "naming_screen.h"
-#include "rogue_voltorbflip.h"
 
 #define TAG_ITEM_ICON 5500
 
@@ -161,13 +161,6 @@ static const u8 sText_SpaceTimes[] = _(" time(s)");
 void Special_ShowDiploma(void)
 {
     SetMainCallback2(CB2_ShowDiploma);
-    LockPlayerFieldControls();
-}
-
-void Special_ViewVoltorbFlip(void)
-{
-    gMain.savedCallback = CB2_ReturnToField;
-    SetMainCallback2(CB2_ShowVoltorbFlip);
     LockPlayerFieldControls();
 }
 
@@ -1279,7 +1272,7 @@ void IsGrassTypeInParty(void)
         if (GetMonData(pokemon, MON_DATA_SANITY_HAS_SPECIES) && !GetMonData(pokemon, MON_DATA_IS_EGG))
         {
             species = GetMonData(pokemon, MON_DATA_SPECIES);
-            if (GetSpeciesType(species, 0) == TYPE_GRASS || GetSpeciesType(species, 1) == TYPE_GRASS)
+            if (gSpeciesInfo[species].types[0] == TYPE_GRASS || gSpeciesInfo[species].types[1] == TYPE_GRASS)
             {
                 gSpecialVar_Result = TRUE;
                 return;

@@ -30,27 +30,6 @@ enum WeatherState
     WEATHER_INACTIVE_AND_BLOCKED,
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-enum AIConsiderGimmick
-{
-    NO_GIMMICK,
-    USE_GIMMICK,
-};
-
-static inline bool32 IsMoveUnusable(u32 moveIndex, u32 move, u32 moveLimitations)
-{
-    return move == MOVE_NONE
-        || move == MOVE_UNAVAILABLE
-        || moveLimitations & 1u << moveIndex;
-}
-
-typedef bool32 (*MoveFlag)(u32 move);
-
-=======
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 bool32 AI_IsFaster(u32 battlerAi, u32 battlerDef, u32 move);
 bool32 AI_IsSlower(u32 battlerAi, u32 battlerDef, u32 move);
 bool32 AI_RandLessThan(u32 val);
@@ -110,42 +89,29 @@ bool32 IsAbilityOfRating(u32 ability, s8 rating);
 bool32 AI_IsAbilityOnSide(u32 battlerId, u32 ability);
 bool32 AI_MoveMakesContact(u32 ability, u32 holdEffect, u32 move);
 bool32 ShouldUseZMove(u32 battlerAtk, u32 battlerDef, u32 chosenMove);
-void SetAIUsingGimmick(u32 battler, enum AIConsiderGimmick use);
-bool32 IsAIUsingGimmick(u32 battler);
-void DecideTerastal(u32 battler);
+u32 AI_GetBattlerAbility(u32 battler);
 
 // stat stage checks
 bool32 AnyStatIsRaised(u32 battlerId);
-<<<<<<< HEAD
-<<<<<<< HEAD
-bool32 CanLowerStat(u32 battlerAtk, u32 battlerDef, u32 abilityDef, u32 stat);
-=======
 bool32 ShouldLowerStat(u32 battlerAtk, u32 battlerDef, u32 battlerAbility, u32 stat);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-bool32 ShouldLowerStat(u32 battlerAtk, u32 battlerDef, u32 battlerAbility, u32 stat);
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 bool32 BattlerStatCanRise(u32 battler, u32 battlerAbility, u32 stat);
 bool32 AreBattlersStatsMaxed(u32 battler);
 u32 CountPositiveStatStages(u32 battlerId);
 u32 CountNegativeStatStages(u32 battlerId);
+bool32 ShouldLowerAttack(u32 battlerAtk, u32 battlerDef, u32 defAbility);
+bool32 ShouldLowerDefense(u32 battlerAtk, u32 battlerDef, u32 defAbility);
+bool32 ShouldLowerSpeed(u32 battlerAtk, u32 battlerDef, u32 defAbility);
+bool32 ShouldLowerSpAtk(u32 battlerAtk, u32 battlerDef, u32 defAbility);
+bool32 ShouldLowerSpDef(u32 battlerAtk, u32 battlerDef, u32 defAbility);
+bool32 ShouldLowerAccuracy(u32 battlerAtk, u32 battlerDef, u32 defAbility);
+bool32 ShouldLowerEvasion(u32 battlerAtk, u32 battlerDef, u32 defAbility);
 
 // move checks
 bool32 IsAffectedByPowder(u32 battler, u32 ability, u32 holdEffect);
 bool32 MovesWithCategoryUnusable(u32 attacker, u32 target, u32 category);
 s32 AI_WhichMoveBetter(u32 move1, u32 move2, u32 battlerAtk, u32 battlerDef, s32 noOfHitsToKo);
-<<<<<<< HEAD
-<<<<<<< HEAD
-struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, enum AIConsiderGimmick considerGimmickAtk, enum AIConsiderGimmick considerGimmickDef);
-struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, enum AIConsiderGimmick considerGimmickAtk, enum AIConsiderGimmick considerGimmickDef, u32 weather);
-=======
 struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, enum DamageRollType rollType);
 struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, u32 weather, enum DamageRollType rollType);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-struct SimulatedDamage AI_CalcDamageSaveBattlers(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, enum DamageRollType rollType);
-struct SimulatedDamage AI_CalcDamage(u32 move, u32 battlerAtk, u32 battlerDef, uq4_12_t *typeEffectiveness, bool32 considerZPower, u32 weather, enum DamageRollType rollType);
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 bool32 AI_IsDamagedByRecoil(u32 battler);
 u32 GetNoOfHitsToKO(u32 dmg, s32 hp);
 u32 GetNoOfHitsToKOBattlerDmg(u32 dmg, u32 battlerDef);
@@ -158,20 +124,8 @@ bool32 HasMove(u32 battlerId, u32 move);
 bool32 HasOnlyMovesWithCategory(u32 battlerId, u32 category, bool32 onlyOffensive);
 bool32 HasMoveWithCategory(u32 battler, u32 category);
 bool32 HasMoveWithType(u32 battler, u32 type);
-<<<<<<< HEAD
-<<<<<<< HEAD
-bool32 HasMoveWithEffect(u32 battlerId, enum BattleMoveEffects moveEffect);
-bool32 HasBattlerSideMoveWithEffect(u32 battler, u32 effect);
-bool32 HasNonVolatileMoveEffect(u32 battlerId, u32 effect);
-bool32 IsPowerBasedOnStatus(u32 battlerId, enum BattleMoveEffects effect, u32 argument);
-=======
 bool32 HasMoveEffect(u32 battlerId, u32 moveEffect);
 bool32 IsPowerBasedOnStatus(u32 battlerId, u32 effect, u32 argument);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-bool32 HasMoveEffect(u32 battlerId, u32 moveEffect);
-bool32 IsPowerBasedOnStatus(u32 battlerId, u32 effect, u32 argument);
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 bool32 HasMoveWithAdditionalEffect(u32 battlerId, u32 moveEffect);
 bool32 HasMoveWithCriticalHitChance(u32 battlerId);
 bool32 HasMoveWithMoveEffectExcept(u32 battlerId, u32 moveEffect, u32 exception);
@@ -184,28 +138,12 @@ bool32 IsMoveRedirectionPrevented(u32 battlerAtk, u32 move, u32 atkAbility);
 bool32 IsMoveEncouragedToHit(u32 battlerAtk, u32 battlerDef, u32 move);
 bool32 IsHazardMove(u32 move);
 bool32 IsTwoTurnNotSemiInvulnerableMove(u32 battlerAtk, u32 move);
-<<<<<<< HEAD
-<<<<<<< HEAD
-bool32 IsBattlerDamagedByStatus(u32 battler);
-s32 ProtectChecks(u32 battlerAtk, u32 battlerDef, u32 move, u32 predictedMove);
-bool32 ShouldSetSandstorm(u32 battler, u32 ability, enum ItemHoldEffect holdEffect);
-bool32 ShouldSetHail(u32 battler, u32 ability, enum ItemHoldEffect holdEffect);
-bool32 ShouldSetSnow(u32 battler, u32 ability, enum ItemHoldEffect holdEffect);
-bool32 ShouldSetRain(u32 battlerAtk, u32 ability, enum ItemHoldEffect holdEffect);
-bool32 ShouldSetSun(u32 battlerAtk, u32 atkAbility, enum ItemHoldEffect holdEffect);
-=======
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 void ProtectChecks(u32 battlerAtk, u32 battlerDef, u32 move, u32 predictedMove, s32 *score);
 bool32 ShouldSetSandstorm(u32 battler, u32 ability, u32 holdEffect);
 bool32 ShouldSetHail(u32 battler, u32 ability, u32 holdEffect);
 bool32 ShouldSetSnow(u32 battler, u32 ability, u32 holdEffect);
 bool32 ShouldSetRain(u32 battlerAtk, u32 ability, u32 holdEffect);
 bool32 ShouldSetSun(u32 battlerAtk, u32 atkAbility, u32 holdEffect);
-<<<<<<< HEAD
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 bool32 HasSleepMoveWithLowAccuracy(u32 battlerAtk, u32 battlerDef);
 bool32 IsHealingMove(u32 move);
 bool32 HasHealingEffect(u32 battler);
@@ -272,19 +210,8 @@ bool32 PartyHasMoveCategory(u32 battlerId, u32 category);
 bool32 SideHasMoveCategory(u32 battlerId, u32 category);
 
 // score increases
-<<<<<<< HEAD
-<<<<<<< HEAD
-u32 IncreaseStatUpScore(u32 battlerAtk, u32 battlerDef, enum StatChange statId);
-u32 IncreaseStatUpScoreContrary(u32 battlerAtk, u32 battlerDef, enum StatChange statId);
-u32 IncreaseStatDownScore(u32 battlerAtk, u32 battlerDef, u32 stat);
-=======
 u32 IncreaseStatUpScore(u32 battlerAtk, u32 battlerDef, u32 statId);
 u32 IncreaseStatUpScoreContrary(u32 battlerAtk, u32 battlerDef, u32 statId);
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-u32 IncreaseStatUpScore(u32 battlerAtk, u32 battlerDef, u32 statId);
-u32 IncreaseStatUpScoreContrary(u32 battlerAtk, u32 battlerDef, u32 statId);
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 void IncreasePoisonScore(u32 battlerAtk, u32 battlerDef, u32 move, s32 *score);
 void IncreaseBurnScore(u32 battlerAtk, u32 battlerDef, u32 move, s32 *score);
 void IncreaseParalyzeScore(u32 battlerAtk, u32 battlerDef, u32 move, s32 *score);

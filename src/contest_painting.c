@@ -363,11 +363,7 @@ static void VBlankCB_ContestPainting(void)
 static void InitContestMonPixels(u16 species, bool8 backPic)
 {
     const void *pal = GetMonSpritePalFromSpeciesAndPersonality(species, gContestPaintingWinner->isShiny, gContestPaintingWinner->personality);
-<<<<<<< HEAD
-    memcpy(gContestPaintingMonPalette, pal, PLTT_SIZE_4BPP);
-=======
     LZDecompressVram(pal, gContestPaintingMonPalette);
->>>>>>> parent of 6e64f6f5ef (New sprite compressor (#5627))
     if (!backPic)
     {
         HandleLoadSpecialPokePic(TRUE,
