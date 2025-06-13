@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE128",
       "offset": 40,
       "direction": "left"
+    },
+    {
+      "map": "MAP_HOHTO_PASSAGE",
+      "offset": -70,
+      "direction": "right"
     }
   ],
   "object_events": [],
