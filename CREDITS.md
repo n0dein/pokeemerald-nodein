@@ -58,6 +58,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <<<<<<< HEAD
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/iriv24"><img src="https://avatars.githubusercontent.com/u/40581123?v=4?s=100" width="100px;" alt="iriv24"/><br /><sub><b>iriv24</b></sub></a><br /><a href="https://github.com/rh-hideout/pokeemerald-expansion/commits?author=iriv24" title="Code">💻</a></td>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Bivurnum"><img src="https://avatars.githubusercontent.com/u/147376167?v=4?s=100" width="100px;" alt="Bivurnum"/><br /><sub><b>Bivurnum</b></sub></a><br /><a href="https://github.com/rh-hideout/pokeemerald-expansion/commits?author=Bivurnum" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Emiliasky"><img src="https://avatars.githubusercontent.com/u/48217459?v=4?s=100" width="100px;" alt="Emilia Daelman"/><br /><sub><b>Emilia Daelman</b></sub></a><br /><a href="https://github.com/rh-hideout/pokeemerald-expansion/commits?author=Emiliasky" title="Tests">⚠️</a> <a href="https://github.com/rh-hideout/pokeemerald-expansion/commits?author=Emiliasky" title="Code">💻</a></td>
     </tr>
@@ -67,6 +68,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 >>>>>>> parent of 48b88899d1 (add bassforte123 as a contributor for code (#7003))
 =======
 >>>>>>> parent of 2358f9a871 (add iriv24 as a contributor for code (#7059))
+=======
+>>>>>>> parent of 451cb91d5d (add Bivurnum as a contributor for code (#7067))
 =======
 >>>>>>> parent of 451cb91d5d (add Bivurnum as a contributor for code (#7067))
     </tr>
