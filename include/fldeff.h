@@ -51,8 +51,4 @@ u8 CreateFieldMoveTask(void);
 bool8 SetUpFieldMove_RockSmash(void);
 bool8 FldEff_UseRockSmash(void);
 
-// defog
-bool8 SetUpFieldMove_Defog(void);
-bool8 FldEff_Defog(void);
-
 #endif // GUARD_FLDEFF_H
