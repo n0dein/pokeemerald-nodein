@@ -4444,10 +4444,10 @@
     {
       "id": "LAYOUT_PALEO_PARK_ENTRANCE",
       "name": "PaleoParkEntrance_Layout",
-      "width": 13,
+      "width": 12,
       "height": 7,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "secondary_tileset": "gTileset_PokemonDayCare",
       "border_filepath": "data/layouts/PaleoParkEntrance/border.bin",
       "blockdata_filepath": "data/layouts/PaleoParkEntrance/map.bin"
     },
@@ -4455,7 +4455,7 @@
       "id": "LAYOUT_ROUTE103_SOUTH",
       "name": "Route103_South_Layout",
       "width": 30,
-      "height": 21,
+      "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route103_South/border.bin",
