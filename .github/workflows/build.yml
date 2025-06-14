@@ -9,7 +9,10 @@ on:
 
 jobs:
   build:
+<<<<<<< HEAD
     if: github.actor != 'allcontributors[bot]'
+=======
+>>>>>>> parent of 7263bb1886 (Update CI to ignore allcontributors commits (#7046))
     runs-on: ubuntu-latest
     env:
       GAME_VERSION: EMERALD
@@ -37,6 +40,7 @@ jobs:
           TEST: 1
         run: |
           make -j${nproc} check
+<<<<<<< HEAD
   allcontributors:
     if: github.actor == 'allcontributors[bot]'
     runs-on: ubuntu-latest
@@ -45,3 +49,5 @@ jobs:
       - name: Automatically pass for allcontributors
         run: echo "CI automatically passes for allcontributors" && exit 0
 
+=======
+>>>>>>> parent of 7263bb1886 (Update CI to ignore allcontributors commits (#7046))
