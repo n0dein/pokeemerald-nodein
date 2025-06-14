@@ -6032,9 +6032,7 @@ u32 GetDynamicMoveType(struct Pokemon *mon, u32 move, u32 battler, enum MonState
             gBattleStruct->ateBoost[battler] = TRUE;
         return ateType;
     }
-    else if (moveEffect != EFFECT_CHANGE_TYPE_ON_ITEM
-          && moveEffect != EFFECT_TERRAIN_PULSE
-          && moveEffect != EFFECT_NATURAL_GIFT
+    else if (moveType != TYPE_NORMAL
           && moveEffect != EFFECT_HIDDEN_POWER
           && moveEffect != EFFECT_WEATHER_BALL
           && ability == ABILITY_NORMALIZE
