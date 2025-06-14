@@ -42,7 +42,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 23,
+      "x": 21,
       "y": 3,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -54,7 +54,7 @@
       "flag": "FLAG_HIDE_ROUTE_110_TEAM_AQUA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WAILORD)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WAILMER)",
       "x": 24,
       "y": 2,
       "elevation": 0,

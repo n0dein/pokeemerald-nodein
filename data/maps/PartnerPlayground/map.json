@@ -411,9 +411,7 @@
       "flag": "FLAG_PP_EEVEE"
     }
   ],
-  "warp_events": [
-
-  ],
+  "warp_events": [],
   "coord_events": [
     {
       "type": "trigger",

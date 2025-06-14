@@ -4447,7 +4447,7 @@
       "width": 13,
       "height": 7,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonDayCare",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/PaleoParkEntrance/border.bin",
       "blockdata_filepath": "data/layouts/PaleoParkEntrance/map.bin"
     },
