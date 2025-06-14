@@ -71,12 +71,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 #define POKEDEX_PLUS_HGSS            TRUE   // If TRUE, enables the custom HGSS style Pokedex.
-=======
-#define POKEDEX_PLUS_HGSS            FALSE   // If TRUE, enables the custom HGSS style Pokedex.
->>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
-=======
-#define POKEDEX_PLUS_HGSS            FALSE   // If TRUE, enables the custom HGSS style Pokedex.
->>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
+
 #define SUMMARY_SCREEN_NATURE_COLORS TRUE    // If TRUE, nature-based stat boosts and reductions will be red and blue in the summary screen.
 #define HQ_RANDOM                    TRUE    // If TRUE, replaces the default RNG with an implementation of SFC32 RNG. May break code that relies on RNG.
 #define COMPETITIVE_PARTY_SYNTAX     TRUE    // If TRUE, parties are defined in "competitive syntax".
