@@ -17,7 +17,11 @@
 If you use **`pokeemerald-expansion`**, please credit **RHH (Rom Hacking Hideout)**. Optionally, include the version number for clarity.
 
 ```
+<<<<<<< HEAD
 Based off RHH's pokeemerald-expansion 1.11.4 https://github.com/rh-hideout/pokeemerald-expansion/
+=======
+Based off RHH's pokeemerald-expansion 1.11.3 https://github.com/rh-hideout/pokeemerald-expansion/
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 ```
 
 Please consider [crediting all contributors](CREDITS.md) involved in the project!

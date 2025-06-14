@@ -7101,6 +7101,7 @@ static void Cmd_moveend(void)
                 effect = TRUE;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (gBattleMons[gBattlerTarget].status1 & STATUS1_FROSTBITE
                 && IsBattlerAlive(gBattlerTarget)
                 && gBattlerAttacker != gBattlerTarget
@@ -7220,6 +7221,8 @@ static void Cmd_moveend(void)
             effect = HandleMoveEndAbilityBlock(gBattlerAttacker, gBattlerTarget, gCurrentMove);
 =======
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
             gBattleScripting.moveendState++;
             break;
         case MOVEEND_SHEER_FORCE:

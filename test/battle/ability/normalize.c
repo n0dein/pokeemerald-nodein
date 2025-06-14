@@ -2,6 +2,7 @@
 #include "test/battle.h"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ASSUMPTIONS
 {
     ASSUME(GetMoveType(MOVE_TACKLE) == TYPE_NORMAL);
@@ -303,6 +304,11 @@ TO_DO_BATTLE_TEST("Normalize tuns a move into a Normal-type move");
 TO_DO_BATTLE_TEST("Normalize boosts power of both affected and originally Normal-type moves by 20% (Gen7+)");
 TO_DO_BATTLE_TEST("Normalize affects status moves"); // Eg. Thunder Wave can affect Ground types
 >>>>>>> parent of 09ee1d0b2d (Merge branch 'upcoming' into expansion-1.11.4)
+=======
+TO_DO_BATTLE_TEST("Normalize tuns a move into a Normal-type move");
+TO_DO_BATTLE_TEST("Normalize boosts power of both affected and originally Normal-type moves by 20% (Gen7+)");
+TO_DO_BATTLE_TEST("Normalize affects status moves"); // Eg. Thunder Wave can affect Ground types
+>>>>>>> parent of 8cfe915bcd (Expansion 1.11.4 & 1.12.0 (#7026))
 TO_DO_BATTLE_TEST("Normalize makes Flying Press do Normal/Flying damage");
 TO_DO_BATTLE_TEST("Normalize still makes Freeze-Dry do super effective damage to Water-type Pokémon");
 TO_DO_BATTLE_TEST("Normalize-affected moves become Electric-type under Electrify's effect");
