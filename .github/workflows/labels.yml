@@ -7,7 +7,10 @@ on:
 jobs:
   label:
 <<<<<<< HEAD
+<<<<<<< HEAD
     if: github.actor != 'allcontributors[bot]'
+=======
+>>>>>>> parent of 7263bb1886 (Update CI to ignore allcontributors commits (#7046))
 =======
 >>>>>>> parent of 7263bb1886 (Update CI to ignore allcontributors commits (#7046))
     runs-on: ubuntu-latest
@@ -32,6 +35,7 @@ jobs:
             category: sprite-issue
             type: documentation
 <<<<<<< HEAD
+<<<<<<< HEAD
   allcontributors:
     if: github.actor == 'allcontributors[bot]'
     runs-on: ubuntu-latest
@@ -40,5 +44,7 @@ jobs:
       - name: Automatically pass for allcontributors
         run: echo "CI automatically passes for allcontributors" && exit 0
 
+=======
+>>>>>>> parent of 7263bb1886 (Update CI to ignore allcontributors commits (#7046))
 =======
 >>>>>>> parent of 7263bb1886 (Update CI to ignore allcontributors commits (#7046))
