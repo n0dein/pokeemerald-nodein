@@ -224,7 +224,7 @@
       "name": "Ruby",
       "avatar_url": "https://avatars.githubusercontent.com/u/178652077?v=4",
       "profile": "https://github.com/RubyRaven6",
-      "contributions": [
+            "contributions": [
         "code",
         "doc"
       ]
@@ -256,6 +256,7 @@
       "contributions": [
         "code"
       ]
+<<<<<<< HEAD
     },
     {
       "login": "bassforte123",
@@ -302,6 +303,8 @@
       "contributions": [
         "code"
       ]
+=======
+>>>>>>> parent of 48b88899d1 (add bassforte123 as a contributor for code (#7003))
     }
   ],
   "contributorsPerLine": 7,
