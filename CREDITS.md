@@ -32,7 +32,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tertu-m"><img src="https://avatars.githubusercontent.com/u/836640?v=4?s=100" width="100px;" alt="tertu"/><br /><sub><b>tertu</b></sub></a><br /><a href="#maintenance-tertu-m" title="Maintenance">🚧</a> <a href="https://github.com/rh-hideout/pokeemerald-expansion/commits?author=tertu-m" title="Code">💻</a></td>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <td align="center" valign="top" width="14.28%"><a href="https://linktr.ee/pkmnsnfrn"><img src="https://avatars.githubusercontent.com/u/77138753?v=4?s=100" width="100px;" alt="psf"/><br /><sub><b>psf</b></sub></a><br /><a href="#maintenance-pkmnsnfrn" title="Maintenance">🚧</a> <a href="https://github.com/rh-hideout/pokeemerald-expansion/commits?author=pkmnsnfrn" title="Code">💻</a> <a href="#projectManagement-pkmnsnfrn" title="Project Management">📆</a></td>
+=======
+      <td align="center" valign="top" width="14.28%"><a href="https://linktr.ee/pkmnsnfrn"><img src="https://avatars.githubusercontent.com/u/77138753?v=4?s=100" width="100px;" alt="psf"/><br /><sub><b>psf</b></sub></a><br /><a href="#maintenance-pkmnsnfrn" title="Maintenance">🚧</a> <a href="https://github.com/rh-hideout/pokeemerald-expansion/commits?author=pkmnsnfrn" title="Code">💻</a></td>
+>>>>>>> parent of 29adca79a5 (add pkmnsnfrn as a contributor for projectManagement (#7081))
 =======
       <td align="center" valign="top" width="14.28%"><a href="https://linktr.ee/pkmnsnfrn"><img src="https://avatars.githubusercontent.com/u/77138753?v=4?s=100" width="100px;" alt="psf"/><br /><sub><b>psf</b></sub></a><br /><a href="#maintenance-pkmnsnfrn" title="Maintenance">🚧</a> <a href="https://github.com/rh-hideout/pokeemerald-expansion/commits?author=pkmnsnfrn" title="Code">💻</a></td>
 >>>>>>> parent of 29adca79a5 (add pkmnsnfrn as a contributor for projectManagement (#7081))
