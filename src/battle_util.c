@@ -503,16 +503,6 @@ void HandleAction_UseMove(void)
 void HandleAction_Switch(void)
 {
     gBattlerAttacker = gBattlerByTurnOrder[gCurrentTurnActionNumber];
-
-    // if switching to a mon that is already on field, cancel switch
-    if (!(gAbsentBattlerFlags & (1u << BATTLE_PARTNER(gBattlerAttacker)))
-     && IsBattlerAlive(BATTLE_PARTNER(gBattlerAttacker))
-     && gBattlerPartyIndexes[BATTLE_PARTNER(gBattlerAttacker)] == gBattleStruct->monToSwitchIntoId[gBattlerAttacker])
-    {
-        gCurrentActionFuncId = B_ACTION_FINISHED;
-        return;
-    }
-
     gBattle_BG0_X = 0;
     gBattle_BG0_Y = 0;
     gActionSelectionCursor[gBattlerAttacker] = 0;
@@ -816,7 +806,7 @@ void HandleAction_NothingIsFainted(void)
 
 void HandleAction_ActionFinished(void)
 {
-    u32 i, j;
+    u32 i, j, moveType;
     bool32 afterYouActive = gSpecialStatuses[gBattlerByTurnOrder[gCurrentTurnActionNumber + 1]].afterYou;
     gBattleStruct->monToSwitchIntoId[gBattlerByTurnOrder[gCurrentTurnActionNumber]] = gSelectedMonPartyId = PARTY_SIZE;
     gCurrentTurnActionNumber++;
@@ -827,6 +817,16 @@ void HandleAction_ActionFinished(void)
                     | HITMARKER_OBEYS | HITMARKER_SYNCHRONISE_EFFECT
                     | HITMARKER_CHARGING | HITMARKER_NEVER_SET | HITMARKER_IGNORE_DISGUISE);
 
+    // check if Stellar type boost should be used up
+    moveType = GetBattleMoveType(gCurrentMove);
+
+    if (GetActiveGimmick(gBattlerAttacker) == GIMMICK_TERA
+        && GetBattlerTeraType(gBattlerAttacker) == TYPE_STELLAR
+        && GetMoveCategory(gCurrentMove) != DAMAGE_CATEGORY_STATUS
+        && IsTypeStellarBoosted(gBattlerAttacker, moveType))
+    {
+        ExpendTypeStellarBoost(gBattlerAttacker, moveType);
+    }
     ClearDamageCalcResults();
     gCurrentMove = 0;
     gBattleScripting.animTurn = 0;
