@@ -16,8 +16,6 @@
   - [How to use the Testing System](tutorials/how_to_testing_system.md)
   - [How to add new Trainer Slides](tutorials/how_to_new_trainer_slide.md)
 - [Changelog](./CHANGELOG.md)
-    - [1.12.x]()
-        - [Version 1.12.0](changelogs/1.12.x/1.12.0.md)
     - [1.11.x]()
         - [Version 1.11.4](changelogs/1.11.x/1.11.4.md)
         - [Version 1.11.3](changelogs/1.11.x/1.11.3.md)

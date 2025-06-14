@@ -1,7 +1,7 @@
 #ifndef GUARD_CONSTANTS_EXPANSION_H
 #define GUARD_CONSTANTS_EXPANSION_H
 
-// Last version: 1.12.0
+// Last version: 1.11.4
 #define EXPANSION_VERSION_MAJOR 1
 <<<<<<< HEAD
 #define EXPANSION_VERSION_MINOR 12
