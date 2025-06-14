@@ -12,11 +12,15 @@ jobs:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if: github.actor != 'allcontributors[bot]'
 =======
 >>>>>>> parent of 7263bb1886 (Update CI to ignore allcontributors commits (#7046))
 =======
 >>>>>>> parent of 7263bb1886 (Update CI to ignore allcontributors commits (#7046))
+=======
+    if: github.actor != 'allcontributors'
+>>>>>>> parent of fd90802a37 (Fixed CI issue introduced 7046 (#7072))
 =======
     if: github.actor != 'allcontributors'
 >>>>>>> parent of fd90802a37 (Fixed CI issue introduced 7046 (#7072))
