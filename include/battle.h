@@ -618,7 +618,6 @@ struct BattlerState
     u8 targetsDone[MAX_BATTLERS_COUNT];
 
     u32 commandingDondozo:1;
-    u32 absentBattlerFlags:1;
     u32 focusPunchBattlers:1;
     u32 multipleSwitchInBattlers:1;
     u32 alreadyStatusedMoveAttempt:1; // For example when using Thunder Wave on an already paralyzed Pokémon.
@@ -631,7 +630,8 @@ struct BattlerState
     u32 usedMicleBerry:1;
     u32 pursuitTarget:1;
     u32 stompingTantrumTimer:2;
-    u32 padding:16;
+    u32 canPickupItem:1;
+    u32 padding:17;
     // End of Word
 };
 
