@@ -1163,3 +1163,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/CianwoodCity/scripts.inc"
 
 	.include "data/maps/Route41/scripts.inc"
+
+	.include "data/maps/Route40/scripts.inc"
