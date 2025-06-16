@@ -137,6 +137,12 @@
       "map": "MAP_CIANWOOD_CITY",
       "x": 29,
       "y": 36
+    },
+    {
+      "id": "HEAL_LOCATION_ROUTE40",
+      "map": "MAP_ROUTE40",
+      "x": 32,
+      "y": 12
     }
   ]
 }

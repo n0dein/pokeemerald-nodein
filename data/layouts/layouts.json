@@ -4444,12 +4444,22 @@
     {
       "id": "LAYOUT_ROUTE40",
       "name": "Route40_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 37,
+      "height": 44,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route40/border.bin",
       "blockdata_filepath": "data/layouts/Route40/map.bin"
+    },
+    {
+      "id": "LAYOUT_OLIVINE_CITY",
+      "name": "OlivineCity_Layout",
+      "width": 75,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/OlivineCity/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity/map.bin"
     }
   ]
 }

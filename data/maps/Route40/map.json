@@ -17,20 +17,25 @@
       "map": "MAP_ROUTE41",
       "offset": -39,
       "direction": "down"
+    },
+    {
+      "map": "MAP_OLIVINE_CITY",
+      "offset": -30,
+      "direction": "right"
     }
   ],
   "object_events": [],
   "warp_events": [
     {
       "x": 12,
-      "y": 9,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_ROUTE40",
       "dest_warp_id": "0"
     },
     {
       "x": 13,
-      "y": 9,
+      "y": 13,
       "elevation": 0,
       "dest_map": "MAP_ROUTE40",
       "dest_warp_id": "0"
