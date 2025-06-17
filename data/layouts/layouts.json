@@ -4445,7 +4445,7 @@
       "id": "LAYOUT_ROUTE40",
       "name": "Route40_Layout",
       "width": 37,
-      "height": 44,
+      "height": 50,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route40/border.bin",
