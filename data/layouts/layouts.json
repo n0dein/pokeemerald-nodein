@@ -4460,6 +4460,26 @@
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/OlivineCity/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE38",
+      "name": "Route38_Layout",
+      "width": 60,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route38/border.bin",
+      "blockdata_filepath": "data/layouts/Route38/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE39",
+      "name": "Route39_Layout",
+      "width": 36,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/Route39/border.bin",
+      "blockdata_filepath": "data/layouts/Route39/map.bin"
     }
   ]
 }
