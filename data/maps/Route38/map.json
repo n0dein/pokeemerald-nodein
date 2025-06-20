@@ -22,7 +22,7 @@
   "object_events": [
     {
       "local_id": "Scyther1",
-      "graphics_id": "OBJ_EVENT_GFX_OW_MON(SPECIES_SCYTHER)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SCYTHER)",
       "x": 26,
       "y": 2,
       "elevation": 0,
@@ -36,7 +36,7 @@
     },
     {
       "local_id": "Pinsir1",
-      "graphics_id": "OBJ_EVENT_GFX_OW_MON(SPECIES_PINSIR)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(PINSIR)",
       "x": 10,
       "y": 1,
       "elevation": 0,
@@ -50,7 +50,7 @@
     },
     {
       "local_id": "Heracross1",
-      "graphics_id": "OBJ_EVENT_GFX_OW_MON(SPECIES_HERACROSS)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(HERACROSS)",
       "x": 12,
       "y": 1,
       "elevation": 0,
