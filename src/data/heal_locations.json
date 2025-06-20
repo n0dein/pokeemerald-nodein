@@ -143,6 +143,12 @@
       "map": "MAP_ROUTE40",
       "x": 16,
       "y": 24
+    },
+    {
+      "id": "HEAL_LOCATION_ROUTE38",
+      "map": "MAP_ROUTE38",
+      "x": 30,
+      "y": 15
     }
   ]
 }
